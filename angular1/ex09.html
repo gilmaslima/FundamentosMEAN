@@ -13,10 +13,12 @@
                 label: '@',
                 model: '='
             },
-            template:
+            template: `
                 <label for="{{ $ctrl.id }}">{{ $ctrl.label }}</label>
                 <input id="{{ $ctrl.id }}" ng-model='$ctrl.model'>
-                    })
+                `
+            })
+
             angular.module('app').controller('MeuController', function () {
                 const self = this
                 self.name = "Anônimo"
