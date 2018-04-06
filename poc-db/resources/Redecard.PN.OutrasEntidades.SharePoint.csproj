@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80874FDE-9BD3-4CF5-A8C2-8EEDD26322CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.OutrasEntidades.SharePoint</RootNamespace>
+    <AssemblyName>Redecard.PN.OutrasEntidades.SharePoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="Redecard.PN.Comum.SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7152ae6779a4ff54, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\CampoConfirmacaoSenha.cs" />
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\CampoNovoAcesso.ascx.cs">
+      <DependentUpon>CampoNovoAcesso.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\CampoNovoAcesso.ascx.designer.cs">
+      <DependentUpon>CampoNovoAcesso.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\CampoSenha.cs" />
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\ConfiguracaoCampoNovoAcesso.cs" />
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\ICampoNovoAcesso.cs" />
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\TipoCampoNovoAcesso.cs" />
+    <Compile Include="CONTROLTEMPLATES\OutrasEntidades\TipoMensagemNovoAcesso.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EntidadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HISPBServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HisServicoWfEmissores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicoISLogin\Reference.cs" />
+    <Compile Include="Service References\ServicoISLogin\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicoPortalEmissores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicoWFPropostas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UsuarioServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services.cs" />
+    <Compile Include="WebParts\BancosSPB\ISSPB\ISSPB.cs" />
+    <Compile Include="WebParts\BancosSPB\ISSPB\ISSPBUserControl.ascx.cs">
+      <DependentUpon>ISSPBUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\BancosSPB\ISSPB\ISSPBUserControl.ascx.designer.cs">
+      <DependentUpon>ISSPBUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FMS\ConsultarEstab\ConsultarEstabelecimento.cs" />
+    <Compile Include="WebParts\FMS\ConsultarEstab\ConsultarEstabelecimentoUserControl.ascx.cs">
+      <DependentUpon>ConsultarEstabelecimentoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\FMS\ConsultarEstab\ConsultarEstabelecimentoUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultarEstabelecimentoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FMS\PCConsulte\PCConsulte.cs" />
+    <Compile Include="WebParts\FMS\PCConsulte\PCConsulteUserControl.ascx.cs">
+      <DependentUpon>PCConsulteUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\FMS\PCConsulte\PCConsulteUserControl.ascx.designer.cs">
+      <DependentUpon>PCConsulteUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FMS\PCImprima\PCImprima.cs" />
+    <Compile Include="WebParts\FMS\PCImprima\PCImprimaUserControl.ascx.cs">
+      <DependentUpon>PCImprimaUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\FMS\PCImprima\PCImprimaUserControl.ascx.designer.cs">
+      <DependentUpon>PCImprimaUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FMS\STConsulte\STConsulte.cs" />
+    <Compile Include="WebParts\FMS\STConsulte\STConsulteUserControl.ascx.cs">
+      <DependentUpon>STConsulteUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\FMS\STConsulte\STConsulteUserControl.ascx.designer.cs">
+      <DependentUpon>STConsulteUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FMS\STImprima\STImprima.cs" />
+    <Compile Include="WebParts\FMS\STImprima\STImprimaUserControl.ascx.cs">
+      <DependentUpon>STImprimaUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\FMS\STImprima\STImprimaUserControl.ascx.designer.cs">
+      <DependentUpon>STImprimaUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FMS\STSolicite\STSolicite.cs" />
+    <Compile Include="WebParts\FMS\STSolicite\STSoliciteUserControl.ascx.cs">
+      <DependentUpon>STSoliciteUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\FMS\STSolicite\STSoliciteUserControl.ascx.designer.cs">
+      <DependentUpon>STSoliciteUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Komerci\RedirecionaKomerci\RedirecionaKomerci.cs" />
+    <Compile Include="WebParts\Komerci\RedirecionaKomerci\RedirecionaKomerciUserControl.ascx.cs">
+      <DependentUpon>RedirecionaKomerciUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Komerci\RedirecionaKomerci\RedirecionaKomerciUserControl.ascx.designer.cs">
+      <DependentUpon>RedirecionaKomerciUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Komerci\Usuarios_Komerci\Usuarios_Komerci.cs" />
+    <Compile Include="WebParts\Komerci\Usuarios_Komerci\Usuarios_KomerciUserControl.ascx.cs">
+      <DependentUpon>Usuarios_KomerciUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Komerci\Usuarios_Komerci\Usuarios_KomerciUserControl.ascx.designer.cs">
+      <DependentUpon>Usuarios_KomerciUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RedecardRedirecionamentoLegado\RedecardRedirecionamentoLegado.cs" />
+    <Compile Include="WebParts\RedecardRedirecionamentoLegado\RedecardRedirecionamentoLegadoUserControl.ascx.cs">
+      <DependentUpon>RedecardRedirecionamentoLegadoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RedecardRedirecionamentoLegado\RedecardRedirecionamentoLegadoUserControl.ascx.designer.cs">
+      <DependentUpon>RedecardRedirecionamentoLegadoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d6f4da4a-e483-48e7-a442-44b5073d0f1f}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\FMSWebPart\FMSWebPart.feature">
+      <FeatureId>{f74a04ae-8caf-425d-b43a-16131c78bdaa}</FeatureId>
+    </None>
+    <None Include="Features\FMSModulo\FMSModulo.feature">
+      <FeatureId>{620e5982-6a8b-4e3e-ba3d-3b9ed64e9341}</FeatureId>
+    </None>
+    <None Include="Features\KomerciModulo\KomerciModulo.feature">
+      <FeatureId>{f7a4f4b0-f01e-4330-91a3-a6767a052108}</FeatureId>
+    </None>
+    <None Include="Features\KomerciWebPart\KomerciWebPart.feature">
+      <FeatureId>{d28141d3-d35d-43d9-ac7d-c3950c20bb10}</FeatureId>
+    </None>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{2b30e68e-2ccb-4fa1-b901-ee5abf275b71}</FeatureId>
+    </None>
+    <None Include="Features\Modulos\Modulos.feature">
+      <FeatureId>{e474d7ab-4795-4255-a54b-33f629dc1dc8}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="LAYOUTS\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{63e150d1-22cb-4878-854d-c9e8aaa09833}</SharePointProjectItemId>
+    </None>
+    <None Include="ModuloFMS\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c4dbc9f2-72bd-4d3d-8ce4-7eceab6a6de8}</SharePointProjectItemId>
+    </None>
+    <None Include="ModuloKomerci\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{362dc34e-79b3-4b1e-857c-11a178f9ccae}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{67ed6077-15c6-4bb0-9a36-621610bde1d1}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Paginas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b6f3182b-9a6b-4896-8501-fc1c31adec87}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\BancosSPB\ISSPB\ISSPB.webpart" />
+    <None Include="WebParts\BancosSPB\ISSPB\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{42dbaa94-0952-49f5-8438-90e05b777da0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FMS\ConsultarEstab\ConsultarEstabelecimento.webpart" />
+    <None Include="WebParts\FMS\ConsultarEstab\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3b26dd4d-c1b6-482d-a40d-485dfbe79f7c}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FMS\PCConsulte\PCConsulte.webpart" />
+    <None Include="WebParts\FMS\PCConsulte\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c2427bb1-373a-4e60-84dd-08a81007001e}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FMS\PCImprima\PCImprima.webpart" />
+    <None Include="WebParts\FMS\PCImprima\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{480b57cf-cc96-4ef4-bc0b-2156c1d8605c}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FMS\STConsulte\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{016a9e4a-5ea3-4263-a869-79cdebe2a91a}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FMS\STConsulte\STConsulte.webpart" />
+    <None Include="WebParts\FMS\STImprima\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d13c9aef-4436-4058-b182-bd31eade1bc7}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FMS\STImprima\STImprima.webpart" />
+    <None Include="WebParts\FMS\STSolicite\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e5bc7432-00bd-427b-a2a1-aaf7e62dd795}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FMS\STSolicite\STSolicite.webpart" />
+    <None Include="WebParts\Komerci\RedirecionaKomerci\RedirecionaKomerci.webpart" />
+    <None Include="WebParts\Komerci\RedirecionaKomerci\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{206cd3dd-abc0-4725-924c-a11e9ccac364}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\Komerci\Usuarios_Komerci\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{544ef1e2-64dc-4172-b46a-ac74aa177f50}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\Komerci\Usuarios_Komerci\Usuarios_Komerci.webpart" />
+    <None Include="WebParts\RedecardRedirecionamentoLegado\RedecardRedirecionamentoLegado.webpart" />
+    <None Include="WebParts\RedecardRedirecionamentoLegado\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{df636c54-a7f2-4250-b604-1d053be89585}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\OutrasEntidades\CampoNovoAcesso.ascx" />
+    <Content Include="Features\FMSWebPart\FMSWebPart.Template.xml">
+      <DependentUpon>FMSWebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\FMSModulo\FMSModulo.Template.xml">
+      <DependentUpon>FMSModulo.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\KomerciModulo\KomerciModulo.Template.xml">
+      <DependentUpon>KomerciModulo.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\KomerciWebPart\KomerciWebPart.Template.xml">
+      <DependentUpon>KomerciWebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Modulos\Modulos.Template.xml">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\OutrasEntidades\Scripts\campo-novo-acesso.js" />
+    <Content Include="LAYOUTS\OutrasEntidades\Scripts\campo-novo-acesso.txt" />
+    <Content Include="LAYOUTS\OutrasEntidades\Scripts\outras-entidades.js" />
+    <Content Include="LAYOUTS\OutrasEntidades\Styles\outras-entidades.css" />
+    <Content Include="ModuloFMS\pn_TravaDomicilioDownload.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_TravaDomicilioConsultaPvsTravados.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_TravaDomicilioConsultaPvsNaoTravados.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_TravaDomicilioConsultaPeriodo.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_TravaDomicilioConsultaLimite.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_TravaDomicilioConsultaExtratoPvsTravados.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_TravaDomicilioConsultaEstabelecimento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_TravaDomicilioConsulta.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_STSolicite.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_STImprima.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_STConsulte.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_SolicitacaoTecnologia.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_PropostaCredenciamento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_PCImprima.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_PCCredencie.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_PCConsulte.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_MonitoracaoTransacoes.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\ServicoPortalEmissores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServicoWFPropostas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HisServicoWfEmissores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServicoISLogin\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\FMS\PCConsulte\Elements.xml" />
+    <Content Include="WebParts\FMS\PCConsulte\PCConsulteUserControl.ascx" />
+    <Content Include="WebParts\FMS\PCImprima\Elements.xml" />
+    <Content Include="WebParts\FMS\PCImprima\PCImprimaUserControl.ascx" />
+    <Content Include="WebParts\FMS\STConsulte\Elements.xml" />
+    <Content Include="WebParts\FMS\STConsulte\STConsulteUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\FMS\STImprima\Elements.xml" />
+    <Content Include="WebParts\FMS\STImprima\STImprimaUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\FMS\STSolicite\Elements.xml" />
+    <Content Include="WebParts\FMS\STSolicite\STSoliciteUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RedecardRedirecionamentoLegado\Elements.xml" />
+    <Content Include="WebParts\RedecardRedirecionamentoLegado\RedecardRedirecionamentoLegadoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\UsuarioServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EntidadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ModuloFMS\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ModuloFMS\pn_ConsultarEstabelecimento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloKomerci\pn_CancelarPreAutorizacao.aspx" />
+    <Content Include="ModuloKomerci\pn_EstornarPreAutorizacao.aspx" />
+    <Content Include="ModuloKomerci\pn_ConfirmarPreAutorizacao.aspx" />
+    <Content Include="ModuloKomerci\pn_Distribuidores.aspx" />
+    <Content Include="ModuloKomerci\pn_RelatorioVendas.aspx" />
+    <Content Include="ModuloKomerci\pn_PreAutorizacao.aspx" />
+    <Content Include="ModuloKomerci\pn_EstornoVenda.aspx" />
+    <Content Include="ModuloKomerci\Elements.xml" />
+    <Content Include="ModuloKomerci\pn_FacaVendaAqui.aspx" />
+    <Content Include="Paginas\Elements.xml" />
+    <Content Include="Paginas\pn_ISSPB.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModuloKomerci\pn_Usuarios_Komerci.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\FMS\ConsultarEstab\ConsultarEstabelecimentoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\FMS\ConsultarEstab\Elements.xml" />
+    <Content Include="WebParts\Komerci\RedirecionaKomerci\Elements.xml" />
+    <Content Include="WebParts\Komerci\RedirecionaKomerci\RedirecionaKomerciUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\Komerci\Usuarios_Komerci\Elements.xml" />
+    <Content Include="WebParts\Komerci\Usuarios_Komerci\Usuarios_KomerciUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\HISPBServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\BancosSPB\ISSPB\Elements.xml" />
+    <Content Include="WebParts\BancosSPB\ISSPB\ISSPBUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EntidadeServico\" />
+    <WCFMetadataStorage Include="Service References\HISPBServico\" />
+    <WCFMetadataStorage Include="Service References\HisServicoWfEmissores\" />
+    <WCFMetadataStorage Include="Service References\ServicoISLogin\" />
+    <WCFMetadataStorage Include="Service References\ServicoPortalEmissores\" />
+    <WCFMetadataStorage Include="Service References\ServicoWFPropostas\" />
+    <WCFMetadataStorage Include="Service References\UsuarioServico\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

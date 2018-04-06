@@ -1,0 +1,24 @@
+﻿/*
+ * Projeto: BBF - Facelift
+ * Descrição: Correções paliativas dos elementos
+ * Autor/Empresa: Iteris Consultoria e Software
+ * ©Copyright: 2017 Rede S.A
+ * Notas:   
+*/
+
+.consulta-vendas-filter.filters-box .datepicker, 
+.consulta-vendas-filter.filters-box.filters-white .datepicker {
+    width: 111px;
+}
+
+.consulta-vendas-filter .edit-item-rede:first-child .cs-item-field-label {
+    top: 9px;
+}
+
+.consulta-vendas-filter .edit-item-rede:first-child .cs-item-field-label.on-focus-rede {
+    top: -18px;
+}
+
+.consulta-vendas-filter .edit-item-rede .cs-item-field-label.on-focus-rede {
+    top: -16px;
+}

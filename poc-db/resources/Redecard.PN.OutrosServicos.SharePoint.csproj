@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFCD2B2C-4B1F-48C8-B4DB-BF1EC3DF9458}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.OutrosServicos.SharePoint</RootNamespace>
+    <AssemblyName>Redecard.PN.OutrosServicos.SharePoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="Redecard.PN.Comum.SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7152ae6779a4ff54, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\PrecoUnicoBusiness.cs" />
+    <Compile Include="ControlTemplates\OutrosServicos\Corban\Paginador.ascx.cs">
+      <DependentUpon>Paginador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Corban\Paginador.ascx.designer.cs">
+      <DependentUpon>Paginador.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\ConteudoEditavel.ascx.cs">
+      <DependentUpon>ConteudoEditavel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\ConteudoEditavel.ascx.designer.cs">
+      <DependentUpon>ConteudoEditavel.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\DetalheOfertaContaCerta.ascx.cs">
+      <DependentUpon>DetalheOfertaContaCerta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\DetalheOfertaContaCerta.ascx.designer.cs">
+      <DependentUpon>DetalheOfertaContaCerta.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\GridDetalheOferta.ascx.cs">
+      <DependentUpon>GridDetalheOferta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\GridDetalheOferta.ascx.designer.cs">
+      <DependentUpon>GridDetalheOferta.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\SelecionarOferta.ascx.cs">
+      <DependentUpon>SelecionarOferta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\SelecionarOferta.ascx.designer.cs">
+      <DependentUpon>SelecionarOferta.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\TaxaOferta.ascx.cs">
+      <DependentUpon>TaxaOferta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Mdr\TaxaOferta.ascx.designer.cs">
+      <DependentUpon>TaxaOferta.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Ofertas\ContaCerta.ascx.cs">
+      <DependentUpon>ContaCerta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Ofertas\ContaCerta.ascx.designer.cs">
+      <DependentUpon>ContaCerta.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Ofertas\JapaoBonusRede.ascx.cs">
+      <DependentUpon>JapaoBonusRede.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Ofertas\JapaoBonusRede.ascx.designer.cs">
+      <DependentUpon>JapaoBonusRede.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Ofertas\TurquiaPrecoUnico.ascx.cs">
+      <DependentUpon>TurquiaPrecoUnico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\OutrosServicos\Ofertas\TurquiaPrecoUnico.ascx.designer.cs">
+      <DependentUpon>TurquiaPrecoUnico.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Extensions\Portal\EnumExtensions.cs" />
+    <Compile Include="Core\Extensions\Portal\ObjectExtensions.cs" />
+    <Compile Include="Core\Extensions\Portal\StringExtensions.cs" />
+    <Compile Include="Core\Seguranca\Portal\Criptografia.cs" />
+    <Compile Include="Core\Web\Controles\Portal\Botao\Botao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\Busca\Busca.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPv.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvFilialConsulta.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvModo.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvOrigemSolicitacao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvTipoAssociacao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvTipoEntidade.cs" />
+    <Compile Include="Core\Web\Controles\Portal\DropDownList\DropDownList.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadCsv.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadDoc.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadExcel.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadHtml.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadPdf.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadTxt.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoEnviarEmail.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoImprimir.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcoes.cs" />
+    <Compile Include="Core\Web\Controles\Portal\QuadroAviso\QuadroAviso.cs" />
+    <Compile Include="Core\Web\Controles\Portal\TableSize\TableSize.cs" />
+    <Compile Include="Core\Web\Controles\Portal\TableSize\TableSizeAlign.cs" />
+    <Compile Include="ExtensaoMetodo.cs" />
+    <Compile Include="Features\ModulosCorban\ModulosCorban.EventReceiver.cs">
+      <DependentUpon>ModulosCorban.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ModulosMdr\ModulosMdr.EventReceiver.cs">
+      <DependentUpon>ModulosMdr.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Modulos\Modulos.EventReceiver.cs">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\OutrosServicos\AceiteRestricao.aspx.cs">
+      <DependentUpon>AceiteRestricao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\OutrosServicos\AceiteRestricao.aspx.designer.cs">
+      <DependentUpon>AceiteRestricao.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\OutrosServicos\SelecionaCarta.aspx.cs">
+      <DependentUpon>SelecionaCarta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\OutrosServicos\SelecionaCarta.aspx.designer.cs">
+      <DependentUpon>SelecionaCarta.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\DadosBuscaCorban.cs" />
+    <Compile Include="Modelos\PrecoUnicoView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EmissorServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EntidadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaterialVendaServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaximoServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NkPlanoContasServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OfertaServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RegimeFranquiaServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SolicitacaoServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WaOutrosServicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WMOutrosServicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ZPContaCertaServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ZPOutrosServicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ZPPlanoContasServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebPartsCorban\HistoricoTransacoesCorban\HistoricoTransacoesCorban.cs" />
+    <Compile Include="WebPartsCorban\HistoricoTransacoesCorban\HistoricoTransacoesCorbanUserControl.ascx.cs">
+      <DependentUpon>HistoricoTransacoesCorbanUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPartsCorban\HistoricoTransacoesCorban\HistoricoTransacoesCorbanUserControl.ascx.designer.cs">
+      <DependentUpon>HistoricoTransacoesCorbanUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultaDeBancoEmissor\ConsultarBancoEmissor.cs" />
+    <Compile Include="WebParts\ConsultaDeBancoEmissor\ConsultarBancoEmissorUserControl.ascx.cs">
+      <DependentUpon>ConsultarBancoEmissorUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultaDeBancoEmissor\ConsultarBancoEmissorUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultarBancoEmissorUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultaKitsMaterial\ConsultaKitsMaterial.cs" />
+    <Compile Include="WebParts\ConsultaKitsMaterial\ConsultaKitsMaterialUserControl.ascx.cs">
+      <DependentUpon>ConsultaKitsMaterialUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultaKitsMaterial\ConsultaKitsMaterialUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultaKitsMaterialUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultarKitsMaterialComp\ConsultarKitsMaterialComp.cs" />
+    <Compile Include="WebParts\ConsultarKitsMaterialComp\ConsultarKitsMaterialCompUserControl.ascx.cs">
+      <DependentUpon>ConsultarKitsMaterialCompUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultarKitsMaterialComp\ConsultarKitsMaterialCompUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultarKitsMaterialCompUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultarOfertas\ConsultarOfertas.cs" />
+    <Compile Include="WebParts\ConsultarOfertas\ConsultarOfertasUserControl.ascx.cs">
+      <DependentUpon>ConsultarOfertasUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultarOfertas\ConsultarOfertasUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultarOfertasUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultarPlano\ConsultarPlano.cs" />
+    <Compile Include="WebParts\ConsultarPlano\ConsultarPlanoUserControl.ascx.cs">
+      <DependentUpon>ConsultarPlanoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultarPlano\ConsultarPlanoUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultarPlanoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultarStatusSolicitacao\ConsultarStatusSolicitacao.cs" />
+    <Compile Include="WebParts\ConsultarStatusSolicitacao\ConsultarStatusSolicitacaoUserControl.ascx.cs">
+      <DependentUpon>ConsultarStatusSolicitacaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultarStatusSolicitacao\ConsultarStatusSolicitacaoUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultarStatusSolicitacaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ContrateAqui\ContrateAqui.cs" />
+    <Compile Include="WebParts\ContrateAqui\ContrateAquiUserControl.ascx.cs">
+      <DependentUpon>ContrateAquiUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ContrateAqui\ContrateAquiUserControl.ascx.designer.cs">
+      <DependentUpon>ContrateAquiUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\FacaSuaSolicitacao\FacaSuaSolicitacao.cs" />
+    <Compile Include="WebParts\FacaSuaSolicitacao\FacaSuaSolicitacaoUserControl.ascx.cs">
+      <DependentUpon>FacaSuaSolicitacaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\FacaSuaSolicitacao\FacaSuaSolicitacaoUserControl.ascx.designer.cs">
+      <DependentUpon>FacaSuaSolicitacaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\SerasaComprovante\SerasaComprovante.cs" />
+    <Compile Include="WebParts\SerasaComprovante\SerasaComprovanteUserControl.ascx.cs">
+      <DependentUpon>SerasaComprovanteUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\SerasaComprovante\SerasaComprovanteUserControl.ascx.designer.cs">
+      <DependentUpon>SerasaComprovanteUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\SolicitarMateriais\SolicitarMateriais.cs" />
+    <Compile Include="WebParts\SolicitarMateriais\SolicitarMateriaisUserControl.ascx.cs">
+      <DependentUpon>SolicitarMateriaisUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\SolicitarMateriais\SolicitarMateriaisUserControl.ascx.designer.cs">
+      <DependentUpon>SolicitarMateriaisUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\SolicitarMaterialVendas\SolicitarMaterialVendas.cs" />
+    <Compile Include="WebParts\SolicitarMaterialVendas\SolicitarMaterialVendasUserControl.ascx.cs">
+      <DependentUpon>SolicitarMaterialVendasUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\SolicitarMaterialVendas\SolicitarMaterialVendasUserControl.ascx.designer.cs">
+      <DependentUpon>SolicitarMaterialVendasUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WpMdr\DetalheOfertaContaCerta\DetalheOfertaContaCerta.ascx.cs">
+      <DependentUpon>DetalheOfertaContaCerta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WpMdr\DetalheOfertaContaCerta\DetalheOfertaContaCerta.ascx.g.cs">
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DetalheOfertaContaCerta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WpMdr\SelecionarOferta\SelecionarOferta.ascx.cs">
+      <DependentUpon>SelecionarOferta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WpMdr\SelecionarOferta\SelecionarOferta.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelecionarOferta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WpMdr\TaxaOferta\TaxaOferta.ascx.cs">
+      <DependentUpon>TaxaOferta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WpMdr\TaxaOferta\TaxaOferta.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaxaOferta.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e641b520-7e78-477c-8d2f-f787a81ea398}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\WebPartsMdr\WebPartsMdr.feature">
+      <FeatureId>{c20746d8-8656-48f0-a08b-2e97f1e4d9f2}</FeatureId>
+    </None>
+    <None Include="Features\ModulosMdr\ModulosMdr.feature">
+      <FeatureId>{eb706bd6-48cc-492f-97a5-2c702990bbe0}</FeatureId>
+    </None>
+    <None Include="Features\WebPartsCorban\WebPartsCorban.feature">
+      <FeatureId>{1b5dcba4-0757-411d-86b1-6a2ea4cc1c81}</FeatureId>
+    </None>
+    <None Include="Features\ModulosCorban\ModulosCorban.feature">
+      <FeatureId>{50df1791-2090-468b-b0cd-ef7e26cadc47}</FeatureId>
+    </None>
+    <None Include="Features\Modulos\Modulos.feature">
+      <FeatureId>{47536226-f02d-48e2-949e-097f97836e28}</FeatureId>
+    </None>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{394998be-afae-41c0-8803-6d1c870eda96}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{231779e2-fb50-40db-9df0-bdb04936ecdf}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\Manuais\ficha_serasa02.pdf" />
+    <None Include="Layouts\OutrosServicos\Scripts\consultar-banco-emissor.min.js.map">
+      <DependentUpon>consultar-banco-emissor.js</DependentUpon>
+    </None>
+    <None Include="Layouts\OutrosServicos\Scripts\contrate-aqui.min.js.map">
+      <DependentUpon>contrate-aqui.js</DependentUpon>
+    </None>
+    <None Include="Layouts\OutrosServicos\Scripts\serasa-comprovante.min.js.map">
+      <DependentUpon>serasa-comprovante.js</DependentUpon>
+    </None>
+    <None Include="Layouts\OutrosServicos\Scripts\oferta-bonus-rede.min.js.map">
+      <DependentUpon>oferta-bonus-rede.js</DependentUpon>
+    </None>
+    <None Include="Layouts\OutrosServicos\Scripts\conta-certa.min.js.map">
+      <DependentUpon>conta-certa.js</DependentUpon>
+    </None>
+    <None Include="Layouts\OutrosServicos\Scripts\preco-unico.min.js.map">
+      <DependentUpon>preco-unico.js</DependentUpon>
+    </None>
+    <None Include="Layouts\OutrosServicos\Scripts\selecionar-oferta.min.js.map">
+      <DependentUpon>selecionar-oferta.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2f654649-c6e6-46f0-90d2-94ca4f4c28fb}</SharePointProjectItemId>
+    </None>
+    <None Include="ModulosCorban\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a199881b-2c63-4331-9d24-75f47bb3f64c}</SharePointProjectItemId>
+    </None>
+    <None Include="ModulosMdr\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e0e2b667-2103-43c6-a5b5-284bded91bd3}</SharePointProjectItemId>
+    </None>
+    <None Include="Modulos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cc450d12-2d61-4d92-9024-42befe0f04c1}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Package\Package.package">
+      <PackageId>{cc5d6d18-1f13-4124-86e9-114eabda0aae}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebPartsCorban\HistoricoTransacoesCorban\HistoricoTransacoesCorban.webpart" />
+    <None Include="WebPartsCorban\HistoricoTransacoesCorban\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3584778b-8685-4998-84fa-55bb974ba2e0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConsultaDeBancoEmissor\ConsultarBancoEmissor.webpart" />
+    <None Include="WebParts\ConsultaDeBancoEmissor\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{66910b4d-fb66-4dd9-af5f-7cd76d69122e}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConsultaKitsMaterial\ConsultaKitsMaterial.webpart" />
+    <None Include="WebParts\ConsultaKitsMaterial\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{676e7ca4-25db-4ab2-99eb-685cd787ea81}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConsultarKitsMaterialComp\ConsultarKitsMaterialComp.webpart" />
+    <None Include="WebParts\ConsultarKitsMaterialComp\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{104b759c-8bd0-4438-8ae7-efe339e7952a}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConsultarOfertas\ConsultarOfertas.webpart" />
+    <None Include="WebParts\ConsultarOfertas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{af9464fc-ab41-4ab6-999b-f5cb0bdbc3bb}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConsultarPlano\ConsultarPlano.webpart" />
+    <None Include="WebParts\ConsultarPlano\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{41ea7573-1ec6-43a8-92a5-ea54b7f8f831}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConsultarStatusSolicitacao\ConsultarStatusSolicitacao.webpart" />
+    <None Include="WebParts\ConsultarStatusSolicitacao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8de8ec42-7712-489f-9658-31dcf92ecfd0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ContrateAqui\ContrateAqui.webpart" />
+    <None Include="WebParts\ContrateAqui\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{545ef443-ca2c-4687-a6d6-2d48e0692246}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\FacaSuaSolicitacao\FacaSuaSolicitacao.webpart" />
+    <None Include="WebParts\FacaSuaSolicitacao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{92229424-8f07-49ec-8ed9-d63bb64033e8}</SharePointProjectItemId>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WebParts\SerasaComprovante\SerasaComprovante.webpart" />
+    <None Include="WebParts\SerasaComprovante\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c47c1494-46cb-48b4-91e6-4c1c76421252}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SolicitarMateriais\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{477a56cf-2502-468b-8ad1-6e7abaa17b46}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SolicitarMateriais\SolicitarMateriais.webpart" />
+    <None Include="WebParts\SolicitarMaterialVendas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2e83c1af-9a38-4da4-9778-86556d45490b}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SolicitarMaterialVendas\SolicitarMaterialVendas.webpart" />
+    <None Include="WpMdr\DetalheOfertaContaCerta\DetalheOfertaContaCerta.webpart" />
+    <None Include="WpMdr\DetalheOfertaContaCerta\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3fe594ec-5469-4899-9926-e9ff45280a39}</SharePointProjectItemId>
+    </None>
+    <None Include="WpMdr\SelecionarOferta\SelecionarOferta.webpart" />
+    <None Include="WpMdr\SelecionarOferta\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c7dc8a00-5de6-4ef4-9927-3c6b4229873a}</SharePointProjectItemId>
+    </None>
+    <None Include="WpMdr\TaxaOferta\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ef890cf3-34b8-43d1-80b6-1456500018a1}</SharePointProjectItemId>
+    </None>
+    <None Include="WpMdr\TaxaOferta\TaxaOferta.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EmissorServico\" />
+    <WCFMetadataStorage Include="Service References\EntidadeServico\" />
+    <WCFMetadataStorage Include="Service References\MaterialVendaServico\" />
+    <WCFMetadataStorage Include="Service References\MaximoServico\" />
+    <WCFMetadataStorage Include="Service References\NkPlanoContasServico\" />
+    <WCFMetadataStorage Include="Service References\OfertaServico\" />
+    <WCFMetadataStorage Include="Service References\RegimeFranquiaServico\" />
+    <WCFMetadataStorage Include="Service References\SolicitacaoServico\" />
+    <WCFMetadataStorage Include="Service References\WaOutrosServicos\" />
+    <WCFMetadataStorage Include="Service References\WMOutrosServicos\" />
+    <WCFMetadataStorage Include="Service References\ZPContaCertaServico\" />
+    <WCFMetadataStorage Include="Service References\ZPOutrosServicos\" />
+    <WCFMetadataStorage Include="Service References\ZPPlanoContasServico\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaterialVendaServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlTemplates\OutrosServicos\Corban\Paginador.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ControlTemplates\OutrosServicos\Mdr\ConteudoEditavel.ascx" />
+    <Content Include="ControlTemplates\OutrosServicos\Mdr\DetalheOfertaContaCerta.ascx" />
+    <Content Include="ControlTemplates\OutrosServicos\Mdr\GridDetalheOferta.ascx" />
+    <Content Include="ControlTemplates\OutrosServicos\Mdr\SelecionarOferta.ascx" />
+    <Content Include="ControlTemplates\OutrosServicos\Mdr\TaxaOferta.ascx" />
+    <Content Include="ControlTemplates\OutrosServicos\Ofertas\ContaCerta.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ControlTemplates\OutrosServicos\Ofertas\JapaoBonusRede.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ControlTemplates\OutrosServicos\Ofertas\TurquiaPrecoUnico.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\WebPartsMdr\WebPartsMdr.Template.xml">
+      <DependentUpon>WebPartsMdr.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ModulosMdr\ModulosMdr.Template.xml">
+      <DependentUpon>ModulosMdr.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebPartsCorban\WebPartsCorban.Template.xml">
+      <DependentUpon>WebPartsCorban.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ModulosCorban\ModulosCorban.Template.xml">
+      <DependentUpon>ModulosCorban.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Modulos\Modulos.Template.xml">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\OutrosServicos\btnExpandir.png" />
+    <Content Include="Images\OutrosServicos\btnOcultar.png" />
+    <Content Include="Layouts\OutrosServicos\Corban\ico_dinheiro.png" />
+    <Content Include="Images\OutrosServicos\seta.gif" />
+    <Content Include="Layouts\OutrosServicos\Corban\exportar-consulta.js" />
+    <Content Include="Layouts\OutrosServicos\Corban\filtro.js" />
+    <Content Include="Layouts\OutrosServicos\AceiteRestricao.aspx" />
+    <Content Include="Layouts\OutrosServicos\Scripts\contrate-aqui.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\contrate-aqui.min.js">
+      <DependentUpon>contrate-aqui.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Scripts\serasa-comprovante.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\serasa-comprovante.min.js">
+      <DependentUpon>serasa-comprovante.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Styles\contrate-aqui.css" />
+    <Content Include="Layouts\OutrosServicos\Styles\contrate-aqui.min.css">
+      <DependentUpon>contrate-aqui.css</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Scripts\solicitacao-materiais.js" />
+    <Content Include="Layouts\OutrosServicos\Corban\historico-transacoes-corban.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\consultar-banco-emissor.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\consultar-banco-emissor.min.js">
+      <DependentUpon>consultar-banco-emissor.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Scripts\jquery.printElement.custom.min.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\oferta-bonus-rede.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\oferta-bonus-rede.min.js">
+      <DependentUpon>oferta-bonus-rede.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Scripts\conta-certa.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\conta-certa.min.js">
+      <DependentUpon>conta-certa.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Scripts\preco-unico.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\preco-unico.min.js">
+      <DependentUpon>preco-unico.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Scripts\selecionar-oferta.js" />
+    <Content Include="Layouts\OutrosServicos\Scripts\selecionar-oferta.min.js">
+      <DependentUpon>selecionar-oferta.js</DependentUpon>
+    </Content>
+    <Content Include="Layouts\OutrosServicos\Styles\oferta-bonus-rede.css" />
+    <Content Include="Layouts\OutrosServicos\Styles\turquia-preco-unico.min.css">
+      <DependentUpon>turquia-preco-unico.css</DependentUpon>
+    </Content>
+    <Content Include="ModulosMdr\Paginas\DetalheOfertaContaCerta.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\ZPContaCertaServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MaximoServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\SolicitarMateriais\Elements.xml" />
+    <Content Include="WebParts\SolicitarMateriais\SolicitarMateriaisUserControl.ascx" />
+    <Content Include="WpMdr\DetalheOfertaContaCerta\DetalheOfertaContaCerta.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DetalheOfertaContaCerta.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WpMdr\DetalheOfertaContaCerta\Elements.xml" />
+    <Content Include="WpMdr\SelecionarOferta\Elements.xml" />
+    <Content Include="WpMdr\SelecionarOferta\SelecionarOferta.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>SelecionarOferta.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WpMdr\TaxaOferta\Elements.xml" />
+    <Content Include="WpMdr\TaxaOferta\TaxaOferta.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>TaxaOferta.ascx.g.cs</LastGenOutput>
+    </Content>
+    <None Include="Service References\EntidadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EmissorServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Layouts\OutrosServicos\Atendimento.htm" />
+    <None Include="Service References\RegimeFranquiaServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Layouts\OutrosServicos\Styles\turquia-preco-unico.css" />
+    <Content Include="Layouts\OutrosServicos\SelecionaCarta.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\SolicitacaoServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ModulosCorban\Paginas\Elements.xml" />
+    <Content Include="ModulosCorban\Paginas\HistoricoTransacoesCorban.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModulosMdr\Paginas\DetalheOfertaTaxa.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ModulosMdr\Paginas\Elements.xml" />
+    <Content Include="ModulosMdr\Paginas\SelecionarOferta.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\ConsultarOfertasBonus.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\ConsultarOfertasContaCerta.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\ConsultarOfertasPrecoUnico.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConsultarOfertas.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConsultaCheques.aspx" />
+    <Content Include="Modulos\Paginas\pn_ConsultarBancoEmissor.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConsultarKitsMaterial.aspx" />
+    <Content Include="Modulos\Paginas\pn_ConsultarKitsMaterialComposicao.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConsultarPlano.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConsultarStatusSolicitacao.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConsultaSolicitacoes.aspx" />
+    <Content Include="Modulos\Paginas\pn_ContrateAqui.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_FacaSuaSolicitacao.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_SerasaComprovante.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_SolicitacoesMateriaVenda.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_SolicitarMaterialVendas.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\WMOutrosServicos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ZPOutrosServicos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ZPPlanoContasServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NkPlanoContasServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WaOutrosServicos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\OfertaServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebPartsCorban\HistoricoTransacoesCorban\Elements.xml" />
+    <Content Include="WebPartsCorban\HistoricoTransacoesCorban\HistoricoTransacoesCorbanUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultaDeBancoEmissor\ConsultarBancoEmissorUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultaDeBancoEmissor\Elements.xml" />
+    <Content Include="WebParts\ConsultaKitsMaterial\ConsultaKitsMaterialUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultaKitsMaterial\Elements.xml" />
+    <Content Include="WebParts\ConsultarKitsMaterialComp\ConsultarKitsMaterialCompUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultarKitsMaterialComp\Elements.xml" />
+    <Content Include="WebParts\ConsultarOfertas\ConsultarOfertasUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultarOfertas\Elements.xml" />
+    <Content Include="WebParts\ConsultarPlano\ConsultarPlanoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultarPlano\Elements.xml" />
+    <Content Include="WebParts\ConsultarStatusSolicitacao\ConsultarStatusSolicitacaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultarStatusSolicitacao\Elements.xml" />
+    <Content Include="WebParts\ContrateAqui\ContrateAquiUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ContrateAqui\Elements.xml" />
+    <Content Include="WebParts\FacaSuaSolicitacao\Elements.xml" />
+    <Content Include="WebParts\FacaSuaSolicitacao\FacaSuaSolicitacaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\SerasaComprovante\Elements.xml" />
+    <Content Include="WebParts\SerasaComprovante\SerasaComprovanteUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\SolicitarMaterialVendas\Elements.xml" />
+    <Content Include="WebParts\SolicitarMaterialVendas\SolicitarMaterialVendasUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

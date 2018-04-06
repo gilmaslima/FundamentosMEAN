@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{581F4D12-FCCC-4C35-B5C0-627104CD93C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rede.PN.Credenciamento.Sharepoint</RootNamespace>
+    <AssemblyName>Rede.PN.Credenciamento.Sharepoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Projects\Rede - Novo Portal\DEV\MultivanAlelo\PNCredenciamento\Backup1\Rede.PN.Credenciamento.Sharepoint\</UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\Base\UserControlCredenciamentoBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\Conclusao.ascx.cs">
+      <DependentUpon>Conclusao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\Conclusao.ascx.designer.cs">
+      <DependentUpon>Conclusao.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\CondicaoComercial.ascx.cs">
+      <DependentUpon>CondicaoComercial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\CondicaoComercial.ascx.designer.cs">
+      <DependentUpon>CondicaoComercial.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\Confirmacao.ascx.cs">
+      <DependentUpon>Confirmacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\Confirmacao.ascx.designer.cs">
+      <DependentUpon>Confirmacao.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosBancarios.ascx.cs">
+      <DependentUpon>DadosBancarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosBancarios.ascx.designer.cs">
+      <DependentUpon>DadosBancarios.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosContato.ascx.cs">
+      <DependentUpon>DadosContato.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosContato.ascx.designer.cs">
+      <DependentUpon>DadosContato.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosIniciais.ascx.cs">
+      <DependentUpon>DadosIniciais.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosIniciais.ascx.designer.cs">
+      <DependentUpon>DadosIniciais.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosOperacionais.ascx.cs">
+      <DependentUpon>DadosOperacionais.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosOperacionais.ascx.designer.cs">
+      <DependentUpon>DadosOperacionais.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\RecuperacaoProposta.ascx.cs">
+      <DependentUpon>RecuperacaoProposta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\RecuperacaoProposta.ascx.designer.cs">
+      <DependentUpon>RecuperacaoProposta.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\ResumoProposta.ascx.cs">
+      <DependentUpon>ResumoProposta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Rede.Credenciamento\ResumoProposta.ascx.designer.cs">
+      <DependentUpon>ResumoProposta.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Features\Modulos\Modulos.EventReceiver.cs">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Rede.Credenciamento\Handlers\DadosIniciais.ashx.cs">
+      <DependentUpon>DadosIniciais.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DRCepServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEAgencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEBancos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GECanais\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GECarteiras\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GECelulas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEContaCorr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEDomBancario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEEmpVenDir\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEFiliaisZona\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEGerencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEGrpComGer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEPendencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEPontoVen\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEProdutoParceiro\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEProdutos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEProprietarios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GERamosAtd\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GERegimes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEServicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GETaxaFiliacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GETipoCom\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Servico.DD\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TGAcaoCom\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TGCenarios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TGEventosEsp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TGFabHardware\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TGFichaTec\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TGForSoftware\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TGTipoEquip\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFAdministracao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFCampanhas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFDomBancario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFEnderecos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFOfertas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFParametros\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFParamOfertas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFProdutos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFPropostaValidarPassos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFProposta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFProprietarios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFScoreRisco\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFSerasa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFServicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFTecnologia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WMOcorrencia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Servicos\ServicosTG.cs" />
+    <Compile Include="Servicos\ServicosWF.cs" />
+    <Compile Include="Servicos\ServicosDR.cs" />
+    <Compile Include="Servicos\ServicosGE.cs" />
+    <Compile Include="WebParts\SolicitacaoCredenciamento\SolicitacaoCredenciamento.cs" />
+    <Compile Include="WebParts\SolicitacaoCredenciamento\SolicitacaoCredenciamentoUserControl.ascx.cs">
+      <DependentUpon>SolicitacaoCredenciamentoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\SolicitacaoCredenciamento\SolicitacaoCredenciamentoUserControl.ascx.designer.cs">
+      <DependentUpon>SolicitacaoCredenciamentoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1c7619fe-40e0-4ce3-9b54-1b464ebb2b4f}</SharePointProjectItemId>
+    </None>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\ResumoProposta.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\Rede.Credenciamento\Handlers\DadosIniciais.ashx" />
+    <None Include="Listas\EntidadeCanal\EntidadeCanalInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{94e2bbef-19a1-46c1-8bb5-c7500e5d8c3d}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\EntidadeCanal\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f99c7cab-12d9-4bc5-849f-fcec84ac2f8a}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Modulos\Modulos.feature">
+      <FeatureId>{79950eef-7bd3-4f3b-bed0-00e692b2c006}</FeatureId>
+    </None>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{2232da94-c7d4-4515-b0ff-c651bbfb21b6}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4dffcfd4-ac67-458d-b16e-78024a4e7f0d}</SharePointProjectItemId>
+    </None>
+    <None Include="Modulos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ea83c06d-003a-4761-b6d5-c694ac03130f}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{f26918d7-e550-4ef4-8ed1-71b135bbd867}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Rede.PN.Credenciamento.Modelo.Cenario.datasource" />
+    <None Include="Properties\DataSources\Rede.PN.Credenciamento.Modelo.DadosMatriz.datasource" />
+    <None Include="Properties\DataSources\Rede.PN.Credenciamento.Modelo.QuantidadeProposta.datasource" />
+    <None Include="Properties\DataSources\Rede.PN.Credenciamento.Modelo.Serasa.datasource" />
+    <None Include="WebParts\SolicitacaoCredenciamento\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a928c37b-b973-43e9-8e0f-3b02d6f004f9}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SolicitacaoCredenciamento\SolicitacaoCredenciamento.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\Conclusao.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\CondicaoComercial.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\Confirmacao.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosBancarios.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosContato.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosIniciais.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\DadosOperacionais.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\Rede.Credenciamento\RecuperacaoProposta.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\Rede.Credenciamento\Images\imagem_seta.png" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\conclusao.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\condicao-comercial.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\confirmacao.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\solicitacao-credenciamento.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\dados-bancarios.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\dados-contato.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\dados-iniciais.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\dados-operacionais.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\jquery.printElement.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Scripts\recuperacao-proposta.js" />
+    <Content Include="Layouts\Rede.Credenciamento\Styles\condicao-comercial.css" />
+    <Content Include="Layouts\Rede.Credenciamento\Styles\dados-contato.css" />
+    <Content Include="Layouts\Rede.Credenciamento\Styles\dados-bancarios.css" />
+    <Content Include="Layouts\Rede.Credenciamento\Styles\dados-iniciais.css" />
+    <Content Include="Layouts\Rede.Credenciamento\Styles\solicitacao-credenciamento.css" />
+    <Content Include="Listas\EntidadeCanal\Elements.xml" />
+    <Content Include="Listas\EntidadeCanal\EntidadeCanalInstance\Elements.xml" />
+    <Content Include="Listas\EntidadeCanal\Schema.xml" />
+    <Content Include="Features\Modulos\Modulos.Template.xml">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Modulos\Paginas\Elements.xml" />
+    <Content Include="Modulos\Paginas\SolicitacaoCredenciamento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\WMOcorrencia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFTecnologia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFSerasa\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFScoreRisco\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFProprietarios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFProposta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFParametros\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFOfertas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFEnderecos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFDomBancario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFAdministracao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TGTipoEquip\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TGForSoftware\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TGFichaTec\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TGFabHardware\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TGEventosEsp\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TGCenarios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TGAcaoCom\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Servico.DD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GETipoCom\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GETaxaFiliacao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEServicos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GERegimes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GERamosAtd\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEProprietarios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEProdutos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEPontoVen\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEPendencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEGrpComGer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEGerencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEFiliaisZona\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEEmpVenDir\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEDomBancario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEContaCorr\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GECelulas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GECarteiras\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GECanais\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEBancos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEAgencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DRCepServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFServicos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFProdutos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFCampanhas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFPropostaValidarPassos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFParamOfertas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEProdutoParceiro\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\SolicitacaoCredenciamento\Elements.xml" />
+    <Content Include="WebParts\SolicitacaoCredenciamento\SolicitacaoCredenciamentoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rede.PN.Credenciamento.Modelo\Rede.PN.Credenciamento.Modelo.csproj">
+      <Project>{C4C8DEA8-C20D-44FB-AE93-D1243F3E4AFC}</Project>
+      <Name>Rede.PN.Credenciamento.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DRCepServico\" />
+    <WCFMetadataStorage Include="Service References\GEAgencias\" />
+    <WCFMetadataStorage Include="Service References\GEBancos\" />
+    <WCFMetadataStorage Include="Service References\GECanais\" />
+    <WCFMetadataStorage Include="Service References\GECarteiras\" />
+    <WCFMetadataStorage Include="Service References\GECelulas\" />
+    <WCFMetadataStorage Include="Service References\GEContaCorr\" />
+    <WCFMetadataStorage Include="Service References\GEDomBancario\" />
+    <WCFMetadataStorage Include="Service References\GEEmpVenDir\" />
+    <WCFMetadataStorage Include="Service References\GEFiliaisZona\" />
+    <WCFMetadataStorage Include="Service References\GEGerencias\" />
+    <WCFMetadataStorage Include="Service References\GEGrpComGer\" />
+    <WCFMetadataStorage Include="Service References\GEPendencias\" />
+    <WCFMetadataStorage Include="Service References\GEPontoVen\" />
+    <WCFMetadataStorage Include="Service References\GEProdutoParceiro\" />
+    <WCFMetadataStorage Include="Service References\GEProdutos\" />
+    <WCFMetadataStorage Include="Service References\GEProprietarios\" />
+    <WCFMetadataStorage Include="Service References\GERamosAtd\" />
+    <WCFMetadataStorage Include="Service References\GERegimes\" />
+    <WCFMetadataStorage Include="Service References\GEServicos\" />
+    <WCFMetadataStorage Include="Service References\GETaxaFiliacao\" />
+    <WCFMetadataStorage Include="Service References\GETipoCom\" />
+    <WCFMetadataStorage Include="Service References\Servico.DD\" />
+    <WCFMetadataStorage Include="Service References\TGAcaoCom\" />
+    <WCFMetadataStorage Include="Service References\TGCenarios\" />
+    <WCFMetadataStorage Include="Service References\TGEventosEsp\" />
+    <WCFMetadataStorage Include="Service References\TGFabHardware\" />
+    <WCFMetadataStorage Include="Service References\TGFichaTec\" />
+    <WCFMetadataStorage Include="Service References\TGForSoftware\" />
+    <WCFMetadataStorage Include="Service References\TGTipoEquip\" />
+    <WCFMetadataStorage Include="Service References\WFAdministracao\" />
+    <WCFMetadataStorage Include="Service References\WFCampanhas\" />
+    <WCFMetadataStorage Include="Service References\WFDomBancario\" />
+    <WCFMetadataStorage Include="Service References\WFEnderecos\" />
+    <WCFMetadataStorage Include="Service References\WFOfertas\" />
+    <WCFMetadataStorage Include="Service References\WFParametros\" />
+    <WCFMetadataStorage Include="Service References\WFParamOfertas\" />
+    <WCFMetadataStorage Include="Service References\WFProdutos\" />
+    <WCFMetadataStorage Include="Service References\WFPropostaValidarPassos\" />
+    <WCFMetadataStorage Include="Service References\WFProposta\" />
+    <WCFMetadataStorage Include="Service References\WFProprietarios\" />
+    <WCFMetadataStorage Include="Service References\WFScoreRisco\" />
+    <WCFMetadataStorage Include="Service References\WFSerasa\" />
+    <WCFMetadataStorage Include="Service References\WFServicos\" />
+    <WCFMetadataStorage Include="Service References\WFTecnologia\" />
+    <WCFMetadataStorage Include="Service References\WMOcorrencia\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

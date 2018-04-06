@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99836F34-AC10-435A-BE3C-54637624456D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rede.PN.CondicaoComercial.SharePoint</RootNamespace>
+    <AssemblyName>Rede.PN.CondicaoComercial.SharePoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Redecard.PN.Comum, Version=4.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="wnvhtmlconvert, Version=5.5.0.29430, Culture=neutral, PublicKeyToken=5b5f377bc08a4d32, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\PDFConvert\wnvhtmlconvert.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Bandeira.cs" />
+    <Compile Include="Business\BandeiraImagem.cs" />
+    <Compile Include="Business\Flex.cs" />
+    <Compile Include="Business\ListaImagensBandeira.cs" />
+    <Compile Include="Business\Pdf.cs" />
+    <Compile Include="Business\Taxa.cs" />
+    <Compile Include="ControlTemplates\DadosBancarios\DadosBancariosCreditoUserControl.ascx.cs">
+      <DependentUpon>DadosBancariosCreditoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\DadosBancariosCreditoUserControl.ascx.designer.cs">
+      <DependentUpon>DadosBancariosCreditoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\DadosBancariosDebitoUserControl.ascx.cs">
+      <DependentUpon>DadosBancariosDebitoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\DadosBancariosDebitoUserControl.ascx.designer.cs">
+      <DependentUpon>DadosBancariosDebitoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\DadosBancariosVoucherUserControl.ascx.cs">
+      <DependentUpon>DadosBancariosVoucherUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\DadosBancariosVoucherUserControl.ascx.designer.cs">
+      <DependentUpon>DadosBancariosVoucherUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\TabelaCredito.ascx.cs">
+      <DependentUpon>TabelaCredito.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\TabelaCredito.ascx.designer.cs">
+      <DependentUpon>TabelaCredito.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\TabelaDebito.ascx.cs">
+      <DependentUpon>TabelaDebito.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\DadosBancarios\TabelaDebito.ascx.designer.cs">
+      <DependentUpon>TabelaDebito.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\Terminais\TerminaisUserControl.ascx.cs">
+      <DependentUpon>TerminaisUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\Terminais\TerminaisUserControl.ascx.designer.cs">
+      <DependentUpon>TerminaisUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Web\Controles\Portal\BotaoInformacao\BotaoInformacao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\BotaoInformacao\BotaoInformacaoPosition.cs" />
+    <Compile Include="Core\Web\Controles\Portal\Botao\Botao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadCsv.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadDoc.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadExcel.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadHtml.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadPdf.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadTxt.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoEnviarEmail.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoImprimir.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcoes.cs" />
+    <Compile Include="Core\Web\Controles\Portal\QuadroAviso\QuadroAviso.cs" />
+    <Compile Include="Service References\ContaCertaServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EntidadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaximoServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UsuarioServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ZPDadosCadastraisServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\TaxasCreditoDebito\TaxasCreditoDebito.cs" />
+    <Compile Include="WebParts\TaxasCreditoDebito\TaxasCreditoDebitoUserControl.ascx.cs">
+      <DependentUpon>TaxasCreditoDebitoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\TaxasCreditoDebito\TaxasCreditoDebitoUserControl.ascx.designer.cs">
+      <DependentUpon>TaxasCreditoDebitoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6dc7db9c-b3cc-4b86-92e0-d8f2dee034f4}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{649a6449-849a-49b9-ade6-49302731bc89}</FeatureId>
+    </None>
+    <None Include="Features\Modulos\Modulos.feature">
+      <FeatureId>{60b67ebd-db00-4890-99bb-b54bfae06bf9}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\PN.CondicaoComercial\Scripts\jquery.printElement.custom.min.js.map" />
+    <None Include="Layouts\PN.CondicaoComercial\Scripts\taxas-credito-debito.min.js.map">
+      <DependentUpon>taxas-credito-debito.js</DependentUpon>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dfa9c391-c523-41b4-b58f-0ad2516b4dbf}</SharePointProjectItemId>
+    </None>
+    <None Include="Modulos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2c7dacd7-a5be-41ad-beb3-6f6605e47a88}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="WebParts\TaxasCreditoDebito\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{abe7ceb7-56a3-4c72-bc99-b92ec0ce11a6}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\TaxasCreditoDebito\TaxasCreditoDebito.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlTemplates\DadosBancarios\DadosBancariosCreditoUserControl.ascx" />
+    <Content Include="ControlTemplates\DadosBancarios\DadosBancariosDebitoUserControl.ascx" />
+    <Content Include="ControlTemplates\DadosBancarios\DadosBancariosVoucherUserControl.ascx" />
+    <Content Include="ControlTemplates\DadosBancarios\TabelaCredito.ascx" />
+    <Content Include="ControlTemplates\DadosBancarios\TabelaDebito.ascx" />
+    <Content Include="ControlTemplates\Terminais\TerminaisUserControl.ascx" />
+    <Content Include="Layouts\PN.CondicaoComercial\Css\selecionar-oferta.css" />
+    <Content Include="Layouts\PN.CondicaoComercial\Scripts\jquery.printElement.custom.min.js" />
+    <Content Include="Layouts\PN.CondicaoComercial\Scripts\taxas-credito-debito.js" />
+    <Content Include="Layouts\PN.CondicaoComercial\Scripts\taxas-credito-debito.min.js">
+      <DependentUpon>taxas-credito-debito.js</DependentUpon>
+    </Content>
+    <None Include="Service References\EntidadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UsuarioServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MaximoServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ContaCertaServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ZPDadosCadastraisServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\TaxasCreditoDebito\TaxasCreditoDebitoUserControl.ascx" />
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Modulos\Modulos.Template.xml">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Content>
+    <Content Include="Modulos\Paginas\Elements.xml" />
+    <Content Include="Modulos\Paginas\taxas-e-ofertas-contratadas.aspx" />
+    <Content Include="WebParts\TaxasCreditoDebito\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{59faa145-12cc-4844-9005-5690d2a9ce7b}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ContaCertaServico\" />
+    <WCFMetadataStorage Include="Service References\EntidadeServico\" />
+    <WCFMetadataStorage Include="Service References\MaximoServico\" />
+    <WCFMetadataStorage Include="Service References\UsuarioServico\" />
+    <WCFMetadataStorage Include="Service References\ZPDadosCadastraisServico\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

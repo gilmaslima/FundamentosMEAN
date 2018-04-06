@@ -1,0 +1,82 @@
+/*
+© Copyright 2016 Rede S.A.
+Autor : ASH
+Empresa : Iteris Software e Consultoria.
+*/
+
+.side-menu.side-menu-atendimento {
+    display: block;
+    top: 45%;
+    bottom: inherit;    
+}
+
+.side-menu.side-menu-atendimento a:hover {
+    text-decoration: none;
+}
+
+.chat-pre {
+    position: absolute;
+    background-color: #FFF;
+    width: 100%;
+    overflow: hidden;        
+    max-height: 999px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.chat-pre .container-rede {
+    padding: 15px;
+}
+
+.chat-pre label {
+    display: block;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+
+.chat-pre.hidden {
+    max-height: 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.chat-window {
+    position: fixed;
+    top: 40%;
+    width: 200px;
+    height: 300px;
+}
+
+.chat-pre .btn-rede,
+.chat-pre .btn-primary {
+    min-width: 0;
+    width: 100%;
+}
+
+.chat-pre input[type="text"],
+.chat-pre textarea {
+    margin-bottom:10px;
+}
+
+.chat-pre input[type="text"]:invalid,
+.chat-pre input[type="text"]:required,
+.chat-pre textarea:invalid,
+.chat-pre textarea:required {
+    box-shadow: none;
+}
+
+.chat-pre input[type="text"] {
+    width:100%;
+}
+
+.chat-pre textarea{
+    margin-left:0 !important;
+    height:70px;
+    resize: none;
+    line-height: 22px;
+    width: 158px;
+}

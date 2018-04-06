@@ -1,0 +1,28 @@
+﻿/*
+Projeto: Redecard.PN.OutrosServicos
+Descrição: Folha de estilos Oferta Bonus Rede
+Autor/Empresa: Seygi kutani / Iteris Consultoria e Informática
+Cliente: Rede S.A.
+©Copyright: 2017 Rede S.A.
+Notas: 
+*/
+
+div.chart-infos-content.display-none {
+    display: none !important;
+}
+
+div.ui-dialog[aria-describedby="lbxModalAluguelCompensado"] span.ui-dialog-title {
+    height: 30px !important;
+}
+
+.lightbox-aluguelCompensado {
+    width: 400px !important;
+}
+
+.lightbox-beneficio {
+    width: 750px !important;
+}
+
+div#temp-impressao-content {
+    width: 800px;
+}

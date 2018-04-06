@@ -1,0 +1,813 @@
+@charset "utf-8";
+
+h2{
+	border-left:7px solid #FFCB00;
+	color:#14388C;
+	font:15pt Tahoma;
+	letter-spacing:-1px;
+	margin-bottom:20px;
+	padding:13px 0 0 4px;
+	text-transform:uppercase;
+}
+
+#main p.bg, #main div.bg{
+	float: left;
+	display: inline;
+	width: 100%;
+	/*background: url("../img/bg_sitemap.jpg") no-repeat center bottom;*/
+	/*padding-bottom: 60px;*/
+	margin: 10px 0 15px 0;
+}
+
+	#main div.bg img{
+		margin: 10px 15px 10px 0;
+	}
+	
+	#main div.bg p{
+		padding: 20px 0 0 0;
+	}
+
+#main p.intro{
+	margin: 0;
+}
+
+	#main p.intro strong{
+		float: left;
+		margin: 10px 0;
+		width: 100%;
+	}
+
+#main div.intro{
+	float: left;
+	display: inline;
+	width: 710px;
+	margin: 0 0 20px 0;
+}
+
+	#main div.intro img{
+		margin: 10px 15px 10px 0;
+	}
+
+	#main div.intro p.description{
+		float: left;
+		margin: 0;
+		width: 540px;
+	}
+	
+span.warning{
+	color: #ff0000;
+}
+
+#main #content .section{
+	float: left;
+	padding: 0 0 56px 0;
+}
+
+	#main #content .section .highlights{
+		float: left;
+		margin: 0;
+		width: 345px;
+	}
+	
+		#main #content .section .highlights h2{
+			float: left;
+			display: inline;
+			width: 206px;
+			border-left: solid #ffcb00 5px;
+			padding: 0 0 0 8px;
+			color: #14388c;
+			font-weight: normal;
+			font-size: 22px;
+			text-transform: uppercase;
+			margin: 0 0 8px 0;
+		}
+		
+		#main #content .section .highlights img{
+			margin: 0 0 0 14px;
+		}
+		
+		#main #content .section .highlights p{
+			float: left;
+			display: inline;
+			margin: 0 0 10px 14px;
+			color: #575757;
+			font-size: 11px;
+			width: 222px;
+		}
+		
+		#main #content .section .highlights p span{
+			float: left;
+			margin: 5px 0;
+			width: 100%;
+			font-size: 12px;
+		}
+
+		#main #content .section .highlights a{
+			float: left;
+			display: inline;
+			background: url(../img/area_logada/buttons/btn_bg_blue.png) no-repeat right top;
+			color: #ffc10c;
+			text-align: left;
+			padding-left: 15px;
+			padding-top:10px;
+			text-transform:uppercase;
+			width: 111px;
+			height: 30px;
+			margin: 0 0 0 14px;
+		}
+
+#main .boxes{
+	margin: 20px 0 0 0;
+}
+
+	#main .boxes .box, #main #sidebar .box{
+		float: left;
+		background: #eff1f7;
+		padding: 15px 20px 30px 20px !important;
+		width: 263px;
+		height: 132px;
+		margin: 0 20px 30px 0;
+		text-align: center;
+		font: 12px/1 Arial;
+	}
+	
+	#main #sidebar .box{
+		width: 221px;
+		height: 190px;
+		margin: 0;
+		background: url(../img/area_logada/bg_sidebar_box.jpg) no-repeat;
+	}
+	
+	#main .boxes .box h3, #main #sidebar .box h3{
+		float: left;
+		width: 100%;
+		color: #14388c !important;
+		font-size: 18px;
+		font-weight: normal;
+		text-transform: uppercase;
+		margin: 0 0 10px 0;
+		text-align: left;
+		background: none !important;
+	}
+	
+		#main .boxes .box h3 span, #main #sidebar .box h3 span{
+			float: left;
+			width: 93%;
+			font-size: 15px;
+			font-weight: bold;
+			padding: 0 0 0 20px;
+		}
+		
+	#main .boxes .box p, #main #sidebar .box p{
+		float: left;
+		padding: 0 0 0 20px;
+		margin: 0 0 20px 0;
+		text-align: left;
+	}
+	
+	#main #sidebar .box p{
+		padding: 0;
+		font-size: 12px !important;
+		margin: 0 0 40px 0 !important;
+	}
+
+	#main .boxes .box a, #main #sidebar .box a{
+		background: url(../img/area_logada/buttons/btn_bg_blue.png) no-repeat right top;
+		padding: 8px 30px 6px 8px;
+		height: 29px;
+		color: #ffc10c;
+		text-transform: uppercase;
+	}
+	
+	#main .boxes .box strong{
+		float: left;
+		padding: 0 0 0 20px;
+		margin: 0 0 20px 0;
+		text-align: left;
+	}
+
+#main .content_rav{
+	width: 680px !important;
+}
+
+#main .sidebar_rav{
+	width: 261px !important;
+}
+
+#main .receiveValues{
+	float: left;
+	width: 100%;
+}
+
+#main .odd{
+	float: left;
+	display: inline;
+	width: 100%;
+	background: url("../img/bg_sitemap.jpg") no-repeat center bottom;
+	padding-bottom: 60px;
+	margin: 0;
+}
+
+	#main .receiveValues p{
+		float: left;
+		width: 100%;
+		margin: 0 0 10px 0;
+	}
+	
+		#main .receiveValues p strong{
+			float: left;
+			font-size: 13px;
+			margin: 0 0 5px 0;
+			width: 100%;
+		}
+		
+		#main .receiveValues p .success{
+			float: left;
+			background: url(../img/area_logada/icons/ico_success.png) no-repeat left 5px;
+			padding: 6px 0 5px 28px;
+			font-size: 13px;
+			color: #183c8e;
+		}
+
+	#main .receiveValues a{
+		float: right;
+	}
+	
+	#main .receiveValues a.back{
+		float: left;
+	}
+
+	#main .receiveValues table{
+		clear: both;
+		font-size: 11px;
+		margin: 0 0 10px 130px;
+		border: solid #eff1f7 1px;
+		/*width: 398px;*/
+	}
+
+	#main .receiveValues table tbody tr td{
+		float: none;
+		border: none;
+		padding: 6px 15px;
+		text-align: center;
+	}
+
+	#main .receiveValues table tbody tr td.left{
+		text-align: left;
+		border-right: solid #ccd2e6 1px;
+		background: #e5e7f0;
+		color: #4d5e83;
+	}
+
+	#main .receiveValues table tbody tr td.bg{
+		background: #fff;
+	}
+	
+	#main .receiveValues table tbody tr td.right{
+		background: #eff1f7;
+	}
+
+#main .anticipationAutomatic{
+	float: left;
+}
+
+#main .anticipationAutomatic p{
+	float: left;
+	width: 100%;
+}
+
+	#main .anticipationAutomatic p strong{
+		float: left;
+		width: 100%;
+		margin: 0 0 6px 0;
+	}
+	
+	#main .anticipationAutomatic p span{
+		float: left;
+		width: 100%;
+		font-size: 11px;
+		margin: 10px 0;
+		color: #ababab;
+	}
+
+#main .anticipationAutomatic form{
+	float: left;
+	width: 100%;	
+}
+
+	#main .anticipationAutomatic form fieldset{
+		background: #eff1f7;
+		padding: 20px;
+		margin: 0 0 20px 0;
+	}
+	
+		#main .anticipationAutomatic form fieldset p{
+			float: left;
+			width: 100%;
+			margin: 20px 0 5px 0;
+		}
+		
+		#main .anticipationAutomatic form fieldset p.first{
+			margin: 0;
+		}
+		
+		#main .anticipationAutomatic form fieldset div{
+			float: left;
+			width: 100%;
+		}
+		
+		#main .anticipationAutomatic form fieldset div a.addEmail{
+			float: left;
+			clear: left;
+			margin: 5px 0 0 0;
+			padding: 0 0 0 10px;
+			font-size: 11px;
+			background: url(../img/area_logada/bullets/lista_sidebar.gif) no-repeat left center;
+		}
+		
+		#main .anticipationAutomatic form fieldset div input{
+			float: left;
+			background: #fff;
+			border: solid 2px #a5abb9;
+			height: 11px;
+			width: 160px;
+			font-size: 10px;
+			color: #183c8e;
+			padding: 3px 5px;
+		}
+		
+		#main .anticipationAutomatic form fieldset div input.radio{
+			width: auto;
+			clear: none;
+			border: none;
+		}
+		
+		#main .anticipationAutomatic form fieldset div input.calendar{
+			float: left;
+			clear: none;
+			display: inline;
+			background: url(../img/icons/ico_calendar.gif) no-repeat left top;
+			text-indent: -9999px;
+			width: 16px;
+			height: 15px;
+			margin: 4px 0;
+			border: none;
+		}
+		
+		#main .anticipationAutomatic form fieldset div span, #main .anticipationAutomatic form fieldset div label, #main .anticipationAutomatic form fieldset div input.radio{
+			float: left;
+			margin: 5px 5px 0 0;
+		}
+		
+		#main .anticipationAutomatic form fieldset div label.center{
+			margin: 5px 15px;
+			width: auto;
+		}
+		
+		#main .anticipationAutomatic form fieldset div span{
+			font-size: 11px;
+			margin: 4px 0 0 5px;
+			color: #ababab;
+		}
+		
+		#main .anticipationAutomatic form fieldset div select{
+			width: 110px;
+		}
+		
+		#main .anticipationAutomatic form fieldset div select.day{
+			width: 40px;
+		}
+		
+		#main .anticipationAutomatic form fieldset div select.month{
+			width: 75px;
+		}
+		
+		#main .anticipationAutomatic form fieldset div select.year{
+			width: 50px;
+		}
+		
+		#main .anticipationAutomatic form fieldset div.jqf1Sel{
+			float: left;
+			background-image: url("../img/form/jqf4.png");
+			height: 17px;
+		}
+		
+		#main .anticipationAutomatic form fieldset div.jqf1Sel{
+			margin: 3px 6px 10px 0;
+		}
+		
+			#main .anticipationAutomatic form fieldset div.jqf1Sel div.jqf1SelAtivo{
+				background-image: url("../img/form/jqf4.png");
+				background-position: right -500px;
+				height: 17px;
+			}
+			
+				#main .anticipationAutomatic form fieldset div.jqf1Sel div.jqf1SelAtivo a{
+					background-image: url("../img/form/jqf4.png");
+					background-position: left -471px;
+					height: 17px;
+					padding-top: 2px;
+				}
+
+	#main .anticipationAutomatic table{
+		clear: both;
+		font-size: 11px;
+		margin: 15px 0 10px 130px;
+		border: solid #eff1f7 1px;
+		/*width: 398px;*/
+	}
+
+	#main .anticipationAutomatic table tbody tr td{
+		float: none;
+		border: none;
+		padding: 6px 15px;
+		text-align: center;
+	}
+
+	#main .anticipationAutomatic table tbody tr td.left{
+		text-align: left;
+		border-right: solid #ccd2e6 1px;
+		background: #e5e7f0;
+		color: #4d5e83;
+	}
+
+	#main .anticipationAutomatic table tbody tr td.bg{
+		background: #fff;
+	}
+	
+	#main .anticipationAutomatic table tbody tr td.right{
+		background: #eff1f7;
+	}
+	
+	#main .anticipationAutomatic a.back{
+		float: left;
+	}
+	
+#main p.cancellationRequest{
+	float: left;
+	background: url("../img/area_logada/icons/ico_x.png") no-repeat left 2px;
+	padding: 4px 0 0 26px;
+	margin: 10px 0 0 0;
+	color: #183c8e;
+	font-size: 15px;
+}
+
+	#main p.cancellationRequest a{
+		float: left;
+		clear: left;
+		margin: 5px 0 0 0;
+		padding: 0 0 0 10px;
+		font-size: 11px;
+		background: url(../img/area_logada/bullets/lista_sidebar.gif) no-repeat left center;
+	}
+
+#main .receiveValues table.creditToday{
+	background: #fafafc;
+	margin-left: 20px;
+	float: left;
+}
+	
+	#main .receiveValues table.creditToday tbody tr td.right{
+		text-align: center;
+		background: #eff1f7;
+		border-right: none;
+	}
+	
+	#main .receiveValues table.creditToday tbody tr td.middle, #main .receiveValues table.creditToday tbody tr td.left{
+		text-align: center;
+		border-right: 1px solid #CCD2E6
+	}
+	
+	#main .receiveValues table.creditToday tbody tr td.left{
+		background: none;
+		color: #575757;
+	}
+	
+	#main .receiveValues table.creditToday tbody tr td.bg{
+		background: #d8dbe7;
+	}
+	
+	#main .receiveValues table.creditToday tbody tr td.middle_bg, #main .receiveValues table.creditToday tbody tr td.left_bg{
+		background: #e5e7f0;
+	}
+	
+	table.creditToday tbody tr td span{
+		color: #4d5e83;
+	}
+	
+	table.creditToday tbody tr td span.red{
+		color: #ff0000;
+	}
+
+#main .icoAjuda {
+	display: inline;
+	float: left;
+	padding: 4px 0 0 6px;
+	position: relative;
+	z-index: 4;
+}
+
+#main .ajuda {
+	background: url(../img/area_logada/bg_ajuda.png) no-repeat;
+	display: none;
+	height: 150px !important;
+	left: 18px;
+	padding: 0 15px 0 25px !important;
+	position: absolute;
+	top: -26px;
+	width: 212px !important;
+	border: none  !important;
+	float: none  !important;
+}
+
+#main .icoAjuda .ajuda h3 {
+	font: bold 14px Arial !important;
+	margin-top: 12px !important;
+}
+
+#main .icoAjuda .ajuda p {
+	float: none !important;
+	font-size: 11px !important;
+	line-height: 14px !important;
+	margin: 1em 0 0 !important;
+	padding: 0 !important;
+	text-transform: none !important;
+}
+
+.model{
+	top: 250px;
+	width: auto;
+}
+
+	.model img, .model p{
+		float: left;
+		clear: left;
+		padding: 10px;
+	}
+	
+	.model div{
+		float: left;
+		text-align: center;
+		clear: left;
+		width: 100%;
+		padding: 10px 0;
+	}
+	
+	.model p strong{
+		float: left;
+		clear: left;
+		margin: 0 0 5px 0;
+	}
+
+	.model a.closeModal{
+		position:  absolute;
+		top: 0;
+		right: 0;
+		width: 20px;
+		height: 20px;
+		background: url(../img/area_logada/buttons/btn_close.gif) no-repeat;
+		text-indent: -9999px;
+		margin: 15px 15px 0 0;
+	}
+	
+	.model div a.closeModel{
+		float: none !important;
+		text-align: center;
+	}
+
+fieldset.boxConsulta {
+	border-bottom: solid 1px #ccd2e6;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	margin: 0 300px 0 0;
+	padding: 20px;
+	background-color: #eff1f7;
+	float: left;
+	width: 320px;
+}
+
+fieldset.boxConsulta p.txtTit {
+	color: #575757;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 7px 0;
+}
+
+fieldset.boxConsulta p {
+	color: #575757;
+	font-size: 11px;
+}
+
+fieldset.boxConsulta label {
+	width: 85px;
+	margin: 7px 0 0 0;
+	float: left;
+}
+
+fieldset.boxConsulta .btnConsulta {
+	float: left;
+	margin: 7px 0 0 0;
+}
+
+fieldset.boxConsulta label input {
+	border: solid 2px #b6bac2;
+	width: 70px;
+}
+
+.respConsulta {
+	width: 320px;
+	padding: 20px;
+	float: left;
+	background-color: #fbfbfe;
+	border-bottom: solid 1px #ccd2e6;
+	display: none;
+}
+
+.respConsulta ul.info {
+	width: 300px;
+	float: left;
+}
+
+.respConsulta ul.info li {
+	color: #575757;
+	font-size: 12px;
+	margin: 0 0 10px 0;
+}
+
+.respConsulta ul.info li.cod {
+	color: #575757;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.respConsulta ul.info li span {
+	font-weight: bold;
+}
+
+fieldset.maquina  {
+	margin: 25px 0 0 0;
+	padding: 0;
+	float: left;
+	width: 718px;
+}
+
+fieldset.maquina .boxManutencao {
+	background-color: #eff1f7;
+	width: 300px;
+	float: left;
+	margin: 0 25px 0 0;
+	padding: 20px;
+	min-height: 110px;
+}
+
+fieldset.maquina .boxManutencao2 {
+	background-color: #eff1f7;
+	width: 300px;
+	float: left;
+	padding: 20px;
+	min-height: 110px;
+}
+
+fieldset.maquina label {
+	width: 275px;
+	float: left;
+	margin: 10px 0 0 0;
+}
+
+fieldset.maquina label select {
+	width: 290px;
+}
+
+fieldset.maquina label input {
+	width: 286px;
+	border: 2px solid #b6bac2;
+}
+
+fieldset.maquina p {
+	float: left;
+	width: 290px;
+	font-weight: bold;
+	color: #575757;
+	font-size: 13px;
+}
+
+fieldset.maquina p.btnOk1 {
+	margin: 10px 0 0 0;
+}
+
+fieldset.maquina p.btnOk2 {
+	margin: 45px 0 0 0;
+}
+
+.boxResultado {
+	width: 703px;
+	float: left;
+	border-top: solid 1px #ccd2e6;
+	margin: 25px 0 0 0;
+	padding: 25px 0 0 0;
+}
+
+.boxResultado p {
+	color: #575757;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 20px 0;
+}
+
+.boxResultado p span {
+	color: #d41212;
+}
+
+.vacancies{
+	float: left;
+}
+
+.vacancies h4{
+	float: left;
+	display: inline;
+	font-size: 14px;
+	color: #183c8e;
+	margin: 0 0 10px 0;
+	width: 700px;
+}
+
+.vacancies ul{
+	float: left;
+	display: inline;
+	padding: 0 0 10px 0;
+	margin: 0;
+	list-style: none;
+}
+
+.vacancies ul li{
+	float: left;
+	display: inline;
+	background: #eff1f7;
+	padding: 1px;
+	margin: 0 0 10px 0;
+	width: 700px;
+}
+
+.vacancies ul li a{
+	float: left;
+	background: #e1e4ed url("../img/icons/ico_blue_more.jpg") no-repeat 10px center;
+	width: 660px;
+	padding: 10px 10px 10px 30px;
+	font-weight: bold;
+}
+
+.vacancies ul li a.less{
+	background-image: url("../img/icons/ico_blue_less.jpg");
+}
+
+.vacancies ul li div.descriptionVague{
+	float: left;
+	background: #eff1f7;
+	width: 700px;
+	padding: 0;
+	margin: 0;
+	color: #575757;
+	font-size: 11px;
+	display: none;
+}
+
+.vacancies ul li div.descriptionVague p.desc{
+	color: #575757;
+	font-size: 11px;
+	font-weight: normal;
+	margin: 0;
+	padding: 20px;
+	float: left;
+	line-height: 12px;
+}	
+			
+.vacancies ul li div.descriptionVague div a{
+	float: left;
+	display: inline;
+	background: url("../img/buttons/btn_quero_candidatar_essa_vaga.png") no-repeat left top;
+	text-indent: -9999px;
+	width: 189px;
+	height: 47px;
+}
+
+.areaSimulador {
+	float: left;
+}
+
+ul.prevencao {
+	float: left;
+}
+
+ul.prevencao li {
+	background: url(../img/bullets/bullet_lista.gif) no-repeat left 2px;
+	padding: 0 0 0 15px;
+	color: #575757;
+	font-size: 12px;
+	margin: 0 0 20px 0;
+}
+
+ul.prevencao li span {
+	font-weight: bold;
+}

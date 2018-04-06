@@ -1,0 +1,33 @@
+﻿/*
+Projeto: BBF - Facelift
+Descrição: css a ser aplicado no modo de impressao
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+*/
+
+@media print {
+    /*div.content-row[id$=divRelatorioValores] {
+        background-color: aqua;
+    }*/
+    
+    div.col-2.quadroTotais {
+        margin-bottom: 65px;
+    }
+
+    div.col-2.quadroTotais > div.col {
+        width: 340px !important;
+    }
+
+    div.money-values.values-button div.value-box {
+        width: auto !important;
+    }
+
+        div.money-values.values-button div.value-box:first-child {
+            border: 0 !important;
+        }
+		
+		div.money-values.values-button div.value-box:last-child {
+            display: none;
+        }
+}

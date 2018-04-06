@@ -1,0 +1,180 @@
+/*
+Projeto: BBF - Facelift
+Descrição: Combobox com checkbox 
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+    14/02/2017 - JFR - Redefinição de design do campo de multipla seleção, prevendo existência de subfiltros
+*/
+
+.dropdown-checkbox {
+    position: relative;
+}
+
+    .dropdown-checkbox dd,
+    .dropdown-checkbox dt {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .dropdown-checkbox dt {
+        border: 1px solid #ddd;
+    }
+
+    .dropdown-checkbox ul {
+        margin: -1px 0 0 0;
+    }
+
+    .dropdown-checkbox dd {
+        position: relative;
+    }
+
+    .dropdown-checkbox span {
+        text-decoration: none;
+        outline: none;
+        font-size: 14px;
+    }
+
+    .dropdown-checkbox dt span {
+        background-color: #FFF;
+        display: block;
+        padding: 5px 20px 3px 10px;
+        min-height: 25px;
+        line-height: 24px;
+        overflow: hidden;
+        border: 0;
+        width: auto;
+        cursor: pointer;
+    }
+
+        .dropdown-checkbox dt a:hover,
+        .dropdown-checkbox dt span:hover {
+            background-color: #f9f9f9;
+        }
+
+    .dropdown-checkbox dt:after {
+        content: "";
+        float: right;
+        display: block;
+        position: absolute;
+        right: 11px;
+        top: 13px;
+        width: 17px;
+        height: 10px;
+        background: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/arrow-down.png') no-repeat;
+    }
+
+    .dropdown-checkbox dt a span,
+    .multiSel span {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 3px 2px 0;
+    }
+
+    .dropdown-checkbox dd ul {
+        z-index: 1;
+        background-color: #FFF;
+        /* border: 1px solid #DDD; */
+        border: none;
+        color: #4f4139;
+        display: none;
+        left: 0px;
+        position: absolute;
+        min-width: 267px;
+        width: 100%;
+        list-style: none;
+        max-height: 70vh;
+        overflow: auto;
+        -webkit-box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+        top: 1px;
+        padding-bottom: 6px;
+    }
+
+        .dropdown-checkbox dd ul li {
+            padding: 7px 10px;
+            /*border-bottom: 1px solid #DDD;*/
+        }
+
+            .dropdown-checkbox dd ul li:hover {
+                background-color: #F1EFEE;
+            }
+
+            .dropdown-checkbox dd ul li.dropdown-controls:hover {
+                background-color: #FFF;
+            }
+
+            .dropdown-checkbox dd ul li.dropdown-controls{
+                padding: 15px 0 22px;
+                margin: 0px 10px 12px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .dropdown-checkbox dd ul li.dropdown-controls .rede-search{
+                margin: 0;
+            }
+
+            .dropdown-checkbox .search-box {
+                position: relative;
+                width: 100%;
+
+            }
+
+            .dropdown-checkbox .search-box input.search-input {
+                width: 100%;
+                padding-right: 60px;
+            }
+
+            .dropdown-checkbox .search-box input.search-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .dropdown-checkbox dd ul li > img {
+                vertical-align: text-top;
+                margin-right: 4px;
+                margin-top: 4px;
+            }
+
+            .dropdown-checkbox dd ul li .dropdown-filters{
+                margin-bottom: 15px;
+            }
+
+            .dropdown-checkbox dd ul li .dropdown-filters .ez-radio{
+                width: 18px;
+                margin-left: 20px;
+            }
+
+            .dropdown-checkbox dd ul li .dropdown-filters .ez-radio:first-child{
+                margin-left: 0;
+            }
+
+    .dropdown-checkbox span.value {
+        display: none;
+    }
+
+    .dropdown-checkbox dd ul li a {
+        padding: 5px;
+        display: block;
+    }
+
+    .dropdown-checkbox span.checkbox-clear-all {
+        font-size: 12px;
+        display: block;
+        float: right;
+        text-decoration: underline;
+        width: auto;
+        cursor: pointer;
+    }
+
+        .dropdown-checkbox span.checkbox-clear-all:hover {
+            color: #4f4139;
+        }
+
+.large-dropdown-checkbox {
+    min-width: 600px !important;
+    right: 0 !important;
+    left: auto !important;
+}

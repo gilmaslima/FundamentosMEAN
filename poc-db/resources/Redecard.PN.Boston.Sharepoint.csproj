@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B98E950F-3726-4A36-8550-EC627A888EAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.Boston.Sharepoint</RootNamespace>
+    <AssemblyName>Redecard.PN.Boston.Sharepoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\PDFConvert\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BostonBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\Redecard.PN.Boston.Sharepoint\RedirecionaDataCash.ascx.cs">
+      <DependentUpon>RedirecionaDataCash.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\Redecard.PN.Boston.Sharepoint\RedirecionaDataCash.ascx.designer.cs">
+      <DependentUpon>RedirecionaDataCash.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Modulos\Modulos.EventReceiver.cs">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\captcha.aspx.cs">
+      <DependentUpon>captcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\captcha.aspx.designer.cs">
+      <DependentUpon>captcha.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\Comprovante.aspx.cs">
+      <DependentUpon>Comprovante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\Comprovante.aspx.designer.cs">
+      <DependentUpon>Comprovante.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\ConfirmacaoDados.aspx.cs">
+      <DependentUpon>ConfirmacaoDados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\ConfirmacaoDados.aspx.designer.cs">
+      <DependentUpon>ConfirmacaoDados.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\DadosBancarios.aspx.cs">
+      <DependentUpon>DadosBancarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\DadosBancarios.aspx.designer.cs">
+      <DependentUpon>DadosBancarios.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\DadosCliente.aspx.cs">
+      <DependentUpon>DadosCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\DadosCliente.aspx.designer.cs">
+      <DependentUpon>DadosCliente.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\DadosIniciais.aspx.cs">
+      <DependentUpon>DadosIniciais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\DadosIniciais.aspx.designer.cs">
+      <DependentUpon>DadosIniciais.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\EscolhaEquipamento.aspx.cs">
+      <DependentUpon>EscolhaEquipamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\EscolhaEquipamento.aspx.designer.cs">
+      <DependentUpon>EscolhaEquipamento.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\Handlers\MontarUrlComprovante.ashx.cs">
+      <DependentUpon>MontarUrlComprovante.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\ImpossivelContinuar.aspx.cs">
+      <DependentUpon>ImpossivelContinuar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\ImpossivelContinuar.aspx.designer.cs">
+      <DependentUpon>ImpossivelContinuar.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\RetornoPagamento.aspx.cs">
+      <DependentUpon>RetornoPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\RetornoPagamento.aspx.designer.cs">
+      <DependentUpon>RetornoPagamento.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\RetornoPagamentoFechado.aspx.cs">
+      <DependentUpon>RetornoPagamentoFechado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\RetornoPagamentoFechado.aspx.designer.cs">
+      <DependentUpon>RetornoPagamentoFechado.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\TransacaoNaoAprovada.aspx.cs">
+      <DependentUpon>TransacaoNaoAprovada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MobileRede\TransacaoNaoAprovada.aspx.designer.cs">
+      <DependentUpon>TransacaoNaoAprovada.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ComprovanteVenda.cs" />
+    <Compile Include="Modelo\DadosCredenciamento.cs" />
+    <Compile Include="Modelo\Endereco.cs" />
+    <Compile Include="Modelo\PedidoNovoLeitor.cs" />
+    <Compile Include="Modelo\PedidoNovoLeitorRetorno.cs" />
+    <Compile Include="Modelo\Proprietario.cs" />
+    <Compile Include="Negocio\Servicos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DRParametrizacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FEToken\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEAgencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEBancos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GECanais\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEContaCorr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEDomBancario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GEPontoVen\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GERamosAtd\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PNTransicoes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFAdministracao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFOrigem\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WFProposta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WMOcorrencia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Comprovante\Comprovante.cs" />
+    <Compile Include="WebParts\Comprovante\ComprovanteUserControl.ascx.cs">
+      <DependentUpon>ComprovanteUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Comprovante\ComprovanteUserControl.ascx.designer.cs">
+      <DependentUpon>ComprovanteUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\GerenciamentoMobile\GerenciamentoMobile.cs" />
+    <Compile Include="WebParts\GerenciamentoMobile\GerenciamentoMobileUserControl.ascx.cs">
+      <DependentUpon>GerenciamentoMobileUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\GerenciamentoMobile\GerenciamentoMobileUserControl.ascx.designer.cs">
+      <DependentUpon>GerenciamentoMobileUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\NovoLeitorCartaoComprovanteCredito\NovoLeitorCartaoComprovanteCredito.cs" />
+    <Compile Include="WebParts\NovoLeitorCartaoComprovanteCredito\NovoLeitorCartaoComprovanteCreditoUserControl.ascx.cs">
+      <DependentUpon>NovoLeitorCartaoComprovanteCreditoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\NovoLeitorCartaoComprovanteCredito\NovoLeitorCartaoComprovanteCreditoUserControl.ascx.designer.cs">
+      <DependentUpon>NovoLeitorCartaoComprovanteCreditoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\NovoLeitorCartao\NovoLeitorCartao.cs" />
+    <Compile Include="WebParts\NovoLeitorCartao\NovoLeitorCartaoUserControl.ascx.cs">
+      <DependentUpon>NovoLeitorCartaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\NovoLeitorCartao\NovoLeitorCartaoUserControl.ascx.designer.cs">
+      <DependentUpon>NovoLeitorCartaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\PedidoNovoEquipamento\PedidoNovoEquipamento.cs" />
+    <Compile Include="WebParts\PedidoNovoEquipamento\PedidoNovoEquipamentoUserControl.ascx.cs">
+      <DependentUpon>PedidoNovoEquipamentoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\PedidoNovoEquipamento\PedidoNovoEquipamentoUserControl.ascx.designer.cs">
+      <DependentUpon>PedidoNovoEquipamentoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RedirecionaDataCashBaseWebpart.cs" />
+    <Compile Include="WebParts\TransacaoNaoAprovada\TransacaoNaoAprovada.cs" />
+    <Compile Include="WebParts\TransacaoNaoAprovada\TransacaoNaoAprovadaUserControl.ascx.cs">
+      <DependentUpon>TransacaoNaoAprovadaUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\TransacaoNaoAprovada\TransacaoNaoAprovadaUserControl.ascx.designer.cs">
+      <DependentUpon>TransacaoNaoAprovadaUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlTemplates\Redecard.PN.Boston.Sharepoint\RedirecionaDataCash.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\Modulos\Modulos.Template.xml">
+      <DependentUpon>Modulos.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\fundoCaptcha\0.jpg" />
+    <Content Include="Images\fundoCaptcha\1.jpg" />
+    <Content Include="Images\fundoCaptcha\2.jpg" />
+    <Content Include="Images\fundoCaptcha\3.jpg" />
+    <Content Include="Images\fundoCaptcha\4.jpg" />
+    <Content Include="Images\fundoCaptcha\5.jpg" />
+    <Content Include="Images\fundoCaptcha\6.jpg" />
+    <Content Include="Images\fundoCaptcha\7.jpg" />
+    <Content Include="Images\fundoCaptcha\8.jpg" />
+    <Content Include="Images\fundoCaptcha\9.jpg" />
+    <Content Include="Layouts\MobileRede\Comprovante.aspx" />
+    <Content Include="Layouts\MobileRede\ConfirmacaoDados.aspx" />
+    <Content Include="Layouts\MobileRede\EscolhaEquipamento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\MobileRede\imagens\bg_header.jpg" />
+    <Content Include="Layouts\MobileRede\imagens\bg_header_vivo.jpg" />
+    <Content Include="Layouts\MobileRede\imagens\calendar.gif" />
+    <Content Include="Layouts\MobileRede\captcha.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\MobileRede\DadosBancarios.aspx" />
+    <Content Include="Layouts\MobileRede\DadosCliente.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\MobileRede\imagens\carrinho_de_compras.png" />
+    <Content Include="Layouts\MobileRede\imagens\chip_gde.png" />
+    <Content Include="Layouts\MobileRede\imagens\chip_pq.png" />
+    <Content Include="Layouts\MobileRede\imagens\Device_vivo.png" />
+    <Content Include="Layouts\MobileRede\imagens\HEADER_PortalVIVO02.jpg" />
+    <Content Include="Layouts\MobileRede\imagens\Ico_PDF.png" />
+    <Content Include="Layouts\MobileRede\imagens\Ico_Print.png" />
+    <Content Include="Layouts\MobileRede\imagens\leitor_rede.png" />
+    <Content Include="Layouts\MobileRede\imagens\LogoRede.png" />
+    <Content Include="Layouts\MobileRede\imagens\Logo_RedeVivo.jpg" />
+    <Content Include="Layouts\MobileRede\imagens\Monitor_portal.png" />
+    <Content Include="Layouts\MobileRede\imagens\passos_laranja.jpg" />
+    <Content Include="Layouts\MobileRede\imagens\tarja_gde.png" />
+    <Content Include="Layouts\MobileRede\imagens\tarja_pq.png" />
+    <Content Include="Layouts\MobileRede\ImpossivelContinuar.aspx" />
+    <Content Include="Layouts\MobileRede\js\BlockUI.js" />
+    <Content Include="Layouts\MobileRede\js\Boston.js" />
+    <Content Include="Layouts\MobileRede\js\DatePicker.js" />
+    <Content Include="Layouts\MobileRede\js\FacaSuaVenda.js" />
+    <Content Include="Layouts\MobileRede\js\jquery-1.8.3.min.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.ba-postmessage.min.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.blockUI.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.meiomask.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.printElement.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.ui.core.min.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.ui.datepicker.min.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.ui.position.min.js" />
+    <Content Include="Layouts\MobileRede\js\jquery.ui.widget.min.js" />
+    <Content Include="Layouts\MobileRede\js\jsDataCash.js" />
+    <Content Include="Layouts\MobileRede\js\PaginacaoJQuery.js" />
+    <Content Include="Layouts\MobileRede\RetornoPagamento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\MobileRede\RetornoPagamentoFechado.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\MobileRede\Styles\credenciamento_boston.css" />
+    <Content Include="Layouts\MobileRede\TransacaoNaoAprovada.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Elements.xml" />
+    <Content Include="Modulos\Paginas\NovoLeitorCartaoComprovanteCredito.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\NovoLeitorCartao.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerenciamentoMobile.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_Comprovante.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_PedidoNovoEquipamento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\MobileRede\Handlers\MontarUrlComprovante.ashx" />
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5fb25a5d-cf8a-4b99-8e3a-06cf5ba92555}</SharePointProjectItemId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e29ba488-98f5-4d70-8c35-8330edf2e78f}</SharePointProjectItemId>
+    </None>
+    <None Include="Service References\GEDomBancario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DRParametrizacao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\NovoLeitorCartaoComprovanteCredito\Elements.xml" />
+    <Content Include="WebParts\NovoLeitorCartaoComprovanteCredito\NovoLeitorCartaoComprovanteCreditoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\NovoLeitorCartao\Elements.xml" />
+    <Content Include="WebParts\NovoLeitorCartao\NovoLeitorCartaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\TransacaoNaoAprovada\Elements.xml" />
+    <Content Include="WebParts\TransacaoNaoAprovada\TransacaoNaoAprovadaUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\PNTransicoes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFOrigem\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFAdministracao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WFProposta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GECanais\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FEToken\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEPontoVen\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WMOcorrencia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Modulos\Paginas\pn_TransacaoNaoAprovada.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\Comprovante\ComprovanteUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\Comprovante\Elements.xml" />
+    <Content Include="WebParts\GerenciamentoMobile\Elements.xml" />
+    <Content Include="WebParts\GerenciamentoMobile\GerenciamentoMobileUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\PedidoNovoEquipamento\Elements.xml" />
+    <Content Include="WebParts\PedidoNovoEquipamento\PedidoNovoEquipamentoUserControl.ascx" />
+    <None Include="Features\Modulos\Modulos.feature">
+      <FeatureId>{fd8f8a38-473d-48bb-9d46-bedbf27e4c13}</FeatureId>
+    </None>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{3e098cc8-7c07-46db-bd7e-e4e8847286ac}</FeatureId>
+    </None>
+    <Content Include="Layouts\MobileRede\BostonMaster20.Master">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Modulos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{751f03e5-138b-4be7-ab68-0e55ee483aa9}</SharePointProjectItemId>
+    </None>
+    <None Include="Service References\GERamosAtd\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEAgencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEBancos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GEContaCorr\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="key.snk" />
+    <Content Include="Layouts\MobileRede\BostonMaster.Master">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2a6bae6a-de2a-4671-8f1e-ba8335f6d795}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{1ce87ee5-1b43-4cbd-9c02-420e753dbe38}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\Comprovante\Comprovante.webpart" />
+    <None Include="WebParts\Comprovante\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{35d3cea0-1f26-4435-aeba-3fa01e59d652}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\GerenciamentoMobile\GerenciamentoMobile.webpart" />
+    <None Include="WebParts\GerenciamentoMobile\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b32c0cd8-667f-4002-94e4-f565d3a29bd7}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\NovoLeitorCartaoComprovanteCredito\NovoLeitorCartaoComprovanteCredito.webpart" />
+    <None Include="WebParts\NovoLeitorCartaoComprovanteCredito\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1ce2dfae-66f7-4767-98b9-a2ab32211c90}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\NovoLeitorCartao\NovoLeitorCartao.webpart" />
+    <None Include="WebParts\NovoLeitorCartao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{42978fec-b83a-45ef-a948-5ca2cd18b13c}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\PedidoNovoEquipamento\PedidoNovoEquipamento.webpart" />
+    <None Include="WebParts\PedidoNovoEquipamento\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{80dd9ed5-ca56-413a-a189-ca01352bf8a5}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\TransacaoNaoAprovada\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{90c4bbcc-581f-4dfb-96e4-65cf4e6172b0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\TransacaoNaoAprovada\TransacaoNaoAprovada.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layouts\MobileRede\DadosIniciais.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DRParametrizacao\" />
+    <WCFMetadataStorage Include="Service References\FEToken\" />
+    <WCFMetadataStorage Include="Service References\GEAgencias\" />
+    <WCFMetadataStorage Include="Service References\GEBancos\" />
+    <WCFMetadataStorage Include="Service References\GECanais\" />
+    <WCFMetadataStorage Include="Service References\GEContaCorr\" />
+    <WCFMetadataStorage Include="Service References\GEDomBancario\" />
+    <WCFMetadataStorage Include="Service References\GEPontoVen\" />
+    <WCFMetadataStorage Include="Service References\GERamosAtd\" />
+    <WCFMetadataStorage Include="Service References\PNTransicoes\" />
+    <WCFMetadataStorage Include="Service References\WFAdministracao\" />
+    <WCFMetadataStorage Include="Service References\WFOrigem\" />
+    <WCFMetadataStorage Include="Service References\WFProposta\" />
+    <WCFMetadataStorage Include="Service References\WMOcorrencia\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

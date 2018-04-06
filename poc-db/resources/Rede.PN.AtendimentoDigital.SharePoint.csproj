@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F644ED6-169D-4582-BC90-8489D0CC5598}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rede.PN.AtendimentoDigital.SharePoint</RootNamespace>
+    <AssemblyName>Rede.PN.AtendimentoDigital.SharePoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Redecard.PN.Comum, Version=4.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Bases\BaseEmail.cs" />
+    <Compile Include="Core\Cache.cs" />
+    <Compile Include="Core\CryptoSalesforce.cs" />
+    <Compile Include="Core\Emails\EmailFaleConosco.cs" />
+    <Compile Include="Core\Emails\EmailSuporteMaquininha.cs" />
+    <Compile Include="Core\Constants\Fields.cs" />
+    <Compile Include="Core\Constants\Lists.cs" />
+    <Compile Include="Core\Enums\ExtratoTipoRelatorio.cs" />
+    <Compile Include="Core\Enums\ExtratoTipoVenda.cs" />
+    <Compile Include="Core\Enums\QueryStrings.cs" />
+    <Compile Include="Core\ExtensionMethods.cs" />
+    <Compile Include="Core\Formatador.cs" />
+    <Compile Include="Core\Handler\AuthorizeAttribute.cs" />
+    <Compile Include="Core\Handler\HttpNoSessionAttribute.cs" />
+    <Compile Include="Core\Handler\HttpAttribute.cs" />
+    <Compile Include="Core\Handler\HttpDeleteAttribute.cs" />
+    <Compile Include="Core\Handler\HttpPutAttribute.cs" />
+    <Compile Include="Core\Handler\HttpPostAttribute.cs" />
+    <Compile Include="Core\Handler\HandlerBase.cs" />
+    <Compile Include="Core\Handler\HandlerResponse.cs" />
+    <Compile Include="Core\Email.cs" />
+    <Compile Include="Core\Handler\HttpGetAttribute.cs" />
+    <Compile Include="Core\ListSchema\Field.cs" />
+    <Compile Include="Core\ListSchema\List.cs" />
+    <Compile Include="Core\ListSchema\ListMetaData.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataContentTypes.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataContentTypesContentType.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataContentTypesContentTypeFieldRef.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataForm.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataView.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewFieldRef.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewParameterBinding.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewQuery.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewQueryFieldRef.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewQueryGroupBy.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewQueryGroupByFieldRef.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewRowLimit.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewToolbar.cs" />
+    <Compile Include="Core\ListSchema\ListMetaDataViewXslLink.cs" />
+    <Compile Include="Core\OrdemServico\ContatoOs.cs" />
+    <Compile Include="Core\OrdemServico\HorarioOs.cs" />
+    <Compile Include="Core\OrdemServico\EnderecoOs.cs" />
+    <Compile Include="Core\OrdemServico\OrdemServico.cs" />
+    <Compile Include="Core\Search\Config\CardsConfig.cs" />
+    <Compile Include="Core\Search\Config\CorrectionsConfig.cs" />
+    <Compile Include="Core\Search\Config\IgnoredWordsConfig.cs" />
+    <Compile Include="Core\Search\Config\AccentuationConfig.cs" />
+    <Compile Include="Core\Search\Datasource\CardDatasource.cs" />
+    <Compile Include="Core\Search\Config\CardConfig.cs" />
+    <Compile Include="Core\Search\Datasource\Public\FaqNaoLogadoDataSource.cs" />
+    <Compile Include="Core\Search\Model\Content\CardItem.cs" />
+    <Compile Include="Core\Search\Model\Content\ContentItem.cs" />
+    <Compile Include="Core\Search\Model\Content\CategoriaItem.cs" />
+    <Compile Include="Core\Search\Config\SubcardConfig.cs" />
+    <Compile Include="Core\Search\Model\Content\Public\PerguntaRespostaNaoLogadoItem.cs" />
+    <Compile Include="Core\Search\Model\Content\Public\SubcategoriaNaoLogadoItem.cs" />
+    <Compile Include="Core\Search\Model\Content\Public\CategoriaNaoLogadoItem.cs" />
+    <Compile Include="Core\Search\Model\Content\SubcategoriaItem.cs" />
+    <Compile Include="Core\Search\Model\Content\ServicoItem.cs" />
+    <Compile Include="Core\Search\Model\Content\PerguntaRespostaItem.cs" />
+    <Compile Include="Core\Search\Model\Device.cs" />
+    <Compile Include="Core\Search\Model\Hit.cs" />
+    <Compile Include="Core\Search\Model\Pagination.cs" />
+    <Compile Include="Core\Search\Model\ProcessedTerm.cs" />
+    <Compile Include="Core\Search\Model\Result\ResultGroup.cs" />
+    <Compile Include="Core\Search\Model\Weights.cs" />
+    <Compile Include="Core\Search\Model\QueryConfig.cs" />
+    <Compile Include="Core\Search\Config\SynonymsConfig.cs" />
+    <Compile Include="Core\Search\Datasource\CategoriaDatasource.cs" />
+    <Compile Include="Core\Search\Datasource\PerguntaRespostaDatasource.cs" />
+    <Compile Include="Core\Search\Datasource\ISearchDatasource.cs" />
+    <Compile Include="Core\Search\Datasource\ServicoDatasource.cs" />
+    <Compile Include="Core\Search\Datasource\SubcategoriaDatasource.cs" />
+    <Compile Include="Core\Search\SearchPortal.cs" />
+    <Compile Include="Core\Search\Model\Result\ResultItem.cs" />
+    <Compile Include="Core\Search\Model\Result\SearchResult.cs" />
+    <Compile Include="Core\SolicitacaoMaterial\EnderecoSolicitacao.cs" />
+    <Compile Include="Core\SolicitacaoMaterial\SolicitacaoMaterial.cs" />
+    <Compile Include="Core\Taxas\Bandeira.cs" />
+    <Compile Include="Core\Taxas\Flex.cs" />
+    <Compile Include="Core\Taxas\Taxa.cs" />
+    <Compile Include="Core\Warnings\Datasource\WarningsAtendimentoDatasource.cs" />
+    <Compile Include="Core\Warnings\Model\Content\WarningsAtendimentoItem.cs" />
+    <Compile Include="Core\Warnings\WarningsAtendimentoPortal.cs" />
+    <Compile Include="Features\Listas\Listas.EventReceiver.cs">
+      <DependentUpon>Listas.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SolicitacaoMaterial.cs" />
+    <Compile Include="Handlers\Taxas.cs" />
+    <Compile Include="Handlers\Dirf.cs" />
+    <Compile Include="Handlers\EnvioEmail.cs" />
+    <Compile Include="Handlers\EmailHandler.cs" />
+    <Compile Include="Handlers\Favorito.cs" />
+    <Compile Include="Handlers\Maximo.cs" />
+    <Compile Include="Handlers\Search.cs" />
+    <Compile Include="Handlers\SessaoUsuario.cs" />
+    <Compile Include="Handlers\QueryString.cs" />
+    <Compile Include="Handlers\WarningsAtendimento.cs" />
+    <Compile Include="Layouts\PN.AtendimentoDigital\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AtendimentoDigitalRepository.cs" />
+    <Compile Include="Repository\BaseEntityRepository.cs" />
+    <Compile Include="Repository\DuvidaCategoriaRepository.cs" />
+    <Compile Include="Repository\DuvidaPerguntaRespostaRepository.cs" />
+    <Compile Include="Repository\DuvidaSubcategoriaRepository.cs" />
+    <Compile Include="Repository\Entities\WarningsAtendimentoEntity.cs" />
+    <Compile Include="Repository\IDuvidaPerguntaRespostaRepository.cs" />
+    <Compile Include="Repository\IDuvidaSubcategoriaRepository.cs" />
+    <Compile Include="Repository\Entities\BaseEntity.cs" />
+    <Compile Include="Repository\Entities\AtendimentoDigital.cs" />
+    <Compile Include="Repository\Entities\ParametrosConfiguracao.cs" />
+    <Compile Include="Repository\Entities\PaginaPergunta.cs" />
+    <Compile Include="Repository\Entities\FaleConoscoMotivo.cs" />
+    <Compile Include="Repository\Entities\DuvidaCategoria.cs" />
+    <Compile Include="Repository\Entities\DuvidaFrequente.cs" />
+    <Compile Include="Repository\Entities\DuvidaPerguntaResposta.cs" />
+    <Compile Include="Repository\Entities\DuvidaSubcategoria.cs" />
+    <Compile Include="Repository\IAtendimentoDigitalRepository.cs" />
+    <Compile Include="Repository\IDuvidaCategoriaRepository.cs" />
+    <Compile Include="Repository\IListItemRepository.cs" />
+    <Compile Include="Repository\IParametrosConfiguracaoRepository.cs" />
+    <Compile Include="Repository\IWarningsAtendimento.cs" />
+    <Compile Include="Repository\ListItemRepository.cs" />
+    <Compile Include="Repository\ParametrosConfiguracaoRepository.cs" />
+    <Compile Include="Repository\WarningsAtendimentoRepository.cs" />
+    <Compile Include="Service References\EntidadeServico2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EntidadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaterialVendaServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaximoServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Servico.Dirf\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicoFavorito\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\AtendimentoDigital\HtmlContentLoader\FileEncoding.cs" />
+    <Compile Include="WebParts\AtendimentoDigital\HtmlContentLoader\HtmlContentLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Atendimento Digital\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{19e24707-436a-42ef-875b-c21f51011487}</SharePointProjectItemId>
+    </None>
+    <None Include="Bibliotecas\AtendimentoDigital\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c9725627-3d77-4fec-a0d9-7a3131ad18e5}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\CanaisExibicao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{15b73238-95f7-4108-a42d-7197a70a1a5e}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\ExibeFaleConosco\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{76e3b711-3e80-4361-8814-7b8da95b723e}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\FAQPergunta\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{67558152-0f51-439e-8104-68e3d1a5f03f}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\FAQPergunta_x003a_ID\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5a5b4111-d712-4607-9be7-7ad8540f5b06}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\Icone\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b884c7b5-69a3-44b3-a3c9-cd38d9f258a1}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\IDVideo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c632ec84-8829-4ef1-a34a-a080a933247d}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\Ordem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8265ed15-5cb0-4ec8-a47f-f4b336910eb2}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\Pagina\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{31602ee4-4285-4b45-8289-7bc09a057407}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\TextoPrincipal\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fe3708e7-112e-411a-8c7b-b07531808951}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\TextoSecundario\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fe9ce532-958f-4e4e-bdf7-194a389fa7b8}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\TituloPrincipal\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{96a0f7cd-da02-4ba1-968c-115d3bed3103}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\TituloSecundario\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e0edc9f0-2f15-4303-9c80-c5d0ab0f0d28}</SharePointProjectItemId>
+    </None>
+    <None Include="Colunas\UrlPagina\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ced4d171-536d-42f7-81dc-4b3cd026cf94}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\VideoCarrossel\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6edcd9b6-afab-4e7f-a410-a14ca6f75494}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\VideoContainer\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c69d4a4e-16e3-4df4-be0e-c8deabc36e18}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\VideoFAQ\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{893cf720-0b03-4711-8cce-5b576838de05}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Bibliotecas\Bibliotecas.feature">
+      <FeatureId>{15f12921-ed12-4cc9-bd17-5cafe60a5f53}</FeatureId>
+    </None>
+    <None Include="Features\ModulosAtendimento\ModulosAtendimento.feature">
+      <FeatureId>{f66bd502-a464-4e42-b632-6a6dc3e39822}</FeatureId>
+    </None>
+    <None Include="Features\Listas\Listas.feature">
+      <FeatureId>{c0794bf5-7206-4c7c-ad38-8459a1a76725}</FeatureId>
+    </None>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{dd90d86f-7b7c-4edb-b4c5-0e20a94f49dd}</FeatureId>
+    </None>
+    <None Include="Features\ModulosPaginas\ModulosPaginas.feature">
+      <FeatureId>{b6671625-7474-4b95-87bf-e370e8f5c004}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\PN.AtendimentoDigital\Handler.ashx" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8f290c8e-f7c5-434d-aacb-c0e785effc34}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaFrequente\DuvidaFrequenteDefinition\DuvidaFrequenteInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bc1bf3b9-de88-4735-99ee-4c81cd457f9c}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaFrequente\DuvidaFrequenteDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4cc0faf1-d1d2-4c00-9525-1846202ee686}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\PaginaPergunta\PaginaPerguntaDefinition\PaginaPerguntaInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5449346a-9e09-4017-bede-ba8348249d82}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\PaginaPergunta\PaginaPerguntaDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e39fce91-641e-4344-9480-a1a1d3d6cb57}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\ParametrosConfiguracao\ParametrosConfiguracaoDefinition\ParametrosConfiguracaoInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eca90720-cebe-4977-ba37-bcd9c67029fb}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\ParametrosConfiguracao\ParametrosConfiguracaoDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{26208507-832d-45cf-b166-cda7106b3505}</SharePointProjectItemId>
+    </None>
+    <None Include="Command Center\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{afdcbb33-a722-4c9c-8c2e-a5013d901282}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\Videos\Videos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7b5bec94-1a7f-4795-9d69-2de5fee59594}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\Videos\Videos\VideosInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{49cf427a-1216-4923-b1db-5a17615d4c35}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\WarningsAtendimento\WarningsAtendimentoDefinition\WarningsAtendimentoInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d49236da-14c9-4898-86a6-a4be71a6faf4}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\WarningsAtendimento\WarningsAtendimentoDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{56f0e579-ded3-4d6f-a234-dd183411144b}</SharePointProjectItemId>
+    </None>
+    <None Include="Paginas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dc500431-c917-4edd-9d39-df028366dc64}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaCategoria\DuvidaCategoriaDefinition\DuvidaCategoriaInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{98e9cce8-3950-48e5-bf3e-df9c724b4c57}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaCategoria\DuvidaCategoriaDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6c622002-cac3-437a-b0cc-4754368a5780}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaPerguntaResposta\DuvidaPerguntaRespostaDefinition\DuvidaPerguntaRespostaInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1eb6d567-2514-41fe-ae18-45419088c5ef}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaPerguntaResposta\DuvidaPerguntaRespostaDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b4a83a7e-1d98-4186-822f-6ca3871e92fb}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaSubcategoria\DuvidaSubcategoriaDefinition\DuvidaSubcategoriaInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4392ad0d-e26d-49f4-b05f-63dca9695e1a}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\DuvidaSubcategoria\DuvidaSubcategoriaDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{10541192-8e1b-4c67-b04f-7985ecb0acc5}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\FaleConoscoMotivo\FaleConoscoMotivoDefinition\FaleConoscoMotivoInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5f510630-e90f-4072-95bc-6d2c8742f5ce}</SharePointProjectItemId>
+    </None>
+    <None Include="Listas\FaleConoscoMotivo\FaleConoscoMotivoDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8b9c1f86-7ddc-4c96-8ac1-3f146c237cff}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{d57ad701-8d92-4c96-afd2-10c28daf9f5e}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\AtendimentoDigital\HtmlContentLoader\HtmlContentLoader.webpart" />
+    <None Include="WebParts\AtendimentoDigital\HtmlContentLoader\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{70520fa2-3141-4933-b399-126cb1372383}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EntidadeServico2\" />
+    <WCFMetadataStorage Include="Service References\EntidadeServico\" />
+    <WCFMetadataStorage Include="Service References\MaterialVendaServico\" />
+    <WCFMetadataStorage Include="Service References\MaximoServico\" />
+    <WCFMetadataStorage Include="Service References\Servico.Dirf\" />
+    <WCFMetadataStorage Include="Service References\ServicoFavorito\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Atendimento Digital\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bibliotecas\AtendimentoDigital\Elements.xml" />
+    <Content Include="Colunas\CanaisExibicao\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Colunas\ExibeFaleConosco\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Colunas\FAQPergunta\Elements.xml" />
+    <Content Include="Colunas\FAQPergunta_x003a_ID\Elements.xml" />
+    <Content Include="Colunas\Icone\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Colunas\IDVideo\Elements.xml" />
+    <Content Include="Colunas\Ordem\Elements.xml" />
+    <Content Include="Colunas\Pagina\Elements.xml" />
+    <Content Include="Colunas\TextoPrincipal\Elements.xml" />
+    <Content Include="Colunas\TextoSecundario\Elements.xml" />
+    <Content Include="Colunas\TituloPrincipal\Elements.xml" />
+    <Content Include="Colunas\TituloSecundario\Elements.xml" />
+    <Content Include="Colunas\UrlPagina\Elements.xml" />
+    <Content Include="ContentTypes\VideoCarrossel\Elements.xml" />
+    <Content Include="ContentTypes\VideoContainer\Elements.xml" />
+    <Content Include="ContentTypes\VideoFAQ\Elements.xml" />
+    <Content Include="Features\Bibliotecas\Bibliotecas.Template.xml">
+      <DependentUpon>Bibliotecas.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ModulosAtendimento\ModulosAtendimento.Template.xml">
+      <DependentUpon>ModulosAtendimento.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Listas\Listas.Template.xml">
+      <DependentUpon>Listas.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ModulosPaginas\ModulosPaginas.Template.xml">
+      <DependentUpon>ModulosPaginas.feature</DependentUpon>
+    </Content>
+    <Content Include="Listas\ParametrosConfiguracao\ParametrosConfiguracaoDefinition\Elements.xml" />
+    <Content Include="Listas\ParametrosConfiguracao\ParametrosConfiguracaoDefinition\ParametrosConfiguracaoInstance\Elements.xml" />
+    <Content Include="Listas\ParametrosConfiguracao\ParametrosConfiguracaoDefinition\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Command Center\Elements.xml" />
+    <Content Include="Listas\Videos\Videos\Elements.xml" />
+    <Content Include="Listas\Videos\Videos\Schema.xml" />
+    <Content Include="Listas\Videos\Videos\VideosInstance\Elements.xml" />
+    <Content Include="Listas\WarningsAtendimento\WarningsAtendimentoDefinition\Elements.xml" />
+    <Content Include="Listas\WarningsAtendimento\WarningsAtendimentoDefinition\WarningsAtendimentoInstance\Elements.xml" />
+    <Content Include="Listas\WarningsAtendimento\WarningsAtendimentoDefinition\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paginas\AtendimentoDigital\Busca.aspx" />
+    <Content Include="Paginas\AtendimentoDigital\FAQ.aspx" />
+    <Content Include="Paginas\AtendimentoDigital\SuporteMaquininha.aspx" />
+    <Content Include="Paginas\AtendimentoDigital\Home.aspx" />
+    <None Include="Service References\MaximoServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Servico.Dirf\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EntidadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EntidadeServico2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServicoFavorito\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MaterialVendaServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\AtendimentoDigital\HtmlContentLoader\Elements.xml" />
+    <Content Include="Listas\DuvidaCategoria\DuvidaCategoriaDefinition\DuvidaCategoriaInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\DuvidaCategoria\DuvidaCategoriaDefinition\Elements.xml" />
+    <Content Include="Listas\DuvidaCategoria\DuvidaCategoriaDefinition\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\DuvidaFrequente\DuvidaFrequenteDefinition\DuvidaFrequenteInstance\Elements.xml" />
+    <Content Include="Listas\DuvidaFrequente\DuvidaFrequenteDefinition\Elements.xml" />
+    <Content Include="Listas\DuvidaFrequente\DuvidaFrequenteDefinition\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\DuvidaPerguntaResposta\DuvidaPerguntaRespostaDefinition\DuvidaPerguntaRespostaInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\DuvidaPerguntaResposta\DuvidaPerguntaRespostaDefinition\Elements.xml" />
+    <Content Include="Listas\DuvidaPerguntaResposta\DuvidaPerguntaRespostaDefinition\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\DuvidaSubcategoria\DuvidaSubcategoriaDefinition\DuvidaSubcategoriaInstance\Elements.xml" />
+    <Content Include="Listas\DuvidaSubcategoria\DuvidaSubcategoriaDefinition\Elements.xml" />
+    <Content Include="Listas\DuvidaSubcategoria\DuvidaSubcategoriaDefinition\Schema.xml" />
+    <Content Include="Listas\FaleConoscoMotivo\FaleConoscoMotivoDefinition\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\FaleConoscoMotivo\FaleConoscoMotivoDefinition\FaleConoscoMotivoInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\FaleConoscoMotivo\FaleConoscoMotivoDefinition\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Listas\PaginaPergunta\PaginaPerguntaDefinition\Elements.xml" />
+    <Content Include="Listas\PaginaPergunta\PaginaPerguntaDefinition\PaginaPerguntaInstance\Elements.xml" />
+    <Content Include="Listas\PaginaPergunta\PaginaPerguntaDefinition\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paginas\AtendimentoDigital\Atendimento.aspx" />
+    <Content Include="Paginas\AtendimentoDigital\FaleConosco.aspx" />
+    <Content Include="Paginas\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Search\Analyzer\" />
+    <Folder Include="Paginas\PageLayout\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,28 @@
+﻿/* Changes Novo Acesso*/
+#divCapsLock
+{
+    display: block;
+    border-style: solid !important;
+    border-width: 1px!important;
+    border-color: #000000 !important;
+    border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    margin-top: 2px !important;
+    margin-left: 0px !important;
+    width: 123px !important;
+    padding: 3px !important;
+    text-align: left !important;
+    background-image: url('/_layouts/Redecard.Comum/IMAGES/ico_validacao_aviso_capslock.png') !important;
+    background-repeat: no-repeat !important;
+    background-position-x: 4px !important;
+    background-position-y: 4px !important;
+    line-height: 20px !important;
+    padding-left: 26px !important;
+    position: absolute !important;
+    z-index: 100 !important;
+    background-color: white !important;
+    font-family: Arial, verdana !important;
+    font-size: 12px !important;
+    color: rgb(76, 181, 137) !important;
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+#header ul.links, #header form.frmSearch, #header form.frmServices, #header ul#menu {
+	display: none;
+}	
+
+#footer {
+	display: none;
+}
+
+.tools ul.share {
+	display: none;
+}
+
+.business, .forYou, .accessservices, .accredit, .download, .faq, .fastaccess, .flashFlags, .redecardClick, .tagcloud, .video, .highlights {
+	display: none;
+}
+	
+#breadcrumb {
+	display: none;
+}	
+
+#main .menu{
+	display: none;
+}
+
+.banners {
+	display: none;
+}
+
+.tagcloud ul li, #main #sidebar .tagcloud h2, #content .center form.frmTestimonials, .frmDownloads, .frmQuestions, .frmCardBenefits, .comments span, .comments a, .submenu ul, .submenu img, .testimonials a, .needHelp, banner, .right a, ul.campaigns li, .btAdquira, .boxBuscaPerguntas ul li, .boxResultados {
+	display: none;
+}
+
+/* area logada */
+
+#subheader, ul.sf-menu, ul.identificacao li, #header p, ul.links, ul.identificacao {
+	display: none;
+}
+
+.umclique, .avisos, .box, .enquete, .enquete, .favoritos, .manuaisvideos, .encontrar, .perguntas, .prevencao, .produtosservicos, .simulador, .dicasuso, .calculateReceive{
+	display: none;
+}
+
+
+#content .center .downloads tbody tr td,
+#content table.tabDadosBancarios tr td{
+	border: solid 1px #000;
+}

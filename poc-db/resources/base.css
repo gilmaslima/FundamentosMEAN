@@ -1,0 +1,1168 @@
+@charset "utf-8";
+
+@import "header.css";
+@import "superfish.css";
+@import "footer.css";
+@import "extratos.css";
+
+* {
+	border: 0;
+	font-size: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* Estilos Padrões */
+
+body {
+	color: #575757;
+	font: 12px/1 Arial;
+}
+
+.rc-body {
+	background: url(../../img/area_logada/bg_header.jpg) no-repeat top;
+}
+
+a, a:visited {
+	color: #183c8e;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	text-decoration: underline;
+	outline: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+a.btnBlue, button.btnBlue {
+	background: #788dbd;
+	border: none;
+	color: #fff !important;
+	display: inline;
+	float: right;
+	font: 12px Tahoma;
+	padding: 2px 5px 3px;
+	text-transform: uppercase;
+}
+
+input.calendar{
+	float: left;
+	display: inline;
+	background: url(../../img/icons/ico_calendar.gif) no-repeat left top;
+	text-indent: -9999px;
+	width: 16px;
+	height: 15px;
+	margin: 1px 0;
+}
+
+button.btnBlue {
+	height: 19px;
+	padding: -1px 5px;
+}
+
+hr, select {
+	display: none;
+}
+
+.center {
+	margin: 0 auto;
+	width: 970px;
+}
+
+.clear, br { clear: both }
+.left { float: left }
+.right { float: right }
+
+/* --------------- */
+
+/* Breadcrumb */
+#breadcrumb {
+	background: url(../../img/bg_breadcrumb.jpg) repeat-x bottom;
+	height: 32px;
+	overflow: hidden;
+}
+
+	#breadcrumb ul {
+		margin-top: 8px;
+	}
+		
+		#breadcrumb ul li {
+			background: url(../../img/bullets/blt_seta_blue.gif) no-repeat right 6px;
+			display: inline;
+			font: 11px Tahoma;
+			margin-right: 5px;
+			padding-right: 6px;
+		}
+		
+			#breadcrumb ul li a {
+				color: #969aa2;
+			}
+			
+		#breadcrumb ul li.last {
+			background: none;
+		}
+		
+			#breadcrumb ul li.last strong {
+				color: #183c8e;
+				font-weight: normal;
+			}
+/* --------------- */
+
+/* Main */
+
+	#main #intro {
+		background: url(../../img/area_logada/bg_intro.gif) no-repeat bottom;
+		margin-bottom: -38px;
+		overflow: hidden;
+		padding: 29px 0 67px;
+	}
+	
+		#main #intro div {
+			float: left;
+			width: 340px;
+		}
+		
+			#main #intro div h3 {
+				color: #14388c;
+				font: 16px "Trebuchet MS";
+				margin-bottom: 7px;
+				text-transform: uppercase;
+			}
+			
+				#main #intro div h3 big {
+					font-size: 23px;
+				}
+				
+			#main #intro div p {
+				color: #595959;
+				font-size: 12px;
+				line-height: 14px;
+			}
+		
+		#main #intro .banner {
+			float: right;
+		}
+		
+			#main #intro .banner img {
+				display: block;
+			}
+
+	#main #content {
+		float: left;
+		display: inline;
+		padding: 0 0 36px 0;
+		width: 727px;
+	}
+	
+		#main #content h2,
+		#main .internal h2 {
+			border-left: 7px solid #ffcb00;
+			color: #14388c;
+			font: 27px Tahoma;
+			letter-spacing: -1px;
+			margin-bottom: 20px;
+			padding: 13px 0 0 4px;
+			text-transform: uppercase;
+		}
+	
+		#main #content .extratoResumido {
+			overflow: hidden;
+			padding-top: 12px;
+		}
+		
+			#main #content .extratoResumido .left {
+				width: 337px;
+			}
+			
+			#main #content .extratoResumido .estabelecimentos {
+				font-size: 11px;
+				overflow: hidden;
+				padding: 0 0 24px 12px;
+			}
+	
+		#main #content .extratoResumido .estabelecimentos p, #main .internal .extratoResumido .estabelecimentos p,
+			#main #content .extratoResumido .estabelecimentos ul.tipos li, #main .internal .extratoResumido .estabelecimentos ul.tipos li {
+				margin-bottom: 13px;
+			}
+			
+		#main #content .extratoResumido .estabelecimentos ul.tipos, #main .internal .extratoResumido .estabelecimentos ul.tipos {
+			float: left;
+		}
+		
+		#main .listagem {
+			float: right;
+			font-size: 11px;
+			width: 224px;
+		}
+		
+			#main .listagem .scroll-pane {
+				height: 108px;
+				overflow: auto;
+			}
+			
+			#main .listagem .jScrollPaneTrack {
+				background: #e2e6f1;
+			}
+			
+				#main .listagem .jScrollPaneTrack .jScrollPaneDrag {
+					background: #c4cde3;
+					height: 20px !important;
+				}
+				
+			#main .listagem .jScrollArrowUp,
+			#main .listagem .jScrollArrowDown {
+				background: #8094c1 url(../../img/area_logada/icons/scroll.gif) no-repeat;
+				height: 15px;
+				width: 15px;
+			}
+			
+			#main .listagem .jScrollArrowDown {
+				background-position: -15px 0;
+			}
+			
+			#main #content .listagem ul, #main .internal .listagem ul {
+				background: #e4e8f2;
+				padding: 3px;
+			}
+			
+				#main .listagem ul li.alt {
+					background: #f4f5f9;
+				}
+					
+					#main .listagem ul li label {
+						color: #5b5d61;
+						display: block;
+						line-height: 1;
+						padding: 3px;
+					}
+					
+						#main ul li label input[type="checkbox"],
+						#main ul li label input[type="radio"] {
+							margin: 1px 3px;
+							vertical-align: -2px;
+						}
+						
+						*+html #main ul li label input[type="checkbox"],
+						*+html #main ul li label input[type="radio"] {
+							margin: -3px 0 -2px -1px !important;
+						}
+		
+			#main .listagem p.selecionar {
+				color: #626262;
+				font-size: 10px;
+				margin: 7px 20px 0 0;
+				text-align: right;
+			}
+			
+				#main .listagem p.selecionar span {
+					color: #183c8e;
+				}
+	
+	#main #content .extratoResumido .ultimasVendas,
+	#main #content .extratoResumido .lancamentosFuturos {
+		background: #eff1f7;
+		padding: 2px;
+	}
+	
+	#main #content .extratoResumido .lancamentosFuturos {
+		float: right;
+		width: 359px;
+	}
+	
+		#main #content .extratoResumido .ultimasVendas h3,
+		#main #content .extratoResumido .lancamentosFuturos h3 {
+			color: #14388c;
+			font: 18px Tahoma;
+			letter-spacing: -1px;
+			margin: 6px 7px;
+			text-transform: uppercase;
+		}
+		
+		#main #content .extratoResumido .ultimasVendas p,
+		#main #content .extratoResumido .lancamentosFuturos p {
+			margin: 0 7px 14px;
+		}
+		
+		#main table.tabela {
+			background: #eff1f7;
+			font-size: 11px;
+			width: 100%;
+		}
+		
+		#main table.tabela thead tr th {
+			background: #dee1eb;
+			border-right: 1px solid #ccd2e6;
+			color: #4e5f84;
+			padding: 6px 0;
+			vertical-align: middle;
+		}
+		
+		#main table.tabela tr th,
+		#main table.tabela tr td {
+			border-bottom: 1px solid #e1e4ed;
+			border-right: 1px solid #ccd2e6;
+			padding: 6px 1px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		
+		#main table.tabela tr.alt td,
+		#main table.tabela tr.alt th {
+			background: #f9fafc;
+		}
+		
+		#main table.tabela tr .last {
+			border-right: 0 !important;
+		}
+		
+		#main table.tabela tr.last td {
+			border-bottom: 0 !important;
+		}
+	
+		#main #content .extratoResumido .lancamentosFuturos p.detalhamento {
+			color: #183c8e;
+			font-size: 10px;
+			margin: 16px 12px;
+			text-align: right;
+		}
+	
+		#main #content .destaques {
+			background: url(../../img/area_logada/bg_destaques.png) no-repeat top;
+			clear: both;
+			overflow: hidden;
+			padding: 76px 0 56px;
+		}
+		
+			#main #content .destaques div {
+				display: inline;
+				float: left;
+				height: 220px;
+				min-height: 220px;
+				padding: 0 14px;
+				position: relative;
+				width: 203px;
+			}
+			
+			#main #content .destaques>div {
+				height: auto;
+			}
+			
+				#main #content .destaques div h3 {
+					border-left: 7px solid #ffcb00;
+					color: #14388c;
+					font: 22px/22px Tahoma;
+					margin: 0 -14px 30px;
+					text-transform: uppercase;
+					padding: 22px 0 0 8px;
+				}
+				
+				#main #content .destaques div p {
+					margin-bottom: 1em;
+					font-size: 11px;
+					line-height: 14px;
+				}
+				
+				#main #content .destaques div p.desc {
+					font-size: 13px;
+					line-height: 13px;
+				}
+				
+				#main #content .destaques div a {
+					background: url(../../img/area_logada/buttons/destaques.png) no-repeat;
+					bottom: 0;
+					color: #ffc418;
+					font: 14px Tahoma;
+					left: 14px;
+					text-transform: uppercase;
+					padding: 7px 0 13px 7px;
+					position: absolute;
+					width: 118px;
+				}
+				
+			#main #content .destaques .rav,
+			#main #content .destaques .komerci {
+				background: url(../../img/area_logada/bg_titulos_destaques.png) no-repeat center 41px;
+				margin-right: 17px;
+			}
+				
+				#main #content .destaques .prodServ h3 {
+					margin-bottom: 8px;
+					padding-top: 0;
+				}
+				
+				#main #content .destaques .rav img,
+				#main #content .destaques .komerci img {
+					position: absolute;
+					right: 14px;
+					top: 16px;
+				}
+					
+					#main #content .destaques .rav p big {
+						display: block;
+						font-size: 16px;
+					}
+				
+				#main #content .destaques .rav big.receba {
+					background: #f1f1f1;
+					color: #8094c1;
+					display: block;
+					font: bold 21px Arial;
+					margin-bottom: 12px;
+					padding: 8px;
+					text-align: center;
+				}
+				
+				#main #content .destaques .prodServ img {
+					margin: 7px 0;
+				}
+	
+	#main #sidebar {
+		float: right;
+		width: 218px;
+	}
+		
+		#main #sidebar>div {
+			background: url(../../img/area_logada/bg_sidebar_rodape.jpg) no-repeat bottom;
+			overflow: hidden;
+			padding: 0 16px 23px 7px;
+		}
+		
+			#main #sidebar div h3 {
+				height: 69px;
+				margin: 0 -16px 15px -7px;
+				overflow: hidden;
+				text-indent: -9999px;
+			}
+			
+			#main #sidebar div p {
+				line-height: 14px;
+				margin-bottom: 1.75em;
+			}
+					
+			#main #sidebar .avisos h3 {
+				background: url(../../img/area_logada/titles/avisos_importantes.png) no-repeat;
+			}
+						
+				#main #sidebar .avisos p strong {
+					color: #183c8e;
+					font-size: 14px;
+				}
+				
+			#main #sidebar .avisos a,
+			#main #sidebar .favoritos ul li {
+				background: url(../../img/area_logada/bullets/lista_sidebar.gif) no-repeat 0 2px;
+				display: inline-block;
+				padding-left: 11px;
+			}
+		
+			#main #sidebar .favoritos h3 {
+				background: url(../../img/area_logada/titles/meus_favoritos.gif) no-repeat;
+			}
+			
+			#main #sidebar .favoritos p {
+				color: #666;
+				font-size: 11px;
+				line-height: 13px;
+			}
+			
+				#main #sidebar .favoritos ul li,
+				#main #sidebar .enquete ul li {
+					display: block;
+					margin: 0 2px 14px;
+				}
+				
+					#main #sidebar .favoritos ul li a {
+						color: #575757;
+					}
+					
+					#main #sidebar .enquete ul.result li span{
+						float: left;
+						height: 7px;
+						margin: 2px 2px 0 0;
+						background: url(../../img/bg_progress_result.jpg) repeat-x;
+					}
+					
+					#main #sidebar .enquete p.result{
+						float: left;
+						display: inline;
+						width: 100%;
+						text-align: center;
+						margin: 0;
+					}
+		
+			#main #sidebar .enquete h3 {
+				background: url(../../img/area_logada/titles/participe_enquete.gif) no-repeat;
+			}
+/* --------------- */
+
+#main .internal{
+	float: left;
+	display: inline;
+	width: 100% !important;
+	padding: 20px 0 !important;
+	color: #575757;
+}
+	
+	#main .internal p{
+		margin: 10px 0;
+	}
+	
+	#main .internal p.bg{
+		padding: 0 0 60px 0;
+		background: url("../../img/bg_section.jpg") no-repeat center bottom;
+	}
+	
+	#main .internal p span.important{
+		color: #ff0000;
+	}
+	
+	#main .internal form.frmCancelExtract strong{
+		float: left;
+		display: inline;
+		font-size: 14px;
+	}
+	
+	#main .internal form.frmCancelExtract a{
+		padding: 3px 5px 2px 5px;
+	}
+	
+	#main .internal form.frmCancelExtract a, #main .internal form.frmCancelExtract button{
+		float: left;
+		display: inline;
+		margin: 0 5px 0 0;
+	}
+	
+	#main .internal form.frmCancelExtract fieldset{
+		float: left;
+		display: inline;
+		clear: both;
+		background: #f4f5f9;
+		width: auto;
+		margin: 10px 0 15px 0;
+	}
+	
+	#main .internal form.frmCancelExtract fieldset ul li{
+		float: left;
+		display: inline;
+		padding: 10px 20px;
+	}
+	
+	#main .internal form.frmCancelExtract fieldset ul li input.radio, #main .internal form.frmCancelExtract fieldset ul li label{
+		float: left;
+		margin: 0 5px 0 0;
+	}
+	
+	#main .internal form.frmNewQuery{
+		float: left;
+		display: inline;
+		width: 100%;
+		height: 174px;
+		margin: 0 0 20px 0;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset{
+		float: left;
+		display: inline;
+		height: 100%;
+		font-size: 11px;
+		padding: 0 15px 0 0;
+		margin: 0 15px 0 0;
+		border-right: solid #ccd0e6 1px;
+	}
+	
+	#main .internal form.movingSales div.fieldset{
+		padding: 0 58px 0 0;
+		margin: 0 58px 0 0;
+		width: 18%;
+	}
+	
+	#main .internal form.frmNewQuery div.first{
+		width: 32%;
+	}
+	
+	#main .internal form.movingSales div.period{
+		width: 23%;
+	}
+	
+	#main .internal form.frmNewQuery div.last{
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset p{
+		float: left;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset ul.tipos{
+		float: left;
+		display: inline;
+		width: 120px;
+		margin: 0 10px 0 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+		#main .internal form.frmNewQuery div.fieldset ul.tipos li{
+			float: left;
+			display: inline;
+			width: 100%;
+			margin: 0 0 10px 0;
+		}
+
+	#main .internal form.frmNewQuery div.fieldset .listagem{
+		width: 180px;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset .listagem p{
+		float: right;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset .listagem ul li{
+		height: 22px;
+	}
+
+	#main .internal form.frmNewQuery div.fieldset input.radio{
+		float: left;
+		display: inline;
+		margin: 3px 4px 0 0;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset input.text{
+		float: left;
+		border: solid 2px #a5abb9;
+		height: 11px;
+		width: 142px;
+		font-size: 10px;
+		color: #183c8e;
+		padding: 3px 5px;
+	}
+
+	#main .internal form.frmNewQuery div.fieldset select{
+		width: 170px;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset select.day{
+		width: 40px;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset select.month{
+		width: 80px;
+	}
+	
+	#main .internal form.frmNewQuery div.fieldset select.year{
+		width: 52px;
+	}
+
+	#main .internal form.frmNewQuery div.period p span{
+		float: left;
+		font-size: 10px;
+		margin: 2px 0 0 13px;
+	}
+
+	#main .internal form.frmNewQuery div.period label{
+		float: left;
+		margin: 3px 0 0 0;
+		width: 17px;
+	}
+	
+	#main .internal form.frmNewQuery div.period ul{
+		float: left;
+		display: inline;
+		width: 220px;
+	}
+	
+	#main .internal form.frmNewQuery div.period ul li{
+		float: left;
+		display: inline;
+		width: 220px;
+		margin: 0 0 10px 0;
+	}
+
+	#main .internal form.frmNewQuery div.fieldset div.jqf1Sel{
+		float: left;
+		background-image: url("../../img/form/jqf4.png");
+		height: 17px;
+		margin: 0;
+	}
+	
+	#main .internal form.frmNewQuery div.period div.jqf1Sel{
+		margin: 0 4px 0 0;
+	}
+	
+		#main .internal form.frmNewQuery div.fieldset div.jqf1Sel div.jqf1SelAtivo{
+			background-image: url("../../img/form/jqf4.png");
+			background-position: right -500px;
+			height: 17px;
+		}
+		
+			#main .internal form.frmNewQuery div.fieldset div.jqf1Sel div.jqf1SelAtivo a{
+				background-image: url("../../img/form/jqf4.png");
+				background-position: left -471px;
+				height: 17px;
+				padding-top: 2px;
+			}
+			
+			#main .internal form.frmNewQuery div.fieldset div.jqf1Sel .jqf1SelList li{
+				margin: 0;
+			}
+			
+	#main .internal form.frmNewQuery div.fieldset button{
+		margin: 100px 0 0 0;
+	}
+	
+	#main .internal form.movingSales div.fieldset button{
+		margin: 30px 0 0 0;
+	}
+
+	#main .internal p.border{
+		border: solid #d1d8e8 1px;
+		padding: 14px;
+	}
+
+	#main .dirf strong{
+		font-size: 14px;
+	}
+
+	#main .dirf form input.radio{
+		float: left;
+		margin: 0 5px 0 0;
+	}
+	
+	#main .dirf form label.left{
+		margin: 2px 5px 0 0;
+	}
+	
+	#main .dirf form select{
+		width: 70px;
+	}
+	
+	#main .dirf form button{
+		float: left;
+	}
+	
+	#main .dirf form fieldset div.jqf1Sel{
+		float: left;
+		background-image: url("../../img/form/jqf4.png");
+		height: 17px;
+		margin: 0;
+	}
+	
+	#main .dirf form fieldset div.jqf1Sel{
+		margin: 0 4px 10px 0;
+	}
+	
+		#main .dirf form fieldset div.jqf1Sel div.jqf1SelAtivo{
+			background-image: url("../../img/form/jqf4.png");
+			background-position: right -500px;
+			height: 17px;
+		}
+		
+			#main .dirf form fieldset div.jqf1Sel div.jqf1SelAtivo a{
+				background-image: url("../../img/form/jqf4.png");
+				background-position: left -471px;
+				height: 17px;
+				padding-top: 2px;
+			}
+
+	#main .dirf .contentDirf{
+		float: left;
+		display: inline;
+		width: 980px;
+		height: 546px;
+		background: #f4f6fb;
+	}
+
+	.options{
+		float: left;
+		display: inline;
+		width: 100%;
+		height: 38px;
+		margin: 10px 0;
+		background: url("../../img/bg_tools.jpg") repeat-x left -15px; 
+	}
+	
+		.options a.btnBack{
+			float: left;
+			display: inline;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 15px 10px;
+			padding: 0 0 0 20px;
+			background: url("../../img/bullets/blt_seta_left_yellow.png") no-repeat left bottom;
+		}
+	
+		.options ul{
+			float: right;
+			display: inline;
+			margin: 12px 15px;
+		}
+		
+			.options ul li{
+				float: left;
+				font-size: 10px;
+				display: inline;
+				height: 15px;
+				text-transform: uppercase;
+				margin: 0 10px 0 0;
+				border-right: solid #ccd4e5 1px;
+			}
+			
+			.options ul li a{
+				background: no-repeat right top;
+				float: left;
+				font: 11px Tahoma;
+				display: inline;
+				height: 15px;
+				padding: 0 20px 0 0;
+				margin: 0 8px 0 0;
+			}
+			
+			.options ul li.first {
+				border: none;
+				margin-top: 2px;
+			}
+			
+			.options ul li.last{
+				border: none;
+			}
+			
+			.options ul li a.ico_print{
+				background-image: url(../../img/icons/ico_print.gif);
+			}
+			
+			.options ul li a.ico_lamp{
+				background-image: url(../../img/icons/ico_lamp.gif);
+			}
+			
+			.options ul li a.ico_doc{
+				background-image: url(../../img/icons/ico_doc.gif);
+			}
+			
+			.options ul li a.ico_txt{
+				background-image: url(../../img/icons/ico_txt.gif);
+			}
+			
+			.options ul li a.ico_xls{
+				background-image: url(../../img/icons/ico_xls.gif);
+			}
+			
+			.options ul li a.ico_graph{
+				background-image: url(../../img/icons/ico_graph.gif);
+			}
+
+	.bgmodal{
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 0.3;
+		filter: alpha(opacity=30);
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		float: left;
+		background: #183c8e;
+	}
+	
+	.modal{
+		position: absolute;
+		top: 340px;
+		left: 40%;
+		z-index: 200;
+		width: 300px;
+		height: auto;
+		background: #fff;
+		border-bottom: solid #a1a1a1 1px;
+		border-right: solid #a1a1a1 1px;
+	}
+	
+		.modal .warning{
+			float: left;
+			display: inline;
+			background: url("../../img/icons/ico_warning.png") no-repeat 18px 40px;
+			padding: 18px 18px 18px 90px;
+		}
+	
+			.modal .warning strong{
+				float: left;
+				display: inline;
+				width: 192px;
+				text-align: center;
+				color: #183c8e;
+				text-transform: uppercase;
+				margin: 0 0 14px 0;
+			}
+			
+			.modal .warning p{
+				float: left;
+				display: inline;
+				width: 100%;
+				font-size: 11px;
+				margin: 0 0 14px 0;
+			}
+			
+				.modal .warning p strong{
+					font-size: 11px;
+					text-transform: none;
+					color: #575757;
+					width: auto;
+					float: none;
+				}
+			
+			.modal .warning ul li{
+				color: #ff0000;
+				font-size: 11px;
+			}
+			
+			.modal .warning a{
+				float: left;
+				display: inline;
+				margin: 0 0 0 80px; 
+			}
+
+		.modal .success{
+			background: url("../../img/icons/ico_success.png") no-repeat 28px 40px;
+		}
+		
+	#main .bookmark .listagem{
+		float: left !important;
+		display: inline;
+		width: 285px !important;
+		margin: 0 76px 40px 0;
+	}
+	
+		#main .bookmark .listagem strong{
+			float: left;
+			text-transform: uppercase;
+			margin: 0 0 8px 0;
+		}
+	
+		#main #content .bookmark .listagem .scroll-pane{
+			height: 154px;
+		}
+
+		#main #content .bookmark .listagem ul li{
+			height: 21px;
+		}
+		
+				#main .internal p.movimento {
+					color: #808080;
+					float: left;
+					font: 14px Arial;
+					margin: 13px 0 12px;
+					text-transform: uppercase;
+				}
+				
+				#main .internal p.movimento strong {
+					font-weight: bold;
+				}
+				
+				#main .internal h4.correcoes {
+					background: #8094c1 url(../../img/area_logada/icons/correcoes.gif) no-repeat 9px center;
+					color: #fbfbfe;
+					float: left;
+					font: bold 14px Arial;
+					margin: 23px 0 8px;
+					padding: 9px 25px;
+					text-transform: uppercase;
+					width: 920px;
+				}
+				
+				#main .internal table.tabela tr th {
+					height: 33px;
+					padding: 6px;
+				}
+				
+				#main .internal table.tabela tbody tr th {
+					text-align: right;
+					text-transform: uppercase;
+				}
+				
+				#main .internal table.tabela tr td {
+					font-size: 10px;
+					height: 33px;
+					padding: 6px;
+					text-transform: uppercase;
+				}
+				
+				#main .internal table.tabela tr td.negativo {
+					color: #fb0000;
+				}
+				
+				#main .internal table.tabela tfoot tr th {
+					background: #b9c1dc;
+					border-bottom: 0;
+					text-align: right;
+					text-transform: uppercase;
+				}
+				
+				#main .internal table.tabela tfoot tr td {
+					background: #b9c1dc;
+					border-bottom: 0;
+				}
+				
+				#main .internal table.tabela tfoot tr td.negativo {
+					color: #fb0000;
+					font-weight: bold;
+				}
+				
+				#main .internal table.tabela tfoot tr.last th,
+				#main .internal table.tabela tfoot tr.last td {
+					background: #d3d7e5;
+				}
+				
+				#main .internal label.ordenar {
+					float: right;
+					padding: 10px 0;
+				}
+				
+				#main .internal label.ordenar span.texto,
+				#main .internal label.linhas span.texto {
+					display: inline;
+					float: left;
+					font-size: 10px;
+					margin: 6px 8px 0;
+					text-transform: uppercase;
+				}
+				
+				#main .internal label.linhas {
+					float: left;
+					padding: 10px 6px;
+				}
+				
+				#main .internal label.ordenar span.texto {
+					display: inline;
+					float: left;
+					font-size: 10px;
+					margin: 6px 8px 0;
+					text-transform: uppercase;
+				}
+				
+				#main .internal .icoAjuda.inverso {
+					clear: right;
+					float: right;
+					margin-top: -3px;
+					padding: 0 0 7px;
+				}
+				
+				#main .internal .icoAjuda.inverso .ajuda {
+					background: url(../../img/area_logada/bg_ajuda_inverso.png) no-repeat;
+					left: -252px;
+					padding: 0 25px 0 15px;
+					top: -27px;
+				}
+				
+				#main .internal .consultas {
+					background: url(../../img/area_logada/bg_consultas.png) center no-repeat;
+					float: left;
+					height: 100px;
+					margin-top: 20px;
+					width: 100%;
+				}
+				
+				#main .internal .consultas h3 {
+					color: #183c8e;
+					font: bold 14px Arial;
+					margin: 18px 96px 0;
+					text-transform: uppercase;
+				}
+				
+				#main .internal .consultas p {
+					line-height: 14px;
+					margin: 4px 46px 0 96px;
+				}
+				
+				#main .internal .visualizarPor {
+					clear: both;
+					float: right;
+					margin-top: -15px;
+					position: relative;
+					width: 100%;
+				}
+				
+				#main .internal .visualizarPor .icoAjuda {
+					position: absolute;
+					right: 0;
+					top: -10px;
+				}
+				
+				#main .internal .visualizarPor p {
+					float: right;
+					font-size: 10px;
+					padding: 0 12px;
+					text-transform: uppercase;
+				}
+				
+				#main .internal .visualizarPor p input {
+					margin-left: 15px;
+					vertical-align: -2px;
+				}
+				
+				#main .internal .visualizarPor p input.text {
+					background: #e1e6f1;
+					border: 2px solid #a5abb9;
+					color: #324A59;
+					font-size: 10px;
+					margin-right: 10px;
+					padding: 2px 4px;
+					width: 120px;
+				}
+				
+				#main .internal .visualizarPor p button {
+					float: none;
+					vertical-align: -2px;
+				}
+				
+ul.paginate {
+	clear: both;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 17px 0 10px;
+	width: 144px;
+}
+
+	ul.paginate li{
+		background: none !important;
+		padding: 0 !important;
+		display: inline;
+	}
+	
+		ul.paginate li a, ul.paginate li a:visited{
+			float: left;
+			color: #244694;
+			padding: 5px;
+			width: 8px;
+		}
+
+		ul.paginate li a.selected, ul.paginate li a:hover, ul.paginate li a:focus{
+			color: #666;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		
+		ul.paginate li.previous a, ul.paginate li.previous a:visited{
+			float: left;
+			display: inline;
+			text-indent: -9999px;
+			background: url(../../img/bullets/blt_seta_left_blue.png) no-repeat center center;
+		}
+		
+		ul.paginate li.previous a.selected, ul.paginate li.previous a:hover, ul.paginate li.previous a:focus{
+			background-image: url(../../img/bullets/blt_seta_left_darkblue.png);
+		}
+		
+		ul.paginate li.next a, ul.paginate li.next a:visited{
+			float: left;
+			display: inline;
+			text-indent: -9999px;
+			background: url(../../img/bullets/blt_seta_right_blue.png) no-repeat center center;
+		}
+		
+		ul.paginate li.next a.selected, ul.paginate li.next a:hover, ul.paginate li.next a:focus{
+			background-image: url(../../img/bullets/blt_seta_right_darkblue.png);
+		}

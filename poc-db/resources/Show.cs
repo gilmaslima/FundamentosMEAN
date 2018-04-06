@@ -1,0 +1,24 @@
+﻿using System;
+using System.ComponentModel;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using Microsoft.SharePoint;
+using Microsoft.SharePoint.WebControls;
+
+namespace Redecard.PN.Extrato.SharePoint.WebParts.Show
+{
+    [ToolboxItemAttribute(false)]
+    public class Show : WebPart
+    {
+        // Visual Studio might automatically update this path when you change the Visual Web Part project item.
+        private const string _ascxPath = @"~/_CONTROLTEMPLATES/Redecard.PN.Extrato.SharePoint.WebParts/Show/ShowUserControl.ascx";
+
+        protected override void CreateChildControls()
+        {
+            Control control = Page.LoadControl(_ascxPath);
+            Controls.Add(control);
+        }
+    }
+}

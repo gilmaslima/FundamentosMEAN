@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63C7CB6D-4B40-42AD-B12B-BA9C2368530C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rede.PN.ApiLogin.Sharepoint</RootNamespace>
+    <AssemblyName>Rede.PN.ApiLogin.Sharepoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <TokenReplacementFileExtensions>svc</TokenReplacementFileExtensions>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jose-jwt, Version=1.9.3.0, Culture=neutral, PublicKeyToken=9265a2a2d627babb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RedeBin\jose-jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\RedeBin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Redecard.PN.Comum, Version=4.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RedeBin\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ISAPI\portal\ILoginServico.cs">
+      <DependentUpon>LoginServico.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ISAPI\portal\Keys\TokenKeyManager.cs" />
+    <Compile Include="ISAPI\portal\LoginServico.svc.cs">
+      <DependentUpon>LoginServico.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ISAPI\portal\Models\Entidade.cs" />
+    <Compile Include="ISAPI\portal\Models\GrupoEntidade.cs" />
+    <Compile Include="ISAPI\portal\Models\PayLoadToken.cs" />
+    <Compile Include="ISAPI\portal\Models\Request\ListarEstabelecimentoRequest.cs" />
+    <Compile Include="ISAPI\portal\Models\Request\LoginConciliadorRequest.cs" />
+    <Compile Include="ISAPI\portal\Models\Response\ListarEstabelecimentosResponse.cs" />
+    <Compile Include="ISAPI\portal\Models\Response\StatusRetorno.cs" />
+    <Compile Include="ISAPI\portal\Models\Response\ValidacaoLoginResponse.cs" />
+    <Compile Include="ISAPI\portal\Models\Usuario.cs" />
+    <Compile Include="ISAPI\portal\Models\UsuarioPayload.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="configs\web.config" />
+    <None Include="configs\web.config%40desenv" />
+    <None Include="configs\web.config%40prod_externo" />
+    <None Include="configs\web.config%40prod_interno" />
+    <None Include="configs\web.config%40simul" />
+    <None Include="ISAPI\portal\Keys\private.rsa" />
+    <None Include="ISAPI\portal\Keys\public.rsa" />
+    <None Include="ISAPI\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{63585882-bcc4-4f83-aa47-00a8e32751e1}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+    <None Include="Package\Package.package">
+      <PackageId>{258caf31-900e-4336-952c-3a387a69bd37}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ISAPI\portal\Keys\private_key.xml" />
+    <Content Include="ISAPI\portal\Keys\public_key.xml" />
+    <Content Include="ISAPI\portal\LoginServico.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rede.PN.ApiLogin.Modelo\Rede.PN.ApiLogin.Modelo.csproj">
+      <Project>{4db2ec37-88bd-4979-8343-3ce63fdf29d3}</Project>
+      <Name>Rede.PN.ApiLogin.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rede.PN.ApiLogin.Negocio\Rede.PN.ApiLogin.Negocio.csproj">
+      <Project>{2da4ecfb-f575-4556-bb34-128ca37f2cb0}</Project>
+      <Name>Rede.PN.ApiLogin.Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

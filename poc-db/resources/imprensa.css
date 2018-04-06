@@ -1,0 +1,125 @@
+@import url("conheca_redecard.css");
+
+.errorMsg{
+	display: inline-block;
+}
+
+#main .menu h2{
+	background-image: url("../img/titles/tit_imprensa.jpg");
+}
+
+#content p.description img, #content div.description img{
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#content .center ul.testimonials li strong{
+	float: left;
+	width: 100%;
+}
+
+#content .center .left .frmSearchReleases{
+	float: left;
+	display: inline;
+	width: 100%;
+	padding: 10px 0;
+}
+
+	#content .center .left .frmSearchReleases label{
+		float: left;
+		display: inline;
+		color: #183c8e;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 4px 10px 0 0;
+	}
+
+	#content .center .left .frmSearchReleases select{
+		width: 138px;
+	}
+	
+	#content .center .left .frmSearchReleases fieldset div.jqf1Sel{
+		background-image: url("../img/form/jqf2.png");
+		height: 26px;
+		margin: 0 5px;
+	}
+	
+		#content .center .left .frmSearchReleases fieldset div.jqf1Sel div.jqf1SelAtivo{
+			background-image: url("../img/form/jqf2.png");
+			background-position: right -500px;
+			height: 26px;
+		}
+		
+			#content .center .left .frmSearchReleases fieldset div.jqf1Sel div.jqf1SelAtivo a{
+				background-image: url("../img/form/jqf2.png");
+				background-position: left -471px;
+				height: 26px;
+				padding-top: 6px;
+			}
+	
+	#content .center .left .frmSearchReleases button{
+		float: left;
+	}
+	
+#content .center .left .journalist{
+	float: left;
+	display: inline;
+	padding: 10px 16px 6px 16px;
+	width: 431px;
+	background: url("../img/bg_journalist.jpg") repeat-x left bottom;
+}
+
+	#content .center .left .journalist h3{
+		text-transform: uppercase;
+		font-size: 23px;
+		font-weight: normal;
+		color: #ffcb00;
+	}
+	
+	#content .center .left .journalist strong{
+		text-transform: uppercase;
+		color: #14388c;
+		font-size: 12px;
+	}
+
+	#content .center .left .journalist ul{
+		float: left;
+		display: inline;
+		padding: 0;
+		list-style: none;
+		margin: 30px 0 0 0;
+		width: 431px;
+	}
+
+		#content .center .left .journalist ul li{
+			float: left;
+			clear: none;
+			display: inline;
+			width: 215px;
+			background: none;
+			padding: 0;
+			margin: 0 0 18px 0;
+		}
+		
+			#content .center .left .journalist ul li span{
+				font-style: normal;
+				color: #575757;
+				background: url("../img/icons/ico_user.gif") no-repeat 2px 1px;
+				padding: 0 0 0 20px;
+			}
+			
+			#content .center .left .journalist ul li a{
+				background: url("../img/icons/ico_mail.gif") no-repeat left center;
+				padding: 0 0 0 20px;
+			}
+			
+#content .center ul.testimonials a {
+	float:none;
+	clear:none;
+	}
+#content .center ul.testimonials li * {
+				font-size: 12px;
+			}
+
+			

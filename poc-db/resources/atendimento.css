@@ -1,0 +1,384 @@
+﻿/*  Projeto: Atendimento Digital; 
+    Descrição: CSS exclusivo para a página /AtendimentoDigital/Atendimento.aspx; 
+    Autor/Empresa: Mário Neto/Iteris Software e Consultoria; 
+    Cliente: Rede; 
+    ©Copyright: 2016 Rede S.A.;    
+*/
+.portal-container-fluid, .portal-container {
+    width: auto;
+    min-width: inherit !important;
+}
+
+.jade-text {
+    color: #00b9b5 !important;
+}
+
+.faq-description {
+    background-color: #E0E0E0;
+    padding: 0 40px 50px 40px;
+}
+
+.faq-answer {
+    line-height: 22px;
+    text-align: justify;
+    word-spacing: 2px;
+    white-space: pre-line;
+    padding: 10px 0;
+}
+
+.bottom-20 {
+    margin-bottom: 20px;
+}
+
+.right-15 {
+    margin-right: 15px;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.faq-list {
+    margin: 10px 0 0 0;
+}
+
+.faq-item:nth-child(odd) {
+    background-color: #eee;
+}
+
+.faq-item:nth-child(even) {
+    background-color: #FFF;
+}
+
+.faq-title {
+    display: inline-block;
+}
+
+.faq-list-title {
+    padding: 20px 30px !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.faq-list-title-last {
+    padding: 20px 30px;
+    margin-bottom: 55px;
+}
+
+ul.faq-list > li > p {
+    border-bottom: 1px solid #4F4139 !important;
+}
+
+ul.faq-list > li:first-child > p {
+    border-top: 1px solid #4F4139 !important;
+}
+
+.faq-answer-interaction {
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.faq-answer-interaction-options {
+    padding-right: 40px;
+    display: inline-block;
+    float: left;
+    margin-top: 35px !important;
+}
+
+.faq-answer-interaction-other-topic {
+    display: inline-block;
+    padding: 30px 40px 20px 0;
+}
+
+.disc-orange-list {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #ff7800;
+}
+
+    .disc-orange-list .list-title {
+        color: black !important;
+    }
+
+.faq-answer-interaction-other-topic-list {
+    max-width: 810px !important;
+}
+
+.faq-thanks-message {
+    max-width: 810px !important;
+    clear: both;
+    margin: 30px 0;
+}
+
+.faq-box {
+    margin-bottom: 45px;
+}
+
+.money-values {
+    height: 230px;
+    display: inline-block;
+    padding: 0 20px 25px 25px;
+    margin-bottom: 25px;
+    overflow: auto;
+}
+
+.value {
+    padding: 20px 5px;
+}
+
+.value-child {
+    padding: 0 5px;
+    font-size: 10pt;
+}
+
+.faq-foot-contact {
+    margin-top: 65px;
+}
+
+    .faq-foot-contact .money-values {
+        min-height: 270px;
+        width: auto;
+    }
+
+        .faq-foot-contact .money-values .value {
+            display: inline-block;
+            padding: 10px 0px;
+        }
+
+        .faq-foot-contact .money-values .value-icon {
+            margin: 13px 0px !important;
+        }
+
+            .faq-foot-contact .money-values .value-icon p {
+                padding: 0 20px;
+            }
+
+        .faq-foot-contact .money-values .value .commom-text-bold {
+            float: left;
+            margin: 30px 0 0 20px;
+            font-size: 18px;
+        }
+
+        .faq-foot-contact .money-values .value-box {
+            display: block;
+            height: 86%;
+            margin-bottom: 10px;
+        }
+
+        .faq-foot-contact .money-values .jade-text.right {
+            margin-right: 35px;
+        }
+
+
+.ui-accordion .ui-accordion-header {
+    display: block;
+    cursor: default;
+    position: relative;
+    margin: 0;
+    padding: inherit;
+    padding: unset;
+    min-height: 0;
+    font-size: 100%;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: inherit;
+    border: 0;
+    padding: 4px 3px;
+    text-align: left;
+    color: #4f4139;
+}
+
+.value-icon {
+    float: right;
+    margin-top: 35px !important;
+}
+
+.faq-autoatendimento-icon {
+    background: url(../img/atendimento-icons.png) no-repeat;
+    float: left;
+}
+
+.faq-autoatendimento-line {
+    background: url(../img/bg-line2.png) repeat-x center 64px;
+    width: 100%;
+    margin: 15px 0 0;
+    background-position: bottom;
+    padding-bottom: 0 !important;
+}
+
+.ouvidoria {
+    width: 64px;
+    height: 67px;
+    background-position: -124px top;
+    margin: 6px 25px 0 20px !important;
+}
+
+.mensagem {
+    width: 81px;
+    height: 60px;
+    margin-top: 12px;
+    margin-right: 26px !important;
+    background-position: -248px bottom !important;
+    margin: 15px 19px 0 15px !important;
+}
+
+.telefone {
+    width: 60px;
+    height: 68px;
+    background-position: -188px top !important;
+    margin: 5px 18px 0 15px !important;
+}
+
+.col-4>.col {
+    width: 319px;
+}
+
+.col-3 > .col {
+    width: 367.5px;
+    padding: 0 24px;
+    height: 52px !important;
+    vertical-align: middle;
+    border: 1px solid;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+    .col-3 > .col:last-child {
+        border-right: none;
+    }
+
+        .col-3 > .col:last-child > div {
+            margin-top: 0 !important;
+        }
+
+    .col-3 > .col > div {
+        margin-top: 8px !important;
+    }
+
+
+.modal-rede-container-atendimento .ui-dialog-titlebar {
+    padding: 18px 22px 5px !important;
+}
+
+.modal-rede-container-atendimento .ui-dialog-title {
+    color: black;
+    padding-left: 10px;
+}
+
+.modal-rede-container-atendimento .modal-hr {
+    margin: 10px 10px 35px 10px;
+    color: #4f4139;
+    height: 0px;
+    border: none;
+    border-top: 1px solid #4f4139;
+}
+
+.modal-rede-container-atendimento .faq-foot-contact {
+    margin-top: inherit !important;
+}
+
+
+.modal-rede-container-atendimento .money-values {
+    padding: 0;
+    margin-top: 0 !important;
+}
+
+.modal-rede-container-atendimento .value-icon {
+    float: none !important;
+}
+
+    .modal-rede-container-atendimento .value-icon p {
+        margin-top: 10px !important;
+    }
+
+.modal-rede-container-atendimento .value.faq-autoatendimento-line {
+    margin: 0 !important;
+}
+
+.modal-rede-container-atendimento .value {
+    padding: 0 25px !important;
+}
+
+.modal-rede-container-atendimento .col-2 {
+    margin: -15px 0 15px 0px;
+}
+
+.col-2>.col {
+    width: 615px;
+}
+
+.modal-rede-container-atendimento .col {
+    width: 500px !important;
+    border: #4f4139 1px solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.modal-rede-container-atendimento .col-2 > .col:last-child {
+    border-right: none;
+}
+
+.modal-rede-container-atendimento .telefone {
+    margin: 5px 20px 0 15px !important;
+}
+
+.modal-rede-container-atendimento .ouvidoria {
+    margin: 6px 20px 0 15px !important;
+}
+
+.FAQ-Videos > div:first-child {
+    text-align: left;
+    vertical-align: top;
+    padding-right: 25px;
+}
+
+.FAQ-Videos > div {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    padding: 0px;
+}
+
+.FAQ-Videos {
+    background-color: #fff;
+    height: 50px;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+}
+
+    .FAQ-Videos img {
+        width: 260px;
+        height: 179px;
+    }
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+a.pointer {
+    cursor: pointer;
+}
+
+.video-thumb-rede {
+    margin-left: 25px !important;
+}
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 1;
+  transition: opacity .4s ease;
+}

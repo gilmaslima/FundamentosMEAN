@@ -1,0 +1,18 @@
+﻿/*
+Projeto: BBF - Facelift
+Descrição: Estabilização do estilo aplicado pelo animate.custom.css com os requisitos de facelift do portal
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+*/
+
+.animated {
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    -o-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}

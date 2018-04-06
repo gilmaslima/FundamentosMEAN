@@ -1,0 +1,119 @@
+@import url("conheca_redecard.css");
+
+#main .menu h2{
+	background-image: url("../img/titles/tit_trabalhe_conosco.jpg");
+}
+
+div.banners{
+	float: left;
+	background: url("../img/bg_products_gallery.jpg") no-repeat center bottom;
+	padding: 0 0 26px 0;
+	margin: 0 0 20px 0;
+}
+
+div.banners a{
+	float: left;
+}
+
+div.banners a img{
+	border: none;
+}
+
+#content .center .vacancies{
+	float: left;
+}
+
+	#content .center .vacancies h4{
+		float: left;
+		display: inline;
+		font-size: 14px;
+		color: #183c8e;
+		margin: 0 0 10px 0;
+		width: 478px;
+	}
+	
+	#content .center .vacancies ul{
+		float: left;
+		display: inline;
+		padding: 0 0 10px 0;
+		margin: 0;
+		list-style: none;
+	}
+	
+		#content .center .vacancies ul li{
+			float: left;
+			display: inline;
+			background: #eff1f7;
+			padding: 1px;
+			margin: 0 0 10px 0;
+		}
+		
+			#content .center .vacancies ul li a{
+				float: left;
+				background: #e1e4ed url("../img/icons/ico_blue_more.jpg") no-repeat 10px center;
+				width: 446px;
+				padding: 10px 10px 10px 30px;
+				font-weight: bold;
+			}
+			
+				#content .center .vacancies ul li a.less{
+					background-image: url("../img/icons/ico_blue_less.jpg");
+				}
+			
+			#content .center .vacancies ul li div.descriptionVague{
+				float: left;
+				background: #eff1f7;
+				width: 486px;
+				padding: 0;
+				margin: 0;
+				color: #575757;
+				font-size: 11px;
+				display: none;
+			}
+			
+				#content .center .vacancies ul li div.descriptionVague div{
+					float: left;
+					display: inline;
+					padding: 20px 8px 0 8px;
+				}
+			
+				#content .center .vacancies ul li div.descriptionVague div.left{
+					width: 154px;
+				}
+				
+				#content .center .vacancies ul li div.descriptionVague div.right{
+					width: 300px;
+					background: #f4f5f9;
+				}
+
+					#content .center .vacancies ul li div.descriptionVague div ul{
+						float: left;
+						width: 100%;
+					}
+					
+						#content .center .vacancies ul li div.descriptionVague div ul li{
+							float: left;
+							display: inline;
+							margin: 0;
+							width: 100%;
+							background: none;
+						}
+
+					#content .center .vacancies ul li div.descriptionVague div strong{
+						text-transform: uppercase;
+						color: #899bc5;
+					}
+					
+						#content .center .vacancies ul li div.descriptionVague div strong span{
+							color: #575757;
+							font-size: 32px;
+						}
+						
+					#content .center .vacancies ul li div.descriptionVague div a{
+						float: left;
+						display: inline;
+						background: url("../img/buttons/btn_quero_candidatar_essa_vaga.png") no-repeat left top;
+						text-indent: -9999px;
+						width: 189px;
+						height: 47px;
+					}

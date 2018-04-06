@@ -1,0 +1,87 @@
+﻿*
+{
+    font-family: Arial;
+    font-size: 12px;
+}
+
+body
+{
+    overflow: auto !important;
+}
+
+#pageContentCentraliza
+{
+	text-align: left;
+	margin-left: 23px;
+}
+
+.borda-top, .borda-bottom
+{
+	line-height: 7px !important;
+}
+
+.comentario
+{
+	width: 100%;
+	float: left;
+	margin-left: 5px !important;
+	font-style: italic;
+	font-size: 11px;
+}
+
+.box-aviso
+{
+	margin: 0px !important;
+	width: 561px !important;
+}
+
+#buttons
+{
+	text-align: right;
+	width: 563px;
+	margin-top: 10px;
+}
+
+.tabelaDados
+{
+	border: 0px !important;
+	width: 550px !important;
+}
+
+.camposObrigatorios
+{
+	width: 400px !important;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#pageContentCentraliza #titulo
+{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000 !important;
+}
+
+#pageContentCentraliza #subtitulo
+{
+    margin-bottom: 10px;
+}
+
+#pageContentCentraliza .tabelaDados
+{
+    padding-top: 0px !important;
+    width: 100% !important;
+    margin-top: 0px !important;
+}
+
+#pnlErroPrincipal, #ctrlConfirmacaoPositiva_pnlErroPrincipal, #crtlAlteracaoSenha_pnlErroPrincipal
+{
+	width: 550px !important;
+	padding: 5px !important;
+}
+
+select 
+{
+	margin-left: 5px !important;
+}

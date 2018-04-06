@@ -1,0 +1,387 @@
+﻿/*
+Projeto: Rede.Eadquirencia;
+Descrição: CSS do formulário "Relatório de Vendas", do modulo de eadquirencia;
+Autor/Empresa: Thiago Corda/Iteris;
+Cliente: Rede;
+©Copyright: 2016 Iteris;
+Notas: Anotações, atualizações e perigos;
+*/
+
+.form-content {
+	color: #A4A4AA;
+	border: solid 1px #DCDCDC !important;
+	font-weight: bold;
+}
+
+    .form-content .titulo {
+        font-weight: bold;
+        background-color: #DCDCDC;
+        font-style: normal;
+        font-size: 15px;
+        text-align: center;
+        padding: 5px 0 0 0 !important;
+        color: black;
+		height:20px !important;
+    }
+
+    .form-content .conteudo {
+        /*padding-top: 5px;*/
+        background-color: #DCDCDC;
+    }
+
+        .form-content .conteudo p {
+            text-align: left;
+            font-weight: normal;
+            font-style: normal;
+            padding-left: 7%;
+            padding-top: 10px;
+            font-weight: bold;
+            background-color: #E5E5E5;
+        }
+
+        .form-content .conteudo .linha {
+            clear: both;
+            height: 25px;
+            padding-top: 10px;
+        }
+
+        .form-content .conteudo .linhaLarge {
+        }
+
+        .form-content .conteudo .linha:nth-child(even) {
+            background-color: #E5E5E5;
+        }
+
+        .form-content .conteudo .linha:nth-child(odd) {
+            background-color: #F7F7F7;
+        }
+
+        .form-content .conteudo .linha .col-center {
+            margin-left: 30% !important;
+        }
+
+        .form-content .conteudo .linha .col-right {
+            margin-right: 30%;
+        }
+
+        .form-content .conteudo .linha .col-label {
+            margin-left: 10px;
+            text-align: right;
+            width: 150px;
+            float: left;
+        }
+
+        .form-content .conteudo .linha .col-input {
+            margin-left: 20px;
+            text-align: left;
+            width: 250px;
+            float: left;
+            color: black;
+            font-weight: normal;
+        }
+
+        .form-content .conteudo .linha .col-input-large {
+            margin-left: 20px;
+            text-align: center;
+            color: black;
+        }
+	.form-content .painel
+	{
+		height:350px !important;
+		background-color: #E5E5E5 !important;
+	}
+
+
+.fundoFormulario {
+    background-color: #DCDCDC !important;
+}
+
+.imageFatura { 
+   position: relative; 
+   width: 100%;
+}
+
+	.imageFatura img{ 
+	   margin-top:1% !important;
+	   width: 45%; 
+	   height:45%;
+	}
+
+	.imageFatura h2 { 
+	   position: absolute; 
+	   top: 72%; 
+	   left: 9%; 
+	   width: 100%; 
+	   font-size:12px;
+	   color:black;
+	}
+
+.upper
+{
+	text-transform: uppercase;
+}
+
+.col-center
+{
+	margin-left: 15% !important;
+}
+
+.paragrafo
+{
+	margin-left:5% !important;
+}
+
+.alturaMedia
+{
+	Height: 30px;
+	margin-top:10px !important;
+}
+
+.alturaGrande
+{
+	Height: 100%;
+	margin-top:10px !important;
+}
+
+.subTitulo
+{
+	color: #003399;
+	font-weight: bold;
+}
+
+.conteudoRelatorio{
+    margin:10px 10px 10px 10px !important;
+    overflow:hidden;
+}
+
+.coluna{
+    float:left;
+    width:30%;
+    margin-left:10px;
+}
+
+.colunaDropDown{
+    float:left;
+    width:20%;
+    position:relative;
+    margin-left:10px;
+}
+
+.linha{ 
+    float:left;
+    width:100%;
+    margin-top:10px !important;
+}
+
+    .linha span{
+        margin-bottom:10px;
+    }
+    
+    .linha .campo{
+        margin-top:5px;
+    }
+
+    .linha .botao{
+        float:right;
+        margin-right:15px;
+    }
+
+    .linha .botaoSemMargem{
+        float:right;
+    }
+
+.date{
+    position:relative;
+    float:left;
+    margin-right:5px;
+    margin-top:1px;
+}
+
+    span, .date{
+        margin-top:3px;
+    }
+
+.margin20px{
+    margin-left:20px!important;
+}
+
+.linha .alinhaDireita {
+    float:right;
+    margin-bottom:10px;
+}
+.linha .alinhaEsquerda
+{
+    float:left;
+    margin-top: 20px;
+}
+
+#tblTotais tr td:first-child{
+    text-align: right !important;
+    font-weight: bold;
+    background-color:#d6d7d6;
+    width:auto;
+    color:#666666
+}
+#tblTotais tr td{
+    text-align: center;
+    border: 1px solid #d6d7d6;
+    height: 27px;
+    width: 100px;
+}
+
+.bordaBranca {
+    border-top: 1px solid #fff !important;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+#lblFiltros {
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    color: #999999;
+    font-size:13px;
+    font-style:normal;
+}
+
+.destaqueFiltro{
+    font-size:13px;
+}
+
+.w750{
+    width: 750px;
+}
+
+.w175{
+    width:175px !important;
+}
+
+.w150{
+    width:150px !important;
+}
+.w120{
+    width: 120px !important;
+}
+.w110{
+    width: 110px !important;
+}
+.w100{
+    width:100px !important;
+}
+.w90{
+    width: 90px !important;
+}
+.w85{
+    width: 85px !important;
+}
+.w80{
+    width: 80px !important;
+}
+.w70{
+    width: 70px !important;
+}
+
+.gridResultados{
+    text-align:center;
+    width:100%;
+}
+
+.linhaGrid{
+    height:30px;
+}
+    .linhaGrid td {
+        border: 1px solid #f7f3f7;
+    }
+
+.linhaDetalhes{
+    height:130px;
+    font-size:10px;
+}
+
+    .linhaDetalhes td{
+        text-align:left;
+    }
+    .linhaDetalhes .negrito {
+        font-size:11px;
+    }
+
+.divPaginacao {
+    margin-top: 20px;
+    text-align:center;
+    width: 300px;
+    margin: auto 45%;
+}
+
+.botoesRelatorio{
+    float: right;
+    padding-top: 10px;
+}
+
+.linhaRodapeRelatorio
+{
+    float:left; 
+    width:100%
+}
+
+.iconeImpressao {
+    background-image: url(../Images/botao_imprimir.png) !important;
+    padding-right: 20px !important;
+}
+.iconeVazio {
+    background-image: none !important;
+}
+
+input.botaoPadrao {
+    display: inline-block;
+    /**display: inline;*/
+    zoom: 1;
+    background: #085092;
+    font-family: Arial;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: 0;
+    color: #FFFFFF !important; /*font-size: 12pt;*/
+    font-size: 12px;
+    height: 20px;
+    padding: 0;
+    /**padding: 0 10px 0 0;*/
+    margin: 0;
+    line-height: 20px;
+    /*vertical-align: top;*/
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: right 3px;
+    text-decoration: none;
+}
+
+.validatorRed{
+    color:red !important;
+}
+
+.caixaTexto
+{
+	margin:2px !important;
+}
+
+.item 
+{
+	margin:5px 0px!important;
+}
+
+.divPaginacao
+{
+	margin:auto !important;
+	width: 100%;
+}
+
+.paginacao
+{
+	margin:auto !important;
+	width: 15%;
+}
+.botoesRelatorio .botao
+{
+	margin-left: 3px !important;
+	margin-right: 3px !important;
+}

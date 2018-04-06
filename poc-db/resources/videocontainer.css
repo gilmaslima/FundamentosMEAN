@@ -1,0 +1,393 @@
+﻿/*
+© Copyright 2016 Rede S.A.
+Autor : Mário Neto
+Empresa : Iteris Software e Consultoria.
+*/
+.product-video-rede .product-video-container {
+    background-color: #fff;
+    width: 100%;
+    padding:30px 0;
+    margin-top: 15px;
+}
+
+.product-video-col {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 45px;
+    }
+
+.product-video-col:first-child {
+    padding-right: 0;
+}
+
+.product-video-col:last-child {
+    border-left:1px solid #cac6c3;
+}
+
+.orange-title-rede{
+    color:#ff7800;
+    font-family: 'opensans-bold',sans-serif;
+    margin-bottom:10px;
+    max-width: 320px;
+}
+
+.product-video-col .commom-text{
+    margin-bottom:15px;
+}
+
+.product-video-col .btn-rede{
+    float:none;
+}
+
+.product-video-col img{
+    width:320px;
+    height:180px;
+}
+
+
+
+
+
+
+#portal-content.video-container, #portal-content .portal-container, #portal-content .portal-container-fluid, #portal-content .portal-content {
+    width: unset;
+    min-width: unset;
+}
+
+#portal-content.video-container, #portal-content.video-container .portal-container-fluid {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 346px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 624px 173px;
+    transform-origin: 624px 173px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}
+
+#portal-content.video-container .portal-container-fluid > .portal-container {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 346px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 624px 173px;
+    transform-origin: 624px 173px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_3*/
+
+#portal-content.video-container .portal-container-fluid > .portal-container:before {
+    border-collapse: collapse;
+    color: rgb(79, 65, 57);
+    display: table;
+    column-rule-color: rgb(79, 65, 57);
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_3:before*/
+
+#portal-content.video-container .portal-container-fluid > .portal-container > .portal-content {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 346px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 624px 173px;
+    transform-origin: 624px 173px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_4*/
+
+#portal-content.video-container .portal-container-fluid > .portal-container > .portal-content:after {
+    border-collapse: collapse;
+    clear: both;
+    color: rgb(79, 65, 57);
+    display: table;
+    column-rule-color: rgb(79, 65, 57);
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_4:after*/
+
+#portal-content.video-container .content-row {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    display: table;
+    height: 286px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 624px 143px;
+    transform-origin: 624px 143px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    margin: 0px 0px 60px;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_5*/
+
+#portal-content.video-container .product-video-rede {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 286px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 624px 143px;
+    transform-origin: 624px 143px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_6*/
+
+#portal-content.video-container .content-title {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 27px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 624px 13.5px;
+    transform-origin: 624px 13.5px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 20px / normal opensans-bold, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_7*/
+
+#portal-content.video-container .product-video-container {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 244px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 624px 122px;
+    transform-origin: 624px 122px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    margin: 15px 0px 0px;
+    outline: rgb(79, 65, 57) none 0px;
+    padding: 30px 0px;
+}/*#DIV_8*/
+
+#portal-content.video-container .product-video-col-1 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    display: table-cell;
+    height: 184px;
+    vertical-align: middle;
+    width: 280px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 182.5px 92px;
+    transform-origin: 182.5px 92px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_9*/
+
+#portal-content.video-container .product-video-col-1 > a {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(0, 114, 188);
+    text-decoration: none;
+    column-rule-color: rgb(0, 114, 188);
+    border: 0px none rgb(0, 114, 188);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(0, 114, 188) none 0px;
+}/*#A_10*/
+
+#portal-content.video-container .product-video-col-1 > a > img {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(0, 114, 188);
+    height: 180px;
+    width: 320px;
+    column-rule-color: rgb(0, 114, 188);
+    perspective-origin: 160px 90px;
+    transform-origin: 160px 90px;
+    border: 0px none rgb(0, 114, 188);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(0, 114, 188) none 0px;
+}/*#IMG_11*/
+
+#portal-content.video-container .product-video-col-1 > div {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    display: none;
+    height: auto;
+    width: auto;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_12*/
+
+#portal-content.video-container .product-video-col-2 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    display: table-cell;
+    height: 184px;
+    vertical-align: middle;
+    width: auto;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 281px 92px;
+    transform-origin: 281px 92px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+    padding: 0px 45px;
+}/*#DIV_13*/
+
+#portal-content.video-container .product-video-col > span {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    column-rule-color: rgb(79, 65, 57);
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#SPAN_14*/
+
+#portal-content.video-container .product-video-col-3 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    display: table-cell;
+    height: 184px;
+    vertical-align: middle;    
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 160.5px 92px;
+    transform-origin: 160.5px 92px;
+    border-top: 0px none rgb(79, 65, 57);
+    border-right: 0px none rgb(79, 65, 57);
+    border-bottom: 0px none rgb(79, 65, 57);
+    border-left: 1px solid rgb(202, 198, 195);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+    padding: 0px 0px 0px 45px;
+}/*#DIV_15*/
+
+#portal-content.video-container .orange-title-rede {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(255, 120, 0);
+    height: 19px;
+    max-width: 320px;
+    width: 230px;
+    column-rule-color: rgb(255, 120, 0);
+    perspective-origin: 115px 9.5px;
+    transform-origin: 115px 9.5px;
+    border: 0px none rgb(255, 120, 0);
+    font: normal normal normal normal 14px / normal opensans-bold, sans-serif;
+    margin: 0px 0px 10px;
+    outline: rgb(255, 120, 0) none 0px;
+}/*#DIV_16*/
+
+#portal-content.video-container .commom-text {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 38px;
+    width: 230px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 115px 19px;
+    transform-origin: 115px 19px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    margin: 0px 0px 15px;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_17*/
+
+#portal-content.video-container .btn-rede {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(79, 65, 57);
+    height: 40px;
+    min-width: 115px;
+    width: 230px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 115px 20px;
+    transform-origin: 115px 20px;
+    border: 0px none rgb(79, 65, 57);
+    font: normal normal normal normal 14px / normal opensans-regular, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_18*/
+
+#portal-content.video-container .btn-rede > .btn-primary {
+    border-collapse: collapse;
+    color: rgb(79, 65, 57);
+    cursor: pointer;
+    display: table;
+    float: left;
+    height: 38px;
+    min-width: 200px;
+    text-align: center;
+    width: 230px;
+    column-rule-color: rgb(79, 65, 57);
+    perspective-origin: 115px 20px;
+    transform-origin: 115px 20px;
+    background: rgb(255, 228, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 0px none rgb(212, 185, 0);
+    border-right: 0px none rgb(212, 185, 0);
+    border-bottom: 4px solid rgb(212, 185, 0);
+    border-left: 0px none rgb(212, 185, 0);
+    font: normal normal normal normal 16px / normal opensans-bold, sans-serif;
+    outline: rgb(79, 65, 57) none 0px;
+}/*#DIV_19*/
+
+#portal-content.video-container .btn-rede > .btn-primary > input {
+    border-collapse: collapse;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+    height: 36px;
+    text-align: center;
+    white-space: pre;
+    width: 230px;
+    column-rule-color: rgb(34, 34, 34);
+    align-items: flex-start;
+    perspective-origin: 115px 18px;
+    transform-origin: 115px 18px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(34, 34, 34);
+    font: normal normal normal normal 16px / normal opensans-bold, sans-serif;
+    outline: rgb(34, 34, 34) none 0px;
+    padding: 7px 10px;
+}/*#INPUT_20*/
+
+ .ui-dialog{
+    z-index: 9999;
+ }
+ .ui-widget-overlay{
+     position:fixed;
+ }
+.ui-dialog .ui-dialog-content {
+    padding:0 !important;
+}
+.ui-dialog .ui-helper-clearfix {
+    padding:0 !important;
+}
+.ui-dialog .ui-helper-clearfix .ui-dialog-title {
+    display: none;
+}   
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.modal-rede-container.modal-video-rede {
+    width: 560px !important;
+    height: 315px !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+    top: 0 !important;
+    bottom: 0 !important;
+    position: fixed;
+}
+
+.video-container-invisible 
+{
+    visibility: hidden;
+}

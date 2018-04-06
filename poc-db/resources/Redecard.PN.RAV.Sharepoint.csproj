@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A36CA515-1074-46AB-ABB9-DCE1E3B054D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.RAV.Sharepoint</RootNamespace>
+    <AssemblyName>Redecard.PN.RAV.Sharepoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PreDeploymentCommand>
+    </PreDeploymentCommand>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\DLL\PDFConvert\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\SPClaims\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Extensions\Portal\EnumExtensions.cs" />
+    <Compile Include="Core\Extensions\Portal\ObjectExtensions.cs" />
+    <Compile Include="Core\Extensions\Portal\StringExtensions.cs" />
+    <Compile Include="Core\Seguranca\Portal\Criptografia.cs" />
+    <Compile Include="Core\Web\Controles\Portal\AssistentePassos\AssistentePassos.cs" />
+    <Compile Include="Core\Web\Controles\Portal\AssistentePassos\Passo.cs" />
+    <Compile Include="Core\Web\Controles\Portal\Botao\Botao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\Busca\Busca.cs" />
+    <Compile Include="Core\Web\Controles\Portal\CampoEmail\CampoEmail.cs" />
+    <Compile Include="Core\Web\Controles\Portal\CampoEmail\CampoEmailValidator.cs" />
+    <Compile Include="Core\Web\Controles\Portal\CampoEmail\EmailServerValidateEventArgs.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPv.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvFilialConsulta.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvModo.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvOrigemSolicitacao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvTipoAssociacao.cs" />
+    <Compile Include="Core\Web\Controles\Portal\ConsultaPv\ConsultaPvTipoEntidade.cs" />
+    <Compile Include="Core\Web\Controles\Portal\CustomRulesValidator\CustomRulesValidator.cs" />
+    <Compile Include="Core\Web\Controles\Portal\CustomRulesValidator\CustomRulesValidatorRule.cs" />
+    <Compile Include="Core\Web\Controles\Portal\CustomRulesValidator\CustomServerValidateEventArgs.cs" />
+    <Compile Include="Core\Web\Controles\Portal\DropDownList\DropDownList.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadCsv.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadDoc.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadExcel.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadHtml.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadPdf.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoDownloadTxt.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoEnviarEmail.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcaoImprimir.cs" />
+    <Compile Include="Core\Web\Controles\Portal\MenuAcoes\MenuAcoes.cs" />
+    <Compile Include="Core\Web\Controles\Portal\PainelMensagem\PainelMensagem.cs" />
+    <Compile Include="Core\Web\Controles\Portal\PainelMensagem\PainelMensagemIcon.cs" />
+    <Compile Include="Features\Feature Modulos\Feature Modulos.EventReceiver.cs">
+      <DependentUpon>Feature Modulos.feature</DependentUpon>
+    </Compile>
+    <Compile Include="LAYOUTS\RAV\MA30.aspx.cs">
+      <DependentUpon>MA30.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LAYOUTS\RAV\MA30.aspx.designer.cs">
+      <DependentUpon>MA30.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYOUTS\RedecardAreaFechadaTipo4.aspx.cs">
+      <DependentUpon>RedecardAreaFechadaTipo4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LAYOUTS\RedecardAreaFechadaTipo4.aspx.designer.cs">
+      <DependentUpon>RedecardAreaFechadaTipo4.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAVComum.cs" />
+    <Compile Include="Service References\EntidadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ModuloRAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WAExtratoAntecipacaoRAVServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\AcessoSenha\AcessoSenha.cs" />
+    <Compile Include="WebParts\AcessoSenha\AcessoSenhaUserControl.ascx.cs">
+      <DependentUpon>AcessoSenhaUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\AcessoSenha\AcessoSenhaUserControl.ascx.designer.cs">
+      <DependentUpon>AcessoSenhaUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\CadastroEmails\CadastroEmails.cs" />
+    <Compile Include="WebParts\CadastroEmails\CadastroEmailsUserControl.ascx.cs">
+      <DependentUpon>CadastroEmailsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\CadastroEmails\CadastroEmailsUserControl.ascx.designer.cs">
+      <DependentUpon>CadastroEmailsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Principal\Principal.cs" />
+    <Compile Include="WebParts\Principal\PrincipalUserControl.ascx.cs">
+      <DependentUpon>PrincipalUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Principal\PrincipalUserControl.ascx.designer.cs">
+      <DependentUpon>PrincipalUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RavAutomaticoComprovante\RavAutomaticoComprovante.cs" />
+    <Compile Include="WebParts\RavAutomaticoComprovante\RavAutomaticoComprovanteUserControl.ascx.cs">
+      <DependentUpon>RavAutomaticoComprovanteUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RavAutomaticoComprovante\RavAutomaticoComprovanteUserControl.ascx.designer.cs">
+      <DependentUpon>RavAutomaticoComprovanteUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RavAutomaticoConfirmacao\RavAutomaticoConfirmacao.cs" />
+    <Compile Include="WebParts\RavAutomaticoConfirmacao\RavAutomaticoConfirmacaoUserControl.ascx.cs">
+      <DependentUpon>RavAutomaticoConfirmacaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RavAutomaticoConfirmacao\RavAutomaticoConfirmacaoUserControl.ascx.designer.cs">
+      <DependentUpon>RavAutomaticoConfirmacaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RavAutomaticoPersonalizacao\RavAutomaticoPersonalizacao.cs" />
+    <Compile Include="WebParts\RavAutomaticoPersonalizacao\RavAutomaticoPersonalizacaoUserControl.ascx.cs">
+      <DependentUpon>RavAutomaticoPersonalizacaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RavAutomaticoPersonalizacao\RavAutomaticoPersonalizacaoUserControl.ascx.designer.cs">
+      <DependentUpon>RavAutomaticoPersonalizacaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RavAvulsoAlteracao\RavAvulsoAlteracao.cs" />
+    <Compile Include="WebParts\RavAvulsoAlteracao\RavAvulsoAlteracaoUserControl.ascx.cs">
+      <DependentUpon>RavAvulsoAlteracaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RavAvulsoAlteracao\RavAvulsoAlteracaoUserControl.ascx.designer.cs">
+      <DependentUpon>RavAvulsoAlteracaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RavAvulsoComprovante\ComprovanteRavAvulso.cs" />
+    <Compile Include="WebParts\RavAvulsoComprovante\ComprovanteRavAvulsoUserControl.ascx.cs">
+      <DependentUpon>ComprovanteRavAvulsoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RavAvulsoComprovante\ComprovanteRavAvulsoUserControl.ascx.designer.cs">
+      <DependentUpon>ComprovanteRavAvulsoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RavAvulsoConfirmacao\ConfirmacaoRavAvulso.cs" />
+    <Compile Include="WebParts\RavAvulsoConfirmacao\ConfirmacaoRavAvulsoUserControl.ascx.cs">
+      <DependentUpon>ConfirmacaoRavAvulsoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RavAvulsoConfirmacao\ConfirmacaoRavAvulsoUserControl.ascx.designer.cs">
+      <DependentUpon>ConfirmacaoRavAvulsoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bb1ec925-d216-457a-b2a4-ac5193f77664}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature Modulos\Feature Modulos.feature">
+      <FeatureId>{81b10ec3-3e4d-4069-ac49-546f16f547d3}</FeatureId>
+    </None>
+    <None Include="Features\Feature WebParts\Feature WebParts.feature">
+      <FeatureId>{d2ee777c-d462-4e41-9f58-b7e0b127abc3}</FeatureId>
+    </None>
+    <None Include="IMAGES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{199dc5b4-ab71-4368-9b6e-46a317de3745}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\principal.min.js.map">
+      <DependentUpon>principal.js</DependentUpon>
+    </None>
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-alteracao.min.js.map">
+      <DependentUpon>rav-automatico-alteracao.js</DependentUpon>
+    </None>
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-comprovante.min.js.map">
+      <DependentUpon>rav-automatico-comprovante.js</DependentUpon>
+    </None>
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-confirmacao.min.js.map">
+      <DependentUpon>rav-automatico-confirmacao.js</DependentUpon>
+    </None>
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-alteracao.min.js.map">
+      <DependentUpon>rav-avulso-alteracao.js</DependentUpon>
+    </None>
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-comprovante.min.js.map">
+      <DependentUpon>rav-avulso-comprovante.js</DependentUpon>
+    </None>
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-confirmacao.min.js.map">
+      <DependentUpon>rav-avulso-confirmacao.js</DependentUpon>
+    </None>
+    <None Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-senha.min.js.map">
+      <DependentUpon>rav-senha.js</DependentUpon>
+    </None>
+    <None Include="MasterPages\RedecardAreaFechada.master" />
+    <None Include="MasterPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d83212da-12a5-4cb3-8786-426049ba92e3}</SharePointProjectItemId>
+    </None>
+    <None Include="Modulos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dcc99b84-7b56-4c2a-8807-59b8890ab625}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Style Library\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2788a08e-9570-4b5e-8949-f56f2db0f1a4}</SharePointProjectItemId>
+    </None>
+    <None Include="STYLES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b5a55aa4-7454-4e9e-9e3f-0e217a0f46a9}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\AcessoSenha\AcessoSenha.webpart" />
+    <None Include="WebParts\AcessoSenha\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aae432e0-f5b7-4e32-8cea-d041525b707b}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\CadastroEmails\CadastroEmails.webpart" />
+    <None Include="WebParts\CadastroEmails\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bd2d23b6-f042-4dd4-82d4-563ddcb45947}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\Principal\Principal.webpart">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WebParts\Principal\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{329bb3d2-776a-41aa-87f5-c92db068f31b}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RavAutomaticoComprovante\RavAutomaticoComprovante.webpart" />
+    <None Include="WebParts\RavAutomaticoComprovante\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5f230a67-0ed9-4b41-a603-253831b0fcf3}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RavAutomaticoConfirmacao\RavAutomaticoConfirmacao.webpart" />
+    <None Include="WebParts\RavAutomaticoConfirmacao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5410f671-1d5f-4fa5-8f58-1bbd8d4d5970}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RavAutomaticoPersonalizacao\RavAutomaticoPersonalizacao.webpart" />
+    <None Include="WebParts\RavAutomaticoPersonalizacao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{50111bdc-c1ce-4a9c-9f75-df314e7e573e}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RavAvulsoAlteracao\RavAvulsoAlteracao.webpart" />
+    <None Include="WebParts\RavAvulsoAlteracao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{87c3cdb5-eb70-4ff6-a05a-cb79b7784d60}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RavAvulsoComprovante\ComprovanteRavAvulso.webpart" />
+    <None Include="WebParts\RavAvulsoComprovante\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c8a20632-b6a2-4918-910b-39f15ef21c26}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RavAvulsoConfirmacao\ConfirmacaoRavAvulso.webpart" />
+    <None Include="WebParts\RavAvulsoConfirmacao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8504f266-405f-428a-937c-1c6583370e60}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fb23e0d4-b324-41c3-9961-964c79b368d2}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LAYOUTS\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9365ea93-dc16-4fd8-aba2-e61997dd8830}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{ab9d99aa-6f21-4dea-a529-fbfa6dc11660}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature Modulos\Feature Modulos.Template.xml">
+      <DependentUpon>Feature Modulos.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature WebParts\Feature WebParts.Template.xml">
+      <DependentUpon>Feature WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\RAV\MA30.aspx" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\principal.min.js">
+      <DependentUpon>principal.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-alteracao.min.js">
+      <DependentUpon>rav-automatico-alteracao.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-senha.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-senha.min.js">
+      <DependentUpon>rav-senha.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\principal.css" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\multibandeira-scroll.css" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\multibandeiras-scroll.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\jquery.printElement.custom.min.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-comprovante.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-comprovante.min.js">
+      <DependentUpon>rav-automatico-comprovante.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-confirmacao.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-alteracao.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-automatico-confirmacao.min.js">
+      <DependentUpon>rav-automatico-confirmacao.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-alteracao.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-alteracao.min.js">
+      <DependentUpon>rav-avulso-alteracao.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-comprovante.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-comprovante.min.js">
+      <DependentUpon>rav-avulso-comprovante.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\principal.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-confirmacao.js" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Scripts\rav-avulso-confirmacao.min.js">
+      <DependentUpon>rav-avulso-confirmacao.js</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\principal.min.css">
+      <DependentUpon>principal.css</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\rav-automatico-alteracao.css" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\rav-automatico-alteracao.min.css">
+      <DependentUpon>rav-automatico-alteracao.css</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\rav-avulso-alteracao.css" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\rav-avulso-alteracao.min.css">
+      <DependentUpon>rav-avulso-alteracao.css</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\rav-senha.css" />
+    <Content Include="LAYOUTS\Redecard.PN.RAV.Sharepoint\Styles\rav-senha.min.css">
+      <DependentUpon>rav-senha.css</DependentUpon>
+    </Content>
+    <Content Include="LAYOUTS\RedecardAreaFechadaTipo4.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="MasterPages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Modulos\pn_PersonalizacaoRavAutomatico.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\pn_AlteracaoRavAvulso.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\pn_CadastroRavAutomatico.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\ModuloRAV\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EntidadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WAExtratoAntecipacaoRAVServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Style Library\Styles\OutrosValores.png" />
+    <Content Include="Style Library\Styles\Redecard.PN.RAV.css" />
+    <Content Include="WebParts\CadastroEmails\CadastroEmailsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\CadastroEmails\Elements.xml" />
+    <Content Include="WebParts\Principal\Elements.xml" />
+    <Content Include="WebParts\Principal\PrincipalUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RavAutomaticoComprovante\Elements.xml" />
+    <Content Include="WebParts\RavAutomaticoComprovante\RavAutomaticoComprovanteUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RavAutomaticoConfirmacao\Elements.xml" />
+    <Content Include="WebParts\RavAutomaticoConfirmacao\RavAutomaticoConfirmacaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RavAutomaticoPersonalizacao\Elements.xml" />
+    <Content Include="WebParts\RavAutomaticoPersonalizacao\RavAutomaticoPersonalizacaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RavAvulsoAlteracao\Elements.xml" />
+    <Content Include="WebParts\RavAvulsoAlteracao\RavAvulsoAlteracaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RavAvulsoComprovante\ComprovanteRavAvulsoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RavAvulsoComprovante\Elements.xml" />
+    <Content Include="WebParts\RavAvulsoConfirmacao\ConfirmacaoRavAvulsoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RavAvulsoConfirmacao\Elements.xml" />
+    <Content Include="Modulos\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Modulos\pn_Rav.aspx" />
+    <Content Include="Modulos\pn_CadastroEmails.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\pn_ComprovanteRavAutomatico.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\pn_ComprovanteRavAvulso.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\pn_ConfirmacaoRavAutomatico.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\pn_ConfirmacaoRavAvulso.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\pn_Principal.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Style Library\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebParts\AcessoSenha\AcessoSenhaUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\AcessoSenha\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EntidadeServico\" />
+    <WCFMetadataStorage Include="Service References\ModuloRAV\" />
+    <WCFMetadataStorage Include="Service References\WAExtratoAntecipacaoRAVServico\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

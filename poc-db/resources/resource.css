@@ -1,0 +1,1240 @@
+#main #sharePointMenu1 #content{
+	width: auto;
+}
+
+	#sharePointMenu1 #content .left{
+		float: left;
+		display: inline;
+		width: 720px;
+	}
+
+#sharePointMenu1 #content .center{
+	display: inline;
+	width: auto;
+	margin: 0 15px;
+}
+
+	#sharePointMenu1 #content .center .left{
+		float: left;
+		width: 488px;
+	}
+		
+		#sharePointMenu1 #content .center .left h2{
+			width: 460px;
+		}
+
+	#sharePointMenu1 #content .center h2{
+		font-weight: normal;
+		font-size: 28px;
+		margin: 10px 0;
+	}
+	
+	#sharePointMenu1 #content p.bg, #sharePointMenu1 #content div.bg{
+		float: left;
+		display: inline;
+		width: 100%;
+		background: url("../img/bg_products_gallery.jpg") no-repeat center bottom;
+		padding-bottom: 56px;
+		margin: 10px 0 15px 0;
+	}
+		
+	#sharePointMenu1 #content .center .section{
+		background-image: url("../img/bg_products_gallery.jpg") !important;
+		margin-bottom: 15px;
+		width: 490px;
+	}
+	
+		#sharePointMenu1 #content .center .section .highlights {
+			width: 245px !important;
+		}
+		
+	#sharePointMenu1 #content .center .highlights{
+		margin: 0 0 15px 0 !important;
+	}
+	
+		#sharePointMenu1 #content .center .highlights h2{
+			float: left;
+			display: inline;
+			width: 100%;
+			border-left: solid #ffcb00 5px;
+			padding-left: 8px;
+			color: #14388c;
+			font-weight: normal;
+			font-size: 22px;
+			text-transform: uppercase;
+			margin: 0 0 8px 0;
+		}
+		
+		#sharePointMenu1 #content .center .highlights p{
+			float: left;
+			width: 162px;
+		}
+		
+			#sharePointMenu1 #content .center .highlights p a{
+				color: #000;
+			}
+				
+				#sharePointMenu1 #content .center .highlights p a strong{
+					float: left;
+					width: 100%;
+					color: #183c8e;
+				}
+	
+	#sharePointMenu1 #content .center .testimonials{
+		float: left;
+		width: 100%;
+		margin: 0 0 20px 0;
+	}
+	
+		#sharePointMenu1 #content .center .testimonials p{
+			color: #575757;
+			font-size: 12px;
+			width: 100% !important:
+		}
+	
+		#sharePointMenu1 #content .center .testimonials span{
+			float: left;
+			color: #183c8e;
+			font-style: italic;
+			margin-bottom: 10px;
+		}
+		
+		#sharePointMenu1 #content .center .testimonials a{
+			float: left;
+			clear: left;
+		}
+		
+	#sharePointMenu1 #content .center .video p.description{
+		float: left;
+		width: 242px;
+		margin: 0 12px 0 0;
+	}
+	
+		#sharePointMenu1 #content .center .video div.flash{
+			float: left;
+			display: inline;
+			color: #183c8e;
+			text-transform: uppercase;
+			font-size: 11px;
+			padding: 10px;
+			margin: 0;
+			background: url("../img/bg_video_highlight.jpg") no-repeat right top;
+		}
+		
+			#sharePointMenu1 #content .center .video div.flash div.media{
+				margin: 0;
+			}
+		
+				#sharePointMenu1 #content .center .video div.flash div.media div{
+					float: left;
+					display: inline;
+					width: auto;
+					font-weight: bold;
+					margin: 10px;
+				}
+		
+		#sharePointMenu1 #content .center .hire{
+			float: left;
+			display: inline;
+			height: 78px;
+			width: 100%;
+			background: url("../img/bg_tools.jpg") repeat-x left bottom;
+			margin: 20px 0 0 0;
+			color: #183c8e;
+		}
+		
+			#sharePointMenu1 #content .center .hire p{
+				width: 265px;
+				float: left;
+				display: inline;
+				margin: 18px 20px;
+			}
+			
+			#sharePointMenu1 #content .center .hire a{
+				margin: 22px 0;
+			}
+			
+				#sharePointMenu1 #content .center .hire a.btnSoliciteJa{
+					float: right;
+					margin: 25px 30px;
+				}
+			
+		#sharePointMenu1 #content .center .sacRedecard{
+			float: left;
+			display: inline;
+			width: auto;
+			background: url("../img/bg_tools.jpg") repeat-x left bottom;
+			margin: 20px 0 0 0;
+			padding: 10px;
+			color: #183c8e;
+		}
+		
+			#sharePointMenu1 #content .center .sacRedecard p{
+				width: 200px;
+				float: left;
+				display: inline;
+				margin: 0 20px 0 15px;
+				font-size: 14px;
+				text-transform: uppercase;
+				border-right: solid #dadde2 1px;
+			}
+			
+				#sharePointMenu1 #content .center .sacRedecard p strong{
+					font-size: 30px;
+				}
+			
+			#sharePointMenu1 #content .center .sacRedecard a{
+				margin: 4px 10px 4px 0;
+				width: 170px;
+			}
+			
+	#sharePointMenu1 #content .center ul.pictureGallery{
+		float: left;
+		display: inline;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	
+		#sharePointMenu1 #content .center ul.pictureGallery li{
+			float: left;
+			display: inline;
+			background: #eff1f7;
+			margin: 0 0 10px 0;
+			padding: 15px;
+			width: 458px;
+		}
+		
+			#sharePointMenu1 #content .center ul.pictureGallery li img{
+				float: left;
+				border: none;
+			}
+			
+			#sharePointMenu1 #content .center ul.pictureGallery li p{
+				float: left;
+				width: 322px;
+				margin: 0 0 0 15px;
+			}
+			
+				#sharePointMenu1 #content .center ul.pictureGallery li p a{
+					color: #575757;
+				}
+			
+				#sharePointMenu1 #content .center ul.pictureGallery li p strong, #sharePointMenu1 #content .center ul.pictureGallery li p em, 
+				#sharePointMenu1 #content .center ul.pictureGallery li p span{
+					float: left;
+					width: 322px;
+				}
+				
+				#sharePointMenu1 #content .center ul.pictureGallery li p em{
+					margin: 0 0 5px 0;
+				}
+				
+				#sharePointMenu1 #content .center ul.pictureGallery li p span{
+					margin: 5px 0 0 0;
+					color: #183c8e;
+				}
+			
+	#sharePointMenu1 #content .center div.picture{
+		color: #575757;
+	}
+	
+		#sharePointMenu1 #content .center div.picture h3{
+			font-size: 16px;
+		}
+	
+		#sharePointMenu1 #content .center div.picture div.image{
+			background: #eef1f7;
+		}
+		
+			#sharePointMenu1 #content .center div.picture div.image img{
+				margin: 25px 26px 0 26px;
+			}
+			
+			#sharePointMenu1 #content .center div.picture div.image .media{
+				margin: 0;
+				padding: 0 25px 25px 25px;
+			}
+			
+			#sharePointMenu1 #content .center div.picture div.image div img{
+				margin: 0;
+			}
+			
+			#sharePointMenu1 #content .center div.picture div.image p{
+				float: left;
+				display: inline;
+				margin: 0;
+				padding: 15px 25px 15px 25px;
+			}
+			
+			#sharePointMenu1 #content .center div.picture div.image p strong{
+				float: left;
+				width: 400px;
+			}
+			
+			#sharePointMenu1 #content .center div.picture div.image p em{
+				float: left;
+			}
+			
+			#sharePointMenu1 #content .center div.picture div.image p span{
+				float: right;
+				color: #183c8e;
+			}
+			
+	#sharePointMenu1 #content .center form.frmTestimonials{
+		float: left;
+		margin: 0 0 15px 0;
+	}
+	
+			#sharePointMenu1 #content .center form.frmTestimonials fieldset p{
+				float: left;
+				display: inline;
+				margin: 0 9px 0 0;
+				padding: 0;
+				width: 142px;
+			}
+			
+				#sharePointMenu1 #content .center form.frmTestimonials fieldset p label{
+					float: left;
+					width: 100%;
+					color: #183c8e;
+					padding: 0 0 0 1px;
+					font-weight: bold;
+				}
+				
+				#sharePointMenu1 #content .center form.frmTestimonials fieldset p select{
+					float: left;
+					width: 134px;
+				}
+				
+				#sharePointMenu1 #content .center form.frmTestimonials fieldset p div.jqf1Sel{
+					background-image: url("../img/form/jqf2.png");
+					height: 26px;
+				}
+				
+					#sharePointMenu1 #content .center form.frmTestimonials fieldset p div.jqf1Sel div.jqf1SelAtivo{
+						background-image: url("../img/form/jqf2.png");
+						background-position: right -500px;
+						height: 26px;
+					}
+					
+						#sharePointMenu1 #content .center form.frmTestimonials fieldset p div.jqf1Sel div.jqf1SelAtivo a{
+							background-image: url("../img/form/jqf2.png");
+							background-position: left -471px;
+							height: 26px;
+							padding-top: 6px;
+						}
+						
+				#sharePointMenu1 #content .center form.frmTestimonials fieldset button{
+					float: left;
+					border: none;
+					background: #899bc5;
+					color: #fff;
+					font-weight: bold;
+					padding: 3px;
+					margin: 15px 0 0 0;
+				}
+				
+	#sharePointMenu1 #content .center form.frmQuestions, #sharePointMenu1 #content .center form.frmDownloads{
+		float: left;
+		margin: 0 0 15px 0;
+	}
+	
+			#sharePointMenu1 #content .center form.frmQuestions fieldset p, #sharePointMenu1 #content .center form.frmDownloads fieldset p{
+				float: left;
+				margin: 0 25px 0 0;
+				padding: 0;
+				width: 202px;
+			}
+			
+				#sharePointMenu1 #content .center form.frmQuestions fieldset p label, #sharePointMenu1 #content .center form.frmDownloads fieldset p label{
+					float: left;
+					width: 100%;
+					color: #183c8e;
+					padding: 0 0 0 1px;
+					font-weight: bold;
+				}
+				
+				#sharePointMenu1 #content .center form.frmQuestions fieldset p select, #sharePointMenu1 #content .center form.frmDownloads fieldset p select{
+					float: left;
+					width: 189px;
+				}
+				
+				#sharePointMenu1 #content .center form.frmQuestions fieldset p div.jqf1Sel, 
+				#sharePointMenu1 #content .center form.frmDownloads fieldset p div.jqf1Sel{
+					background-image: url("../img/form/jqf2.png");
+					height: 26px;
+				}
+				
+					#sharePointMenu1 #content .center form.frmQuestions fieldset p div.jqf1Sel div.jqf1SelAtivo, 
+					#sharePointMenu1 #content .center form.frmDownloads fieldset p div.jqf1Sel div.jqf1SelAtivo{
+						background-image: url("../img/form/jqf2.png");
+						background-position: right -500px;
+						height: 26px;
+					}
+					
+						#sharePointMenu1 #content .center form.frmQuestions fieldset p div.jqf1Sel div.jqf1SelAtivo a, 
+						#sharePointMenu1 #content .center form.frmDownloads fieldset p div.jqf1Sel div.jqf1SelAtivo a{
+							background-image: url("../img/form/jqf2.png");
+							background-position: left -471px;
+							height: 26px;
+							padding-top: 6px;
+						}
+						
+				#sharePointMenu1 #content .center form.frmQuestions fieldset button, 
+				#sharePointMenu1 #content .center form.frmDownloads fieldset button{
+					float: left;
+					border: none;
+					background: #899bc5;
+					color: #fff;
+					font-weight: bold;
+					padding: 3px;
+					margin: 15px 0 0 0;
+				}
+				
+		#sharePointMenu1 #content .center form.frmDownloads fieldset.filter{
+			float: left;
+			display: inline;
+			background: #e4e8f2;
+			margin: 14px 0;
+			padding: 15px 15px 0 15px;
+		}
+		
+			#sharePointMenu1 #content .center form.frmDownloads fieldset.filter p{
+				color: #575757;
+				margin: 0 0 15px 0;
+				width: 229px;
+				font-size: 11px;
+			}
+		
+				#sharePointMenu1 #content .center form.frmDownloads fieldset.filter p label{
+					color: #575757;
+					font-weight: normal;
+					padding: 5px 5px 0 0;
+					width: auto;
+				}
+			
+				#sharePointMenu1 #content .center form.frmDownloads fieldset.filter p select{
+					width: 170px;
+				}
+				
+				#sharePointMenu1 #content .center form.frmDownloads fieldset.filter p div.jqf1Sel{
+					background-image: url("../img/form/jqf3.png");
+					height: 26px;
+				}
+				
+					#sharePointMenu1 #content .center form.frmDownloads fieldset.filter p div.jqf1Sel div.jqf1SelAtivo{
+						background-image: url("../img/form/jqf3.png");
+						background-position: right -500px;
+						height: 26px;
+					}
+					
+						#sharePointMenu1 #content .center form.frmDownloads fieldset.filter p div.jqf1Sel div.jqf1SelAtivo a{
+							background-image: url("../img/form/jqf3.png");
+							background-position: left -471px;
+							height: 26px;
+							padding-top: 6px;
+							color: #fcfcfd;
+						}
+						
+	#sharePointMenu1 #content .center form.frmComment{
+		float: left;
+		display: inline;
+		width: 448px;
+		height: 396px;
+		padding: 0 0 47px 0;
+		margin: 0 0 10px 0;
+		background: url("../img/form/bg_form_comment.jpg") no-repeat right bottom;
+	}
+	
+		#sharePointMenu1 #content .center form.frmComment h3{
+			color: #183c8e;
+			font-size: 26px;
+			font-weight: normal;
+			margin: 10px 0;
+			text-transform: uppercase;
+		}
+	
+		#sharePointMenu1 #content .center form.frmComment fieldset{
+			float: left;
+			display: inline;
+			padding: 20px;
+			margin: 0;
+			background: #e4e8f2;
+		}
+	
+			#sharePointMenu1 #content .center form.frmComment fieldset p{
+				float: left;
+				display: inline;
+				margin: 0 0 5px 0;
+				width: 448px;
+			}
+			
+				#sharePointMenu1 #content .center form.frmComment fieldset p label, 
+				#sharePointMenu1 #content .center form.frmComment fieldset p input, 
+				#sharePointMenu1 #content .center form.frmComment fieldset p textarea{
+					float: left;
+					display: inline;
+					width: 446px;
+				}
+	
+				#sharePointMenu1 #content .center form.frmComment fieldset p input, 
+				#sharePointMenu1 #content .center form.frmComment fieldset p textarea{			
+					border: solid #b6bac2 1px;
+				}
+				
+				#sharePointMenu1 #content .center form.frmComment fieldset p label{
+					color: #183c8e;
+					font-size: 13px;
+				}
+				
+				#sharePointMenu1 #content .center form.frmComment fieldset p textarea{
+					height: 130px;
+				}
+				
+	#sharePointMenu1 #content .center .downloads{
+		float: left;
+		display: inline;
+		background: #eff1f7;
+		padding: 1px;
+		font-size: 11px;
+		margin-bottom: 10px;
+	}
+	
+		#sharePointMenu1 #content .center .downloads thead tr{
+			background: #e1e4ed;
+			color: #4d5e83;
+			font-weight: bold;
+		}
+		
+			#sharePointMenu1 #content .center .downloads thead tr th{
+				padding: 5px;
+				text-align: left;
+			}
+			
+		#sharePointMenu1 #content .center .downloads tbody{
+			color: #575757;
+		}
+			
+			#sharePointMenu1 #content .center .downloads tbody tr.bg{
+				background: #fcfcfd;
+			}
+				
+				#sharePointMenu1 #content .center .downloads tbody tr td{
+					padding: 10px 5px;
+				}
+				
+					#sharePointMenu1 #content .center .downloads tbody tr td a{
+						margin: 0 4px;
+					}
+					
+	#sharePointMenu1 #content .center .comments{
+		float: left;
+		display: inline;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	
+		#sharePointMenu1 #content .center .comments li.title{
+			padding: 15px 0;
+			color: #183c8e;
+			background: none;
+			padding: 0;
+		}
+		
+			#sharePointMenu1 #content .center .comments li.title strong{
+				width: 100% !important;
+			}
+		
+		#sharePointMenu1 #content .center .comments li{
+			float: left;
+			display: inline;
+			background: #e4e8f2;
+			padding: 20px;
+			margin: 0 0 10px 0;
+			color: #575757;
+		}
+		
+		#sharePointMenu1 #content .center .comments li.bg{
+			background: #eff1f8;
+		}
+		
+			#sharePointMenu1 #content .center .comments li img{
+				float: left;
+				display: inline;
+				margin: 0 14px 0 0;
+			}
+			
+			#sharePointMenu1 #content .center .comments li strong{
+				float: left;
+				display: inline;
+				width: 325px;
+				color: #183c8e;
+				margin: 0 0 5px 0;
+			}
+			
+			#sharePointMenu1 #content .center .comments li span{
+				float: right;
+				display: inline;
+				font-style: italic;
+				font-size: 11px;
+				color: #183c8e;
+				margin: 5px 0 0 0;
+			}
+
+	#sharePointMenu1 #content .center ul.campaigns{
+		float: left;
+		display: inline;
+		width: 206px;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		color: #575757;
+	}
+	
+		#sharePointMenu1 #content .center ul.campaigns li{
+			float: left;
+			width: 100%;
+			margin: 0 0 25px 0;
+		}
+		
+			#sharePointMenu1 #content .center ul.campaigns li h3{
+				font-size: 16px;
+				margin: 0 0 10px 0;
+			}
+	
+			#sharePointMenu1 #content .center ul.campaigns li img{
+				float: left;
+			}
+			
+			#sharePointMenu1 #content .center ul.campaigns li p{
+				float: right;
+				width: 104px;
+				margin: 0;
+				padding: 0;
+			}
+			
+				#sharePointMenu1 #content .center ul.campaigns li p a{
+					float: left;
+					margin: 6px 0 0 0;
+				}
+				
+	#sharePointMenu1 #content .center .video, #sharePointMenu1 #content .center .highlights{
+		float: left;
+		margin: 0 0 0 34px;
+		color: #575757;
+		width: 222px;
+	}
+	
+		#sharePointMenu1 #content .center .video .media{
+			float: left;
+		}
+	
+	#sharePointMenu1 #content .center ul.awards{
+		float: left;
+		display: inline;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+		#sharePointMenu1 #content .center ul.awards li{
+			float: left;
+			width: 137px;
+			margin: 0 37px 15px 0;
+		}
+		
+		#sharePointMenu1 #content .center ul.awards li.last{
+			margin: 0 0 15px 0;
+		}
+		
+			#sharePointMenu1 #content .center ul.awards li a{
+				color: #575757;
+				font-size: 11px;
+			}
+		
+			#sharePointMenu1 #content .center ul.awards li img{
+				border: none;
+			}
+	
+	#sharePointMenu1 #content .center .highlights{
+		margin: 0;
+	}
+	
+		#sharePointMenu1 #content .center .video h3, #sharePointMenu1 #content .center .highlights h3{
+			font-size: 16px;
+			margin: 0 0 10px 0;
+		}
+		
+		#sharePointMenu1 #content .center .video img, #sharePointMenu1 #content .center .video a, 
+		#sharePointMenu1 #content .center .highlights img, #sharePointMenu1 #content .center .highlights a{
+			float: left;
+		}
+		
+		#sharePointMenu1 #content .center .video p, #sharePointMenu1 #content .center .highlights p{
+			float: left;
+			width: 222px;
+		}
+
+	#sharePointMenu1 #content .center .downloads{
+		margin: 0 0 15px 0 !important;
+	}
+	
+		#sharePointMenu1 #content .center .downloads h2{
+			float: left;
+			display: inline;
+			width: 100%;
+			border-left: solid #ffcb00 5px;
+			padding-left: 8px;
+			color: #14388c;
+			font-weight: normal;
+			font-size: 22px;
+			text-transform: uppercase;
+			margin: 0 0 8px 0;
+		}
+		
+	
+		#sharePointMenu1 #content .center .downloads ul li a{
+			float: left;
+			display: inline;
+			color: #183c8e;
+			background: url("../img/bullets/blt_seta_right_darkblue.png") no-repeat left 2px;
+			padding: 0 0 0 15px;
+			margin: 2px 0 0 0;
+		}
+				
+		#sharePointMenu1 #content .center .downloads ul li strong{
+			float: left;
+			width: 100%;
+			font-size: 12px;
+			margin: 0 0 5px 0;
+			color: #575757;
+		}
+
+	#sharePointMenu1 #content .center .questions{
+		float: left;
+	}
+	
+		#sharePointMenu1 #content .center .questions h4{
+			float: left;
+			display: inline;
+			font-size: 14px;
+			color: #183c8e;
+			margin: 0 0 10px 0;
+			width: 478px;
+		}
+		
+		#sharePointMenu1 #content .center .questions ul{
+			float: left;
+			display: inline;
+			padding: 0 0 10px 0;
+			margin: 0;
+			list-style: none;
+		}
+		
+			#sharePointMenu1 #content .center .questions ul li{
+				float: left;
+				display: inline;
+				background: #eff1f7;
+				padding: 1px;
+				margin: 0 0 10px 0;
+			}
+			
+				#sharePointMenu1 #content .center .questions ul li a{
+					float: left;
+					background: #e1e4ed url("../img/icons/ico_blue_more.jpg") no-repeat 10px center;
+					width: 446px;
+					padding: 10px 10px 10px 30px;
+					font-weight: bold;
+				}
+				
+					#sharePointMenu1 #content .center .questions ul li a.less{
+						background-image: url("../img/icons/ico_blue_less.jpg");
+					}
+				
+				#sharePointMenu1 #content .center .questions ul li p{
+					float: left;
+					background: #eff1f7;
+					width: 466px;
+					padding: 10px;
+					margin: 0;
+					color: #575757;
+					font-size: 11px;
+					display: none;
+				}
+				
+	#sharePointMenu1 #content .center form.frmCardBenefits{
+		float: left;
+		color: #575757;
+		margin: 0 0 10px 0;
+	}
+	
+		#sharePointMenu1 #content .center form.frmCardBenefits fieldset{
+			margin: 0;
+		}
+	
+		#sharePointMenu1 #content .center form.frmCardBenefits legend{
+			float: left;
+			display: inline;
+			width: 100%;
+			font-size: 16px;
+			color: #575757;
+			margin: 0;
+			padding: 0;
+			font-weight: bold;
+		}
+		
+		#sharePointMenu1 #content .center form.frmCardBenefits p{
+			float: left;
+			display: inline;
+			background: #eef0f7;
+			width: 456px;
+			padding: 10px 15px;
+			margin: 15px 0;
+			text-align: right;
+		}
+		
+			#sharePointMenu1 #content .center form.frmCardBenefits p label{
+				float: right;
+				margin: 5px 5px 0 0;
+				font-weight: bold;
+			}
+			
+			#sharePointMenu1 #content .center form.frmCardBenefits p select{
+				width: 200px;
+			}
+			
+				#sharePointMenu1 #content .center form.frmCardBenefits fieldset p div.jqf1Sel{
+					float: right;
+					background-image: url("../img/form/jqf2.png");
+					height: 26px;
+					text-align: left;
+				}
+				
+					#sharePointMenu1 #content .center form.frmCardBenefits fieldset p div.jqf1Sel div.jqf1SelAtivo{
+						background-image: url("../img/form/jqf2.png");
+						background-position: right -500px;
+						height: 26px;
+					}
+					
+						#sharePointMenu1 #content .center form.frmCardBenefits fieldset p div.jqf1Sel div.jqf1SelAtivo a{
+							background-image: url("../img/form/jqf2.png");
+							background-position: left -471px;
+							height: 26px;
+							padding-top: 6px;
+						}
+
+	#sharePointMenu1 #content .center ul.listCards{
+		float: left;
+		display: inline;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		color: #575757;
+	}
+	
+		#sharePointMenu1 #content .center ul.listCards li{
+			float: left;
+			display: inline;
+			width: 456px;
+			margin: 0;
+			padding: 15px;
+		}
+		
+		#sharePointMenu1 #content .center ul.listCards li.bg{
+			background: #eff1f7;
+		}
+		
+			#sharePointMenu1 #content .center ul.listCards li img{
+				float: left;
+				margin: 0 15px 0 0;
+			}
+			
+			#sharePointMenu1 #content .center ul.listCards li strong{
+				float: left;
+				width: 318px;
+				margin: 0 0 10px 0;
+			}
+
+#main .menu{
+	float: left;
+	padding: 0 0 19px 0;
+	margin: 0 10px 0 0;
+	width: 220px;
+	background: #183c8e url(../img/bg_products_menu.jpg) no-repeat left bottom;
+}
+
+	#main .menu h2{
+		background: #183c8e url(../img/titles/tit_conheca_redecard.jpg) no-repeat left top;
+		text-indent: -9999px;
+		float: left;
+		width: 100%;
+		height: 75px;
+		margin: 0;
+	}
+
+	#main .menu .accordion{
+		float: left;
+	}
+
+		#main .menu .accordion h3, #main .menu .accordion h4{
+			float: left;
+			display: inline;
+			background: #e7ebf3;
+			margin: 0 0 0 7px;
+			width: 213px;
+			font-weight: normal;
+			outline: none;
+		}
+	
+		#main .menu .accordion h3.bg, #main .menu .accordion h4.bg{
+			background: #d3daea;
+		}
+		
+		#main .menu .accordion h3.ui-state-active, #main .menu .accordion h4.active{
+			background: #183c8e;
+			color: #ffce0d;
+			font-weight: bold;
+		}
+		
+			#main .menu .accordion h3 a, #main .menu .accordion h3 a:visited, 
+			#main .menu .accordion h4 a, #main .menu .accordion h4 a:visited{
+				float: left;
+				color: #183c8e;
+				padding: 16px 0 16px 30px;
+				width: 183px;
+				text-transform: uppercase;
+				font-size: 13px;
+				background: url(../img/bullets/blt_seta_yellow_2.png) no-repeat 12px 18px;
+			}
+				
+					#main .menu .accordion h3.ui-state-active a, #main .menu .accordion h3.ui-state-active a:visited, 
+					#main .menu .accordion h4.active a, #main .menu .accordion h4.active a:visited{
+						background: url(../img/bullets/blt_seta_bottom_yellow_2.png) no-repeat 10px 20px;
+					}
+			
+			#main .menu .accordion h3 a:hover, #main .menu .accordion h3 a:focus, 
+			#main .menu .accordion h4 a:hover, #main .menu .accordion h4 a:focus{
+				text-decoration: none;
+				font-weight: bold;
+			}
+			
+			#main .menu .accordion h3.ui-state-active a, #main .menu .accordion h3.ui-state-active a, 
+			#main .menu .accordion h4.active a, #main .menu .accordion h4.active a{
+				color: #ffce0d;
+			}
+			
+		#main .menu .accordion div{
+			float: left;
+			display: inline;
+			width: 189px;
+			margin: 0 0 0 7px;
+			padding: 0 12px 12px 12px;
+		}
+		
+			#main .menu .accordion div.empty{
+				height: 0px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			#main .menu .accordion div ul{
+				padding: 0;
+				margin: 0;
+			}
+		
+				#main .menu .accordion div ul li{
+					float: left;
+					display: inline;
+					width: 155px;
+					margin: 0 0 10px 25px;
+					padding: 0 0 0 9px;
+					background: url(../img/bullets/blt_yellow.gif) no-repeat left 7px;
+				}
+		
+					#main .menu .accordion div ul li a{
+						color: #fff;
+					}
+					
+					#main .menu .accordion div ul li a.selected, #main .menu .accordion div ul li a:hover, #main .menu .accordion div ul li a:focus{
+						color: #ffce0d;
+						text-decoration: none;
+					}
+					
+#sharePointMenu1 #content .submenu{
+	float: left;
+	background: #ffce0d url(../img/bg_menu_yellow.jpg) no-repeat right bottom;
+}
+
+	#sharePointMenu1 #content .submenu ul{
+		padding: 0;
+		margin: 0;
+		height: 47px;
+	}
+	
+		#sharePointMenu1 #content .submenu ul li{
+			display: inline;
+			float: left;
+		}
+		
+			#sharePointMenu1 #content .submenu ul li a, #sharePointMenu1 #content .submenu ul li a:visited{
+				float: left;
+				height: 15px;
+				margin: 16px 0;
+				padding: 0 12px;
+				text-transform: uppercase;
+				text-align: center;
+				border-right: solid #244694 1px;
+			}
+			
+			#sharePointMenu1 #content .submenu ul li a.selected, #sharePointMenu1 #content .submenu ul li a:hover, #sharePointMenu1 #content .submenu ul li a:focus{
+				color: #fff;
+				background: #244694;
+				margin: 0 !important;
+				padding: 16px 12px !important;
+				text-decoration: none;
+				border-right-color: #244694;
+			}
+
+#sharePointMenu1 #content h2{
+	float: left;
+	display: inline;
+	width: 697px;
+	margin: 15px 0;
+	font-size: 23px;
+	letter-spacing: -1px;
+	color: #14388c;
+	text-transform: uppercase;
+}
+
+#sharePointMenu1 #content h3{
+	float: left;
+	display: inline;
+	width: 697px;
+	margin: 15px 0;
+	font-size: 23px;
+	letter-spacing: -1px;
+	color: #14388c;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#sharePointMenu1 #content p.description, #sharePointMenu1 #content div.description{
+	font-size: 12px;
+	color: #575757;
+	margin: 0 0 15px 0;
+	float: left;
+	display: inline;
+}
+
+	#sharePointMenu1 #content div.description h3{
+		margin: 0;
+		font-size: 15px;
+	}
+	
+	#sharePointMenu1 #content div.description span{
+		color: #183c8e;
+		font-style: italic;
+	}
+	
+	#sharePointMenu1 #content div.description ul{
+		float: left;
+		display: inline;
+		padding: 0;
+		margin: 10px 0 0 20px;
+		list-style: none;
+	}
+	
+		#sharePointMenu1 #content div.description ul li{
+			float: left;
+			clear: both;
+			width: 400px;
+			display: inline;
+			padding: 0 0 0 10px;
+			margin: 0;
+			background: url("../img/bullets/blt_blue.jpg") no-repeat left 7px;
+		}
+	
+	#sharePointMenu1 #content div.description div.comments{
+		float: left;
+		height: 52px;
+		width: 486px;
+		margin: 10px 0;
+		background: url("../img/bg_tools.jpg") repeat-x left 5px;
+	}
+	
+		#sharePointMenu1 #content div.description div.comments span{
+			float: left;
+			padding: 20px 20px 14px 20px;
+			color: #575757;
+			font-style: normal;
+			font-size: 13px;
+			background: url("../img/divisor_tools.jpg") no-repeat right bottom;
+		}
+		
+			#sharePointMenu1 #content div.description div.comments span strong{
+				padding: 0 0 0 15px;
+				background: url("../img/bullets/blt_seta_right_darkblue.png") no-repeat left center;
+				font-size: 15px;
+			}
+			
+		#sharePointMenu1 #content div.description div.comments a{
+			float: left;
+			width: 62px;
+			height: 26px;
+			color: #ffce0d;
+			text-transform: uppercase;
+			background: url("../img/bg_link_comment.png") no-repeat left center;
+			padding: 4px 7px;
+			margin: 15px 0 0 20px;
+		}
+
+	#sharePointMenu1 #content div.profile{
+		float: left;
+		display: inline;
+		margin: 0 0 15px 0;
+	}
+
+	#sharePointMenu1 #content .needHelp{
+		float: left;
+		width: 214px;
+		margin: 0 22px 0 0;
+	}
+	
+		#sharePointMenu1 #content .needHelp h2{
+			float: left;
+			width: 214px;
+			height: 29px;
+			text-indent: -9999px;
+			margin: 0 0 5px 0;
+			background: url(../img/titles/tit_precisa_ajuda.jpg) no-repeat left top;
+		}
+		
+		#sharePointMenu1 #content .needHelp p{
+			float: left;
+			color: #575757;
+			font-size: 11px;
+			line-height: 12px;
+			margin: 0;
+		}
+		
+		#sharePointMenu1 #content .needHelp a{
+			float: left;
+			margin: 5px 0 0 0;
+		}
+		
+	#sharePointMenu1 #content .section .highlights p{
+		height: auto !important;
+	}
+		
+	#sharePointMenu1 #content .testimonials{
+		float: left;
+		width: 214px;
+		margin: 0 22px 0 0;
+	}
+	
+		#sharePointMenu1 #content .testimonials h2{
+			float: left;
+			width: 214px;
+			height: 29px;
+			text-indent: -9999px;
+			margin: 0 0 5px 0;
+			background: url(../img/titles/tit_depoimentos.jpg) no-repeat left top;
+		}
+		
+		#sharePointMenu1 #content .testimonials p{
+			float: left;
+			display: inline;
+			color: #575757;
+			line-height: 12px;
+			font-size: 11px;
+			margin: 0;
+		}
+		
+		#sharePointMenu1 #content .testimonials p img{
+			border: none;
+			margin: 0 10px 0 0;
+		}
+		
+		#sharePointMenu1 #content .testimonials p a{
+			float: left;
+		}
+		
+			#sharePointMenu1 #content .testimonials p a.btnBlue{
+				margin: 5px 0 0 0;
+			}
+	
+	#sharePointMenu1 #content .banner{
+		float: left;
+	}
+	
+	#sharePointMenu1 #content .center ul.testimonials, #sharePointMenu1 #content .center ul.videos{
+		float: left;
+		list-style: none;
+		padding: 0;
+	}
+	
+		#sharePointMenu1 #content .center ul.testimonials li, #sharePointMenu1 #content .center ul.videos li{
+			float: left;
+			background: #eff1f7;
+			margin: 0 0 15px 0;
+			color: #575757;
+			padding: 15px;
+			width: 460px;
+		}
+		
+			#sharePointMenu1 #content .center ul.testimonials li div.media, #sharePointMenu1 #content .center ul.videos li div.media{
+				float: left;
+				margin: 0 15px 0 0;
+			}
+			
+			#sharePointMenu1 #content .center ul.testimonials li strong, #sharePointMenu1 #content .center ul.videos li strong{
+				float: left;
+				margin: 5px 0 0 0;
+			}
+			
+			#sharePointMenu1 #content .center ul.videos li strong{
+				margin: 0;
+			}
+			
+			#sharePointMenu1 #content .center ul.videos li em{
+				float: left;
+				width: 310px;
+				margin: 0 0 5px 0;
+			}
+			
+			#sharePointMenu1 #content .center ul.videos li span{
+				float: left;
+				color: #183c8e;
+			}
+			
+				#sharePointMenu1 #content .center ul.videos li.video span{
+					float: right;
+				}
+
+
+/*  André
+*   ---------------
+*   Separar WebParts do menu lateral com uma linha em branco
+*/
+#main #sidebar DIV
+{
+    margin-bottom: 0px;
+}
+
+.ms-PartSpacingVertical
+{
+    display: none;
+}
+
+.flashFlags
+{
+    padding-bottom: 2px;
+    margin-top: -1px;
+}
+
+/*.ms-WPBody
+{
+    padding-bottom: 1px;
+}*/

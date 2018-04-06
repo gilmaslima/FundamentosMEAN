@@ -1,0 +1,375 @@
+﻿/*© Copyright 2015 Rede S.A.
+    =============================================
+    Autor: Dhouglas Lombello
+    Data : 08/05/2015
+    Empresa : Iteris Consultoria e Software LTDA.
+    Descrição: Lightbox (Popup) de Aceite de Condições Comerciais
+    Notas:
+        - 25/08/2016 (JFR) - Adaptação do CSS para compor o facelift do portal
+*/
+
+@media print {
+
+    #cartaImprimir {
+        height: 100% !important;
+        overflow: visible !important;
+    }
+}
+
+@media all {
+
+    .boxDados {
+        background-color: #FFFFFF !important;
+    }
+
+    .carta {
+        line-height: 20px;
+        padding: 10px 0 0 0 !important;
+        color: #676767 !important;
+        font-weight: normal !important;
+        width: 100%;
+    }
+
+        .carta:first-child {
+            padding: 0 0 0 0;
+        }
+
+        .carta .titulo {
+            font-size: 12px !important;
+            font-weight: bold !important;
+            color: #FF7800 !important;
+        }
+
+        .carta .subtitulo {
+            font-size: 12px !important;
+            font-weight: bold !important;
+            color: #676767 !important;
+        }
+
+    .carta-descritivo {
+        padding-top: 10px !important;
+        line-height: 15px !important;
+    }
+
+    .carta-padding10top {
+        padding-top: 10px !important;
+    }
+
+    #cartaImprimir {
+        height: 350px;
+        overflow: auto;
+    }
+
+    /* FORMULÁRIO */
+    .carta-formulario-borda {
+        border: 1px solid #CCCCCC !important;
+        height: 80px;
+    }
+
+    .carta-formulario LABEL.impar {
+        width: 20%;
+        float: left;
+        text-align: right;
+        background-color: #FFFFFF !important;
+    }
+
+    .carta-formulario-alternancia LABEL.impar {
+        width: 20%;
+        float: left;
+        text-align: right;
+        background-color: #DDDDDD !important;
+    }
+
+    .carta-formulario LABEL.par {
+        width: 79%;
+        float: left;
+        text-align: left;
+        padding-left: 1% !important;
+        background-color: #FFFFFF !important;
+    }
+
+    .carta-formulario-alternancia LABEL.par {
+        width: 79%;
+        float: left;
+        text-align: left;
+        padding-left: 1% !important;
+        background-color: #DDDDDD !important;
+    }
+
+    /* REPEATER ENDERECO */
+    .carta-endereco-borda {
+        border: 1px solid #CCCCCC !important;
+        height: 80px;
+    }
+
+        .carta-endereco-borda .cabecalho {
+            text-align: center !important;
+            color: #676767 !important;
+            background-color: #CCCCCC;
+            font-weight: bold !important;
+            width: 100%;
+        }
+
+    .carta-endereco,
+    .carta-endereco LABEL {
+        background-color: #FFFFFF !important;
+    }
+
+        .carta-endereco LABEL:first-child,
+        .carta-endereco-alternancia LABEL:first-child {
+            padding-left: 10px !important;
+        }
+
+    .carta-endereco-alternancia,
+    .carta-endereco-alternancia LABEL {
+        background-color: #DDDDDD !important;
+    }
+
+        .carta-endereco LABEL.impar,
+        .carta-endereco-alternancia LABEL.impar {
+            width: 6.8%;
+            float: left;
+            font-weight: bold !important;
+        }
+
+        .carta-endereco LABEL.par,
+        .carta-endereco-alternancia LABEL.par {
+            width: 25%;
+            float: left;
+            padding-left: 1% !important;
+        }
+        .carta-endereco LABEL.unica,
+        .carta-endereco-alternancia LABEL.unica {
+            width: 90%;
+            float: left;
+            padding-left: 1% !important;
+        }
+
+    /* REPEATER DOMICÍLIO BANCÁRIO */
+    .carta-domicilio-borda {
+        border: 1px solid #CCCCCC !important;
+    }
+
+    .carta-domicilio-cabecalho,
+    .carta-domicilio-rodape {
+        background-color: #CCCCCC;
+    }
+
+    .carta-domicilio-cabecalho,
+    .carta-domicilio-rodape,
+    .carta-domicilio-cabecalho-alternancia,
+    .carta-domicilio-rodape-alternancia {
+        padding-left: 10px !important;
+    }
+
+    .carta-domicilio-cabecalho-alternancia,
+    .carta-domicilio-rodape-alternancia {
+        background-color: #FFFFFF;
+    }
+
+    .carta-domicilio-rodape,
+    .carta-domicilio-rodape-alternancia {
+        border: 1px solid #CCCCCC !important;
+        height: 20px;
+        padding-right: 10px !important;
+    }
+
+        .carta-domicilio-rodape LABEL.esquerda,
+        .carta-domicilio-rodape-alternancia LABEL.esquerda {
+            width: 50%;
+            text-align: left;
+            float: left;
+        }
+
+        .carta-domicilio-rodape LABEL.direita,
+        .carta-domicilio-rodape-alternancia LABEL.direita {
+            width: 50%;
+            text-align: right;
+            float: left;
+        }
+
+    /* GRIDVIEW */
+    .carta-tabela {
+        border: 1px solid #DDDDDD !important;
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+
+        .carta-tabela TD {
+            color: #676767;
+            padding-left: 10px !important;
+        }
+
+        .carta-tabela .alternancia {
+            background-color: #DDDDDD;
+        }
+
+        .carta-tabela .cabecalho {
+            color: #676767;
+            background-color: #CCCCCC;
+        }
+
+            .carta-tabela .cabecalho TH {
+                color: #676767;
+                text-align: left;
+                font-weight: bold !important;
+                padding-left: 10px !important;
+            }
+
+    /* RODAPÉ E BOTÕES */
+    .condicoes-comerciais {
+        padding-top: 5px !important;
+    }
+
+        .condicoes-comerciais .info-imprimir-download div {
+            float: left;
+        }
+
+        .condicoes-comerciais .info-imprimir-download .info {
+            padding-top: 5px !important;
+            width: 60%;
+        }
+
+        .condicoes-comerciais .info-imprimir-download .imprimir-download {
+            padding-top: 5px !important;
+            width: 40%;
+        }
+
+            .condicoes-comerciais .info-imprimir-download .imprimir-download .btn {
+                float: right;
+                margin-left: 10px !important;
+            }
+
+        .condicoes-comerciais .aceite-acessar div {
+            float: left;
+        }
+
+        .condicoes-comerciais .aceite-acessar .aceite {
+            padding-top: 30px !important;
+            width: 60%;
+        }
+
+        .condicoes-comerciais .aceite-acessar .acessar {
+            padding-top: 30px !important;
+            width: 40%;
+        }
+
+            .condicoes-comerciais .aceite-acessar .acessar .btn {
+                float: right;
+            }
+
+    /* HEADER PRECO UNICO */
+    .carta-preco-unico-borda {
+        border: 1px solid #CCCCCC !important;
+    }
+
+        .carta-preco-unico-borda * {
+            text-align: center !important;
+        }
+
+    .carta-preco-unico-cabecalho {
+        background-color: #CCCCCC;
+        width: 100%;
+        display: table;
+        height: 40px;
+    }
+
+        .carta-preco-unico-cabecalho .padding10top {
+            padding-top: 10px !important;
+        }
+
+        .carta-preco-unico-cabecalho .bloco {
+            width: 33%;
+            float: left;
+        }
+
+            .carta-preco-unico-cabecalho .bloco .borda1direitaesquerda {
+                border-left: 1px solid #DDDDDD !important;
+                border-right: 1px solid #DDDDDD !important;
+            }
+
+            .carta-preco-unico-cabecalho .bloco div {
+                width: 100%;
+                float: left;
+            }
+
+            .carta-preco-unico-cabecalho .bloco .sub-bloco {
+                width: 50%;
+                float: left;
+            }
+
+        .carta-preco-unico-cabecalho .bloco-flex {
+            width: 66%;
+            float: left;
+        }
+
+            .carta-preco-unico-cabecalho .bloco-flex div {
+                width: 100%;
+                float: left;
+            }
+
+            .carta-preco-unico-cabecalho .bloco-flex .sub-bloco {
+                width: 50%;
+                float: left;
+            }
+
+    .carta-preco-unico {
+        background-color: #FFFFFF !important;
+        display: table;
+        width: 100%;
+    }
+
+        .carta-preco-unico * {
+            text-align: center !important;
+        }
+
+    .carta-preco-unico-flex {
+        background-color: #FFFFFF !important;
+        display: table;
+        width: 100%;
+    }
+
+        .carta-preco-unico-flex * {
+            text-align: center !important;
+        }
+
+        .carta-preco-unico-flex .bloco {
+            width: 33%;
+            float: left;
+        }
+
+    /* GRIDVIEW PRECO UNICO */
+    .carta-tabela-preco-unico {
+        border: 1px solid #DDDDDD !important;
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+
+        .carta-tabela-preco-unico .tamanho-17porcento {
+            width: 17%;
+        }
+
+        .carta-tabela-preco-unico TD {
+            color: #676767;
+            border: 1px solid #DDDDDD !important;
+        }
+
+        .carta-tabela-preco-unico .alternancia {
+            background-color: #DDDDDD;
+        }
+
+        .carta-tabela-preco-unico .cabecalho {
+            color: #676767;
+            background-color: #CCCCCC;
+        }
+
+            .carta-tabela-preco-unico .cabecalho TH {
+                color: #676767;
+                text-align: left;
+                font-weight: bold !important;
+            }
+
+    .carta-texto-negrito {
+        font-weight: bold !important;
+    }
+}

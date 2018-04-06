@@ -1,0 +1,12 @@
+﻿/*
+ * Projeto: Evolução Digital
+ * Descrição: Estilos da página de senha especial do RAV
+ * Autor/Empresa: Iteris Consultoria e Software
+ * ©Copyright: 2017 Rede S.A
+ * Notas:   
+*/
+
+.white-bg .box-rede.termo-rav a.jade-link-rede.termo-rav {
+    vertical-align: baseline;
+    padding-right: 0;
+}

@@ -1,0 +1,12 @@
+﻿/*
+ * Projeto: BBF - Facelift
+ * Descrição: Facelift da pagina Principal
+ * Autor/Empresa: Iteris Consultoria e Software
+ * ©Copyright: 2017 Rede S.A
+ * Notas:   
+    [xx/xx/xxxx] - [XXXX] xxx
+*/
+
+[id$=pnlEmailAlterar] table td a, [id$=pnlEmailAlterar] table td a:hover {
+    text-decoration: none;
+}

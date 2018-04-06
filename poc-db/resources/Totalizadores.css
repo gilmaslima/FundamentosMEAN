@@ -1,0 +1,16 @@
+﻿/*
+Projeto:Redecard.PN.Extrato
+Descrição: Folha de estilos Relatório de Vendas Crédito.
+Autor/Empresa: Valdinei Ribeiro / Iteris Consultoria e Informática
+Cliente:Rede S.A.
+©Copyright:2014 Rede S.A.
+Notas: [29/12/2014] - Alexandre S. - Ajuste centralização de totalizadores para o IE
+*/
+
+.legenda {
+    margin-left: 1px !important;
+}
+   
+.quadroTotais .width-100pc {
+    width: 100% !important;
+}

@@ -1,0 +1,64 @@
+﻿/*
+Projeto: BBF - Facelift
+Descrição: Facelift do controle/webpart ExtratoInibicao
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+*/
+
+.content-explain > p {
+    margin: 15px auto;
+}
+
+.pnl-conteudo {
+    float: left;
+    width: 450px;
+}
+
+.pnl-conteudo-principal {
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+.content-topic > div {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.content-topic-label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+
+.content-topic-field {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.validation-message {
+    color: #f00;
+}
+
+.validacao-pvs-selecionados {
+    margin-top: 10px;
+}
+
+.listagem-filiais {
+    margin-top: 20px;
+}
+
+    .listagem-filiais .listagem-filiais-container {
+        border: 1px solid #ddd;
+        margin-top: 5px;
+    }
+
+    .listagem-filiais select {
+        width: 100%;
+        color: #b4b0ae;
+        border: none;
+    }
+
+.pnl-botoes {
+    margin-top: 10px;
+}

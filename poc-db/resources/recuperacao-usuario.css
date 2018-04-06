@@ -1,0 +1,13 @@
+﻿/*
+Descrição: CSS exclusivo para a tela de recuperação de usuário na área aberta
+Autor/Empresa: Victor Alencar / Iteris
+Cliente: Rede
+©Copyright: 2016
+*/
+
+.modal ul.bullets-list-rede li > p,
+.form-group-header .other-text ul.bullets-list-rede li > p {
+    font-size: 12px;
+    font-family: 'opensans-regular',Sans-Serif;
+    color: #4f4139;
+}

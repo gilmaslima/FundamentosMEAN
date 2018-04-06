@@ -1,0 +1,91 @@
+﻿/*
+Projeto:Redecard.PN.OutrosServicos
+Descrição:Folha de estilos Tuquia Preço Único.
+Autor/Empresa: Valdinei Ribeiro / Iteris Consultoria e Informática
+Cliente:Rede S.A.
+©Copyright:2014 Rede S.A.
+Notas: [19/01/2015] Inclusão de estilo para mensagem "sem apuração realizada"
+*/
+
+.timeline-template {
+    display: none;
+}
+
+#temp-impressao {
+    background-color: #fff;
+    padding-left: 15px;
+}
+
+#temp-impressao-content * {
+    font-size: 10px;
+}
+
+#temp-impressao-content .regular-text {
+    font-size: 10px !important;
+}
+
+#temp-impressao-content .small-text {
+    font-size: 8px !important;
+}
+
+#temp-impressao-content .margin-bottom-md {
+    margin-bottom: 16px !important;
+}
+
+#temp-impressao-content .margin-bottom-sm {
+    margin-bottom: 8px !important;
+}
+
+#temp-impressao-content .table-header-rede,
+#temp-impressao-content .rede-table {
+    border: 1px solid #ddd !important;
+}
+
+#temp-impressao-content .table-header-rede {
+    padding: 8px 20px;
+}
+
+#temp-impressao-content .item-box-rede,
+#temp-impressao-content .timeline-rede .timeline-rede-item .timeline-content .rede-table th,
+#temp-impressao-content .timeline-rede .timeline-rede-item .timeline-content .rede-table td {
+    padding: 4px 20px;
+}
+
+#temp-impressao-content .table-header-rede,
+#temp-impressao-content .timeline-rede .timeline-rede-item .timeline-content .rede-table th {
+    font-size: 12px;
+}
+
+#temp-impressao-content .total-income-rede .total-income-number > span {
+    font-size: 14px;
+}
+
+#temp-impressao-content .timeline-rede.outside-line .timeline-rede-item .timeline-content {
+    padding: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#temp-impressao-content .timeline-rede .timeline-rede-item,
+#temp-impressao-content .timeline-rede .timeline-rede-item .timeline-date:after,
+#temp-impressao-content .timeline-rede .timeline-rede-item:last-child:after {
+    background: none;
+}
+
+#temp-impressao-content .timeline-rede.outside-line .timeline-rede-item {
+    padding-left: 0;
+}
+
+    #temp-impressao-content .timeline-rede.outside-line .timeline-rede-item .timeline-date {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+        #temp-impressao-content .timeline-rede.outside-line .timeline-rede-item .timeline-date span {
+            font-size: 16px;
+        }
+
+#temp-impressao-content .timeline-rede.outside-line {
+    padding-bottom: 20px;
+}

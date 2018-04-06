@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B8C113E-7C80-4C8B-9819-3A6EEA269C40}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.Comum</RootNamespace>
+    <AssemblyName>Redecard.PN.Comum</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Redecard.PN.Comum.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Redecard.PN.Comum.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DesenvRedecard|AnyCPU'">
+    <OutputPath>bin\DesenvRedecard\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Redecard.PN.Comum.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SimuRedecard|AnyCPU'">
+    <OutputPath>bin\SimuRedecard\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Redecard.PN.Comum.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProdRedecard|AnyCPU'">
+    <OutputPath>bin\ProdRedecard\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Redecard.PN.Comum.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\AppFabric\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\AppFabric\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\EntLib\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.AdoNet2.AseClient, Version=2.157.104.0, Culture=neutral, PublicKeyToken=95d94fac46c88e1e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Provider\Sybase.AdoNet2.AseClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentesBase.cs" />
+    <Compile Include="ApplicationPageBaseAutenticada.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssistentePassos.cs" />
+    <Compile Include="Atividade.cs">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BancoDeDadosBase.cs" />
+    <Compile Include="ApplicationPageBaseAnonima.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlacklistValidations\BlacklistIPs.cs" />
+    <Compile Include="BlacklistValidations\BlacklistPVs.cs" />
+    <Compile Include="CacheAdmin.cs" />
+    <Compile Include="ApplicationPageBaseAutenticadaWindows.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationBasePageWindows.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContextoWCF.cs" />
+    <Compile Include="CSVExporter.cs" />
+    <Compile Include="EmailNovoAcesso.cs" />
+    <Compile Include="FormaRecuperacao.cs" />
+    <Compile Include="Historico.cs" />
+    <Compile Include="HistoricoComparacao.cs">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntranetRedecardException.cs" />
+    <Compile Include="Criptografia.cs" />
+    <Compile Include="CSSInliner.cs" />
+    <Compile Include="EncriptadorSHA1.cs" />
+    <Compile Include="ExtensaoMetodo.cs" />
+    <Compile Include="GZipHelper.cs" />
+    <Compile Include="HISUtils.cs" />
+    <Compile Include="Logger\ClassFactory.cs" />
+    <Compile Include="Logger\CustomDatabaseTraceListener.cs" />
+    <Compile Include="Logger\CustomDatabaseTraceListenerData.cs" />
+    <Compile Include="Logger\EventoLog.cs" />
+    <Compile Include="Logger\LogEntry.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Logger\LoggingBehavior.cs" />
+    <Compile Include="Logger\RollingXmlTraceListener.cs" />
+    <Compile Include="Logger\RollingXmlTraceListenerData.cs" />
+    <Compile Include="Logger\TermFilter.cs" />
+    <Compile Include="Logger\TimeFilter.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MultiSelectDropDown\MultiSelectDropDown.cs" />
+    <Compile Include="MultiSelectGridView.cs" />
+    <Compile Include="Paginacao.cs" />
+    <Compile Include="PortalRedecardException.cs" />
+    <Compile Include="PortalWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringSegura.cs" />
+    <Compile Include="RegraDeNegocioBase.cs" />
+    <Compile Include="Serializador.cs" />
+    <Compile Include="Service References\EntidadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HistoricoAtividadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LogServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SMSService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SyncP2Servico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TrataErroServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServicoBase.cs" />
+    <Compile Include="Sessao.cs" />
+    <Compile Include="SharePointLog.cs" />
+    <Compile Include="SMS.cs" />
+    <Compile Include="StatusEnum.cs" />
+    <Compile Include="SybaseFactory.cs" />
+    <Compile Include="UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bundleconfig.json" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
+    <None Include="Redecard.PN.Comum.snk" />
+    <None Include="SharePoint\MasterPage\AreaAberta\RedecardPortalMain.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="SharePoint\MasterPage\AreaFechada\RedecardAreaFechada.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="SharePoint\MasterPage_2_0\AreaAberta\RedecardPortalMain.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="SharePoint\MasterPage_2_0\AreaFechada\RedecardAreaFechada_2_0.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\AreaFechada\RedeAreaFechada_3_0.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Fonts\fontawesome-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\fontawesome-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\fontawesome-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\fontawesome-webfont.woff2" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\FontAwesome.otf" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-bold.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-bold.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-bold.woff2" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-light.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-light.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-light.woff2" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-regular.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-regular.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-regular.woff2" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-semibold.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-semibold.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-display\itau-display-semibold.woff2" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-icons\itaufonts_master_24px_v1-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\itau-icons\itaufonts_master_24px_v1-webfont.woff2" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-bold\OpenSans-Bold-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-bold\OpenSans-Bold-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-bold\OpenSans-Bold-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-light\OpenSans-Light-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-light\OpenSans-Light-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-light\OpenSans-Light-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-regular\OpenSans-Regular-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-regular\OpenSans-Regular-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-regular\OpenSans-Regular-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-semibold\OpenSans-Semibold-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-semibold\OpenSans-Semibold-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0\Fonts\opensans-semibold\OpenSans-Semibold-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0\Scripts\dropdown-multiple-checkbox.min.js.map">
+      <DependentUpon>dropdown-multiple-checkbox.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\jquery.inputmask.bundle.min.js.map">
+      <DependentUpon>jquery.inputmask.bundle.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\jquery.meiomask-1.1.14.min.js.map">
+      <DependentUpon>jquery.meiomask-1.1.14.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\jquery.rwdImageMaps.min.js.map">
+      <DependentUpon>jquery.rwdImageMaps.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\popover.min.js.map">
+      <DependentUpon>popover.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-legado-global.min.js.map">
+      <DependentUpon>redeareafechada-3-0-legado-global.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-legado-style.min.js.map">
+      <DependentUpon>redeareafechada-3-0-legado-style.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-menu-header.min.js.map">
+      <DependentUpon>redeareafechada-3-0-menu-header.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_2_0\Estilos\fonts\fontawesome-webfont.eot" />
+    <None Include="SharePoint\MasterPage_2_0\Estilos\fonts\fontawesome-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_2_0\Estilos\fonts\fontawesome-webfont.woff" />
+    <None Include="SharePoint\MasterPage_2_0\Estilos\fonts\fontawesome-webfont.woff2" />
+    <None Include="SharePoint\MasterPage_2_0\Estilos\fonts\FontAwesome.otf" />
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-coachmark.min.js.map">
+      <DependentUpon>redeareafechada-coachmark.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-definicoes.min.js.map">
+      <DependentUpon>redeareafechada-definicoes.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-fixed-thead.min.js.map">
+      <DependentUpon>redeareafechada-fixed-thead.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-functions.min.js.map">
+      <DependentUpon>redeareafechada-functions.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-consulta-pv.min.js.map">
+      <DependentUpon>redeareafechada-consulta-pv.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-menu-lateral.min.js.map">
+      <DependentUpon>redeareafechada-menu-lateral.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-pesquisa-satisfacao.min.js.map">
+      <DependentUpon>redeareafechada-pesquisa-satisfacao.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\itau-icons\itaufonts_master_24px_v1.eot" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\itau-icons\itaufonts_master_24px_v1.ttf" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\itau-icons\itaufonts_master_24px_v1.woff" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\itau-icons\itaufonts_master_24px_v1.woff2" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-bold\OpenSans-Bold-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-bold\OpenSans-Bold-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-bold\OpenSans-Bold-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-light\OpenSans-Light-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-light\OpenSans-Light-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-light\OpenSans-Light-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-regular\OpenSans-Regular-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-regular\OpenSans-Regular-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-regular\OpenSans-Regular-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-semibold\OpenSans-Semibold-webfont.eot" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-semibold\OpenSans-Semibold-webfont.ttf" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-semibold\OpenSans-Semibold-webfont.woff" />
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\checkbox-toggle.min.js.map">
+      <DependentUpon>checkbox-toggle.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\datatable-responsible.min.js.map">
+      <DependentUpon>datatable-responsible.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\password-toggle.min.js.map">
+      <DependentUpon>password-toggle.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-area-aberta-3-0-definicoes.min.js.map">
+      <DependentUpon>rede-area-aberta-3-0-definicoes.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-area-aberta-3-0-functions.min.js.map">
+      <DependentUpon>rede-area-aberta-3-0-functions.js</DependentUpon>
+    </None>
+    <None Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-meiomask-polyfill.min.js.map">
+      <DependentUpon>rede-meiomask-polyfill.js</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TrataErroServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SyncP2Servico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LogServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="MultiSelectDropDown\MultiSelectDropDown.js" />
+    <None Include="Service References\SMSService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HistoricoAtividadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EntidadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SharePoint\MasterPage_3_0\AreaFechada\RedeAreaFechadaExtrato.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\bootstrap-grid.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\bootstrap.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\chartist.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\checkbox-toggle.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\checkbox-toggle.min.css">
+      <DependentUpon>checkbox-toggle.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\itau-icons.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\itau-icons.min.css">
+      <DependentUpon>itau-icons.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\jquery.mCustomScrollbar.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\owl.video.play.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-ddl-checkbox.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-ddl-checkbox.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-facelift-atendimento.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-facelift-atendimento.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-facelift.min.css">
+      <DependentUpon>redeareafechada-3-0-facelift.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-fixed-thead.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-fixed-thead.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\accordion-arrows.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\accordion-dirf-arrows.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\android-button.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\app-icon-small.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\app-icon.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\apple-button.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\arrow-down-disabled.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\arrow-down-error.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\ball-timeline.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\bar.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\calendar-red.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\carousel-circle-active.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\carousel-circle.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\category-arrow.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\celular.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\contract-timeline-circle.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\custom-scroll-rede.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\dislike.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\conheca_redecard.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\envie.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\footer.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\header.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\banner_destaque.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\Barra_NaoCliente.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_bandeiras.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_chamadas.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_header.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_menuHorizontal.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_NaoCliente.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_redeUmClique.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_secoes.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bg_tools.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\Bkg_BotaoOk.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\btn_yellow_arrow.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\btn_yellow_arrow_2.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_bottom_yellow_2.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_left_blue.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_left_darkblue.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_left_yellow.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_orange.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_right_blue.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_right_darkblue.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_top_yellow.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_seta_yellow_2.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\blt_yellow.gif" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\bullets\bullet_btn.gif" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\icons\ico_print.gif" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\icons\ico_send.gif" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\Ico_BCT.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\img_chamada_bobina.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\img_chamada_cheques.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\img_chamada_recebimento.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\LogoRede.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Aba npo selecionada.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Aba selecionada.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_BarraNaoeCliente.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_BotaoExemplo.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_BotaoOk.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_box.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_Box2.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_Box3.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_Boxes.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_Compartilhe.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_Footer.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_Header.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_Header_Inst.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_MenuLateral_Interna.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Bkg_MenuSuperior.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Botao continuar.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Botao ocultar.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Botao sair.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Botpo continuar.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Btn_Voltar.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Caixa_menu.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Ico_BCT.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Ico_Email.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Ico_Impressora.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Ico_SetaMenu_Sele.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Ico_SetaMenu_SSele.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\LogoRede.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Seta.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\old\Seta_BoxEstabelecimento.png" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\tit_atendimento.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\tit_clientes_parceiros.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\tit_conheca_redecard.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\images\tit_solucoes.jpg" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\Rede.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\reset.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaFechada\redecardareafechada-2-0.css" />
+    <Content Include="SharePoint\Estilos\AreaFechada\base.css" />
+    <Content Include="SharePoint\Estilos\AreaFechada\header.css" />
+    <Content Include="SharePoint\Estilos\AreaFechada\superfish.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Estilos\AreaAberta\style.css" />
+    <Content Include="SharePoint\MasterPage_2_0\Scripts\AreaAberta\core.js" />
+    <Content Include="SharePoint\MasterPage_2_0\Scripts\AreaAberta\jquery.js" />
+    <Content Include="SharePoint\MasterPage_2_0\Scripts\AreaAberta\libs\HOM.webtrends.js" />
+    <Content Include="SharePoint\MasterPage_2_0\Scripts\AreaAberta\libs\PRD.webtrends.js" />
+    <Content Include="SharePoint\MasterPage_2_0\Scripts\AreaFechada\redecardareafechada_2_0.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\animate.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\animate.custom.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\animate.custom.min.css">
+      <DependentUpon>animate.custom.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\animate.min.css">
+      <DependentUpon>animate.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\jquery-ui.min.css">
+      <DependentUpon>jquery-ui.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-coachmark.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-coachmark.min.css">
+      <DependentUpon>redeareafechada-3-0-coachmark.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-facelift-conteudos.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-facelift-conteudos.min.css">
+      <DependentUpon>redeareafechada-3-0-facelift-conteudos.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-ie8.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-ie8.min.css">
+      <DependentUpon>redeareafechada-3-0-ie8.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-reset.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-reset.min.css">
+      <DependentUpon>redeareafechada-3-0-reset.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0.jquery.ezmark.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0.jquery.ezmark.min.css">
+      <DependentUpon>redeareafechada-3-0.jquery.ezmark.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\font-awesome.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\images\ui-icons_444444_256x240.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\images\ui-icons_555555_256x240.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\images\ui-icons_777620_256x240.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\images\ui-icons_777777_256x240.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\jquery-ui.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\jquery.selectBoxIt.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\jquery.selectBoxIt.min.css">
+      <DependentUpon>jquery.selectBoxIt.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\owl.carousel.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\owl.theme.default.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-facelift.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-generics.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-generics.min.css">
+      <DependentUpon>redeareafechada-3-0-generics.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-legado.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-3-0-legado.min.css">
+      <DependentUpon>redeareafechada-3-0-legado.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-fonts.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-fonts.min.css">
+      <DependentUpon>redeareafechada-fonts.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-ocultar-title-default.css" />
+    <Content Include="SharePoint\MasterPage_3_0\Estilos\redeareafechada-ocultar-title-default.min.css">
+      <DependentUpon>redeareafechada-ocultar-title-default.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Fonts\fontawesome-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Fonts\opensans-bold\OpenSans-Bold-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Fonts\opensans-light\OpenSans-Light-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Fonts\opensans-regular\OpenSans-Regular-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Fonts\opensans-semibold\OpenSans-Semibold-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\ajax-loader.gif" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\apple_store_logo.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\arrow-down.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\arrow-second-level.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\ballon-triangle.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\breadcrumb-arrow-active.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\breadcrumb-arrow.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\calendar-grey.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\calendar-left.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\calendar-orange.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\calendar-right.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\calendar-white.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\card-cabal.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\card-diners.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\card-hipercard.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\card-master.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\card-visa.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\checkbox.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\close-modal.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\csv.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\disabled-select-arrow.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\download.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\error-icon-orange.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\error-icon-small.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\error-icon.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\excel.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\first-step-jade.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\first-step.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\google-play-logo.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\help.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\home-carousel-circle-active.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\home-carousel-circle.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\html.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\icon_facebook.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\icon_twitter.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\icon_youtube.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\ic_alerta.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\ic_check.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\ic_errado.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\info-icon-branco.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\info-icon.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\last-step-active-jade.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\last-step-active.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\last-step.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\left-arrow-orange.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\left-coachmark.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\likert.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\line-timeline.gif" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\loader-fullscreen.gif" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logo-box.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logo-rede.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-banco-amazonia.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-banco-nordeste.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-banese.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-banestes.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-banrisul.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-bb.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-bonsucesso.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-bradesco.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-brb.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-caixa.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-hsbc.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-itau.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-mercantil.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-safra.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-santander.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-semear.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-sicred.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-bancos\logo-tribanco.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-vouchers\alelo.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-vouchers\green-card-refeicao.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-vouchers\green-card.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-vouchers\sodexo.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-vouchers\ticket-alimentacao.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-vouchers\ticket-restaurante.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logos-vouchers\vr-refeicao.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\logout.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\m-comfio.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\m-semfio.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\maquininha-com-fio-rede.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\maquininha-sem-fio-rede.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\notinha-logo.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\notinha-recorte.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\order-button.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\owl.video.play.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\pdf.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\permission-menu.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\POO.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\POS.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\print.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\radio-black.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\radio.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\rav-banner.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\rede-icon.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\right-arrow-orange.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\right-coachmark.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\search-bg.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\search-icon.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\send-email.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\smile.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\smiley-small.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\smiley.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\social-icons.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\step-active-jade.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\step-active.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\step.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\teste-carousel.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\teste.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\triangulo-tooltip.svg" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\txt-file.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\user.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\video-overlay.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\video.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\warning-small.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\warning.png" />
+    <Content Include="SharePoint\MasterPage_3_0\Images\redeareafechada-facelift\word-file.png" />
+    <Content Include="SharePoint\MasterPage_3_0\AreaFechada\RedeAreaFechada.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\bootstrap.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\chartist.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\dropdown-multiple-checkbox.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\dropdown-multiple-checkbox.min.js">
+      <DependentUpon>dropdown-multiple-checkbox.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery-1.12.3.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery-2.1.3.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery-ui.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.ba-throttle-debounce.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.blockUI.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.ezmark.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.inputmask.bundle.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.inputmask.bundle.min.js">
+      <DependentUpon>jquery.inputmask.bundle.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.meiomask-1.1.14.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.meiomask-1.1.14.min.js">
+      <DependentUpon>jquery.meiomask-1.1.14.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.placeholder.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.rwdImageMaps.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.rwdImageMaps.min.js">
+      <DependentUpon>jquery.rwdImageMaps.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\jquery.selectBoxIt.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\match-media.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\owl.carousel.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\PIE.htc" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\popover.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\popover.min.js">
+      <DependentUpon>popover.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-legado-global.min.js">
+      <DependentUpon>redeareafechada-3-0-legado-global.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-legado-style.min.js">
+      <DependentUpon>redeareafechada-3-0-legado-style.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-menu-header.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-menu-header.min.js">
+      <DependentUpon>redeareafechada-3-0-menu-header.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-legado-global.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-coachmark.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-coachmark.min.js">
+      <DependentUpon>redeareafechada-coachmark.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-consulta-pv.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-consulta-pv.min.js">
+      <DependentUpon>redeareafechada-consulta-pv.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-definicoes.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-definicoes.min.js">
+      <DependentUpon>redeareafechada-definicoes.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-fixed-thead.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-fixed-thead.min.js">
+      <DependentUpon>redeareafechada-fixed-thead.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-functions.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-3-0-legado-style.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-functions.min.js">
+      <DependentUpon>redeareafechada-functions.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-menu-lateral.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-menu-lateral.min.js">
+      <DependentUpon>redeareafechada-menu-lateral.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-pesquisa-satisfacao.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-pesquisa-satisfacao.min.js">
+      <DependentUpon>redeareafechada-pesquisa-satisfacao.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-warnings.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\redeareafechada-warnings.min.js">
+      <DependentUpon>redeareafechada-warnings.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\selectivizr.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0\Scripts\svg2vml.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\bootstrap-grid.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\images\sort_asc.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\images\sort_both.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\images\sort_desc.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\itau-icons.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\itau-icons.min.css">
+      <DependentUpon>itau-icons.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\jquery-ui.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\jquery.datatables.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\jquery.selectBoxIt.min.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-3-0-fonts.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-3-0-fonts.min.css">
+      <DependentUpon>rede-area-aberta-3-0-fonts.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-3-0-reset.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-3-0-reset.min.css">
+      <DependentUpon>rede-area-aberta-3-0-reset.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-3-0.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-3-0.min.css">
+      <DependentUpon>rede-area-aberta-3-0.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-ocultar-title-default.css" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Estilos\rede-area-aberta-ocultar-title-default.min.css">
+      <DependentUpon>rede-area-aberta-ocultar-title-default.css</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\itau-icons\itaufonts_master_24px_v1.svg" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-bold\OpenSans-Bold-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-light\OpenSans-Light-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-regular\OpenSans-Regular-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Fonts\opensans-semibold\OpenSans-Semibold-webfont.svg" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartoes\1.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartoes\104.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartoes\237.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartoes\33.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartoes\341.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartoes\389.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartoes\399.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\loader-fullscreen.gif" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\accordion-arrows.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\accordion-dirf-arrows.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\ajax-loader.gif" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\calendar-grey.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\calendar-left.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\calendar-orange.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\calendar-right.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\calendar-white.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\cartao-exemplo.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\dislike.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\help.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\logo-box.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\radio-black.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\radio.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\search-icon.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\smile.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\smiley-small.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\smiley.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\social-icons.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\warning-small.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Images\masterpage_3_0\warning.png" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\MasterPage\RedePortalNovoAcesso2013.html" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\PageLayout\RedePortalAbertoNovoAcesso.aspx" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\checkbox-toggle.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\checkbox-toggle.min.js">
+      <DependentUpon>checkbox-toggle.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\datatable-responsible.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\datatable-responsible.min.js">
+      <DependentUpon>datatable-responsible.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery-1.12.3.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery-ui.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.ba-throttle-debounce.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.blockUI.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.datatables.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.ezmark.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.inputmask.bundle.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.meiomask-1.1.14.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.placeholder.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.selectBoxIt.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\jquery.validate.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\password-toggle.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\password-toggle.min.js">
+      <DependentUpon>password-toggle.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\popover.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-area-aberta-3-0-definicoes.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-area-aberta-3-0-definicoes.min.js">
+      <DependentUpon>rede-area-aberta-3-0-definicoes.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-area-aberta-3-0-functions.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-area-aberta-3-0-functions.min.js">
+      <DependentUpon>rede-area-aberta-3-0-functions.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-meiomask-polyfill.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\rede-meiomask-polyfill.min.js">
+      <DependentUpon>rede-meiomask-polyfill.js</DependentUpon>
+    </Content>
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\respond.min.js" />
+    <Content Include="SharePoint\MasterPage_3_0_AreaAberta\Scripts\selectivizr.min.js" />
+    <Content Include="SharePoint\Paginas\AreaFechada\logout.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SharePoint\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EntidadeServico\" />
+    <WCFMetadataStorage Include="Service References\HistoricoAtividadeServico\" />
+    <WCFMetadataStorage Include="Service References\LogServico\" />
+    <WCFMetadataStorage Include="Service References\SMSService\" />
+    <WCFMetadataStorage Include="Service References\SyncP2Servico\" />
+    <WCFMetadataStorage Include="Service References\TrataErroServico\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

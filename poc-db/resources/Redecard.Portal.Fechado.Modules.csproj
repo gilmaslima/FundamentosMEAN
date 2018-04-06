@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F69F7828-37AB-4EE8-A5C7-1162D556F045}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.Portal.Fechado.Modules</RootNamespace>
+    <AssemblyName>Redecard.Portal.Fechado.Modules</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Deploy\WSP\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConteudoReutilizavel\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{95ef3cf8-aed4-4c9c-8a44-e1c8dcd914a0}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Site\Site.feature">
+      <FeatureId>{bc4f37ab-9df6-4bc2-8b83-36df42a22e1a}</FeatureId>
+    </None>
+    <None Include="Features\VincularReusableContent\VincularReusableContent.feature">
+      <FeatureId>{dbb2cd37-1c74-4388-8674-bfb1bb5577e1}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="ModuleMasterPage_PortalFechado\RedecardAreaFechada.master">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="ModuleMasterPage_PortalFechado\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bc5550a2-cb7d-45e3-b0c4-33f081112d1e}</SharePointProjectItemId>
+    </None>
+    <None Include="ModulePageLayout_PortalFechado\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{054e5e5b-acf6-4d31-8d6a-b785fe9cc567}</SharePointProjectItemId>
+    </None>
+    <None Include="ModuleRedecardTheme_PortalFechado\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2cd303d6-4427-444d-aaf3-c59eddaa2d43}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{5f003e55-06f6-465e-b090-5ac1fa4ecca9}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="ReusableContent\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{68ad54be-5972-4b50-88b7-74ed691a1747}</SharePointProjectItemId>
+    </None>
+    <None Include="SiteColumns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{97e40fe8-e492-4af8-92d2-4177f616ade4}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\images\" />
+    <Folder Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ModuleMasterPage_PortalFechado\Elements.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConteudoReutilizavel\Elements.xml" />
+    <Content Include="Features\Site\Site.Template.xml">
+      <DependentUpon>Site.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\VincularReusableContent\VincularReusableContent.Template.xml">
+      <DependentUpon>VincularReusableContent.feature</DependentUpon>
+    </Content>
+    <Content Include="ModuleMasterPage_PortalFechado\jquery.pngFix.pack.js" />
+    <Content Include="ModuleMasterPage_PortalFechado\pluginpage.js" />
+    <Content Include="ModulePageLayout_PortalFechado\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ModulePageLayout_PortalFechado\RedeAreaFechada.aspx" />
+    <Content Include="ModulePageLayout_PortalFechado\RedecardAreaFechadaTipo1.aspx" />
+    <Content Include="ModulePageLayout_PortalFechado\RedecardAreaFechadaTipo1Titulo.aspx" />
+    <Content Include="ModulePageLayout_PortalFechado\RedecardAreaFechadaTipo1TituloSubtitulo.aspx" />
+    <Content Include="ModulePageLayout_PortalFechado\RedecardAreaFechadaTipo2.aspx" />
+    <Content Include="ModulePageLayout_PortalFechado\RedecardAreaFechadaTipo3.aspx" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Data\xml\bandeiras.xml" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Data\xml\carrossel.xml" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Data\xml\cot_redecard.xml" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Data\xml\ofertas.xml" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Data\xml\produtos.xml" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Data\xml\simulador.xml" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Data\xml\tvflash.xml" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_ajuda.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_ajuda_inverso.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_consultas.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_destaques.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_footer.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_header.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_intro.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_menu.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_menu.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_sidebar_box.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_sidebar_rodape.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_sidebar_topo.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bg_titulos_destaques.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bullets\blt_check.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bullets\lista_menu.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\bullets\lista_sidebar.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\buttons\btn_bg_blue.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\buttons\btn_close.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\buttons\destaques.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\buttons\fechar.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\ajuda.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\correcoes.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\envio-documento.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\ico_impressao.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\ico_pdf.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\ico_success.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\ico_x.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\localizar-arquivo.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\icons\scroll.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\img_destaqueSerasa.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\logoKomerci.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\logoRav.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\rav_redecard.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\samples\arquivo.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\samples\banner_manuaisvideos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\samples\banner_produtosservicos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\titles\avisos_importantes.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\titles\dicas_maquininha.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\titles\meus_favoritos.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\titles\participe_enquete.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\titles\portal_servicos.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\titles\tit_quero_antecipar_meus_recebiveis.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\area_logada\vr_menu.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\arrows\arrow_down.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\arrows\arrow_up.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\avatar.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\banner1.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bgBoxAdquira.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_accredit.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_aumente_ganhos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_automacao_comercial.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_bandeiras.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_body.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_breadcrumb.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_complemente_servicos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_credito_debito.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_flash_top.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_footer.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_inovacao.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_internet_celular.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_journalist.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_link_comment.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_maquininha.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_maquininhas.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_menu_blue.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_menu_yellow.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_prevencao.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_products_gallery.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_products_menu.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_progress_result.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_rate_page.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_redecardclick.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_section.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_sidebar_bottom.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_sidebar_top.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_sitemap.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_tab01.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_tab02.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_tab03.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_tab04.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_tagcloud.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_text_sidebar.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_tools.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bg_video_highlight.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bordDivForm.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_blue.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_next.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_previous.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_blue.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_bottom_yellow_2.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_left_blue.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_left_darkblue.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_left_yellow.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_right_blue.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_right_darkblue.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_top_yellow.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_yellow.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_seta_yellow_2.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\blt_yellow.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\bullet_btn.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\bullets\icoFlechaList.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btnLeft.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btnRight.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_contrate_agora.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_credenciese_ja.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_quero_candidatar_essa_vaga.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_solicite_ja.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_solicite_ja_big.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_yellow_arrow.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_yellow_arrow_2.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\dinners.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\discover.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\divisor_tools.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\form\bg_form_comment.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\form\jqf1.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\form\jqf2.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\form\jqf3.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\form\jqf4.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\hipercard.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoAlerta.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoBaixar.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoCarta.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoMais.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoMaisAzul.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoNegativo.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoPositivo.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\icoTel.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_blue_less.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_blue_more.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_calendar.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_central.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_delicious.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_doc.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_envie.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_facebook.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_flickr.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_google.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_graph.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_lamp.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_mail.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_negative.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_orkut.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_pdf.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_positive.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_print.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_send.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_small_delicious.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_small_facebook.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_small_google.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_small_twitter.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_success.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_twitter.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_txt.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_usa.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_user.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_warning.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_white_less.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_white_more.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_xls.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\ico_youtube.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_aumente.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_automacao.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_complemente.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_credito.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_descubra.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_inovacao.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_internet.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\icons\products_services\ico_maquininhas.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\ico_central.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\img01.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\img02.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\img_titulo.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\logo.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\logoImpressao.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\master.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\media01.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\media02.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\products_services\bg_divisor_menu.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\redeshop.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\banner1.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\banner_foneshop.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\bgBtAdquiraJa.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\bgBtAdquiraJa.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\btExpoExcel.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgFlashEstabelecimentos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgLogoVisa.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgPromoJubaina.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgServicos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgTeste1.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgTeste2.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgTeste3.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\imgTeste4.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\logoExperian.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample1.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample10.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample11.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample12.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample2.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample3.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample4.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample5.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample6.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample7.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample8.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\samples\sample9.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\semvar.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\tags.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\titMenuEsqAtendimento.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\titMenuEsqClientesParceiros.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_acesso_servicos_online.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_big_acesso_servicos_online.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_cadastre_curriculo.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_cadastre_curriculo_big.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_central_atendimento_redecard.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_conheca_redecard.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_depoimentos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_descubra_negocios.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_dolar.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_ibov.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_ibovFut.gif" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_imprensa.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_indicadores_financeiros.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_nao_cliente_redecard_ainda.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_noticias.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_oportunidades_conveniencias.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_precisa_ajuda.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_produtos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_produtos_servicos.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_produtos_servicos_indicados.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_sidebar_download.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_sidebar_perguntas_frequentes.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_summer_jobs.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_trabalhe_conosco.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\titles\tit_vantagens_para_voce.jpg" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\varneg.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\varpos.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\visa.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\advancedsearchfix.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\ajax_finansite.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\ajax_xml.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\class\dateutils.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\class\faq.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\class\utils.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\core.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\DD_belatedPNG.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jqf1.portugues.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery-1.4.2.min.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery-ui-1.8.2.custom.min.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery-ui-1.8.4.custom.min.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.domec-1.1.0.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.ifixpng.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.iframeautoheight.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.jcarousel.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.media.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.meiomask.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.metadata.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.mousewheel.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jquery.pngFix.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jScrollPane.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\jwplayer.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\libs\superfish.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\JScript\resource.js" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\bandeiras.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\bandeiras_BKP.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\carrossel.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\flash_accordin.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\flash_banner_nao_cliente.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\flash_flags.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\flash_mp3.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\flash_perfil.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\flash_top.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\flash_video.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\mediaplayer.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\ofertas.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\ofertas_BKP.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\simulador.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\simulador_BKP.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\tvflash.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Media\swf\yt.swf" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\area_logada\base.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Img\buttons\btn_saiba_mais.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\area_logada\extratos.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\area_logada\footer.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\area_logada\header.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\area_logada\superfish.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-icons_454545_256x240.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-icons_666666_256x240.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\jqf1.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\jScrollPane.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\pageLayout.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\produtos_servicos.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\resource.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\servicos.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\style.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\tango\credits.txt" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\tango\next-horizontal.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\tango\next-vertical.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\tango\pageLayout.css" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\tango\prev-horizontal.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\tango\prev-vertical.png" />
+    <Content Include="ModuleRedecardTheme_PortalFechado\Redecard\Stylesheet\tango\skin.css" />
+    <Content Include="ReusableContent\Elements.xml" />
+    <Content Include="SiteColumns\Elements.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

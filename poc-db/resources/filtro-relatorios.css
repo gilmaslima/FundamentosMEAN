@@ -1,0 +1,85 @@
+﻿/*
+Projeto: Redecard.PN.Extrato
+Descrição: Folha de estilos controle Filtro
+Autor/Empresa: Alexandre S. / Iteris
+Cliente: Rede S.A.
+©Copyright: 2014 Rede S.A.
+Notas: Separação dos estilos do controle para o arquivo css
+*/
+
+#tblFiltroRelatorios .nowrap
+{
+    white-space: nowrap !important;
+}
+
+#tblFiltroRelatorios .float-none
+{
+    float: none !important;
+}
+
+#tblFiltroRelatorios .line-height-10px
+{
+    line-height: 10px !important;
+}
+
+#tblFiltroRelatorios .margin-left-5px
+{
+    margin-left: 5px !important;
+}
+
+#tblFiltroRelatorios .display-none
+{
+    display: none;
+}
+
+#tblFiltroRelatorios .col1
+{
+    width: 90px !important;
+}
+
+#tblFiltroRelatorios .col2
+{
+}
+
+#tblFiltroRelatorios .col3
+{
+}
+
+#tblFiltroRelatorios .col4
+{
+    width: 220px !important;
+}
+
+#tblFiltroRelatorios .col5
+{
+    width: 0px !important;
+}
+
+#tblFiltroRelatorios .col6
+{
+}
+
+#tblFiltroRelatorios .row1
+{
+}
+
+#tblFiltroRelatorios .row2
+{
+    height: 33px !important;
+    vertical-align: top !important;
+}
+
+#tblFiltroRelatorios .ddlPeriodo
+{
+    width: 150px !important;
+}
+
+#tblFiltroRelatorios .ddlTipoVenda
+{
+    width: 140px !important;
+}
+
+#tblFiltroRelatorios .buscar-container
+{
+    padding-left: 65px !important;
+}

@@ -1,0 +1,48 @@
+﻿/*
+© Copyright 2016 Rede S.A.
+Autor : Lucas Akira
+Empresa : Iteris Software e Consultoria.
+*/
+
+.height {
+    height: 150px;
+}
+
+.line-height {
+    line-height: 20px;
+}
+
+.label-error {
+    height: 20px;
+    color:red;
+}
+
+.splitter {
+    margin: 20px 0;
+    color: #4f4139;
+    height: 0px;
+    border: none;
+    border-top: 1px solid #4f4139;
+}
+
+.filters-box .col > div {
+    margin-top: 0px;
+}
+.animate-hide {
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    line-height: 20px;
+    opacity: 1;
+    padding: 2px 0;
+}
+
+.animate-hide.ng-hide {
+    display: block;
+    opacity:0;
+}
+
+.col-2>.col {
+    width: 615px;
+}

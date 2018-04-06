@@ -1,0 +1,18 @@
+﻿/*
+ * Projeto: BBF - Facelift
+ * Descrição: Facelift de elementos da página de RAV Avulso - Alteração
+ * Autor/Empresa: Iteris Consultoria e Software
+ * ©Copyright: 2017 Rede S.A
+ * Notas:   
+    2017-11-08 - JFR - Melhorias no fluxo do RAV: reativação da tela de senha e links para impressão do contrato
+*/
+
+.lnk-desfazer-alteracao {
+    display: none;
+    opacity: 0;
+}
+
+.white-bg .box-rede.termo-rav a.jade-link-rede.termo-rav {
+    vertical-align: baseline;
+    padding-right: 0;
+}

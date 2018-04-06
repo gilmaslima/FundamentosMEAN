@@ -1,0 +1,61 @@
+﻿/*
+Projeto: BBF - Facelift
+Descrição: Facelift de elementos do bloco de filtro da página de consulta de vendas
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+*/
+
+.consulta-vendas-filter-box {
+    margin-bottom: 60px;
+}
+
+.consulta-vendas-filter.filters-box {
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+    .consulta-vendas-filter.filters-box .date-box {
+        width: auto;
+    }
+
+.filters-box .col > div {
+    position: relative;
+}
+
+    .filters-box .col > div > .btn-rede {
+        width: auto;
+        position: absolute;
+        right: 0;
+        margin-top: 15px;
+    }
+
+.consulta-vendas-filter.filters-box .datepicker, 
+.consulta-vendas-filter.filters-box.filters-white .datepicker {
+    width: 111px;
+}
+
+.consulta-vendas-filter .edit-item-rede > input.datepicker {
+    width: 100% !important;
+    padding-top: 10px;
+}
+
+.consulta-vendas-filter .edit-item-rede .cs-item-field-label {
+    top: 18px;
+}
+
+.consulta-vendas-filter .edit-item-rede:first-child .cs-item-field-label {
+    top: 9px;
+}
+
+.consulta-vendas-filter .edit-item-rede .cs-item-field-label.on-focus-rede {
+    top: -16px;
+}
+
+.consulta-vendas-filter .edit-item-rede:first-child .cs-item-field-label.on-focus-rede {
+    top: -18px;
+}
+
+.msg-error {
+    color: #f00 !important;
+}

@@ -1,0 +1,80 @@
+﻿/*
+Projeto: Pesquisa de Satisfação;
+Descrição: CSS do lightbox da Pesquisa de Satisfação;
+Autor/Empresa: Alexandre Osada / Iteris
+Cliente: Rede
+©Copyright: 2014 Rede S.A.
+Notas: [19/11/2013] Criação inicial do CSS
+       [13/11/2014] Adaptação para Pesquisa de Satisfação 2014
+       [19/08/2016] Jacques Sá (JFR): adaptação da funcionalidade de pesquisa de satisfação para compôr o facelift
+*/
+
+#pesquisaSatisfacao .pesquisa-container {
+    width: 900px;
+}
+
+#pesquisaSatisfacao .pesquisa-row {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+#pesquisaSatisfacao .bloco-pesquisa table td {
+    width: 46px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+    #pesquisaSatisfacao .bloco-pesquisa table td:first-child {
+        width: 437px;
+        text-align: left;
+    }
+
+.bloco-pesquisa .ez-radio{
+    margin-right: 0px;
+}
+
+#pesquisaSatisfacao .bloco-pesquisa-resp table td {
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    border-top: none;
+}
+
+#pesquisaSatisfacao .bloco-pesquisa-resp table:first-child td {
+    border-top: 1px solid #dddddd;
+}
+
+#pesquisaSatisfacao .bloco-pesquisa table.pesquisa-title tr td {
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: 'opensans-bold',Sans-Serif;
+    color: #4f4139;
+    border: none;
+    padding-top: 0px;
+}
+
+#pesquisaSatisfacao .bloco-pesquisa .bloco-pesquisa-resp tr td {
+    font-size: 14px;
+    font-family: 'opensans-regular',Sans-Serif;
+    color: #4f4139;
+}
+
+#pesquisaSatisfacao .pesquisa-row textarea {
+    resize: none;
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+
+#pesquisaSatisfacao .pesquisa-error-message {
+    color: #4f4139;
+    font-size: 12px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+div[aria-describedby=pesquisaSatisfacao].ui-dialog .ui-dialog-titlebar {
+    padding-bottom: 30px;
+}
+
+.pesquisa-comentario > .commom-text-bold {
+    margin-bottom: 10px;
+}

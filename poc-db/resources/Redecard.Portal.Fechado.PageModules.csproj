@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBFDD395-6623-4337-8A47-8A73EFEAD9DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.Portal.Fechado.PageModules</RootNamespace>
+    <AssemblyName>Redecard.Portal.Fechado.PageModules</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Deploy\WSP\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtratoModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{46b1fe90-6716-4a7b-b6de-eb9260060d64}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\ExtratoPages\ExtratoPages.feature">
+      <FeatureId>{a4acd887-9b74-441b-94a8-9e35c65d883d}</FeatureId>
+    </None>
+    <None Include="Features\GeralPages\GeralPages.feature">
+      <FeatureId>{3b883280-2bb4-47fd-85b8-6d347dabab5c}</FeatureId>
+    </None>
+    <None Include="Features\MinhaContaPages\MinhaContaPages.feature">
+      <FeatureId>{6da95a7e-3a21-4381-a571-e68bb1e226f3}</FeatureId>
+    </None>
+    <None Include="Features\ServicosPages\ServicosPages.feature">
+      <FeatureId>{a5e4f801-c40d-4eaa-ae03-48ccdff59dd2}</FeatureId>
+    </None>
+    <None Include="Features\KomerciPages\KomerciPages.feature">
+      <FeatureId>{b75d2e67-f8a0-44e8-aa8e-000af6288b38}</FeatureId>
+    </None>
+    <None Include="GeralModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2402b1a2-27e9-40ed-894a-8ebe2dfce4d2}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="KomerciModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0c5f20a0-25cc-4002-933c-935eb9490fb1}</SharePointProjectItemId>
+    </None>
+    <None Include="MinhaContaModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b99383c1-b377-40e1-b06b-c06caef81bc5}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{3bf66845-e538-45c1-9de3-80ee825bccdf}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="ServicosModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5825d51d-8acf-4e5a-998f-b05c3edbd258}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ExtratoModule\cancelarrecebimento.aspx" />
+    <Content Include="ExtratoModule\defaultpage.aspx" />
+    <Content Include="ExtratoModule\dirfanual.aspx" />
+    <Content Include="ExtratoModule\extratoporemail.aspx" />
+    <Content Include="ExtratoModule\visualizarextrato.aspx" />
+    <Content Include="ExtratoModule\vendasdia.aspx" />
+    <Content Include="ExtratoModule\faturamento.aspx" />
+    <Content Include="ExtratoModule\conhecaadirf.aspx" />
+    <Content Include="ExtratoModule\movimentacaovendas.aspx" />
+    <Content Include="ExtratoModule\movimentacaofinanceira.aspx" />
+    <Content Include="ExtratoModule\consultatransacao.aspx" />
+    <Content Include="ExtratoModule\resumovendas.aspx" />
+    <Content Include="ExtratoModule\servicos.aspx" />
+    <Content Include="ExtratoModule\recebimentoextrato.aspx" />
+    <Content Include="ExtratoModule\dirf.aspx" />
+    <Content Include="ExtratoModule\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\ExtratoPages\ExtratoPages.Template.xml">
+      <DependentUpon>ExtratoPages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\GeralPages\GeralPages.Template.xml">
+      <DependentUpon>GeralPages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\MinhaContaPages\MinhaContaPages.Template.xml">
+      <DependentUpon>MinhaContaPages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ServicosPages\ServicosPages.Template.xml">
+      <DependentUpon>ServicosPages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\KomerciPages\KomerciPages.Template.xml">
+      <DependentUpon>KomerciPages.feature</DependentUpon>
+    </Content>
+    <Content Include="GeralModule\defaultpage.aspx" />
+    <Content Include="GeralModule\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="GeralModule\faleconosco.aspx" />
+    <Content Include="GeralModule\manuaisuso.aspx" />
+    <Content Include="GeralModule\manuaisusocancelamentovendas.aspx" />
+    <Content Include="GeralModule\manuaisusoextratoonline.aspx" />
+    <Content Include="GeralModule\manuaisusomanutencaoterminaleletronico.aspx" />
+    <Content Include="GeralModule\manuaisusoserasaexperianacheirecheque.aspx" />
+    <Content Include="GeralModule\manuaisusovendasinternettelevendas.aspx" />
+    <Content Include="GeralModule\manuaisusovendassegmentoturismo.aspx" />
+    <Content Include="GeralModule\manuaisusovendendoseguranca.aspx" />
+    <Content Include="GeralModule\mapasite.aspx" />
+    <Content Include="GeralModule\perguntasfrequentes.aspx" />
+    <Content Include="GeralModule\segurancaprivacidade.aspx" />
+    <Content Include="KomerciModule\confirmar.aspx" />
+    <Content Include="KomerciModule\cancelarconfirmacao.aspx" />
+    <Content Include="KomerciModule\conhecarelatorio.aspx" />
+    <Content Include="KomerciModule\estornar.aspx" />
+    <Content Include="KomerciModule\relatorio.aspx" />
+    <Content Include="KomerciModule\defaultpage.aspx" />
+    <Content Include="KomerciModule\facavendaaqui.aspx" />
+    <Content Include="KomerciModule\estornovenda.aspx" />
+    <Content Include="KomerciModule\preautorizacao.aspx" />
+    <Content Include="KomerciModule\relatoriosvendas.aspx" />
+    <Content Include="KomerciModule\distribuidores.aspx" />
+    <Content Include="KomerciModule\usuarios.aspx" />
+    <Content Include="MinhaContaModule\alterardadosbancarioscancelar.aspx" />
+    <Content Include="MinhaContaModule\cadastrosenhasite.aspx" />
+    <Content Include="MinhaContaModule\informacoesbancariascredito.aspx" />
+    <Content Include="MinhaContaModule\meusdadoscadastrais.aspx" />
+    <Content Include="MinhaContaModule\tecnologia.aspx" />
+    <Content Include="MinhaContaModule\informacoesbancariasdebito.aspx" />
+    <Content Include="MinhaContaModule\alterardadosbancarioseditar.aspx" />
+    <Content Include="MinhaContaModule\endereco.aspx" />
+    <Content Include="MinhaContaModule\produtodistribuicao.aspx" />
+    <Content Include="MinhaContaModule\informacoescadastrais.aspx" />
+    <Content Include="MinhaContaModule\acessofiliais.aspx" />
+    <Content Include="MinhaContaModule\administracaousuario.aspx" />
+    <Content Include="MinhaContaModule\senhaacessoportal.aspx" />
+    <Content Include="MinhaContaModule\defaultpage.aspx" />
+    <Content Include="ServicosModule\antecipeaqui.aspx" />
+    <Content Include="ServicosModule\historicosolicitacoes.aspx" />
+    <Content Include="ServicosModule\avisosdebitos.aspx" />
+    <Content Include="ServicosModule\cadastrar.aspx" />
+    <Content Include="ServicosModule\comprovantevenda.aspx" />
+    <Content Include="ServicosModule\consultarmaquininha.aspx" />
+    <Content Include="ServicosModule\contrateaqui.aspx" />
+    <Content Include="ServicosModule\consultarplano.aspx" />
+    <Content Include="ServicosModule\consultasolicitacoes.aspx" />
+    <Content Include="ServicosModule\abrirconsultasolicitacao.aspx" />
+    <Content Include="ServicosModule\consultarstatussolicitacao.aspx" />
+    <Content Include="ServicosModule\avisosporemail.aspx" />
+    <Content Include="ServicosModule\antecipacaoautomaticaconsultar.aspx" />
+    <Content Include="ServicosModule\chargeback.aspx" />
+    <Content Include="ServicosModule\solicitacaomaterial.aspx" />
+    <Content Include="ServicosModule\consultarmaterial.aspx" />
+    <Content Include="ServicosModule\consultarreclamacoes.aspx" />
+    <Content Include="ServicosModule\saibacomoantecipar.aspx" />
+    <Content Include="ServicosModule\antecipacaoautomaticacadastrar.aspx" />
+    <Content Include="ServicosModule\desfazercancelamentodia.aspx" />
+    <Content Include="ServicosModule\consultacancelamentosefetuados.aspx" />
+    <Content Include="ServicosModule\solicitacaocandelamentovenda.aspx" />
+    <Content Include="ServicosModule\recebimentodeextratos.aspx" />
+    <Content Include="ServicosModule\defaultpage.aspx" />
+    <Content Include="ServicosModule\rav.aspx" />
+    <Content Include="ServicosModule\cancelamentovendas.aspx" />
+    <Content Include="ServicosModule\enviocomprovantevenda.aspx" />
+    <Content Include="ServicosModule\solicitacoesmaterialvenda.aspx" />
+    <Content Include="ServicosModule\manutencaomaquininha.aspx" />
+    <Content Include="ServicosModule\serasaexperienacheirecheque.aspx" />
+    <Content Include="ServicosModule\consultabancoemissor.aspx" />
+    <Content Include="KomerciModule\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MinhaContaModule\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ServicosModule\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

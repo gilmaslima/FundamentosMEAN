@@ -1,0 +1,248 @@
+﻿/*
+Projeto: Rede.Credenciamento;
+Descrição: CSS do passo "Condição Comercial", do modulo de credenciamento;
+Autor/Empresa: Marcos de Deus/Iteris;
+Cliente: Rede;
+©Copyright: 2014 Iteris;
+Notas: Anotações, atualizações e perigos;
+    2015/09/08 - Inclusão de classes para novos grids de Bandeiras - Dhouglas Lombello
+*/
+.grid-vendas-debito {
+    width: 40%!important;
+    float: left!important;
+    margin-left: 5px!important;
+}
+
+.grid-vendas-credito {
+    width: 55%!important;
+    float: left!important;
+    margin-left: 10px!important;
+}
+
+.grid-vendas-construcard {
+    width: 50%!important;
+    margin-top: 5px!important;
+}
+
+.grid-servicos {
+    width: auto!important;
+    float: left!important;
+    margin-left: 5px!important;
+    margin-top: 0 !important;
+}
+
+.grid-produtos-van {
+    width: 100%!important;
+}
+
+.grid-escalonamento, .grid-vendas-credito, .grid-vendas-debito, .grid-produtos-van, .sub-grid, .grid-vendas-construcard {
+    border: 1px solid #A9A9A9 !important;
+    border-collapse: collapse !important;
+}
+
+    .grid-escalonamento td, .grid-vendas-credito td, .grid-vendas-debito td, .grid-produtos-van td, .sub-grid td, .grid-vendas-construcard td {
+        border: 1px solid #A9A9A9 !important;
+    }
+
+    .grid-escalonamento th, .grid-vendas-credito th, .grid-vendas-debito th, .grid-produtos-van th, .sub-grid th, .grid-vendas-construcard th {
+        border: 1px solid #A9A9A9 !important;
+    }
+
+    .grid-escalonamento td .caixaTexto {
+        margin: 0px 0px 0px 0px !important;
+    }
+
+.width-100-percent {
+    width: 100%!important;
+}
+
+.tablecontainer TR .label, .tablecontainer TR .title {
+    width: 100px;
+}
+
+.alternaterow {
+    text-align: left;
+    background-color: #DDDDDD !important;
+}
+
+.sub-grid th, .grid-vendas-debito th, .grid-servicos th {
+    margin-left: 5px;
+}
+
+.sub-grid th, .grid-vendas-debito th, .grid-vendas-credito th, .grid-vendas-construcard th,
+.grid-servicos th {
+    font-weight: bold;
+    color: #085092;
+    margin-right: 5px!important;
+}
+
+.sub-grid tfoot {
+    font-weight: bold;
+    background-color: #DDDDDD !important;
+}
+
+.text-align-right {
+    text-align: right!important;
+}
+
+#pageContentCentraliza .text-align-left {
+    text-align: left!important;
+    float: left!important;
+}
+
+.width-50-percent {
+    width: 50%!important;
+}
+
+.width-40-percent {
+    width: 40%!important;
+}
+
+.width-60-percent {
+    width: 60%!important;
+}
+
+.text-align-center {
+    text-align: center!important;
+}
+
+.no-margin-left {
+    margin-left: 0px!important;
+}
+
+.float-left {
+    float: left!important;
+}
+
+.float-right {
+    float: right!important;
+}
+
+.margin-left-5 {
+    margin-left: 5px!important;
+}
+
+.margin-right-5 {
+    margin-right: 5px!important;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0 !important;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.pre-sub-repeater {
+    padding: 0 !important;
+}
+
+.sub-repeater {
+    height: 100%;
+    border: 0 !important;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 !important;
+    margin-top: 0 !important;
+}
+
+.sub-repeater-tr {
+    border: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px;
+}
+
+.sub-repeater-tr-last {
+    border: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px;
+}
+
+.sub-repeater-td {
+    border: 0 !important;
+    border-left: 0 !important;
+    padding: 0 !important;
+}
+
+.sub-repeater-td-first {
+    border: 0 !important;
+    border-left: 0 !important;
+    padding: 0 !important;
+}
+
+.sub-repeater-td-second {
+    border: 0 !important;
+    border-right: 0 !important;
+    padding: 0 !important;
+}
+
+.l-faturamento-th {
+    width: 130px !important;
+}
+
+.l-quantidade-th {
+    width: 66px !important;
+    border-left: 1px solid #A9A9A9 !important;
+}
+
+.l-quantidade-td {
+    width: 76px !important;
+}
+
+.l-tipo-venda-th {
+    width: 110px !important;
+}
+
+.l-modalidade-th {
+    width: 169px !important;
+}
+
+.l-modalidade-td {
+    width: 179px !important;
+}
+
+.l-limite-th {
+    width: 120px !important;
+}
+
+.l-limite-td {
+    width: 130px !important;
+}
+
+.l-prazo-th {
+    width: 134px !important;
+}
+
+.l-prazo-td {
+    width: 144px !important;
+}
+
+/* tabela externa: tds/ths recebem borda */
+.tabelaDados.dados.condicao-comercial > tbody > tr > td {
+    border-color: #A9A9A9 !important;
+}
+
+    .tabelaDados.dados.condicao-comercial > tbody > tr > td + td,
+    .tabelaDados.dados.condicao-comercial > tbody > tr > th + th {
+        border-left: 1px solid #A9A9A9 !important;
+    }
+
+.tabelaDados.dados.condicao-comercial > tbody > tr + tr {
+    border-top: 1px solid #A9A9A9 !important;
+}
+
+/* tabela filha da externa: tds recebem borda, com exceção das border externas dos tds de fora */
+.tabelaDados.dados.condicao-comercial > tbody > tr > td > table > tbody > tr > td + td {
+    border-left: 1px solid #A9A9A9 !important;
+}
+
+.tabelaDados.dados.condicao-comercial > tbody > tr > td > table > tbody > tr + tr {
+    border-top: 1px solid #A9A9A9 !important;
+}
+
+/* tabela neta da externa */
+.tabelaDados.dados.condicao-comercial table table td:first-child {
+    border-right: 1px solid #A9A9A9 !important;
+}

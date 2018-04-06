@@ -1,0 +1,13 @@
+﻿.linkSelecionado
+{
+    font-weight:bold;
+}
+
+table.navegadorPaginacao
+{
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
+    font-family:Arial !important;
+    font-size:11px !important;
+}

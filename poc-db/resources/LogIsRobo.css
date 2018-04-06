@@ -1,0 +1,78 @@
+﻿/*
+Descrição: CSS exclusivo para a tela do Log do ISRobo
+Autor/Empresa: Agnaldo Almeida / Iteris
+Cliente: Rede
+©Copyright: 2014
+*/
+
+div.divArquivoLog
+{
+    /*width:698px;*/
+    border:1px;
+    border-style: solid;
+    border-color: #000000;
+    background: #cccccc;
+}
+
+table.tabelaLogProcessamento
+{
+    width:700px;
+    border:1px;
+    border-style: solid;
+    border-color: #000000;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+table.tabelaLogProcessamento thead tr
+{
+    font-weight: bold;
+    background: #cccccc;
+}
+
+table.tabelaLogProcessamento thead tr td
+{
+    border:1px;
+    border-style: solid;
+    border-color: #000000;
+    padding:2px;
+}
+
+table.tabelaLogProcessamento tbody tr 
+{
+    background-color: #CCCCFF;
+}
+
+table.tabelaLogProcessamento tbody tr td
+{
+    border:1px;
+    border-style: solid;
+    border-color: #000000;
+    vertical-align: top;
+    /*border-right:1px;
+    border-left:1px;
+    border-left-style:solid;
+    border-right-style:solid;
+    border-left-color: #000000;
+    border-right-color: #000000;*/
+}
+
+input.w285
+{
+    width:285px;
+}
+
+input.w120
+{
+    width:120px;
+}
+
+input.w80
+{
+    width:80px;
+}
+
+table.tabelaLogProcessamento tbody tr td ol
+{
+    padding-left: 30px;
+}

@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64BE2836-8795-41E7-B6EA-65457F9B2862}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.Emissores.Sharepoint</RootNamespace>
+    <AssemblyName>PN.Emissores</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PreDeploymentCommand>
+    </PreDeploymentCommand>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>bin\Debug\PN.Emissores.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="Redecard.PN.Comum.SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7152ae6779a4ff54, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Redecard.Portal.SharePoint.Client.WCF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1971baf784ec9ba3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Provider\Redecard.Portal.SharePoint.Client.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint">
+      <HintPath>..\..\..\..\DLL\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security">
+      <HintPath>..\..\..\..\DLL\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlTemplates\TravaDomicilio\ConsultaFilho.ascx.cs">
+      <DependentUpon>ConsultaFilho.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\TravaDomicilio\ConsultaFilho.ascx.designer.cs">
+      <DependentUpon>ConsultaFilho.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\TravaDomicilio\ConsultaDetalhe.ascx.cs">
+      <DependentUpon>ConsultaDetalhe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\TravaDomicilio\ConsultaDetalhe.ascx.designer.cs">
+      <DependentUpon>ConsultaDetalhe.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\TravaDomicilio\ConsultaPrincipal.ascx.cs">
+      <DependentUpon>ConsultaPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\TravaDomicilio\ConsultaPrincipal.ascx.designer.cs">
+      <DependentUpon>ConsultaPrincipal.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Emissores\CargaPrePagamento.aspx.cs">
+      <DependentUpon>CargaPrePagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Emissores\CargaPrePagamento.aspx.designer.cs">
+      <DependentUpon>CargaPrePagamento.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\DadosSolicitacaoTecnologia.cs" />
+    <Compile Include="Modelos\DetalheFilho.cs" />
+    <Compile Include="Modelos\DetalheTrava.cs" />
+    <Compile Include="Modelos\SaldoPrePagamento.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ArquivoEmissoresServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HisServicoWfEmissores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HisServicoZpEmissores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicoEmissores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultaSolicitacao\ConsultaSolicitacao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultaSolicitacao\ConsultaSolicitacaoUserControl.ascx.cs">
+      <DependentUpon>ConsultaSolicitacaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultaSolicitacao\ConsultaSolicitacaoUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultaSolicitacaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConsultaTravaDomicilio\ConsultaTravaDomicilio.cs" />
+    <Compile Include="WebParts\ConsultaTravaDomicilio\ConsultaTravaDomicilioUserControl.ascx.cs">
+      <DependentUpon>ConsultaTravaDomicilioUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConsultaTravaDomicilio\ConsultaTravaDomicilioUserControl.ascx.designer.cs">
+      <DependentUpon>ConsultaTravaDomicilioUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DownloadExtrato\DownloadExtrato.cs" />
+    <Compile Include="WebParts\DownloadExtrato\DownloadExtratoUserControl.ascx.cs">
+      <DependentUpon>DownloadExtratoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\DownloadExtrato\DownloadExtratoUserControl.ascx.designer.cs">
+      <DependentUpon>DownloadExtratoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ImprimirSolicitacaoManual\ImprimirSolicitacaoManual.cs" />
+    <Compile Include="WebParts\ImprimirSolicitacaoManual\ImprimirSolicitacaoManualUserControl.ascx.cs">
+      <DependentUpon>ImprimirSolicitacaoManualUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ImprimirSolicitacaoManual\ImprimirSolicitacaoManualUserControl.ascx.designer.cs">
+      <DependentUpon>ImprimirSolicitacaoManualUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\PrePagamento\PrePagamento.cs" />
+    <Compile Include="WebParts\PrePagamento\PrePagamentoUserControl.ascx.cs">
+      <DependentUpon>PrePagamentoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\PrePagamento\PrePagamentoUserControl.ascx.designer.cs">
+      <DependentUpon>PrePagamentoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\SolicitarTecnologia\SolicitarTecnologia.cs" />
+    <Compile Include="WebParts\SolicitarTecnologia\SolicitarTecnologiaUserControl.ascx.cs">
+      <DependentUpon>SolicitarTecnologiaUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\SolicitarTecnologia\SolicitarTecnologiaUserControl.ascx.designer.cs">
+      <DependentUpon>SolicitarTecnologiaUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0c15248d-02e8-495d-84e6-9896e3f96814}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature Modulos\Feature Modulos.feature">
+      <FeatureId>{a6eba008-cce2-4981-aa8a-de52a7d61a82}</FeatureId>
+    </None>
+    <None Include="Features\Feature WebParts\Feature Webparts.feature">
+      <FeatureId>{af837a92-c024-4daa-88ed-2b904cddb21c}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a2d1e6e3-c502-4e80-9a1d-94a2a03273b7}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{43e5015a-ec28-46b7-a406-1d7556be3a0a}</SharePointProjectItemId>
+    </None>
+    <None Include="MasterPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b7305436-8fe1-4cf6-9b93-d5c1a65df7d6}</SharePointProjectItemId>
+    </None>
+    <None Include="Modulos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f351a1dd-9c01-456b-a4e2-2e01b517229b}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{f4546189-3baf-40df-9515-7af8ab32514d}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\ConsultaSolicitacao\ConsultaSolicitacao.webpart" />
+    <None Include="WebParts\ConsultaSolicitacao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{767bccdb-c614-4ef1-b1a2-4bd13e6f85a1}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConsultaTravaDomicilio\ConsultaTravaDomicilio.webpart" />
+    <None Include="WebParts\ConsultaTravaDomicilio\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{44546886-7dc0-4686-961b-89c417895d71}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\DownloadExtrato\DownloadExtrato.webpart" />
+    <None Include="WebParts\DownloadExtrato\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f26f8fc9-36ff-4c7f-96a9-a39d65133cc0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ImprimirSolicitacaoManual\ImprimirSolicitacaoManual.webpart" />
+    <None Include="WebParts\ImprimirSolicitacaoManual\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{206a13fd-fd7a-4204-bfc7-e95b19b9a5b2}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\PrePagamento\PrePagamento.webpart" />
+    <None Include="WebParts\PrePagamento\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{382e581f-08f2-4505-8ef6-ffad522ab35e}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5dd3d0a4-8d97-43cd-82be-9c480ccbcca2}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SolicitarTecnologia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2c64490c-2ab1-46f2-8453-815201d28b30}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SolicitarTecnologia\SolicitarTecnologia.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlTemplates\TravaDomicilio\ConsultaFilho.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ControlTemplates\TravaDomicilio\ConsultaDetalhe.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ControlTemplates\TravaDomicilio\ConsultaPrincipal.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\Feature Modulos\Feature Modulos.Template.xml">
+      <DependentUpon>Feature Modulos.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature WebParts\Feature Webparts.Template.xml">
+      <DependentUpon>Feature Webparts.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\bg_menu.jpg" />
+    <Content Include="Images\interrogacao.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mensagemSucesso.png" />
+    <Content Include="Images\seta_down.png" />
+    <Content Include="Images\seta_up.png" />
+    <Content Include="Layouts\Emissores\CargaPrePagamento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\DownloadExtrato.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\ConsultaTravaDomicilio.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\ImprimirSolicitacaoManual.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\ConsultaPrePagamento.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\ConsultaSolicitacao.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\SolicitarTecnologia.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="MasterPages\Elements.xml" />
+    <Content Include="Modulos\Elements.xml" />
+    <None Include="Service References\ServicoEmissores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HisServicoZpEmissores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ArquivoEmissoresServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HisServicoWfEmissores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\ConsultaSolicitacao\ConsultaSolicitacaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultaSolicitacao\Elements.xml" />
+    <Content Include="WebParts\ConsultaTravaDomicilio\ConsultaTravaDomicilioUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConsultaTravaDomicilio\Elements.xml" />
+    <Content Include="WebParts\DownloadExtrato\DownloadExtratoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\DownloadExtrato\Elements.xml" />
+    <Content Include="WebParts\SolicitarTecnologia\Elements.xml" />
+    <Content Include="WebParts\SolicitarTecnologia\SolicitarTecnologiaUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ImprimirSolicitacaoManual\Elements.xml" />
+    <Content Include="WebParts\ImprimirSolicitacaoManual\ImprimirSolicitacaoManualUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\PrePagamento\Elements.xml" />
+    <Content Include="WebParts\PrePagamento\PrePagamentoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ArquivoEmissoresServico\" />
+    <WCFMetadataStorage Include="Service References\HisServicoWfEmissores\" />
+    <WCFMetadataStorage Include="Service References\HisServicoZpEmissores\" />
+    <WCFMetadataStorage Include="Service References\ServicoEmissores\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

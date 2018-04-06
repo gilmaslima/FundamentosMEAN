@@ -1,0 +1,52 @@
+﻿/*
+Projeto:Redecard.PN.Extrato
+Descrição:Folha de estilos Relatório de Valores Consolidados de Vendas.
+Autor/Empresa: Valdinei Ribeiro / Iteris Consultoria e Informática
+Cliente:Rede S.A.
+©Copyright:2014 Rede S.A.
+Notas:
+*/
+@import url("RelatorioVendasComum.css");
+
+.tblTotais {
+    width: 100% !important;
+    min-height: 110px !important;
+    font-size: 12px !important;
+}   
+
+.tblTotais tr td {
+    line-height: 46px;
+}
+
+.tblTotais tr td:first-child,
+.tblTotais tr td.first-child {
+    font-size: 12px !important;
+    font-family: Arial, Verdana !important;
+    font-weight: bold !important;
+    color: #545454;
+    padding-left: 10px !important;
+    width: 50%;
+}
+
+.tblTotais tr .bordasHorizontais {
+    border-top: 1px solid #CFCFCF !important;
+    border-bottom: 1px solid #CFCFCF !important;
+}
+
+.res_box_conteudo .fieldsetTotais {
+    width: 50% !important;
+    border-color: #a9a9a9 !important;
+    border-width: 1px !important;   
+}
+
+.last {
+    text-align:right !important;
+    padding-right: 20px !important;
+    font-size: 9pt !important;
+    font-family: Arial, Verdana !important;
+}   
+
+.legenda {
+    margin-left: 1px !important;
+}
+   

@@ -1,0 +1,989 @@
+﻿/*
+    Projeto: Portal Responsivo Rede
+    Descição: Criação de páginas responsivas de Criação de Usuário, Recuperação de Senha e Recuperação de Usuário.
+    Auto/Empresa: Juliano Marcon / Rede S.A.
+    Cliente: Canais TI
+    © Copyright 2015 Rede S.A.
+    Notas: Css principal das páginas.
+*/
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:normal,italic,bold);
+@import url('/Style%20Library/Responsivo/Styles/Fonts/Fonts.css');
+
+/* CORES:
+Texto
+#262626 - rgb(38,38,38) - Texto 'Preto'
+#144385 - rgb(20,67,133) - Titulo Azul
+#696A69 - rgb(105,106,105) - Texto Cinza
+
+Box
+#F8F9F9 - rgb(248,249,249) - Fundo Cinza
+#CCCBCE - rgb(204,203,206) - Borda Cinza
+
+Radio Button
+#D8D8D8 - rgb(216,216,216) - Fundo Cinza
+#696A69 - rgb(105,106,105) - Bullet
+
+Header e Ícone passo a passo
+#EF771C - rgb(239,119,28) - Laranja
+#FCD5B3 - rbg(252,213,179) - Laranja claro
+#FFDE34 - rgb(255,222,52) - Amarelo
+#FFF5C3 - rgb(255,245,195) - Amarelo claro
+
+Botões
+#144385 - rgb(20,67,133) - Azul
+#8F9090 - rgb(143,144,144) - Cinza
+#FFE62B - rgb(255,230,43) - Amarelo
+#D8D8D8 - rgb(216,216,216) - Texto Cinza
+
+Força da senha
+#22923C - rgb(34,146,60) - Verde
+#FF0D13 - rgb(227,13,19) - Vermelho
+#36A9E1 - rgb(54,169,225) - Azul
+#EB9E1E - rgb(235,158,30) - Laranja
+#D8D8D8 - rgb(216,216,216) - Fundo Cinza
+
+Mensagens de Atenção
+#22923C - rgb(34,146,60) - Verde
+#FF0D13 - rgb(227,13,19) - Vermelho
+#FDD947 - rgb(253,217,71) - Amarelo
+*/
+
+*
+{
+    font-family: "Myriad Pro" , "Droid Sans" , Arial, Calibri;
+    -webkit-font-smoothing: antialiased;
+    color: #262626;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+body
+{
+    /* Margin bottom by footer height */
+    margin-bottom: 30px;
+}
+.footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Set the fixed height of the footer here */
+    height: 30px;
+}
+/* End of Stick Footer*/
+
+/* em */
+em
+{
+    font-weight: bolder;
+    font-style: normal;
+    color: Black;
+}
+
+
+/* Titulo */
+.container h1
+{
+    font-size: 1.2em;
+    color: #144385;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.container h1 span
+{
+    color: #144385;
+}
+
+/* Descrição e textos de conteúdo */
+.descricao
+{
+    font-size: 1em;
+    line-height: 14pt; /*1.6em;*/
+    color: #696A69;
+    text-align: justify;
+    clear: both;
+    padding-bottom: 10px;
+}
+
+/* Barra superior */
+.navbar hr
+{
+    border-color: rgb(200, 102, 18);
+    margin: 20px 0 12px 0;
+}
+.navbar .container
+{
+    position: relative;
+}
+.navbar .container img
+{
+    width: 90px;
+    position: relative;
+}
+/* Fim da Barra Superior */
+
+
+
+/*Caixa de passos (Master.page)*/
+.passos
+{
+    padding: 10px 0;
+}
+.passos .passo
+{
+    display: block;
+    line-height: 30px;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: inline-block;
+    margin: 0 1px;
+}
+.passos .ativo
+{
+    background: #EF771C;
+    color: #FFDE34;
+}
+.passos .inativo
+{
+    background: #FCD5B3;
+    color: #FFF5C3;
+}
+.passos h2
+{
+    font-size: 1.1em;
+    font-weight: bolder;
+    margin: 0 10px 0 10px;
+    display: inline-block;
+    height: 35px;
+    vertical-align: middle;
+    color: #262626;
+}
+/*Fim da caixa de passos */
+
+
+/* Perguntas */
+div.pergunta
+{
+    font-size: 1em;
+    font-weight: bolder;
+    line-height: 1.1em;
+    color: Black;
+    text-align: justify;
+    clear: both;
+    padding-bottom: 3px;
+    padding-top: 2px;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+}
+
+
+/* Mensagens dos inputs */
+
+div.has-feedback .texto
+{
+    font-size: 0.8em;
+    line-height: 1.6em;
+    color: #696A69;
+    text-align: justify;
+    clear: both;
+    padding-bottom: 10px;
+    visibility: hidden;
+}
+
+div.has-feedback .texto em
+{
+    font-weight: bolder;
+    font-style: normal;
+    color: inherit;
+}
+
+/* Radio e Checkbox */
+.rdnormal
+{
+    display: inline-block !important;
+    max-width: 100% !important;
+    margin-bottom: 5px !important;
+    font-weight: normal !important;
+}
+
+div.has-feedback span.form-control
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/*div.has-feedback span.form-control input[type="radio"] { width: auto; display: inline-block; border:0;}*/
+
+div.has-feedback span.form-control input[type=checkbox]:not(old), div.has-feedback span.form-control input[type=radio   ]:not(old)
+{
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    font-size: 1em;
+}
+
+div.has-feedback span.form-control input[type=checkbox]:not(old) + label, div.has-feedback span.form-control input[type=radio   ]:not(old) + label
+{
+    display: inline-block;
+    cursor: pointer;
+    line-height: 2.1em;
+    margin: 0;
+    padding: 0;
+    margin-left: -2em;
+}
+
+div.has-feedback span.form-control input[type=checkbox]:not(old) + label > span, div.has-feedback span.form-control input[type=radio   ]:not(old) + label > span
+{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+    border: 2px solid gray;
+    border-radius: 0.2em;
+    background: #D8D8D8;
+    vertical-align: bottom;
+}
+
+div.has-feedback span.form-control input[type=radio   ]:not(old) + label > span, div.has-feedback span.form-control input[type=radio   ]:not(old) + label > span span
+{
+    border-radius: 2em;
+}
+
+.bulletAtivo, div.has-feedback span.form-control input[type=radio   ]:not(old):checked + label > span > span, div.has-feedback span.form-control input[type=checkbox]:not(old):checked + label > span > span
+{
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: #696A69;
+    border: 1px solid #696A69;
+}
+
+
+/* Fim dos Radio e Checkbox*/
+
+/* Adaptação do input para Feedback */
+div.has-feedback .form-control
+{
+    padding-right: 0px;
+    box-shadow: none;
+}
+
+
+div.erro.has-feedback .form-control, div.ok .form-control, div.atencao .form-control
+{
+    padding-right: 40px;
+}
+
+div.erro.has-feedback .texto
+{
+    color: #FF0D13;
+    visibility: visible !important;
+}
+div.ok.has-feedback .texto
+{
+    color: #22923C;
+    visibility: visible !important;
+}
+div.atencao.has-feedback .texto
+{
+    color: #FDD947;
+    visibility: visible !important;
+}
+/* Fim da adaptação */
+
+
+/* Feedback (Icone de exibição de mensagem) */
+div.has-feedback .form-control-feedback
+{
+    display: none;
+}
+
+div.erro.has-feedback .row .col-xs-4 .form-control-feedback,
+div.ok.has-feedback .row .col-xs-4 .form-control-feedback,
+div.atencao.has-feedback .row .col-xs-4 .form-control-feedback,
+div.erro.has-feedback .row .col-xs-8 .form-control-feedback,
+div.ok.has-feedback .row .col-xs-8 .form-control-feedback,
+div.atencao.has-feedback .row .col-xs-8 .form-control-feedback
+{
+    margin-top: 4px;
+    margin-right: 20px;
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+div.erro.has-feedback .form-control-feedback,
+div.ok.has-feedback .form-control-feedback,
+div.atencao.has-feedback .form-control-feedback
+{
+    margin-top: 10px;
+    margin-right: 5px;
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+div.erro.has-feedback .form-control-feedback
+{
+    background: transparent url('../Images/IndicadorErro.png') no-repeat 1px 1px;
+}
+div.ok.has-feedback .form-control-feedback
+{
+    background: transparent url('../Images/IndicadorOk.png') no-repeat 1px 1px;
+}
+div.atencao.has-feedback .form-control-feedback
+{
+    background: transparent url('../Images/IndicadorAtencao.png') no-repeat 1px 1px;
+}
+/* Fim do Feedback */
+
+
+/* Popup de ajuda */
+.help
+{
+    margin-top: -2px;
+    margin-left: 5px;
+    font-size: 0.9em;
+    font-weight: lighter;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    color: transparent;
+    width: 15px;
+    height: 15px;
+    background: transparent url('../Images/help.png') no-repeat center center;
+    cursor: pointer;
+    cursor: hand;
+}
+.help:hover
+{
+    text-decoration: none;
+}
+
+.help, .popup .conteudo
+{
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; /* future proofing */
+    -khtml-border-radius: 7px; /* for old Konqueror browsers */
+}
+
+.popup
+{
+    display: none;
+}
+.popup .protection
+{
+    background: #696A69;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}
+.popup .conteudo
+{
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -155px;
+    margin-top: -76px;
+    z-index: 9998;
+    background: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #CCCBCE;
+    width: 300px;
+    height: 170px;
+}
+.popup .conteudo .texto
+{
+    font-size: 0.85em;
+    margin: 0;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+/* Fim do Popup */
+
+
+
+/* Barra de progresso de senha */
+.msg-box ul
+{
+    padding-left: 0px;
+}
+.msg-box li
+{
+    list-style-type: none;
+}
+.msg-box li span.alert
+{
+    display: inline;
+    padding-left: 5px;
+}
+
+.msg-box li span.glyphicon
+{
+    width: 12px;
+    height: 12px;
+}
+
+.msg-box li span.glyphicon-remove.erro:before, .msg-box li span.glyphicon-ok.ok:before
+{
+    font-family: Verdana;
+    content: "";
+}
+
+.msg-box li span.glyphicon-ok.ok
+{
+    background: url('../Images/IconeOk.png') no-repeat center center;
+}
+.msg-box li span.glyphicon-remove.erro
+{
+    background: url('../Images/IconeErro.png') no-repeat center center;
+}
+
+li span.ok
+{
+    color: #22923C;
+}
+li span.erro
+{
+    color: #FF0D13;
+}
+
+.p0
+{
+    width: 0%;
+}
+.pFraca
+{
+    width: 15%;
+    background-color: #36A9E1;
+    background-image: none;
+}
+.pInvalida
+{
+    width: 15%;
+    background-color: #FF0D13;
+    background-image: none;
+}
+.pMedia
+{
+    width: 60%;
+    background-color: #EB9E1E;
+    background-image: none;
+}
+.pForte
+{
+    width: 100%;
+    background-color: #22923C;
+    background-image: none;
+}
+.esconde
+{
+    visibility: hidden;
+}
+
+.progress
+{
+    height: 0.6em;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #D8D8D8;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none;
+    margin: 5px;
+}
+
+.progress-bar
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none;
+}
+
+/* Fim das classes para barra de progresso de senha*/
+
+.rodape
+{
+    padding-bottom: 15px;
+}
+
+form .has-feedback label
+{
+    display: block;
+    font-size: 0.9em;
+    padding-top: 8px;
+}
+
+div.has-feedback input
+{
+    width: 100%;
+    border: 1px solid #144385;
+    padding: 7px;
+    height: 40px;
+}
+
+div.has-feedback input[type=radio], div.has-feedback input[type=checkbox]
+{
+    height: auto;
+    border: 0;
+}
+
+span.alert
+{
+    font-size: 0.9em;
+    display: block;
+    padding: 4px 0;
+    margin: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+span.alert em
+{
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Botões */
+a.btn-primary:hover, a.btn-primary:visited, a.btn-primary:link, a.btn-primary:active
+{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a.btn-primary
+{
+    display: block;
+    content: "";
+    color: #F8F9F9;
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    margin: 0px 0px 6px 0px;
+}
+
+a.btn-primary span
+{
+    display: inline-block;
+    margin: 0 4px 0 4px;
+    vertical-align: top;
+    padding: 0;
+    width: 20px;
+    height: 22px;
+    line-height: 20px;
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+.ativo a.btn-primary span
+{
+    color: #FFE62B;
+}
+
+.inativo a.btn-primary span
+{
+    color: #F8F9F9;
+}
+
+.inativo a.btn-primary
+{
+    background: #8F9090;
+    border: 1px solid #8F9090;
+}
+
+.ativo a.btn-primary
+{
+    border: 1px solid #144385;
+    background: #144385;
+}
+
+.btn-primary .buscar.glyphicon-chevron-right, .btn-primary .cancelar.glyphicon-remove:before, .btn-primary .avancar.glyphicon-chevron-right:before, .btn-primary .voltar.glyphicon-chevron-left:before, .btn-primary .confirmar.glyphicon-ok:before
+{
+    font-family: Verdana;
+    content: "";
+}
+
+.btn-primary .glyphicon
+{
+    background-position: 0px 1px !important;
+}
+.btn-primary .buscar.glyphicon-chevron-right, .btn-primary .avancar.glyphicon-chevron-right, .btn-primary .voltar.glyphicon-chevron-left
+{
+    width: 18px;
+}
+
+.ativo a.btn-primary .cancelar.glyphicon-remove
+{
+    background: transparent url('../Images/BotaoCancelar.png') no-repeat;
+}
+.ativo a.btn-primary .avancar.glyphicon-chevron-right
+{
+    background: transparent url('../Images/BotaoAvancar.png') no-repeat;
+}
+
+.ativo a.btn-primary .buscar.glyphicon-chevron-right
+{
+    background: transparent url('../Images/BotaoLupa.png') no-repeat;
+    background-position : 1px 3px;
+}
+
+.ativo a.btn-primary .voltar.glyphicon-chevron-left
+{
+    background: transparent url('../Images/BotaoVoltar.png') no-repeat;
+}
+.ativo a.btn-primary .confirmar.glyphicon-ok
+{
+    background: transparent url('../Images/BotaoConfirmar.png') no-repeat;
+}
+
+.inativo a.btn-primary .cancelar.glyphicon-remove
+{
+    background: transparent url('../Images/BotaoFechar2.png') no-repeat;
+}
+.inativo a.btn-primary .avancar.glyphicon-chevron-right
+{
+    background: transparent url('../Images/BotaoAvancar2.png') no-repeat;
+}
+.inativo a.btn-primary .voltar.glyphicon-chevron-left
+{
+    background: transparent url('../Images/BotaoVoltar2.png') no-repeat;
+}
+.inativo a.btn-primary .confirmar.glyphicon-ok
+{
+    background: transparent url('../Images/BotaoConfirmar2.png') no-repeat;
+}
+
+/* fim dos botões */
+
+
+
+/* Mensagens */
+.mensagem
+{
+    margin-top: 10px;
+    position: relative;
+    background: #F7F7F7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border: 1px solid rgb(204,202,205);
+}
+
+.mensagem .legenda
+{
+    font-size: 0.8em;
+}
+
+
+.erro .icone, .atencao .icone, .confirmacao .icone
+{
+    display: block;
+    float: left;
+    position: relative; /*top: 15px;     left: 15px;*/
+    width: 100px;
+    height: 90px;
+}
+
+.erro .icone span, .erro .icone span span, .erro .icone em, .atencao .icone span, .atencao .icone span span, .atencao .icone em, .confirmacao .icone span, .confirmacao .icone span span, .confirmacao .icone em
+{
+    display: none; /*display: block; /* Para apresentar como apenas CSS */
+}
+
+.erro .icone
+{
+    background: transparent url('../Images/MensagemErro.png') no-repeat center 15px;
+}
+.atencao .icone
+{
+    background: transparent url('../Images/MensagemAtencao.png') no-repeat center 15px;
+}
+.confirmacao .icone
+{
+    background: transparent url('../Images/MensagemOk.png') no-repeat center 15px;
+}
+
+
+
+.erro .icone span, .atencao .icone span, .confirmacao .icone span
+{
+    width: 65px;
+    height: 45px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -khtml-border-radius: 8px;
+}
+
+.erro .icone span, .erro .icone span span
+{
+    background: #FF0D13;
+    color: #FF0D13;
+}
+.atencao .icone span, .atencao .icone span span
+{
+    background: #FDD947;
+    color: #FDD947;
+}
+.confirmacao .icone span, .confirmacao .icone span span
+{
+    background: #22923C;
+    color: #22923C;
+}
+
+.erro .icone span span, .atencao .icone span span, .confirmacao .icone span span
+{
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    background: #F7F7F7;
+    font-weight: bolder;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -khtml-border-radius: 30px;
+}
+
+.erro .icone span span
+{
+    font-size: 27px;
+    line-height: 37px;
+}
+.atencao .icone span span
+{
+    font-size: 30px;
+    line-height: 35px;
+}
+.confirmacao .icone span span
+{
+    font-size: 22px;
+    line-height: 37px;
+}
+
+.erro .icone em, .atencao .icone em, .confirmacao .icone em
+{
+    background: transparent;
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    padding-left: 20%;
+    padding-top: 20%;
+    overflow: hidden;
+}
+
+.erro .icone em:after, .atencao .icone em:after, .confirmacao .icone em:after
+{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-left: 500px solid transparent;
+}
+
+.erro .icone em:after
+{
+    border-top: 500px solid rgb(227,  6, 19);
+}
+.atencao .icone em:after
+{
+    border-top: 500px solid rgb(251,217,70); /*rgb(235,159, 28);*/
+}
+.confirmacao .icone em:after
+{
+    border-top: 500px solid rgb(31,147,60); /*rgb( 88,163, 54);*/
+}
+
+
+.mensagem .conteudo
+{
+    padding: 10px;
+    min-height: 90px;
+}
+
+.mensagem .conteudo em
+{
+    font-style: normal;
+    font-weight: bold;
+}
+
+.mensagem .conteudo h2
+{
+    margin: 5px 0 10px 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+.mensagem .conteudo p, .mensagem .conteudo > div
+{
+    clear: both;
+}
+
+.mensagem . conteudo ul li
+{
+    margin-left: -25px;
+}
+
+/* fim das mensagens */
+
+
+/* Bordas Arrgb(227,  6, 19)ondadas */
+
+.has-feedback input, a.btn-primary
+{
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    -khtml-border-radius: 7px;
+}
+
+
+.erroLabel, .popup .conteudo .fechar
+{
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    -khtml-border-radius: 2em;
+}
+
+/* Fim das definições de Bordas arrgb(227,  6, 19)ondadas */
+
+.erroTexto
+{
+    font-size: 0.8em;
+    color: #FF0D13;
+    visibility: hidden;
+}
+
+.erroLabel
+{
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 3em;
+    height: 3em;
+    display: block;
+    border: 1px solid #FF0D13;
+    font-size: 0.9em;
+    line-height: 2em;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    color: #FF0D13;
+    width: 2em;
+    height: 2em;
+    background: #FFFFFF;
+}
+
+.popup .conteudo .fechar:link, .popup .conteudo .fechar:hover, .popup .conteudo .fechar:visited, .popup .conteudo .fechar:active
+{
+    border: 0;
+    color: #FFFFFF;
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    display: block;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.75em;
+    font-weight: lighter;
+    text-align: center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: #144385;
+    cursor: pointer;
+    cursor: hand;
+    background: url('../Images/Fechar.png') no-repeat center center;
+}
+
+.box
+{
+    border: 1px solid #CCCBCE;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+.box p, .box div
+{
+    margin: 0;
+}
+.box div
+{
+    padding: 10px;
+}
+.box .row div, .box .row
+{
+    padding: 0;
+}
+.box div .has-feedback
+{
+    padding: 0;
+}
+
+.box h1, .box h2, .box h3
+{
+    font-size: 1em;
+    padding: 5px;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    color: #144385;
+    border-bottom: 1px solid #CCCBCE;
+    background: -webkit-linear-gradient(#D8D8D8, #F8F9F9, #D8D8D8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#D8D8D8, #F8F9F9, #D8D8D8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#D8D8D8, #F8F9F9, #D8D8D8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#D8D8D8, #F8F9F9, #D8D8D8); /* Standard syntax */
+}
+
+.mobile-app-store {
+    margin-top: 10px;
+    text-align: center;
+}
+
+    .mobile-app-store > img {
+        margin-left: 1%;
+        margin-right: 1%;
+        display: inline-block;
+    }

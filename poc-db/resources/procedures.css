@@ -1,0 +1,36 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: Calibri;
+    font-size: 9pt;
+}
+
+table.procedure
+{
+    width: 100%;
+}
+
+table.procedure thead tr
+{
+    background-color: Gray;
+    color: #FFF;
+}
+
+table.procedure thead tr th
+{
+    text-align: left;
+    padding: 2px;
+}
+
+table.procedure tbody tr.altr
+{
+    background-color: Gainsboro;
+}
+
+table.procedure tbody tr td
+{
+    vertical-align: top;
+    width: 50%;
+    padding: 2px;
+}

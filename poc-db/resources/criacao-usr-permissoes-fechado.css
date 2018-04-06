@@ -1,0 +1,26 @@
+﻿/*
+Descrição: CSS exclusivo para a tela permissoes do usuario fechado
+Autor/Empresa: Seygi Kutani / Iteris
+Cliente: Rede
+©Copyright: 2016
+*/
+
+.checkbox-row-rede .rede-input label {
+    margin-right: 0;
+    vertical-align: baseline;
+    font-family: opensans-regular,Sans-Serif;
+}
+
+div.tab-rede {
+    border-bottom: 0 !important;
+}
+
+    div.tab-rede ~ div#permissoesTab {
+        border: 1px solid #ddd;
+        border-top: 0;
+        margin-top: 0 !important;
+    }
+
+div[aria-describedby="lbxModalConfirmacao"] div.ui-dialog-titlebar {
+    display: none;
+}

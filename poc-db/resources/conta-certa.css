@@ -1,0 +1,45 @@
+﻿/*
+ * Projeto: BBF - Facelift
+ * Descrição: Estilos visuais da página maquininha conta certa
+ * Autor/Empresa: Iteris Consultoria e Software
+ * ©Copyright: 2017 Rede S.A
+ * Notas:   
+*/
+
+.limited-box-rede .limited-row .content-title .value-detail {
+    font-size: 14px;
+    width: 100%;
+    text-align: right;
+}
+
+.limited-box-rede .limited-row .content-title div {
+    display: inline-block;
+}
+
+.limited-box-rede .limited-row .content-title div:last-child {
+    vertical-align: middle;
+    float: right;
+}
+
+.limited-box-rede .limited-content .rede-table {
+    margin-bottom: 0;	
+}
+
+.limited-box-rede .limited-box-control {
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+.content-row.white-box {
+    /*padding-bottom: 0;*/
+}
+
+.rede-table.jade thead .other-text {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.limited-box-rede .footnote {
+    position: absolute;
+    bottom: -44px;
+}

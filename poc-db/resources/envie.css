@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+.bgmodal{
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 0.3;
+		filter: alpha(opacity=30);
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		float: left;
+		background: #3C3C3C;
+	}
+	
+	.modal{
+		position: absolute;
+		/*top: 20%;*/
+		top: 15%;
+		left: 37%;
+		z-index: 200;
+		width: 300px;
+		height: auto;
+		background: #fff;
+		border-bottom: solid #a1a1a1 1px;
+		border-right: solid #a1a1a1 1px;
+	}
+	
+		.modal .warning{
+			float: left;
+			display: inline;
+			background: url("../../img/icons/ico_warning.png") no-repeat 18px 40px;
+			padding: 18px 18px 18px 90px;
+		}
+	
+			.modal .warning strong{
+				float: left;
+				display: inline;
+				width: 192px;
+				text-align: center;
+				color: #183c8e;
+				text-transform: uppercase;
+				margin: 0 0 14px 0;
+			}
+			
+			.modal .warning p{
+				float: left;
+				display: inline;
+				width: 100%;
+				font-size: 11px;
+				margin: 0 0 14px 0;
+			}
+			
+				.modal .warning p strong{
+					font-size: 11px;
+					text-transform: none;
+					color: #575757;
+					width: auto;
+					float: none;
+				}
+			
+			.modal .warning ul li{
+				color: #ff0000;
+				font-size: 11px;
+			}
+			
+			.modal .warning a{
+				float: left;
+				display: inline;
+				margin: 0 0 0 80px; 
+			}
+
+		.modal .success{
+			background: url("../../img/icons/ico_success.png") no-repeat 28px 40px;
+			color: #575757;
+		}
+		
+			.modal .success p.center{
+				text-align: center;
+			}
+
+
+.modal .boxLista {
+	float: left;
+	padding: 15px;
+	width: 270px;
+}
+
+.modal p {
+	color: #575757;
+	font-size: 11px;
+	float: left;
+	width: 100%;
+	margin: 0 0 10px 0;
+}
+
+.modal p.titModal {
+	color: #183c8e;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	float: left;
+	width: 250px;
+	margin: 0 0 10px 0;
+}
+
+.modal .boxLista fieldset.formIndique {
+	border: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.modal .boxLista  fieldset.formIndique label {
+	background-color: #eef0f7;
+	padding: 10px;
+	float: left;
+	width: 250px;
+	margin: 0 0 15px 0;
+}
+
+.modal .boxLista  fieldset.formIndique label input {
+	border: solid 2px #b6bac2;
+	width: 200px;
+	height: 20px;
+	color: #575757;
+}
+
+.modal .boxLista  fieldset.formIndique label .btnBlue {
+	float: none;
+}
+
+.modal .boxLista  fieldset.formIndique label .btnOk {
+	margin: 3px 0 0 7px;
+}
+
+.modal .closeModal {
+	background: url(../img/buttons/btn_fechar.gif) no-repeat;
+	height: 12px;
+	position: absolute;
+	text-indent: -9999px;
+	top: 15px;
+	right: 16px;
+	width: 13px;
+}
+
+.modalDados {
+	float: left;
+	padding: 15px;
+	width: 470px;
+}
+
+.modal .boxDados {
+	float: left;
+	width: 470px;
+}
+
+fieldset.formIndique {
+	float: left;
+	border: none;
+	margin: 0;
+	padding: 15px;
+	width: 410px;
+	background-color: #e4e8f2;
+}
+
+fieldset.formIndique p.txtForm {
+	font-size: 11px;
+	color: #575757;
+	margin: 0;
+	width: 405px;
+}
+
+fieldset.formIndique p.txtFormRight {
+	font-size: 11px;
+	color: #575757;
+	margin: 0;
+	width: 405px;
+	text-align: right;
+}
+
+fieldset.formIndique p span {
+	color: #183c8e;
+}
+
+fieldset.formIndique label {
+	float: left;
+	margin: 0;
+	width: 440px;
+	color: #183c8e;
+	font-size: 12px;
+}
+
+fieldset.formIndique label.lblMedio {
+	width: 205px;
+}
+
+fieldset.formIndique label.lblGrande {
+	margin: 20px 0 0 0;
+	width: 415px;
+}
+
+fieldset.formIndique label.lblMedio span {
+	width: 205px;
+	float: left;
+}
+
+fieldset.formIndique label input {
+	border: solid 2px #b6bac2;
+	float: left;
+	color: #575757;
+}
+
+fieldset.formIndique label span {
+	float: left;
+	margin: 0 0 5px 0;
+}
+
+fieldset.formIndique label input.inpMedio {
+	width: 190px;
+}
+
+fieldset.formIndique label textarea {
+	width: 405px;
+	height: 55px;
+	border: solid 2px #b6bac2;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #575757;
+	font-size: 12px;
+}
+
+fieldset.formIndique label input.inpErro {
+	background-color: #fbe9e9;
+}
+
+fieldset.formIndique label span.txtLbl {
+	float: left;
+}
+
+fieldset.formIndique label.txtMsg {
+	text-align: center;
+	color: #575757;
+	font-size: 12px;
+}
+
+fieldset.formIndique p.txtSucesso {
+	background: url(../img/icons/ico_sucess.gif) no-repeat left top;
+	padding: 7px 0 7px 55px;
+	color: #183c8e;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	margin: 0 0 20px 70px;
+	width: 300px;
+}
+
+fieldset.formIndique p.txtResposta {
+	text-align: center;
+	font-size: 12px;
+}
+
+fieldset.formIndique ul.dicas {
+	background: url(../img/hr_form.gif) repeat-x left bottom;
+	padding: 0 0 10px 0;
+	margin: 0 0 20px 0;
+}
+
+.boxBtn {
+	text-align: center;
+	background: url(../img/hr_form.gif) repeat-x left top;
+	padding: 20px 0 10px 0; 
+	float: left;
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+
+.boxBtn .btnBlue {
+	float: none;
+	margin: 0 5px 0 5px;
+}
+
+.modalAlert {
+	float: left;
+	padding: 15px;
+	width: 575px;
+}

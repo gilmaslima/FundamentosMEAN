@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28EED453-F100-4CBF-A262-D17A870EA0A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rede.PN.DadosCadastraisMobile.SharePoint</RootNamespace>
+    <AssemblyName>Rede.PN.DadosCadastraisMobile.SharePoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint">
+      <HintPath>..\BIN\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security">
+      <HintPath>..\BIN\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="Redecard.PN.Comum.SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7152ae6779a4ff54, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\DadosCadastraisMobile\ConfirmacaoPositivaResponsivo.ascx.cs">
+      <DependentUpon>ConfirmacaoPositivaResponsivo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\DadosCadastraisMobile\ConfirmacaoPositivaResponsivo.ascx.designer.cs">
+      <DependentUpon>ConfirmacaoPositivaResponsivo.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\DadosCadastraisMobile\QuadroAvisosResponsivo.ascx.cs">
+      <DependentUpon>QuadroAvisosResponsivo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\DadosCadastraisMobile\QuadroAvisosResponsivo.ascx.designer.cs">
+      <DependentUpon>QuadroAvisosResponsivo.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ModulosAbertaMobile\ModulosAbertaMobile.EventReceiver.cs">
+      <DependentUpon>ModulosAbertaMobile.feature</DependentUpon>
+    </Compile>
+    <Compile Include="InformacaoUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AdministracaoServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EntidadeServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaximoServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UsuarioServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Validacoes.cs" />
+    <Compile Include="WPMobile\ConclusaoCriacaoMob\ConclusaoCriacaoMob.cs" />
+    <Compile Include="WPMobile\ConclusaoCriacaoMob\ConclusaoCriacaoMobUserControl.ascx.cs">
+      <DependentUpon>ConclusaoCriacaoMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\ConclusaoCriacaoMob\ConclusaoCriacaoMobUserControl.ascx.designer.cs">
+      <DependentUpon>ConclusaoCriacaoMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\ConclusaoRecUsuMob\ConclusaoRecUsuMob.cs" />
+    <Compile Include="WPMobile\ConclusaoRecUsuMob\ConclusaoRecUsuMobUserControl.ascx.cs">
+      <DependentUpon>ConclusaoRecUsuMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\ConclusaoRecUsuMob\ConclusaoRecUsuMobUserControl.ascx.designer.cs">
+      <DependentUpon>ConclusaoRecUsuMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\ConfirmacaoCadastroMob\ConfirmacaoCadastroMob.cs" />
+    <Compile Include="WPMobile\ConfirmacaoCadastroMob\ConfirmacaoCadastroMobUserControl.ascx.cs">
+      <DependentUpon>ConfirmacaoCadastroMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\ConfirmacaoCadastroMob\ConfirmacaoCadastroMobUserControl.ascx.designer.cs">
+      <DependentUpon>ConfirmacaoCadastroMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\ConfirmacaoPositivaMob\ConfirmacaoPositivaMob.cs" />
+    <Compile Include="WPMobile\ConfirmacaoPositivaMob\ConfirmacaoPositivaMobUserControl.ascx.cs">
+      <DependentUpon>ConfirmacaoPositivaMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\ConfirmacaoPositivaMob\ConfirmacaoPositivaMobUserControl.ascx.designer.cs">
+      <DependentUpon>ConfirmacaoPositivaMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\ConfPosRecMob\ConfPosRecMob.cs" />
+    <Compile Include="WPMobile\ConfPosRecMob\ConfPosRecMobUserControl.ascx.cs">
+      <DependentUpon>ConfPosRecMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\ConfPosRecMob\ConfPosRecMobUserControl.ascx.designer.cs">
+      <DependentUpon>ConfPosRecMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\ConfirmarAcessoMob\ConfirmarAcessoMob.cs" />
+    <Compile Include="WPMobile\ConfirmarAcessoMob\ConfirmarAcessoMobUserControl.ascx.cs">
+      <DependentUpon>ConfirmarAcessoMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\ConfirmarAcessoMob\ConfirmarAcessoMobUserControl.ascx.designer.cs">
+      <DependentUpon>ConfirmarAcessoMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\CriacaoUsrConfConMob\CriacaoUsrConfConMob.cs" />
+    <Compile Include="WPMobile\CriacaoUsrConfConMob\CriacaoUsrConfConMobUserControl.ascx.cs">
+      <DependentUpon>CriacaoUsrConfConMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\CriacaoUsrConfConMob\CriacaoUsrConfConMobUserControl.ascx.designer.cs">
+      <DependentUpon>CriacaoUsrConfConMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\DadosIniciaisMob\DadosIniciaisMob.cs" />
+    <Compile Include="WPMobile\DadosIniciaisMob\DadosIniciaisMobUserControl.ascx.cs">
+      <DependentUpon>DadosIniciaisMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\DadosIniciaisMob\DadosIniciaisMobUserControl.ascx.designer.cs">
+      <DependentUpon>DadosIniciaisMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\DadosUsuarioMob\DadosUsuarioMob.cs" />
+    <Compile Include="WPMobile\DadosUsuarioMob\DadosUsuarioMobUserControl.ascx.cs">
+      <DependentUpon>DadosUsuarioMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\DadosUsuarioMob\DadosUsuarioMobUserControl.ascx.designer.cs">
+      <DependentUpon>DadosUsuarioMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\FormaEnvioRecuperacaoMob\FormaEnvioRecuperacaoMob.cs" />
+    <Compile Include="WPMobile\FormaEnvioRecuperacaoMob\FormaEnvioRecuperacaoMobUserControl.ascx.cs">
+      <DependentUpon>FormaEnvioRecuperacaoMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\FormaEnvioRecuperacaoMob\FormaEnvioRecuperacaoMobUserControl.ascx.designer.cs">
+      <DependentUpon>FormaEnvioRecuperacaoMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\RecNovaSenhaBasicoMob\RecNovaSenhaBasicoMob.cs" />
+    <Compile Include="WPMobile\RecNovaSenhaBasicoMob\RecNovaSenhaBasicoUserMobControl.ascx.cs">
+      <DependentUpon>RecNovaSenhaBasicoUserMobControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\RecNovaSenhaBasicoMob\RecNovaSenhaBasicoUserMobControl.ascx.designer.cs">
+      <DependentUpon>RecNovaSenhaBasicoUserMobControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\RecSenhaConfMob\RecSenhaConfMob.cs" />
+    <Compile Include="WPMobile\RecSenhaConfMob\RecSenhaConfMobUserControl.ascx.cs">
+      <DependentUpon>RecSenhaConfMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\RecSenhaConfMob\RecSenhaConfMobUserControl.ascx.designer.cs">
+      <DependentUpon>RecSenhaConfMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\RecuperacaoIdentificaoMob\RecuperacaoIdentificaoMob.cs" />
+    <Compile Include="WPMobile\RecuperacaoIdentificaoMob\RecuperacaoIdentificaoMobUserControl.ascx.cs">
+      <DependentUpon>RecuperacaoIdentificaoMobUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\RecuperacaoIdentificaoMob\RecuperacaoIdentificaoMobUserControl.ascx.designer.cs">
+      <DependentUpon>RecuperacaoIdentificaoMobUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\WP1\WP1.cs" />
+    <Compile Include="WPMobile\WP1\WP1UserControl.ascx.cs">
+      <DependentUpon>WP1UserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\WP1\WP1UserControl.ascx.designer.cs">
+      <DependentUpon>WP1UserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\WPFooter\WPFooter.cs" />
+    <Compile Include="WPMobile\WPFooter\WPFooterUserControl.ascx.cs">
+      <DependentUpon>WPFooterUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\WPFooter\WPFooterUserControl.ascx.designer.cs">
+      <DependentUpon>WPFooterUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\WPPopupTerminal\WPPopupTerminal.cs" />
+    <Compile Include="WPMobile\WPPopupTerminal\WPPopupTerminalUserControl.ascx.cs">
+      <DependentUpon>WPPopupTerminalUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\WPPopupTerminal\WPPopupTerminalUserControl.ascx.designer.cs">
+      <DependentUpon>WPPopupTerminalUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMobile\WPPopup\WPPopup.cs" />
+    <Compile Include="WPMobile\WPPopup\WPPopupUserControl.ascx.cs">
+      <DependentUpon>WPPopupUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMobile\WPPopup\WPPopupUserControl.ascx.designer.cs">
+      <DependentUpon>WPPopupUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{45f6d99e-f292-4a40-b791-d492bb50aaba}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\EstilosResponsivo\EstilosResponsivo.feature">
+      <FeatureId>{6a658927-a87f-4f13-af80-b683a63cbc11}</FeatureId>
+    </None>
+    <None Include="Features\ModulosAbertaMobile\ModulosAbertaMobile.feature">
+      <FeatureId>{cacc7157-84b5-4613-adb0-7c58e7a4e2b3}</FeatureId>
+    </None>
+    <None Include="Features\WebPartsAbertaMobile\WebPartsAbertaMobile.feature">
+      <FeatureId>{aa446f4e-0cc7-48c5-a4ca-134787b9e94e}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-Bold.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-BoldCond.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-BoldCondIt.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-BoldIt.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-Cond.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-CondIt.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-It.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-Regular.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-Semibold.otf" />
+    <None Include="Layouts\Rede.PN.DadosCadastraisMobile\Fonts\MyriadPro-SemiboldIt.otf" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e9ade7b2-29e6-4ef9-8104-fa1fc96d781e}</SharePointProjectItemId>
+    </None>
+    <None Include="ModAbertoMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9a0d1c77-519a-4287-8881-6f9f9c0d8cf7}</SharePointProjectItemId>
+    </None>
+    <None Include="ModMaster\MasterPage\SpNovoAcessoResponsivo.Master" />
+    <None Include="ModMaster\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5021e4f4-0897-49d8-b3de-7b7f38d41cfa}</SharePointProjectItemId>
+    </None>
+    <None Include="ModStilo\Scripts\browser-definition.min.js.map">
+      <DependentUpon>browser-definition.js</DependentUpon>
+    </None>
+    <None Include="ModStilo\Scripts\campo-senha-checkbox-toggle.min.js.map">
+      <DependentUpon>campo-senha-checkbox-toggle.js</DependentUpon>
+    </None>
+    <None Include="ModStilo\Scripts\dados-iniciais.min.js.map">
+      <DependentUpon>dados-iniciais.js</DependentUpon>
+    </None>
+    <None Include="ModStilo\Scripts\dados-usuario.min.js.map">
+      <DependentUpon>dados-usuario.js</DependentUpon>
+    </None>
+    <None Include="ModStilo\Scripts\jquery.meiomask.min.js.map">
+      <DependentUpon>jquery.meiomask.js</DependentUpon>
+    </None>
+    <None Include="ModStilo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0eb6116-e553-4089-9d78-8e045d20b909}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{a13968f3-9688-485c-9acb-86a4a6a14370}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Redecard.PN.Comum.SharePoint.EntidadeServico.Pagina.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="WPMobile\ConclusaoCriacaoMob\ConclusaoCriacaoMob.webpart" />
+    <None Include="WPMobile\ConclusaoCriacaoMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fcd49c42-1f85-4d95-a62f-70cc7db2a19f}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\ConclusaoRecUsuMob\ConclusaoRecUsuMob.webpart" />
+    <None Include="WPMobile\ConclusaoRecUsuMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d955f036-6646-4d49-9a2b-1a8c7b5e4239}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\ConfirmacaoCadastroMob\ConfirmacaoCadastroMob.webpart" />
+    <None Include="WPMobile\ConfirmacaoCadastroMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4e30223d-f571-430d-8b86-bb621b2457b0}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\ConfirmacaoPositivaMob\ConfirmacaoPositivaMob.webpart" />
+    <None Include="WPMobile\ConfirmacaoPositivaMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a424b00a-be20-4c92-985b-d4687418bf93}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\ConfPosRecMob\ConfPosRecMob.webpart" />
+    <None Include="WPMobile\ConfPosRecMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f6ce3117-f8e6-4d1d-aaeb-ba52d69fca3a}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\ConfirmarAcessoMob\ConfirmarAcessoMob.webpart" />
+    <None Include="WPMobile\ConfirmarAcessoMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3592fcfb-2e7b-4681-ac32-5e6ab0b24716}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\CriacaoUsrConfConMob\CriacaoUsrConfConMob.webpart" />
+    <None Include="WPMobile\CriacaoUsrConfConMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{76dd2887-34e0-4493-955e-54a0cee6bbaf}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\DadosIniciaisMob\DadosIniciaisMob.webpart" />
+    <None Include="WPMobile\DadosIniciaisMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f9fc9935-f718-4107-b982-ddef5d2050d5}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\DadosUsuarioMob\DadosUsuarioMob.webpart" />
+    <None Include="WPMobile\DadosUsuarioMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2741fbdb-f588-451b-a770-c12120ced7c2}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\FormaEnvioRecuperacaoMob\FormaEnvioRecuperacaoMob.webpart" />
+    <None Include="WPMobile\FormaEnvioRecuperacaoMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0f4f50d-d7d8-47ab-9bc4-b933e6ee6838}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\RecNovaSenhaBasicoMob\RecNovaSenhaBasicoMob.webpart" />
+    <None Include="WPMobile\RecNovaSenhaBasicoMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{389e421f-2661-426c-9e6e-5a0a3dd87f71}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\RecSenhaConfMob\RecSenhaConfMob.webpart" />
+    <None Include="WPMobile\RecSenhaConfMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f9f5f179-271a-4863-8918-86422eb43d86}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\RecuperacaoIdentificaoMob\RecuperacaoIdentificaoMob.webpart" />
+    <None Include="WPMobile\RecuperacaoIdentificaoMob\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3e0c0a1a-1be7-4e84-9851-7d7508c64e37}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\WP1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c6d5b434-d5a4-4e77-9caf-973b7e240463}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\WP1\WP1.webpart" />
+    <None Include="WPMobile\WPFooter\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{721fb34f-e4ba-4e4f-82cc-d4dc6feeea01}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\WPFooter\WPFooter.webpart" />
+    <None Include="WPMobile\WPPopupTerminal\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9edd0cea-cd47-4c7a-abe3-bb60ed7a8619}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\WPPopupTerminal\WPPopupTerminal.webpart" />
+    <None Include="WPMobile\WPPopup\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a38e629d-0681-49d6-aff4-acd02f5201e7}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMobile\WPPopup\WPPopup.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\DadosCadastraisMobile\ConfirmacaoPositivaResponsivo.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CONTROLTEMPLATES\DadosCadastraisMobile\QuadroAvisosResponsivo.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\EstilosResponsivo\EstilosResponsivo.Template.xml">
+      <DependentUpon>EstilosResponsivo.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ModulosAbertaMobile\ModulosAbertaMobile.Template.xml">
+      <DependentUpon>ModulosAbertaMobile.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebPartsAbertaMobile\WebPartsAbertaMobile.Template.xml">
+      <DependentUpon>WebPartsAbertaMobile.feature</DependentUpon>
+    </Content>
+    <Content Include="ModAbertoMob\Elements.xml" />
+    <Content Include="ModAbertoMob\Paginas\ConfirmarAcesso.aspx" />
+    <Content Include="ModAbertoMob\Paginas\CriacaoUsrConfConclusao.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoNovaSenha.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecNovaSenhaExpirada.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoSenhaConclusao.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecUsuarioConclusaoBasico.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoUsuarioConclusao.aspx" />
+    <Content Include="ModAbertoMob\Paginas\CriacaoUsrConfirmacao.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoSenhaConfirmacaoPositiva.aspx" />
+    <Content Include="ModAbertoMob\Paginas\CriacaoUsrConclusao.aspx" />
+    <Content Include="ModAbertoMob\Paginas\CriacaoUsrConfirmacaoPositiva.aspx" />
+    <Content Include="ModAbertoMob\Paginas\CriacaoUsrCadastro.aspx" />
+    <Content Include="ModAbertoMob\Paginas\CriacaoUsrDadosIniciais.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecNovaSenhaBasico.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoSenhaFormaEnvio.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoSenhaIdentificacao.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoUsuarioConfirmacaoPositiva.aspx" />
+    <Content Include="ModAbertoMob\Paginas\RecuperacaoUsuarioIdentificacao.aspx" />
+    <Content Include="ModMaster\Elements.xml" />
+    <Content Include="ModMaster\PageLayout\ResponsivoPageLayout.aspx" />
+    <Content Include="ModStilo\Elements.xml" />
+    <Content Include="ModStilo\Fonts\Fonts.css" />
+    <Content Include="ModStilo\Images\BotaoAvancar.png" />
+    <Content Include="ModStilo\Images\BotaoAvancar2.png" />
+    <Content Include="ModStilo\Images\BotaoCancelar.png" />
+    <Content Include="ModStilo\Images\BotaoConfirmar.png" />
+    <Content Include="ModStilo\Images\BotaoConfirmar2.png" />
+    <Content Include="ModStilo\Images\BotaoFechar2.png" />
+    <Content Include="ModStilo\Images\BotaoLupa.png" />
+    <Content Include="ModStilo\Images\BotaoVoltar.png" />
+    <Content Include="ModStilo\Images\BotaoVoltar2.png" />
+    <Content Include="ModStilo\Images\btn_lupa.png" />
+    <Content Include="ModStilo\Images\Fechar.png" />
+    <Content Include="ModStilo\Images\help.png" />
+    <Content Include="ModStilo\Images\IconeErro.png" />
+    <Content Include="ModStilo\Images\IconeOk.png" />
+    <Content Include="ModStilo\Images\IndicadorAtencao.png" />
+    <Content Include="ModStilo\Images\IndicadorErro.png" />
+    <Content Include="ModStilo\Images\IndicadorOk.png" />
+    <Content Include="ModStilo\Images\LogoRede.png" />
+    <Content Include="ModStilo\Images\MensagemAtencao.png" />
+    <Content Include="ModStilo\Images\MensagemErro.png" />
+    <Content Include="ModStilo\Images\MensagemOk.png" />
+    <Content Include="ModStilo\Images\MobileStoreApple.png" />
+    <Content Include="ModStilo\Images\MobileStoreGoogle.png" />
+    <Content Include="ModStilo\Images\NumeroTerminal.png" />
+    <Content Include="ModStilo\Images\numero_estabelecimento.png" />
+    <Content Include="ModStilo\Scripts\bootstrap.js" />
+    <Content Include="ModStilo\Scripts\browser-definition.js" />
+    <Content Include="ModStilo\Scripts\browser-definition.min.js">
+      <DependentUpon>browser-definition.js</DependentUpon>
+    </Content>
+    <Content Include="ModStilo\Scripts\campo-senha-checkbox-toggle.js" />
+    <Content Include="ModStilo\Scripts\campo-senha-checkbox-toggle.min.js">
+      <DependentUpon>campo-senha-checkbox-toggle.js</DependentUpon>
+    </Content>
+    <Content Include="ModStilo\Scripts\confirmacao-positiva.js" />
+    <Content Include="ModStilo\Scripts\confirmar-senha.js" />
+    <Content Include="ModStilo\Scripts\confirmacao-cadastro.js" />
+    <Content Include="ModStilo\Scripts\dados-iniciais.js" />
+    <Content Include="ModStilo\Scripts\dados-iniciais.min.js">
+      <DependentUpon>dados-iniciais.js</DependentUpon>
+    </Content>
+    <Content Include="ModStilo\Scripts\dados-usuario.js" />
+    <Content Include="ModStilo\Scripts\dados-usuario.min.js">
+      <DependentUpon>dados-usuario.js</DependentUpon>
+    </Content>
+    <Content Include="ModStilo\Scripts\jquery-1.11.2.js" />
+    <Content Include="ModStilo\Scripts\jquery.mask.min.js" />
+    <Content Include="ModStilo\Scripts\jquery.maskedinput.min.js" />
+    <Content Include="ModStilo\Scripts\jquery.meiomask.js" />
+    <Content Include="ModStilo\Scripts\jquery.meiomask.min.js">
+      <DependentUpon>jquery.meiomask.js</DependentUpon>
+    </Content>
+    <Content Include="ModStilo\Scripts\recuperacao-usuario-senha.js" />
+    <Content Include="ModStilo\Scripts\selectivizr-min.js" />
+    <Content Include="ModStilo\Scripts\site.js" />
+    <Content Include="ModStilo\Styles\bootstrap-rede-theme.min.css" />
+    <Content Include="ModStilo\Styles\bootstrap.min.css" />
+    <Content Include="ModStilo\Styles\campo-senha-checkbox-toggle.css" />
+    <Content Include="ModStilo\Styles\campo-senha-checkbox-toggle.min.css">
+      <DependentUpon>campo-senha-checkbox-toggle.css</DependentUpon>
+    </Content>
+    <Content Include="ModStilo\Styles\site.css" />
+    <Content Include="ModStilo\Styles\siteIE8.css" />
+    <None Include="Service References\UsuarioServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EntidadeServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MaximoServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AdministracaoServico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Util\MODELOS\confirmacaoCadastro.txt" />
+    <Content Include="Util\MODELOS\confirmacaoCadastro48h.txt" />
+    <Content Include="WPMobile\ConclusaoCriacaoMob\ConclusaoCriacaoMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\ConclusaoCriacaoMob\Elements.xml" />
+    <Content Include="WPMobile\ConclusaoRecUsuMob\ConclusaoRecUsuMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\ConclusaoRecUsuMob\Elements.xml" />
+    <Content Include="WPMobile\ConfirmacaoCadastroMob\ConfirmacaoCadastroMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\ConfirmacaoCadastroMob\Elements.xml" />
+    <Content Include="WPMobile\ConfirmacaoPositivaMob\ConfirmacaoPositivaMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\ConfirmacaoPositivaMob\Elements.xml" />
+    <Content Include="WPMobile\ConfPosRecMob\ConfPosRecMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\ConfPosRecMob\Elements.xml" />
+    <Content Include="WPMobile\ConfirmarAcessoMob\ConfirmarAcessoMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\ConfirmarAcessoMob\Elements.xml" />
+    <Content Include="WPMobile\CriacaoUsrConfConMob\CriacaoUsrConfConMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\CriacaoUsrConfConMob\Elements.xml" />
+    <Content Include="WPMobile\DadosIniciaisMob\DadosIniciaisMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\DadosIniciaisMob\Elements.xml" />
+    <Content Include="WPMobile\DadosUsuarioMob\DadosUsuarioMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\DadosUsuarioMob\Elements.xml" />
+    <Content Include="WPMobile\FormaEnvioRecuperacaoMob\Elements.xml" />
+    <Content Include="WPMobile\FormaEnvioRecuperacaoMob\FormaEnvioRecuperacaoMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\RecNovaSenhaBasicoMob\Elements.xml" />
+    <Content Include="WPMobile\RecNovaSenhaBasicoMob\RecNovaSenhaBasicoUserMobControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\RecSenhaConfMob\Elements.xml" />
+    <Content Include="WPMobile\RecSenhaConfMob\RecSenhaConfMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\RecuperacaoIdentificaoMob\Elements.xml" />
+    <Content Include="WPMobile\RecuperacaoIdentificaoMob\RecuperacaoIdentificaoMobUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\WP1\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WPMobile\WP1\WP1UserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\WPFooter\Elements.xml" />
+    <Content Include="WPMobile\WPFooter\WPFooterUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\WPPopupTerminal\Elements.xml" />
+    <Content Include="WPMobile\WPPopupTerminal\WPPopupTerminalUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WPMobile\WPPopup\Elements.xml" />
+    <Content Include="WPMobile\WPPopup\WPPopupUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdministracaoServico\" />
+    <WCFMetadataStorage Include="Service References\EntidadeServico\" />
+    <WCFMetadataStorage Include="Service References\MaximoServico\" />
+    <WCFMetadataStorage Include="Service References\UsuarioServico\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

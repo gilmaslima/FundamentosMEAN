@@ -1,0 +1,45 @@
+﻿/*
+Projeto: Rede.Credenciamento;
+Descrição: CSS do passo "Dados Contato", do modulo de credenciamento;
+Autor/Empresa: Marcos.Deus/Iteris;
+Cliente: Rede;
+©Copyright: 2014 Iteris;
+Notas: 
+    2015/09/08 - Inclusão de classes para novos grids de Bandeiras - Dhouglas Lombello
+*/
+
+.margin-left-5 {
+    margin-left: 5px!important;
+}
+
+.margin-right-5 {
+    margin-right: 5px!important;
+}
+
+.margin-left-15 {
+    margin-left: 15px!important;
+}
+
+.margin-left-20 {
+    margin-left: 20px!important;
+}
+
+.w20 {
+    width: 20px!important;
+}
+
+.w100 {
+    width: 100px!important;
+}
+
+.w280 {
+    width: 280px!important;
+}
+
+.w310 {
+    width: 310px!important;
+}
+
+.w338 {
+    width: 338px!important;
+}

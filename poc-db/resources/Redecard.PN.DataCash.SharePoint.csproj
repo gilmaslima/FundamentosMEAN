@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA76F806-5280-4DAD-97D3-FEC65CD8362E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.DataCash.SharePoint</RootNamespace>
+    <AssemblyName>Redecard.PN.DataCash.SharePoint</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="Redecard.PN.Comum.SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7152ae6779a4ff54, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Listas\Listas.EventReceiver.cs">
+      <DependentUpon>Listas.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DataCashService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\BandeirasAdicionais\BandeirasAdicionais.cs" />
+    <Compile Include="WebParts\BandeirasAdicionais\BandeirasAdicionaisUserControl.ascx.cs">
+      <DependentUpon>BandeirasAdicionaisUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\BandeirasAdicionais\BandeirasAdicionaisUserControl.ascx.designer.cs">
+      <DependentUpon>BandeirasAdicionaisUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConfiguracaoAVS\ConfiguracaoAVS.cs" />
+    <Compile Include="WebParts\ConfiguracaoAVS\ConfiguracaoAVSUserControl.ascx.cs">
+      <DependentUpon>ConfiguracaoAVSUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConfiguracaoAVS\ConfiguracaoAVSUserControl.ascx.designer.cs">
+      <DependentUpon>ConfiguracaoAVSUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ConfiguracoesBoleto\ConfiguracoesBoleto.cs" />
+    <Compile Include="WebParts\ConfiguracoesBoleto\ConfiguracoesBoletoUserControl.ascx.cs">
+      <DependentUpon>ConfiguracoesBoletoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConfiguracoesBoleto\ConfiguracoesBoletoUserControl.ascx.designer.cs">
+      <DependentUpon>ConfiguracoesBoletoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Distribuidores\Distribuidores.cs" />
+    <Compile Include="WebParts\Distribuidores\DistribuidoresUserControl.ascx.cs">
+      <DependentUpon>DistribuidoresUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Distribuidores\DistribuidoresUserControl.ascx.designer.cs">
+      <DependentUpon>DistribuidoresUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\EdicaoSenhaHeader\EdicaoSenhaHeader.cs" />
+    <Compile Include="WebParts\EdicaoSenhaHeader\EdicaoSenhaHeaderUserControl.ascx.cs">
+      <DependentUpon>EdicaoSenhaHeaderUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\EdicaoSenhaHeader\EdicaoSenhaHeaderUserControl.ascx.designer.cs">
+      <DependentUpon>EdicaoSenhaHeaderUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\GerenciamentoIpUrl\GerenciamentoIpUrl.cs" />
+    <Compile Include="WebParts\GerenciamentoIpUrl\GerenciamentoIpUrlUserControl.ascx.cs">
+      <DependentUpon>GerenciamentoIpUrlUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\GerenciamentoIpUrl\GerenciamentoIpUrlUserControl.ascx.designer.cs">
+      <DependentUpon>GerenciamentoIpUrlUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\IEdicaoSenhaConnector.cs" />
+    <Compile Include="WebParts\PerformanceAutorizacao\PerformanceAutorizacao.cs" />
+    <Compile Include="WebParts\PerformanceAutorizacao\PerformanceAutorizacaoUserControl.ascx.cs">
+      <DependentUpon>PerformanceAutorizacaoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\PerformanceAutorizacao\PerformanceAutorizacaoUserControl.ascx.designer.cs">
+      <DependentUpon>PerformanceAutorizacaoUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RedirecionaDataCash\RedirecionaDataCash.cs" />
+    <Compile Include="WebParts\RedirecionaDataCash\RedirecionaDataCashUserControl.ascx.cs">
+      <DependentUpon>RedirecionaDataCashUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RedirecionaDataCash\RedirecionaDataCashUserControl.ascx.designer.cs">
+      <DependentUpon>RedirecionaDataCashUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\UserControlBaseDataCash.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\UsuariosEcommerce\UsuariosEcommerce.cs" />
+    <Compile Include="WebParts\UsuariosEcommerce\UsuariosEcommerceUserControl.ascx.cs">
+      <DependentUpon>UsuariosEcommerceUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\UsuariosEcommerce\UsuariosEcommerceUserControl.ascx.designer.cs">
+      <DependentUpon>UsuariosEcommerceUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Features\Listas\Listas.feature">
+      <FeatureId>{1251c376-8f32-4376-9711-2bad70035374}</FeatureId>
+    </None>
+    <None Include="Features\Paginas\Paginas.feature">
+      <FeatureId>{985dc23a-156d-4bf6-8aad-a2a61643deb3}</FeatureId>
+    </None>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{adb81e23-8cb7-4b03-ad20-0448138e7e05}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{debbcc3a-e95b-4524-a4ec-489f9fb8bcf4}</SharePointProjectItemId>
+    </None>
+    <None Include="Modulos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{94ea76a6-007f-42ab-9462-c817808dcc7e}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{6c5aceec-1c11-4b3a-8c0d-bfe46bc331c5}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\BandeirasAdicionais\BandeirasAdicionais.webpart" />
+    <None Include="WebParts\BandeirasAdicionais\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ad4d9b85-28e2-4f62-9cc4-7d8621d16a3e}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConfiguracaoAVS\ConfiguracaoAVS.webpart" />
+    <None Include="WebParts\ConfiguracaoAVS\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4eee0795-0e8e-4f80-a6ee-a549b46c5ac0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ConfiguracoesBoleto\ConfiguracoesBoleto.webpart" />
+    <None Include="WebParts\ConfiguracoesBoleto\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{97c996f5-6cc3-426e-8d2e-9bc8f020afd6}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\Distribuidores\Distribuidores.webpart" />
+    <None Include="WebParts\Distribuidores\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{06e8ea47-4688-468b-b76c-cc1da736294a}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\EdicaoSenhaHeader\EdicaoSenhaHeader.webpart" />
+    <None Include="WebParts\EdicaoSenhaHeader\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b1822170-e347-49d3-9d8c-2e1e72060556}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\GerenciamentoIpUrl\GerenciamentoIpUrl.webpart" />
+    <None Include="WebParts\GerenciamentoIpUrl\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bb3efbac-38d8-4a8f-81e1-2b901d61d31c}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\PerformanceAutorizacao\PerformanceAutorizacao.webpart" />
+    <None Include="WebParts\PerformanceAutorizacao\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dbb71151-51b9-464d-952c-60a6b8c362ff}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RedirecionaDataCash\RedirecionaDataCash.webpart" />
+    <None Include="WebParts\RedirecionaDataCash\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{66857641-97b4-4b6f-9417-d4f34d9e11c3}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\UsuariosEcommerce\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0375353c-fd74-41dc-8a81-d34441d9740f}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\UsuariosEcommerce\UsuariosEcommerce.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Listas\Listas.Template.xml">
+      <DependentUpon>Listas.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Paginas\Paginas.Template.xml">
+      <DependentUpon>Paginas.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\DataCash\imagens\Cartao_Verso.png" />
+    <Content Include="Layouts\DataCash\imagens\Cartao_VersoAmex.jpg" />
+    <Content Include="Layouts\DataCash\imagens\Degrade.png" />
+    <Content Include="Layouts\DataCash\imagens\Ico_Aceita.png" />
+    <Content Include="Layouts\DataCash\imagens\Ico_Cadeado.png" />
+    <Content Include="Layouts\DataCash\imagens\Ico_Rejeita.png" />
+    <Content Include="Layouts\DataCash\imagens\Nivel1.png" />
+    <Content Include="Layouts\DataCash\imagens\Nivel2.png" />
+    <Content Include="Layouts\DataCash\imagens\Nivel3.png" />
+    <Content Include="Layouts\DataCash\imagens\Nivel4.png" />
+    <Content Include="Layouts\DataCash\imagens\Nivel5.png" />
+    <Content Include="Layouts\DataCash\imagens\Nivel6.png" />
+    <Content Include="Layouts\DataCash\imagens\Nivel7.png" />
+    <Content Include="Layouts\DataCash\imagens\passos_laranja.jpg" />
+    <Content Include="Layouts\DataCash\imagens\Titulo_CodigoSeg.jpg" />
+    <Content Include="Layouts\DataCash\Scripts\BandeirasAdicionais.js" />
+    <Content Include="Layouts\DataCash\Scripts\DataCash.js" />
+    <Content Include="Layouts\DataCash\Style\DataCash.css" />
+    <Content Include="Modulos\Paginas\pn_BandeirasAdicionais.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConfiguracoesBoleto.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConsultaXML.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_Configuracoes.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerVendas.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerVendasEstorno.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerVendasPreAutorizacaoCancelar.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerVendasPreAutorizacaoConfirmar.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerVendasPreAutorizacaoEstorno.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerVendasRelatorioTransacao.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerVendasTransacoesRecorrentes.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_PerformanceAutorizacao.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_GerenciamentoIpUrl.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_ConfiguracaoAVS.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_FacaSuaVenda.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\pn_UsuariosEcommerce.aspx" />
+    <Content Include="Modulos\Paginas\pn_Distribuidores.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Modulos\Paginas\Elements.xml" />
+    <Content Include="Modulos\Paginas\TesteSessao.aspx" />
+    <Content Include="WebParts\BandeirasAdicionais\BandeirasAdicionaisUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\BandeirasAdicionais\Elements.xml" />
+    <Content Include="WebParts\ConfiguracaoAVS\ConfiguracaoAVSUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConfiguracaoAVS\Elements.xml" />
+    <None Include="Service References\DataCashService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebParts\ConfiguracoesBoleto\ConfiguracoesBoletoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\ConfiguracoesBoleto\Elements.xml" />
+    <Content Include="WebParts\Distribuidores\DistribuidoresUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\Distribuidores\Elements.xml" />
+    <Content Include="WebParts\EdicaoSenhaHeader\EdicaoSenhaHeaderUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\EdicaoSenhaHeader\Elements.xml" />
+    <Content Include="WebParts\GerenciamentoIpUrl\Elements.xml" />
+    <Content Include="WebParts\GerenciamentoIpUrl\GerenciamentoIpUrlUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\PerformanceAutorizacao\Elements.xml" />
+    <Content Include="WebParts\PerformanceAutorizacao\PerformanceAutorizacaoUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\RedirecionaDataCash\Elements.xml" />
+    <Content Include="WebParts\RedirecionaDataCash\RedirecionaDataCashUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\UsuariosEcommerce\Elements.xml" />
+    <Content Include="WebParts\UsuariosEcommerce\UsuariosEcommerceUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataCashService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

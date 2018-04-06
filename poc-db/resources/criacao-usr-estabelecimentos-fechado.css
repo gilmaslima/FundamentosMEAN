@@ -1,0 +1,23 @@
+﻿/*
+Descrição: CSS exclusivo para a tela estabelecimentos do usuario fechado
+Autor/Empresa: Seygi Kutani / Iteris
+Cliente: Rede
+©Copyright: 2016
+*/
+
+div.tab-rede {
+    border-bottom: 0 !important;
+}
+div.tab-rede ~ div#estabelecimentosTab {
+    border: 1px solid #ddd;
+    border-top: 0;
+    margin-top: 0 !important;
+}
+div.tab-rede ~ div#estabelecimentosTab ~ div.divTitulo {
+    border: 1px solid #ddd;
+    border-top: 0;
+    margin-top: 0 !important;
+}
+div[aria-describedby="lbxModalConfirmacao"] div.ui-dialog-titlebar {
+    display: none;
+}

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{650CA530-F5A2-497B-9383-C753331F61E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.Portal.Aberto.Model.Repository</RootNamespace>
+    <AssemblyName>Redecard.Portal.Aberto.Model.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Deploy\WSP\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Deploy\WSP\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\DTOPerguntaFrequenteEcommerce.cs" />
+    <Compile Include="DTOs\DTOSubMenuMiniSite.cs" />
+    <Compile Include="RepositoryCompartilhe.cs" />
+    <Compile Include="DTOs\DTOCompartilhe.cs" />
+    <Compile Include="RepositoryDicas.cs" />
+    <Compile Include="RepositoryPerguntasFrequentesEcommerce.cs" />
+    <Compile Include="RepositoryRedecardClique.cs" />
+    <Compile Include="DTOs\DTORedecardClique.cs" />
+    <Compile Include="DTOs\DTOCartao.cs" />
+    <Compile Include="DTOs\DTODepoimento.cs" />
+    <Compile Include="DTOs\DTODica.cs" />
+    <Compile Include="DTOs\DTODownload.cs" />
+    <Compile Include="DTOs\DTOFoto.cs" />
+    <Compile Include="DTOs\DTOItem.cs" />
+    <Compile Include="DTOs\DTONoticia.cs" />
+    <Compile Include="DTOs\DTOPerguntaFrequente.cs" />
+    <Compile Include="DTOs\DTOPremio.cs" />
+    <Compile Include="DTOs\DTORelease.cs" />
+    <Compile Include="DTOs\DTOSom.cs" />
+    <Compile Include="DTOs\DTOVideo.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="RepositoryCartoes.cs" />
+    <Compile Include="RepositoryDepoimentos.cs" />
+    <Compile Include="RepositoryDownloads.cs" />
+    <Compile Include="RepositoryFotos.cs" />
+    <Compile Include="RepositoryNoticias.cs" />
+    <Compile Include="RepositoryItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryPerguntasFrequentes.cs" />
+    <Compile Include="RepositoryPremios.cs" />
+    <Compile Include="RepositoryReleases.cs" />
+    <Compile Include="RepositorySons.cs" />
+    <Compile Include="RepositorySubMenusMiniSite.cs" />
+    <Compile Include="RepositoryVideos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Redecard.Portal.Aberto.Model\Redecard.Portal.Aberto.Model.csproj">
+      <Project>{0570ABB7-6976-4DA2-A16A-75D42D718AF7}</Project>
+      <Name>Redecard.Portal.Aberto.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

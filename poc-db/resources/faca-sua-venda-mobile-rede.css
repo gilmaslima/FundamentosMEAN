@@ -1,0 +1,359 @@
+﻿/*
+Projeto: Mobile 2.0;
+Descrição: Utilização pela página Faça Sua Venda Mobile Rede;
+Autor/Empresa: Alexandre Shiroma / ITERIS
+Cliente: Rede
+©Copyright: 2014 Rede;
+*/
+
+.clear {
+    clear: both;
+}
+
+.fg-red {
+    color: Red !important;
+}
+
+.modelos {
+    width: auto;
+    border-spacing: 0px;
+    margin: 15px 0px 0px 0px !important;
+    padding-bottom: 25px !important;
+}
+    
+.modelos .modelo {
+    border: 1px solid #818181 !important;
+    width: 400px;
+    height: 165px;
+    float: left;
+    margin-right: 25px !important;
+}
+    
+.modelos .modelo .conteudo {
+    padding: 10px !important;
+}
+    
+.modelos h2 {
+    font-family:Arial !important;
+    font-weight:bold !important;
+    font-size: 12px !important;
+    color: #FF7800 !important;
+}
+    
+.modelos h3 {
+    font-family: Arial !important;
+    font-weight: bold !important;
+    font-size: 12px !important;
+    color: #085092 !important;
+}
+    
+.modelos .modelo .conteudo > div > div {
+    float: left;
+}
+    
+.modelos .modelo .conteudo > div > div img {
+    padding-top: 10px !important;
+}
+    
+.modelos .modelo .conteudo > div > div ul {
+    list-style-type: disc;
+    padding-top: 15px !important;
+    list-style-position: inside;
+    width: 250px;
+}
+    
+.modelos .modelo .conteudo > div > div ul li span {
+    font-size: 12px;
+}
+    
+.modelos .modelo .conteudo > div > .coluna2 {
+    padding-left: 12px !important;
+}
+    
+.modelos .modelo .conteudo > div > .coluna2 h3 {
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+    
+.modelos .modelo .conteudo > div > .coluna2 .separador {
+    text-align: center;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 8px;
+    padding: 0px 5px !important;
+}
+    
+.modelos .modelo .conteudo > div > .coluna2 .separador label {
+    font-size: 12px;
+}
+    
+.modelos .modelo .conteudo > div > .coluna2 .opcoes {
+    font-size: 12px;
+}
+    
+.modelos .modelo .conteudo > div > .coluna2 .opcoes div {
+    float: left;
+}
+    
+.underline {
+    text-decoration: underline !important;
+}
+
+.display-none {
+    display: none !important;
+}
+    
+#pageContentCentraliza .equipamentos 
+{
+    float: left;
+}
+    
+#pageContentCentraliza .equipamentos .tabelaDados {
+    margin-top: 5px !important;
+    width: 560px !important;
+    border-color: #818181 !important;
+}
+    
+#pageContentCentraliza .equipamentos .tabelaDados input[type="checkbox"] {
+    margin-right: 0px !important;
+}
+    
+#pageContentCentraliza .equipamentos .tabelaDados .imagem {
+    float:left;
+    width: 40px;
+    padding: 2px 5px;
+}
+    
+#pageContentCentraliza .equipamentos .tabelaDados .caixaTexto {
+    width: 25px;
+}
+    
+#pageContentCentraliza .equipamentos .tabelaDados thead tr th {
+    color: #085092 !important;
+    font-weight: bold !important;
+}
+        
+#pageContentCentraliza .equipamentos .tabelaDados tr td > div {
+    height: 41px;
+    line-height: 41px;
+}
+        
+#pageContentCentraliza .equipamentos > div {
+    float: left;
+}
+    
+#pageContentCentraliza .resumo-pedido {
+    font-size: 12px !important;
+    border: 1px solid #818181 !important;
+    width: 242px;
+    margin-left: 25px !important;
+    padding-top: 3px !important;
+    float: left;
+    margin-top: 5px !important;
+    padding-bottom: 5px;
+}
+
+#pageContentCentraliza .resumo-pedido.comprovante {
+    margin-left: 0px !important;
+}
+   
+#pageContentCentraliza .resumo-pedido.comprovante hr {
+    margin-left: -15px !important;
+    margin-right: -10px !important;
+}
+   
+#pageContentCentraliza .resumo-pedido h3 {
+    margin-bottom: 4px !important;
+    display: inline-block;
+}
+    
+#pageContentCentraliza .resumo-pedido img {
+    padding-bottom: 6px !important;
+}
+    
+#pageContentCentraliza .resumo-pedido hr {
+    height: 1px;
+    background-color: #818181;
+    margin: 6px 0px !important;
+}
+    
+#pageContentCentraliza .resumo-pedido ul {
+    list-style-position: inside;
+    list-style-type: disc;
+    color: #085092 !important;
+}
+    
+#pageContentCentraliza .resumo-pedido .item {
+    padding: 0px 10px !important;
+}
+    
+#pageContentCentraliza .resumo-pedido .item .endereco {
+    padding-top: 5px !important;
+}
+    
+#pageContentCentraliza .resumo-pedido table {
+    width: 100%;
+    border: none;
+    border-spacing: 0;
+}
+    
+#pageContentCentraliza .resumo-pedido table thead tr th,
+#pageContentCentraliza .resumo-pedido table tfoot tr td {
+    background-color: #FFF !important;
+    font-weight: bold !important;
+    color: #404040;
+    line-height: 20px !important;
+}
+    
+#pageContentCentraliza .resumo-pedido table tr th,
+#pageContentCentraliza .resumo-pedido table tr td {
+    font-size: 12px !important;
+    min-width: 40px;
+}
+
+#pageContentCentraliza .pagamento ul li {
+    margin-left: 15px;
+}
+
+#pageContentCentraliza .pagamento {
+    width: 560px;
+}
+
+#pageContentCentraliza .pagamento .conteudo {
+    padding: 10px;
+    border: 1px solid #818181 !important;
+    margin-top: 20px !important;
+}
+        
+#pageContentCentraliza .pagamento select {
+    height: 22px;
+}
+        
+#pageContentCentraliza .pagamento h3 {
+    margin-bottom: 10px !important;
+    color: #085092 !important;
+    font-size: 12px !important;
+}
+        
+#pageContentCentraliza .pagamento table tr td {
+    height: 26px !important;
+}
+        
+#pageContentCentraliza .pagamento .dropdown-large {
+    width: 193px;
+}
+        
+#pageContentCentraliza .pagamento .dropdown-small {
+    width: 60px;
+}
+
+#pageContentCentraliza .pagamento .txt-large {
+    width: 181px;
+}
+        
+#pageContentCentraliza .pagamento .txt-medium {
+    width: 30px;
+}
+        
+#pageContentCentraliza .pagamento .txt-small {
+    width: 24px;
+}
+
+#pageContentCentraliza .pagamento .bandeiras-label {
+    vertical-align: top;
+    padding-top: 20px;
+}
+
+#pageContentCentraliza .pagamento .bandeiras {
+    height: 110px !important;
+}
+
+#pageContentCentraliza .pagamento .bandeiras div {
+    float: left;
+    text-align: center;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+        
+#pageContentCentraliza .pagamento .bandeiras div img {
+    display: block;
+    margin-left: 5px !important;
+    margin-right: 4px !important;
+    margin-top: 4px !important;
+    width: auto;
+    height: 33px;
+    vertical-align: top;
+}
+        
+#pageContentCentraliza .pagamento .bandeiras .descricao {
+    font-size: 11px;
+    padding-left: 5px !important;
+}
+        
+#pageContentCentraliza .pagamento a {
+    text-decoration: underline;
+    font-size: 11px;
+}
+
+#pageContentCentraliza .comprovante-vendas {
+    width: 565px;
+    float: left;
+}
+
+#pageContentCentraliza .comprovante-pedido {
+    float:left;
+    width: 543px;
+    margin: 5px 5px 5px 20px;
+    border: 1px solid #818181;
+}
+
+@media print 
+{
+    #pageContentCentraliza .comprovante-pedido {
+        margin-left: 0px !important;
+        margin-top: 20px !important;
+    }
+    
+    #pageContentCentraliza .resumo-pedido.comprovante hr {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+    
+    #pageContentCentraliza .comprovante-atalhos {
+        display: none !important;
+    }
+}
+
+#pageContentCentraliza .comprovante-pedido table.tabelaDados.dados {
+    margin: 0px !important;
+    border: 0px;
+}
+
+#pageContentCentraliza .comprovante-pedido table.tabelaDados.dados td {
+    height: 26px;
+    padding: 3px 5px !important;
+    color: Black;
+}
+
+#pageContentCentraliza .comprovante-pedido table.tabelaDados.dados td.first {
+    border-right: none !important;
+    width: 1%;
+    padding-left: 25px !important;
+    white-space: nowrap;
+    color: Gray;
+}
+
+#pageContentCentraliza .comprovante-atalhos {
+    float: left;
+    margin-left: 20px;
+}
+
+#pageContentCentraliza .comprovante-atalhos #QuadroAtalho {
+    margin-top: 5px !important;
+    width: 140px;
+    border: 1px solid #818181 !important;
+}
+
+#pageContentCentraliza .aviso-container {
+    width: 564px;
+}

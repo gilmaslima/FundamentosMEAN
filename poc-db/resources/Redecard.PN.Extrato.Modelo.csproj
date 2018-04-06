@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1CFCA56-D2D3-495E-989B-72A244D7150A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.Extrato.Modelo</RootNamespace>
+    <AssemblyName>Redecard.PN.Extrato.Modelo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AntecipacaoRAV.cs" />
+    <Compile Include="Comum\Bandeira.cs" />
+    <Compile Include="Comum\CacheVO.cs" />
+    <Compile Include="Comum\RetornoPesquisaSemTotalizadorDTO.cs" />
+    <Compile Include="ConsultaPorTransacao\ConsultarCartasEnvioDTO.cs" />
+    <Compile Include="ConsultaPorTransacao\ConsultarCartasRetornoDTO.cs" />
+    <Compile Include="ConsultaTransacao.cs" />
+    <Compile Include="Dirf\ConsultarAnosBaseDirfRetornoDTO.cs" />
+    <Compile Include="Dirf\ConsultarExtratoDirfEnvioDTO.cs" />
+    <Compile Include="Dirf\ConsultarExtratoDirfEstabelecimentoRetornoDTO.cs" />
+    <Compile Include="Dirf\ConsultarExtratoDirfRetornoDTO.cs" />
+    <Compile Include="Dirf\ConsultarExtratoDirfEmissorRetornoDTO.cs" />
+    <Compile Include="Estornos\Estorno.cs" />
+    <Compile Include="Estornos\EstornoD.cs">
+      <DependentUpon>Estorno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estornos\EstornoTotalizador.cs" />
+    <Compile Include="Estornos\EstornoTotalizadorBandeira.cs" />
+    <Compile Include="HomePage\Resumo.cs" />
+    <Compile Include="HomePage\ValoresPagos.cs" />
+    <Compile Include="HomePage\LancamentosFuturos.cs" />
+    <Compile Include="HomePage\VendasDebito.cs" />
+    <Compile Include="HomePage\VendasCredito.cs" />
+    <Compile Include="HomePage\Vendas.cs" />
+    <Compile Include="LancamentosFuturos.cs" />
+    <Compile Include="OrdensCredito.cs" />
+    <Compile Include="RecargaCelular.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarMotivoDebitoFormaPagamentoRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarPenhoraTotalSemBandeiraRetornoDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarDetalhamentoDebitosDetalheRetornoDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarDetalhamentoDebitosTotaisRetornoDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarMotivoDebitoEnvioDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarMotivoDebitoRetornoDTO.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\TotalizadorPorBandeiraSaldosEmAbertoDTO.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Credito\ResumoVendasCreditoPorDia.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Credito\TotalVendasCreditoPorDiaBandeira.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Debito\ResumoVendasDebitoPorDia.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Debito\TotalVendasDebitoPorDiaBandeira.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Credito\VendasCreditoPorDiaPv.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Credito\TotalVendasCreditoPorPeriodoBandeira.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Debito\VendasDebitoPorDiaPv.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Debito\TotalVendasDebitoPorPeriodoBandeira.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\TotalVendasPorBandeira.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\TotalVendasPorDiaPv.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\TotalVendasPorPeriodoConsolidado.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\TotalPorBandeiraSaldosEmAbertoDTO.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\ConsultarSaldosEmAbertoDTO.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\DadosConsultaSaldosEmAbertoDTO.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\ItemDetalheSaldosEmAbertoDTO.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\PeriodoDisponivelDTO.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\TotalMesSaldosEmAbertoDTO.cs" />
+    <Compile Include="RelatorioSaldosEmAberto\TotalBandeiraMesSaldosEmAbertoDTO.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Credito\TotalVendasCreditoPorPeriodo.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\Debito\TotalVendasDebitoPorPeriodo.cs" />
+    <Compile Include="RelatorioValoresConsolidadosVendas\TotalVendasBase.cs" />
+    <Compile Include="ResumoVendas.cs" />
+    <Compile Include="ResumoVenda\RecargaCelularResumoOrigem.cs" />
+    <Compile Include="ResumoVenda\ConsultarDetalhesResumoDeVendaEnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarDetalhesResumoDeVendaRetornoDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarWACA700EnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarWACA700RetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarPenhoraDetalheProcessoCreditoRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarPenhoraNumeroProcessoRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoDescricaoComValorRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoDescricaoSemValorRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoDetalheProcessoCreditoRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoDetalheProcessoDebitoRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoNumeroProcessoRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoTotaisRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarPenhoraTotaisRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarPenhoraTotalBandeiraRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoTotalBandeiraRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoTotaisRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoDetalheRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoTotalBandeiraDiaRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoTotalDiaRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoTotalPeriodoRetornoDTO.cs" />
+    <Compile Include="RelatorioPagamentosAjustados\ConsultarOrdensCreditoEnviadosAoBancoAjusteRetornoDTO.cs" />
+    <Compile Include="RelatorioPagamentosAjustados\ConsultarOrdensCreditoEnviadosAoBancoDetalheRetornoDTO.cs" />
+    <Compile Include="RelatorioPagamentosAjustados\ConsultarOrdensCreditoEnviadosAoBancoTotaisRetornoDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarConsolidadoDebitosEDesagendamentoEnvioDTO.cs" />
+    <Compile Include="Home\ConsultarCreditoDebitoEnvioDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarDetalhamentoDebitosEnvioDTO.cs" />
+    <Compile Include="Home\ConsultarTransacoesCreditoDebitoEnvioDTO.cs" />
+    <Compile Include="Comum\BasicDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarConsolidadoDebitosEDesagendamentoRetornoDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarDisponibilidadeVencimentosODCEnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarDisponibilidadeVencimentosODCRetornoDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarPreDatadosEnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarPreDatadosRetornoDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarRejeitadosEnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarRejeitadosRetornoDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarWACA701EnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarWACA701RetornoDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarTransacaoDebitoEnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarTransacaoDebitoRetornoDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarVencimentosResumoVendaEnvioDTO.cs" />
+    <Compile Include="ResumoVenda\ConsultarVencimentosResumoVendaRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarPenhoraEnvioDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarPenhoraRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoEnvioDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarRetencaoRetornoDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoEnvioDTO.cs" />
+    <Compile Include="RelatorioCreditoSuspensosRetidosPenhorados\ConsultarSuspensaoRetornoDTO.cs" />
+    <Compile Include="RelatorioPagamentosAjustados\ConsultarOrdensCreditoEnviadosAoBancoEnvioDTO.cs" />
+    <Compile Include="RelatorioPagamentosAjustados\ConsultarOrdensCreditoEnviadosAoBancoRetornoDTO.cs" />
+    <Compile Include="Home\ConsultarCreditoDebitoRetornoDTO.cs" />
+    <Compile Include="RelatorioDebitosDesagendamentos\ConsultarDetalhamentoDebitosRetornoDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Comum\StatusRetornoDTO.cs" />
+    <Compile Include="Home\ConsultarTransacoesCreditoDebitoRetornoDTO.cs" />
+    <Compile Include="Comum\RetornoPesquisaComTotalizadorDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Servicos.cs" />
+    <Compile Include="ValoresPagos.cs" />
+    <Compile Include="Vendas\Construcard.cs" />
+    <Compile Include="Vendas\ConstrucardA1.cs">
+      <DependentUpon>Construcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\ConstrucardA2.cs">
+      <DependentUpon>Construcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\ConstrucardDT.cs">
+      <DependentUpon>Construcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\ConstrucardTotalizador.cs" />
+    <Compile Include="Vendas\ConstrucardTotalizadorValor.cs" />
+    <Compile Include="Vendas\Credito.cs" />
+    <Compile Include="Vendas\CreditoD.cs">
+      <DependentUpon>Credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\CreditoTotalizador.cs" />
+    <Compile Include="Vendas\CreditoTotalizadorValor.cs" />
+    <Compile Include="Vendas\Debito.cs" />
+    <Compile Include="Vendas\DebitoA1.cs">
+      <DependentUpon>Debito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\DebitoA2.cs">
+      <DependentUpon>Debito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\DebitoDT.cs">
+      <DependentUpon>Debito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\DebitoTotalizador.cs" />
+    <Compile Include="Vendas\DebitoTotalizadorValor.cs" />
+    <Compile Include="Vendas\Modalidade.cs" />
+    <Compile Include="Vendas\RecargaCelular.cs" />
+    <Compile Include="Vendas\RecargaCelularPvFisico.cs">
+      <DependentUpon>RecargaCelular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\RecargaCelularPvLogico.cs">
+      <DependentUpon>RecargaCelular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas\RecargaCelularTotalizador.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

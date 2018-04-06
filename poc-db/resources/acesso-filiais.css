@@ -1,0 +1,69 @@
+﻿/*
+Descrição: CSS exclusivo para a tela LoginSelecionaEstabelecimento
+Autor/Empresa: Victor Alencar / Iteris
+Cliente: Rede
+©Copyright: 2016
+*/
+
+#tblFiliais tr {
+	background-color: #FFF;
+}
+
+.btn-primary{
+	float: right;
+	width: 175px;
+}
+
+.truncate {
+	width: 650px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.navegadorPaginacao{
+	margin: auto;
+	font-size: 16px;
+	font-family: 'opensans-regular', sans-serif;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.navegadorPaginacao a {
+	color: #4f4139 !important;
+	text-decoration: none;
+	margin: 0 5px;
+	display: inline-block;
+	text-align: center;
+}
+
+.navegadorPaginacao td.linkSelecionado a {
+	font-family: 'opensans-semibold', sans-serif;
+	text-decoration: underline !important;
+}
+
+.search-rede .search-text {
+    max-width: none !important;
+    width: 120px !important;
+}
+
+.search-rede input.search-input {
+    line-height: 40px;
+}
+
+.search-rede input.search-button{
+    line-height: 38px;
+	border: 0;
+	background-color: #00b9b5;
+	margin: 0;
+	margin-left: -53px;
+	width: 50px;
+	background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/search-icon.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.paginacao-navegacao-hidden {
+    display: none !important;
+}

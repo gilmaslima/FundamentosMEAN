@@ -1,0 +1,74 @@
+﻿/* Classes para repeater */
+.linhaEscura
+{
+    background-color:#f2f2f2 !important;
+}
+
+.celulaRepeaterChk
+{
+    width: 18px;
+    vertical-align: middle;
+    text-align: center !important;
+}
+
+.tabelaDados td, .tabelaDados th
+{
+	padding: 5px;
+}
+
+.aviso 
+{
+    background-color: #FDF5E6;
+    border: 1px solid #FFDEAD;
+}
+
+.header 
+{
+    background-color: #DCDCDC;
+    font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 8pt;
+}
+
+.celulaRepeaterLabel
+{
+    vertical-align: middle;
+}
+
+.linhaEscura:hover, .linhaClara:hover {
+    cursor: hand;
+    background-color: #D2DEE8 !important;
+}
+
+.caixaTexto
+{
+	float: left;
+	background: #E8ECF5;
+	border: solid 2px #A5ABB9;
+	height: 11px;
+	font-size: 10px;
+	color: #183C8E;
+	padding: 3px 5px;
+	margin: 0 8px 0 0;
+}
+
+/* Classe para botão */
+.botaoLegado 
+{
+	BORDER-BOTTOM: 0px; 
+	BORDER-LEFT: 0px; 
+	PADDING-BOTTOM: 4px; 
+	TEXT-TRANSFORM: uppercase; 
+	BACKGROUND-COLOR: #8094c1; 
+	PADDING-LEFT: 4px; 
+	PADDING-RIGHT: 4px; 
+	COLOR: #fff; 
+	BORDER-TOP: 0px; 
+	CURSOR: hand; 
+	FONT-WEIGHT: bold; 
+	BORDER-RIGHT: 0px; 
+	TEXT-DECORATION: none; 
+	PADDING-TOP: 4px; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px;
+}

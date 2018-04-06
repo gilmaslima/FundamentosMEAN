@@ -1,0 +1,241 @@
+﻿/*
+Projeto: Rede.Eadquirencia;
+Descrição: CSS do formulário "ConfigurarCallback", do modulo de eadquirencia;
+Autor/Empresa: Thiago Corda/Iteris;
+Cliente: Rede;
+©Copyright: 2016 Iteris;
+Notas: Anotações, atualizações e perigos;
+
+*/
+
+.titulo-notificacao {
+    font-family: Helvetica-Bold, "Helvetica Bold", Helvetica !important;
+    font-style: normal !important;
+    color: rgb(0, 185, 181) !important;
+    font-size: 23px !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+}
+
+.tabela-notificacao {
+    width:100% !important;
+    padding: 20px !important;
+}
+
+.cabecalho-tabela-notificacao
+{
+    font-weight: bold !important;
+    font-size: 12px !important;
+}
+
+.conteudo-tabela-notificacao
+{
+    font-size: 12px !important;
+    word-break:break-all;
+    -ms-word-break:break-all;
+    padding-right: 10px !important;
+}
+
+.linha-lista-url-notificacao
+{
+    width:100% !important;
+    float:left !important;
+    margin-top: 20px !important;
+}
+
+.titulo-lista-notificacao
+{
+    float: left !important;
+    width: 500px !important;
+    font-size:20px !important;
+    margin-left: 20px !important;
+    font-weight: bold !important;
+    margin-bottom: 7px !important;
+}
+
+.editar-notificacao
+{
+    float: right !important;
+    width: 70px !important;
+    color: rgb(255, 120, 0) !important;
+    margin-top: 10px !important;
+    font-weight: bold !important;
+}
+
+.excluir-notificacao
+{
+    float: right !important;
+    width: 70px !important;
+    color: rgb(255, 120, 0) !important;
+    font-weight: bold !important;
+    margin-bottom: 12px !important;
+}
+
+.incluir-notificacao
+{
+    width: 70px !important;
+    color: rgb(255, 120, 0) !important;
+    font-weight: bold !important;
+    margin-top: 12px !important;
+    margin-left: 20px !important;
+}
+
+.editar-notificacao a, .excluir-notificacao a, .incluir-notificacao a
+{
+    color: rgb(255, 120, 0) !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+}
+
+.conteudo-notificacao
+{
+    width:100% !important;
+    float:left !important;
+    border-top: 1px solid #E4E4E4 !important;
+    border-left: 2px solid #E4E4E4 !important;
+    border-right: 2px solid #E4E4E4 !important;
+    border-bottom: none !important;
+    background-image: url(../Images/fundo-url-notificacao.png) !important;
+    background-repeat:repeat-x !important;
+    background-position:bottom !important;
+}
+
+.texto-url-edicao 
+{
+    border:none !important;
+    border-bottom:1px solid black !important;
+    width: 70% !important;
+    margin-right: 20px !important;
+    font-size: 16px !important;
+}
+
+.linha-edicao-notificacao
+{
+    width:100% !important;
+    float:left !important;
+    margin-left: 20px !important;
+    margin-top: 12px !important;
+}
+
+.aviso-notificacao 
+{
+    color:#FF0000 !important;
+}
+
+.botoes-acao
+{
+    float:right !important;
+    width: 430px !important;
+}
+
+.botao-cancelar 
+{
+    background-color: #575758 !important;
+    border: none !important;
+    color: white !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    margin-right: 16px !important;
+    width: 193px !important;
+    height: 45px !important;
+    margin-bottom: 15px !important;
+    cursor: pointer !important;
+}
+
+input[type=submit].botao-salvar
+{
+    background-color: rgb(248, 222, 0) !important;
+    border: none !important;
+    color: black !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    width: 193px !important;
+    height: 45px !important;
+    cursor: pointer !important;
+}
+
+input[type=submit].botao-salvar[disabled] {
+    background-color: #DDDDDD !important;
+    color: black !important;
+    cursor: default !important;
+}
+
+.negrito 
+{
+    font-weight:bold !important;
+}
+
+.margin-right-10
+{
+    margin-right: 10px !important;
+}
+
+table[id$="cblEventos"] label 
+{
+    margin-right:10px !important;
+}
+
+.botao-exibir-inclusao {
+    margin-top:10px !important;
+    cursor: pointer !important;
+}
+
+.width70pc 
+{
+    width: 70% !important;
+}
+
+.width60pc 
+{
+    width: 60% !important;
+}
+
+.width50pc 
+{
+    width: 50% !important;
+}
+
+.width25pc
+{
+    width: 25% !important;
+}
+
+.width20pc
+{
+    width: 20% !important;
+}
+
+input[type=checkbox]:not(old), 
+input[type=radio]:not(old) {
+    width   : 28px;
+    margin  : 0;
+    padding : 0;
+    opacity : 0;
+}
+
+input[type=checkbox]:not(old) + label {
+    display      : inline-block;
+    margin-left  : -34px !important;
+    padding-left : 20px !important;
+    background   : url('../Images/check_cinza.png') no-repeat 0 0;
+    background-size : 13px;
+}
+
+input[type=radio]:not(old) + label {
+    display      : inline-block;
+    margin-left  : -34px !important;
+    padding-left : 20px !important;
+    background   : url('../Images/radio_cinza.png') no-repeat 0 0;
+    background-size : 18px;
+    line-height : 20px;
+}
+
+input[type=checkbox]:not(old):checked + label {
+    background   : url('../Images/check_laranja.png') no-repeat 0 0;
+    background-size : 13px;
+}
+
+input[type=radio]:not(old):checked + label {
+    background   : url('../Images/radio_laranja.png') no-repeat 0 0;
+    background-size : 18px;
+}

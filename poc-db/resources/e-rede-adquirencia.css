@@ -1,0 +1,154 @@
+﻿/*
+Projeto: Rede.Eadquirencia;
+Descrição: CSS do site "e-rede", do modulo de eadquirencia;
+Autor/Empresa: Thiago Corda/Iteris;
+Cliente: Rede;
+©Copyright: 2016 Iteris;
+Notas: Anotações, atualizações e perigos;
+*/
+    .area {
+        border: 1px solid #838383 !important;
+        float: left;
+        width: 400px;
+        padding-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .linha2 {
+        height: 26px;
+    }
+
+    .texto {
+        float: left;
+        width: 35%;
+        text-align: right;
+        font-size: 13px;
+        padding-top: 3px !important;
+    }
+
+    .valor {
+        float: left;
+        width: 65%;
+    }
+
+    .tituloFormulario {
+        text-align: center;
+        color: black;
+        left: 0;
+        right: 0;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+
+    p {
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .botoes {
+        top:0;
+        position:relative;
+        float: right;
+        padding-right: 0px;
+        right: 0px;
+    }
+
+    .linhaNavegacao{
+        clear:both;
+        width:600px!important;
+    }
+
+    .conteudo {
+        background-color: #F8F8F8;
+        border: solid 1px #A1A1A1!important;
+        width:400px;
+        margin-bottom: 5px !important;
+    }
+
+
+        .conteudo .linha {
+            clear: both;
+            height: 35px;
+        }
+
+           .conteudo .linha:nth-child(even) {
+                background-color: #E5E5E5;
+            }
+
+            /*Css para IE7/IE8*/
+            .conteudo .linha.even {
+                background-color: #E5E5E5;
+            }
+
+
+            .conteudo .linha .col-label {
+                margin-left: 10px;
+                text-align: right;
+                width: 35%;
+                float: left;
+                color: #919191;
+				padding-top: 10px !important;
+            }
+
+            .conteudo .linha .col-label2 {
+                margin-left: 10px;
+                text-align: right;
+                width: 35%;
+                float: left;
+                color: #919191;
+				padding-top: 2px !important;
+            }
+			
+            .conteudo .linha .col-input {
+                margin-left: 5px !important;
+                text-align: left;
+                width: 51%;
+                float: left;
+                color: #737373;
+                font-weight: normal;
+				padding-top: 10px !important;
+            }
+			
+			.noPadding
+			{
+				padding-top: 0px !important;
+			}
+			
+			.botoesAcao
+			{
+				width: 402px !important;
+			}
+
+    .btnObrigatorios .botao 
+    {
+        padding-left: 15px!important;
+    }
+
+    .btnImprimir 
+    {
+        background-image: url(../Images/Icone_Impressora.png) !important;
+        background-position: left 4px !important;
+    }
+
+    .btnPDF 
+    {
+        background-image: url(../Images/Icone_pdf.png) !important;
+        background-position: left 4px !important;
+    }
+
+    .btnExcel
+    {
+        background-image: url(../Images/Icone_xls.png) !important;
+        background-position: left 4px !important;
+    }
+
+.mensagemErro
+{
+    font-size: 10px;
+    color: red;
+}
+
+.azulNegrito {
+    font-weight:bold;
+    color:blue;
+}

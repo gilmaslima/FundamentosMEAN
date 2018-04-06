@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E159C3B6-D4A2-4376-8DD1-CDC8DF0BCCCC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Redecard.PN.OutrosServicos.Negocio</RootNamespace>
+    <AssemblyName>Redecard.PN.OutrosServicos.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Redecard.PN.Comum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=427b1f4483a16eb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\Comum\Redecard.PN.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContaCerta.cs" />
+    <Compile Include="Corban.cs" />
+    <Compile Include="Emissor.cs" />
+    <Compile Include="Maquininha.cs" />
+    <Compile Include="MaterialVenda.cs" />
+    <Compile Include="OfertaUk.cs" />
+    <Compile Include="PlanoContas.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regime.cs" />
+    <Compile Include="Solicitacao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Redecard.PN.OutrosServicos.Agentes\Redecard.PN.OutrosServicos.Agentes.csproj">
+      <Project>{5D0F6DFA-A7DA-4E48-84B7-C9738E28535F}</Project>
+      <Name>Redecard.PN.OutrosServicos.Agentes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Redecard.PN.OutrosServicos.Dados\Redecard.PN.OutrosServicos.Dados.csproj">
+      <Project>{FAB4229C-21E1-4028-A3F8-233C0F2797AB}</Project>
+      <Name>Redecard.PN.OutrosServicos.Dados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Redecard.PN.OutrosServicos.Modelo\Redecard.PN.OutrosServicos.Modelo.csproj">
+      <Project>{087F6AEE-0487-4364-8285-F32FC508213A}</Project>
+      <Name>Redecard.PN.OutrosServicos.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

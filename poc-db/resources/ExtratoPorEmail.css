@@ -1,0 +1,2815 @@
+﻿*
+{
+    font-family: Arial, Verdana, Tahoma;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+table.dados
+{
+    width: 975px;
+}
+
+table.dados tr th
+{
+    background-color: #CCCCCC;
+    height: 31px;
+    padding: 5px;
+    border: 0;
+}
+
+table.dados, table.dados tr td
+{
+    border: 1px solid rgb(170,170,170);
+}
+
+table.dados tr.alttr
+{
+    background-color: rgb(221,221,221);
+}
+
+table.dados tr td
+{
+    height: 35px;
+    padding: 0px 6px;
+    color: rgb(84, 84, 84);
+    text-align: center;
+}
+
+table.dados .alinhaDireita, table.dados .right
+{
+    text-align: right;
+}
+
+table.dados .alinhaEsquerda, table.dados .left
+{
+    text-align: left;
+}
+
+table.dados .alinhaCentro
+{
+    text-align: center;
+}
+
+table.dados tr.footerTable td
+{
+    background-color: rgb(204,204,204);
+    color: rgb(0,0,0) !important;
+}
+
+table.caption, table caption
+{
+    width: 100%;
+    margin-bottom: 0px !important;    
+}
+    
+.bgLinha
+{
+    background-color: rgb(203, 203, 203);
+}
+
+fieldset.fieldsetTotais.res_totais_vertical_top, fieldset.fieldsetTotais.res_totais_vertical_bottom, fieldset.fieldsetTotais.res_totais
+{
+    width: 200px;
+}
+
+fieldset.fieldsetTotais
+{
+    border: 1px solid rgb(129, 129, 129);
+    color: rgb(84,84,84);
+    height: 94px;
+}
+
+fieldset.fieldsetTotais legend
+{
+    color: rgb(8, 80, 146);
+    font-weight: bold;
+    text-align: left;
+}
+
+fieldset.fieldsetTotais .res_totais_vertical_top
+{
+    text-align: center;
+    height: 32px;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    width: 200px;
+}
+
+fieldset.fieldsetTotais .res_totais_vertical_bottom
+{
+    text-align: center;
+    padding-bottom: 7px;
+    width: 200px;
+}
+
+fieldset.fieldsetTotais .res_totais_valor
+{
+    width: 200px;
+}
+
+fieldset.fieldsetTotais span.res_totais_titulo_direita, fieldset.fieldsetTotais span.res_totais_titulo_esquerda
+{
+    font-weight: bold;
+    white-space: nowrap;
+    width: 200px;
+}
+
+fieldset.fieldsetTotais .spanNomeBandeira
+{
+    font-weight: bold;
+    display: block;
+    padding: 0px 5px;
+}
+
+fieldset.fieldsetTotais .spanValorBandeira, fieldset.fieldsetTotais .res_totais_valor
+{
+    color: rgb(84,84,84);
+    display: block;
+    padding: 0px 5px;
+    white-space: nowrap;
+}
+
+fieldset.fieldsetTotais .tdDadosBandeira, fieldset.fieldsetTotais .tdImgBandeira
+{
+    height: 37px;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+
+table.dados tr.gridDadosNumProcessos td
+{
+    background-color: rgb(203, 203, 203) !important;
+    color: #000000 !important;
+}
+
+table.dados tr.subtotal td
+{
+    background-color: rgb(228, 228, 228) !important;
+    color: #000000 !important;
+}
+
+/*
+Projeto: BBF - Facelift
+Descrição: Facelift geral do sistema, como header, footer e tipografia padrão
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #4f4139;
+}
+
+* {
+    font-family: 'opensans-regular',Sans-Serif;
+}
+
+/*=========================== Tools ===============================*/
+
+.text-align-left,
+.col-align-left {
+    text-align: left !important;
+}
+
+.text-align-right,
+.col-align-right {
+    text-align: right !important;
+}
+
+.text-align-center,
+.col-align-center {
+    text-align: center !important;
+}
+
+.clearfix:before,
+.clearfix:after,
+.portal-container:before,
+.portal-content:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after,
+.portal-content:after {
+    clear: both;
+}
+
+.portal-container-fluid {
+    width: 100%;
+    min-width: 1340px;
+}
+
+.portal-container,
+.portal-content {
+    margin: auto;
+}
+
+.portal-container {
+    width: 1340px;
+}
+
+.portal-content {
+    width: 1248px;
+}
+
+.col-2:before,
+.col-2:after,
+.col-3:before,
+.col-3:after,
+.col-4:before,
+.col-4:after {
+    content: " ";
+    display: table;
+}
+
+.col-2:after,
+.col-3:after,
+.col-4:after {
+    clear: both;
+}
+
+.col-2,
+.col-4 {
+    margin: 0 -16px;
+}
+
+.col-3 {
+    margin: 0 -24px;
+}
+
+.col {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.col-2 > .col,
+.col-3 > .col,
+.col-4 > .col {
+    float: left;
+}
+
+.col-2 > .col {
+    width: 583px;
+    padding: 0 16px;
+}
+
+.col-3 > .col {
+    width: 384px;
+    padding: 0 24px;
+}
+
+.col-4 > .col {
+    width: 288px;
+    padding: 0 16px;
+}
+
+.regular {
+    font-family: 'opensans-regular', Sans-Serif;
+}
+
+.semibold {
+    font-family: 'opensans-semibold', Sans-Serif;
+}
+
+.bold, body .ms-WPBody table td.bold {
+    font-family: 'opensans-bold', Sans-Serif;
+}
+
+.title {
+    font-size: 24px;
+    font-family: 'opensans-bold', Sans-Serif;
+    color: #00b9b8;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-family: 'opensans-semibold', Sans-Serif;
+    color: #4f4139;
+    width: 70%;
+}
+
+.commom-text {
+    font-size: 14px;
+    font-family: 'opensans-regular', Sans-Serif;
+    color: #4f4139;
+}
+
+    .commom-text a {
+        color: #3cc9c7 !important;
+    }
+
+.commom-text-bold {
+    font-size: 14px;
+    font-family: 'opensans-bold', Sans-Serif;
+    color: #4f4139;
+}
+
+.other-text {
+    font-size: 12px;
+    font-family: 'opensans-regular', Sans-Serif;
+    color: #4f4139;
+}
+
+    .other-text a {
+        color: #3cc9c7 !important;
+    }
+
+.other-text-bold {
+    font-size: 12px;
+    font-family: 'opensans-bold', Sans-Serif;
+    color: #4f4139;
+}
+
+.jade-text {
+    color: #00b9b5;
+    font-family: 'opensans-bold', Sans-Serif;
+}
+
+.content-row {
+    margin: 0 auto 55px;
+    display: table;
+    width: 100%;
+}
+
+.margin-top-sm {
+    margin-top: 10px;
+}
+
+.margin-top-md {
+    margin-top: 20px;
+}
+
+.margin-top-lg {
+    margin-top: 35px;
+}
+
+.margin-top-xl {
+    margin-top: 60px;
+}
+
+
+.margin-bottom-sm {
+    margin-bottom: 15px;
+}
+
+.margin-bottom-md {
+    margin-bottom: 25px;
+}
+
+.margin-bottom-lg {
+    margin-bottom: 35px;
+}
+
+.margin-bottom-xl {
+    margin-bottom: 60px;
+}
+
+/*==================== Portal CSS =====================*/
+
+#header {
+    position: relative;
+    background: #fff;
+    margin-bottom: 12px;
+}
+
+.orange-bg {
+    background-color: #ff7800;
+    width: 50%;
+    position: absolute;
+}
+
+.header-container {
+    position: relative;
+    z-index: 2;
+}
+
+.fluid-header {
+    width: 100%;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    -webkit-box-shadow: 0px 8px 6px -8px rgb(179, 179, 179);
+    -moz-box-shadow: 0px 8px 6px -8px rgb(179, 179, 179);
+    box-shadow: 0px 8px 6px -8px rgb(179, 179, 179);
+    behavior: url('/sites/fechado/Style Library/pt-br/Redecard/JScript/pie.htc');
+}
+
+.header-content {
+    background-color: #fff;
+    height: 79px;
+}
+
+.header-container,
+.orange-bg,
+.logo-box {
+    height: 79px;
+}
+
+.expiration {
+    height: 18px;
+    padding: 2px 0;
+}
+
+.user-actions .portal-box {
+    float: left;
+    height: 80px;
+    text-align: center;
+    vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .user-actions .portal-box span {
+        font-size: 14px;
+        font-family: 'opensans-bold',Sans-Serif;
+    }
+
+        .user-actions .portal-box span.regular {
+            font-family: 'opensans-regular',Sans-Serif;
+        }
+
+.user-box {
+    background-color: #00b9b5;
+    color: #fff;
+    position: relative;
+}
+
+#header #login-info {
+    float: none;
+    background: #fff;
+    color: #4f4139;
+    position: absolute;
+    left: -84px;
+    right: 0;
+    top: 108%;
+    margin: auto;
+    width: 285px;
+    -webkit-box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+}
+
+.user-info-box {
+    padding: 16px 32px;
+    position: relative;
+    text-align: left;
+}
+
+    .user-info-box span {
+        display: block;
+        line-height: 1;
+    }
+
+img.ballon-triangle {
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.company-name {
+    color: #ff7800;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: 'opensans-bold', Sans-Serif;
+    display: block;
+}
+
+.company-name,
+.user-info-box span.regular {
+    margin-bottom: 16px;
+}
+
+.user-actions .user-box #login-info a {
+    color: #00b9b5;
+    font-family: 'opensans-bold', Sans-Serif;
+    text-decoration: underline;
+    height: auto;
+    padding: 0;
+    font-size: 14px;
+}
+
+.user-actions .user-box.portal-box i {
+    margin-bottom: 6px;
+}
+
+.menu-container {
+    height: 80px;
+}
+
+.menu-display-none {
+    display: none;
+}
+
+.user-actions .portal-box i {
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 3px;
+}
+
+div#s4-workspace-rede {
+    background-color: #f0f0f0;
+    overflow-x: auto;
+}
+
+.copyright {
+    height: 32px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: #3d3736;
+    color: #fff;
+    padding: 8px;
+    vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#footer {
+    color: #fff;
+    background-color: #443d3c;
+    margin-top: 85px;
+}
+
+.site-map .site-map-item {
+    padding: 32px 16px;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-family: 'opensans-bold', Sans-Serif;
+    margin-bottom: 32px;
+}
+
+ul.footer-list > li {
+    margin-bottom: 7px;
+}
+
+ul.footer-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+    ul.footer-list a:hover {
+        text-decoration: underline;
+    }
+
+ul.footer-list > li {
+    font-family: 'opensans-bold', Sans-Serif;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+    ul.footer-list > li ul li {
+        font-family: 'opensans-regular', Sans-Serif;
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    ul.footer-list > li ul {
+        margin-top: 5px;
+        font-size: 12px;
+        list-style: none;
+        padding: 0;
+    }
+
+ul.footer-list {
+    font-size: 13px;
+    list-style: none;
+    padding: 0;
+}
+
+.ajuda ul.footer-list > li {
+    margin-bottom: 3px;
+    font-family: 'opensans-regular', Sans-Serif;
+}
+
+.site-map .site-map-item.ajuda {
+    padding: 32px 16px 0;
+}
+
+.user-actions .portal-box a {
+    text-decoration: none;
+    color: #4f4139;
+    min-width: 80px;
+    padding: 16px;
+    height: 80px;
+    display: block;
+    font-family: 'opensans-semibold', Sans-Serif;
+    vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.user-actions .user-box a {
+    color: #fff;
+}
+
+.user-actions .portal-box:hover {
+    background-color: #f1efee;
+}
+
+.user-actions .user-box:hover {
+    background-color: #00b9b5;
+}
+
+/*Timer Sessão*/
+#TimerSessao {
+    width: auto;
+    height: auto;
+    float: right;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+    #TimerSessao div#RelogioSessao {
+        display: none;
+    }
+
+    #TimerSessao div#SessaoCountdown {
+        width: auto;
+        height: auto;
+        float: none;
+        text-align: center;
+        margin-left: 0;
+        font-family: 'opensans-regular',Sans-Serif;
+    }
+
+        #TimerSessao div#SessaoCountdown b {
+            font-family: 'opensans-bold', Sans-Serif;
+        }
+
+/* oculta div adicionada automaticamente pelo Asp.Menu */
+.menu-header + div {
+    display: none !important;
+}
+
+.menu-container > a[href$=SkipLink],
+.menu-container > a[id$=SkipLink] {
+    display: none !important;
+}
+
+/*Menu principal*/
+ul.level1:focus {
+    outline: 0 !important;
+}
+
+ul.level1 {
+    margin: 0 16px !important;
+}
+
+.level1 > li {
+    padding: 0 16px;
+}
+
+    .level1 > li > a {
+        height: 80px;
+        padding: 32px 16px;
+        line-height: 1;
+        font-size: 14px;
+        font-family: 'opensans-semibold', Sans-Serif;
+        cursor: pointer;
+        vertical-align: baseline;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .level1 > li:hover {
+        background-color: #f1efee;
+        height: 79px;
+    }
+
+
+    .level1 > li > a.popout {
+        background-image: url("/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/arrow-down.png") !important;
+        padding-right: 22px !important;
+    }
+
+ul.level2 {
+    border-top: 1px solid #F1EFEE;
+}
+
+    ul.level2 li {
+        height: 47px;
+    }
+
+.level2 > li > a.level2 {
+    background-color: #f1efee;
+    border-bottom: 1px solid #dddddd !important;
+}
+
+    .level2 > li > a.level2.highlighted {
+        background-color: #fff;
+        color: #00b9b5;
+    }
+
+.level3 > li > a.level3.highlighted {
+    background-color: #00b9b5;
+    color: #fff;
+}
+
+.level2 > li > a.level2.highlighted,
+.level3 > li > a.level3.highlighted {
+    font-family: 'opensans-bold', Sans-Serif;
+}
+
+
+.level3 > li > a.level3 {
+    background-color: #fff;
+}
+
+.level2 > li > a.level2,
+.level3 > li > a.level3 {
+    color: #4f4139;
+    padding: 16px 30px;
+    background-image: none;
+    line-height: 1;
+    min-width: 335px;
+    height: 47px;
+    vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+    .level2 > li > a.level2.popout {
+        background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/arrow-second-level.png') !important;
+        background-repeat: no-repeat !important;
+        background-position: 95% 17px !important;
+        padding-right: 35px !important;
+    }
+
+.level3 > li a.level3.popout {
+    background-image: none !important;
+}
+
+
+.level2 > li {
+    position: static !important;
+}
+
+.level2 ul.level3 {
+    bottom: 0px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.shadow-box,
+.level1 ul.level2 {
+    -webkit-box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    -pie-box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    behavior: url('/sites/fechado/Style Library/pt-br/Redecard/JScript/pie.htc');
+}
+
+.level2 ul.level3 {
+    bottom: 0px;
+    margin: auto;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 8px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 2px 8px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 2px 8px 1px rgba(0,0,0,0.2);
+    -pie-box-shadow: 1px 2px 8px 1px rgba(0,0,0,0.2);
+    behavior: url('/sites/fechado/Style Library/pt-br/Redecard/JScript/pie.htc');
+}
+
+.rede-button {
+    float: left;
+    margin-left: 16px;
+}
+
+    .rede-button:first-child {
+        margin-left: 0;
+    }
+
+.secondary-button .button-body {
+    background-color: #4c4c4c;
+    height: 46px;
+    width: 100%;
+    display: table;
+}
+
+    .secondary-button .button-body:hover {
+        background-color: #3D3D3D;
+    }
+
+
+.secondary-button .button-shadow {
+    background-color: #000;
+    height: 2px;
+}
+
+.button-body img {
+    max-width: 100%;
+}
+
+.footer-list .btn-secondary {
+    width: 120px;
+}
+
+.footer-list .secondary-button.rede-button {
+    width: 110px;
+    overflow: hidden;
+}
+
+.footer-list .rede-button .centralize img {
+    margin-top: 2px;
+}
+
+.footer-list .rede-button:first-child .centralize img {
+    margin-top: 3px;
+}
+
+.centralize {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.level2 i.fa-mobile {
+    margin-left: 7px;
+    display: inline-block;
+    margin-top: -8px;
+    font-size: 23px;
+    vertical-align: sub;
+}
+
+#breadcrumb * {
+    font-family: 'opensans-regular', Sans-Serif;
+    color: #4f4139;
+    font-size: 12px;
+}
+
+#breadcrumb {
+    padding: 0;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span.breadcrumb-root {
+    padding-left: 8px;
+}
+
+.breadcrumb-container {
+    margin-bottom: 40px;
+}
+
+.breadcrumb-separator,
+.current-separator {
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 8px;
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.breadcrumb-separator {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/breadcrumb-arrow.png');
+}
+
+.current-separator {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/breadcrumb-arrow-active.png');
+    margin-left: -15px;
+}
+
+#breadcrumb span .breadcrumb-root > a {
+    color: #4f4139;
+    text-decoration: none;
+}
+
+    #breadcrumb span .breadcrumb-root > a:hover {
+        text-decoration: underline;
+    }
+
+.level3 > li a.level3.popout {
+    background-image: none !important;
+}
+
+.level4, .level4 > * {
+    display: none !important;
+}
+
+
+/* ================= botões ============= */
+.btn-rede:first-child {
+    margin-left: 0;
+}
+
+.btn-rede {
+    margin-left: 16px;
+    float: left;
+}
+
+.btn-apple-store {
+    margin-left: 10px !important;
+}
+
+.btn-primary,
+.btn-secondary {
+    float: left;
+    height: 48px;
+    border-bottom: 4px solid;
+    display: table;
+    text-align: center;
+    min-width: 115px;
+    cursor: pointer;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+    .btn-primary a,
+    .btn-secondary a {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 15px;
+        text-decoration: none;
+    }
+
+.button-hover {
+    border-bottom: 0;
+}
+
+.btn-primary img,
+.btn-secondary img {
+    max-width: 100%;
+}
+
+.btn-primary {
+    font-family: 'opensans-bold', Sans-serif;
+    font-size: 18px;
+    background-color: #ffe400;
+    border-color: #d4b900;
+}
+
+    .btn-primary a {
+        color: #222222;
+    }
+
+.btn-secondary {
+    font-family: 'opensans-semibold', Sans-serif;
+    font-size: 15px;
+    background-color: #4d4d4d;
+    border-color: #010101;
+}
+
+    .btn-secondary a {
+        color: #fff;
+    }
+
+.link-jade {
+    color: #3cc9c7 !important;
+    font-family: 'opensans-bold', sans-serif;
+}
+
+.link-branco {
+    color: #fff !important;
+    font-family: 'opensans-bold', sans-serif;
+}
+
+.link-preto {
+    color: #000 !important;
+    font-family: 'opensans-bold', sans-serif;
+}
+
+/* ===================== Modal ====================== */
+
+.modal-rede-lightbox,
+.modal-rede {
+    display: none;
+}
+
+.modal-rede-lightbox-submit {
+    clear: both;
+}
+
+.modal-rede-lightbox .validation-message {
+    color: #f00;
+}
+
+.ui-dialog {
+    overflow: visible;
+    padding: 0;
+    min-width: 0;
+}
+
+.ui-widget-overlay {
+    opacity: 0.5;
+    background: #333;
+    filter: Alpha(Opacity=40);
+}
+
+.ui-dialog.modal-rede-container .ui-dialog-title {
+    width: 100% !important;
+}
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.ui-dialog .ui-widget-content .ui-state-default.ui-dialog-titlebar-close,
+.ui-dialog .ui-widget-header .ui-state-default.ui-dialog-titlebar-close {
+    position: absolute;
+    right: -30px;
+    top: 9px;
+    border: none;
+    background-color: transparent;
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/close-modal.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-dialog .ui-state-default.ui-dialog-titlebar-close .ui-icon {
+    display: none;
+}
+
+.ui-dialog .ui-helper-clearfix {
+    border: 0;
+    background: #fff;
+    color: #00b9b8;
+    font-size: 24px;
+    font-family: 'opensans-bold',sans-serif;
+    padding: 18px 22px 40px;
+    line-height: 1;
+}
+
+.ui-dialog .ui-dialog-content {
+    padding: 22px;
+    padding-top: 0;
+}
+
+/*
+Projeto: BBF - Facelift
+Descrição: Facelift de elementos do corpo principal das páginas
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+*/
+
+div#pageContentCentraliza {
+    min-height: 340px;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+.footer-list .btn-secondary {
+    width: 120px;
+}
+
+*:focus, *:active {
+    outline: none;
+}
+
+/* =========== Check box e radio button =============== */
+
+.ez-hide {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.ez-checkbox {
+    background: transparent url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/checkbox.png') 0 1px no-repeat;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.ez-radio {
+    background: transparent url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/radio.png') 0 1px no-repeat;
+    display: inline-block;
+    margin-right: 4px;
+    padding-bottom: 2px;
+}
+
+.modal-rede-lightbox .search-check div.ez-radio + label {
+    vertical-align: top;
+}
+
+.ez-checked, .ez-selected {
+    background-position: 0 -18px;
+}
+
+.ez-checkbox, .ez-radio {
+    zoom: 1;
+    *display: inline;
+    _height: 30px;
+}
+
+/* ================== Menu Lateral ====================*/
+.side-menu {
+    display: table;
+    position: fixed;
+    right: -170px;
+    margin: auto;
+    z-index: 10;
+}
+
+.side-menu-item .icon,
+.side-menu-item .item-content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.side-menu-item .icon {
+    width: 36px;
+    height: 36px;
+    background-color: #ff7800;
+    line-height: 0;
+}
+
+.side-menu-item {
+    margin-bottom: 1px;
+    position: relative;
+    -webkit-transition: right 1s;
+    -moz-transition: right 1s;
+    -o-transition: right 1s;
+    -ms-transition: right 1s;
+    transition: right 1s;
+    right: 0px;
+}
+
+    .side-menu-item.active {
+        right: 170px;
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+    }
+
+    .side-menu-item .item-content {
+        width: 170px;
+        padding: 0 15px;
+        text-align: left;
+        background-color: #fff;
+        margin-bottom: 2px;
+    }
+
+    .side-menu-item a {
+        font-family: opensans-semibold;
+        text-decoration: none;
+        color: #4f4139 !important;
+        display: block;
+    }
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.side-menu.static-menu {
+    position: absolute;
+}
+
+/* ================= Filtros ================== */
+
+.filters-box {
+    padding: 20px 23px;
+    background-color: #877d77;
+    margin: 25px 0 60px;
+}
+
+    .filters-box .col-4 {
+        display: table;
+    }
+
+        .filters-box .col-4 > .col {
+            width: 275px;
+            border-left: 1px solid #625852;
+            display: table-cell;
+            float: none;
+            vertical-align: middle;
+        }
+
+            .filters-box .col-4 > .col:first-child {
+                border: none;
+            }
+
+    .filters-box .col > div {
+        margin-top: 22px;
+    }
+
+        .filters-box .col > div:first-child {
+            margin-top: 0;
+        }
+
+    .filters-box .col:first-child > div {
+        margin-left: 0;
+    }
+
+    .filters-box .col:last-child > div {
+        margin-right: 0;
+    }
+
+    .filters-box .selectboxit-container {
+        margin-top: 15px;
+    }
+
+        .filters-box .selectboxit-container:nth-of-type(1),
+        .filters-box .display-none .selectboxit-container * {
+            margin-top: 0;
+        }
+
+.selectboxit-container span.datepicker-box {
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+}
+
+.selectboxit-container * {
+    font-size: 14px;
+    font-family: 'opensans-regular', Sans-serif;
+}
+
+.datepicker {
+    width: 122px;
+    height: 33px;
+    padding: 0;
+    padding-left: 3px !important;
+    padding-right: 30px;
+    padding-right: 35px !important;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    /*background-color: #877D77;
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/calendar-white.png');
+    background-repeat: no-repeat;
+    background-position: center right 5px;*/
+    background: #877D77 url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/calendar-white.png') no-repeat 94.5% center;
+}
+
+.filters-box .datepicker {
+    height: 23px;
+    width: 120px;
+}
+
+.form-control.datepicker {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/calendar-grey.png');
+}
+
+.datepicker-box label {
+    color: #fff;
+    line-height: 33px;
+    padding-bottom: 7px;
+}
+
+.selectboxit-container span.datepicker-box:first-child {
+    margin-right: 17px;
+}
+
+.filters-box .btn-rede {
+    width: 100%;
+}
+
+/* ================== Label =================== */
+
+label.rede-form {
+    margin-right: 10px;
+    margin-left: 0;
+    font-family: 'opensans-bold', sans-serif;
+}
+
+    label.rede-form ~ label.rede-form {
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+.table-controles label.rede-form {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+/* ================ formulários ============= */
+
+.form-row {
+    margin-top: 0;
+}
+
+    .form-row ~ .form-row {
+        margin-top: 20px;
+    }
+
+
+/* ================= Botões ================== */
+.btn-rede {
+    height: 52px;
+    float: left;
+    margin-left: 0px;
+    min-width: 115px;
+}
+
+    .btn-rede:focus {
+        outline: none;
+    }
+
+.btn-primary,
+.btn-secondary {
+    height: 48px;
+    border-bottom: 4px solid;
+    display: table;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.btn-rede ~ .btn-rede {
+    margin-left: 16px;
+}
+
+
+.btn-primary a,
+.btn-secondary a {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.button-hover {
+    border-bottom: 0;
+    margin-top: 4px;
+}
+
+.btn-primary img,
+.btn-secondary img {
+    max-width: 100%;
+}
+
+.btn-primary {
+    font-family: 'opensans-bold', Sans-serif;
+    font-size: 18px;
+    background-color: #ffe400;
+    border-color: #d4b900;
+    min-width: 230px;
+}
+
+    .btn-primary a {
+        color: #222222 !important;
+    }
+
+    .btn-primary > input,
+    .btn-secondary > input {
+        background-color: transparent;
+        border: 0;
+        font-family: 'opensans-bold', Sans-serif;
+        width: 100%;
+        padding: 11px 0;
+        cursor: pointer;
+    }
+
+    .btn-primary > input {
+        color: #222;
+        font-size: 18px;
+    }
+
+.btn-secondary {
+    font-family: 'opensans-semibold', Sans-serif;
+    font-size: 15px;
+    background-color: #4d4d4d;
+    border-color: #010101;
+}
+
+    .btn-secondary > input {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .btn-secondary a {
+        color: #fff !important;
+    }
+
+.load-more {
+    width: 100%;
+}
+
+    .load-more > .btn-primary {
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+
+/* ================== Select box =============== */
+.selectboxit-container span,
+.selectboxit-container .selectboxit-options a {
+    height: 34px;
+    line-height: 34px;
+    max-width: none !important;
+}
+
+.selectboxit-container .selectboxit {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    color: #b4b0ae;
+    width: auto;
+}
+
+.selectboxit-container {
+    display: block;
+}
+
+.selectboxit-btn {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dddddd;
+    border-color: #dddddd;
+}
+
+.rede-select-icon {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/arrow-down.png');
+    height: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.selectboxit.selectboxit-disabled, .selectboxit-options .selectboxit-disabled {
+    background-color: #f1efee;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+    .selectboxit.selectboxit-disabled .rede-select-icon, .selectboxit-options .selectboxit-disabled .rede-select-icon {
+        background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/disabled-select-arrow.png');
+    }
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+    top: 42%;
+}
+
+.selectboxit-btn.selectboxit-enabled:hover, .selectboxit-btn.selectboxit-enabled:focus {
+    color: #b4b0ae;
+    background-color: #f9f9f9;
+}
+
+select.rede-select {
+    width: 100%;
+    display: none;
+}
+
+.selectboxit-container .selectboxit-list {
+    border: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    font-family: 'opensans-semibold';
+    font-size: 14px;
+    color: #4f4139;
+}
+
+    .selectboxit-container .selectboxit-list a {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: 'opensans-regular';
+        color: #4f4139 !important;
+    }
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+    color: #4f4139;
+    background-color: #F1EFEE;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dddddd;
+    border-color: #dddddd;
+    font-size: 14px;
+    font-family: 'opensans-regular', Sans-serif;
+    height: 34px;
+    line-height: 34px;
+    color: #4f4139;
+    padding: 0 8px;
+    margin-left: 0;
+}
+
+    .form-control ~ .form-control {
+        margin-left: 10px;
+    }
+
+    .form-control:disabled {
+        background-color: #f1efee;
+    }
+
+
+/* ================== Tabelas =============== */
+table.rede-table {
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-right: 1px solid #dddddd;
+}
+
+    table.rede-table th,
+    table.rede-table td {
+        vertical-align: middle;
+        border-right: 1px solid #fff;
+    }
+
+.rede-table th {
+    text-align: left;
+    padding: 10px 12px;
+    font-family: 'opensans-bold', sans-serif;
+    color: #fff;
+    background-color: #a49e9d;
+    line-height: 16px;
+    min-width: 90px;
+}
+
+.rede-table.jade th {
+    background-color: #00b9b5;
+}
+
+.rede-table td {
+    padding: 17px 12px;
+    border: 1px solid #dddddd;
+    line-height: 16px;
+}
+
+.rede-table.table-controles input[readonly="readonly"] {
+    background-color: transparent;
+    display: inline !important;
+    border: 0;
+    height: auto;
+    padding: 0 4px;
+}
+
+[id*=txtValorBrutoVenda][readonly="readonly"],
+[id*=txtSaldoDisponivel][readonly="readonly"],
+[id*=txtValorCancelamento][readonly="readonly"] {
+    margin-left: -8px;
+}
+
+.rede-table.table-controles label.rede-form {
+    font-family: 'opensans-regular', sans-serif;
+}
+
+
+.rede-table.table-controles td {
+    padding: 8px 10px;
+}
+
+.rede-table.table-controles tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.rede-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.rede-table tr:nth-child(even) {
+    background-color: #f1efee;
+}
+
+.rede-table a {
+    color: #3cc9c7 !important;
+    font-family: 'opensans-bold', sans-serif;
+}
+
+table.rede-table th:last-child {
+    border-right: 0;
+}
+
+table.rede-table td:last-child {
+    border-right: 0;
+}
+
+.reduce-font,
+.reduce-font th,
+.reduce-font td,
+.reduce-font a {
+    font-size: 12px !important;
+}
+
+.negative-value {
+    color: #f34235;
+}
+
+.table-title {
+    font-family: 'opensans-bold', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.info-button {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/info-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-bottom: -6px;
+    margin-left: 4px;
+}
+
+.rede-table th .info-button {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/info-icon-branco.png');
+}
+
+.table-info {
+    margin-bottom: -5px;
+    margin-top: 30px;
+    display: table;
+    width: 100%;
+}
+
+.total-tr td {
+    background-color: #fff;
+    text-align: right;
+}
+
+    .total-tr td.total-tr-title {
+        text-align: left;
+    }
+
+.total-tr {
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    font-family: 'opensans-bold', Sans-Serif;
+}
+
+.total-values {
+    background-color: #fff;
+    height: 50px;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+    padding: 14px 20px;
+    margin-top: -20px;
+    border: 1px solid #dddddd;
+    border-top: 0;
+    margin-bottom: 20px;
+}
+
+    .total-values > div {
+        display: table-cell;
+        text-align: right;
+    }
+
+        .total-values > div:first-child {
+            text-align: left;
+        }
+
+.rede-table-zebrado-manual tr:nth-child(odd),
+.rede-table-zebrado-manual tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.rede-table-zebrado-manual tr.fundo-v1 {
+    background-color: #fff;
+}
+
+.rede-table-zebrado-manual tr.fundo-v2 {
+    background-color: #f1efee;
+}
+
+/* ================== Paginação ================= */
+
+.rede-pagination, table.paginacao {
+    margin: auto;
+    font-size: 16px;
+    font-family: 'opensans-regular', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
+    .rede-pagination a, table.paginacao a {
+        color: #4f4139 !important;
+        text-decoration: none;
+        margin: 0 5px;
+        display: inline-block;
+        text-align: center;
+    }
+
+        .rede-pagination a.linkSelecionado, table.paginacao a.aspNetDisabled {
+            font-family: 'opensans-semibold', sans-serif;
+            text-decoration: underline !important;
+        }
+
+    .rede-pagination .control-pagination a, table.paginacao .control-pagination a {
+        font-family: 'opensans-bold', sans-serif;
+        font-size: 12px;
+    }
+
+        .rede-pagination .control-pagination a[disabled="disabled"], table.paginacao .control-pagination a[disabled="disabled"] {
+            color: #a49e9d;
+            display: none;
+        }
+
+    .rede-pagination a:hover, table.paginacao a:hover {
+        text-decoration: underline !important;
+    }
+
+    .rede-pagination a[disabled="disabled"]:hover, table.paginacao a[disabled="disabled"]:hover {
+        border-bottom: 0;
+    }
+
+/* ================= Passo a Passo Comum ============== */
+.steps-rede {
+    margin: 47px 0 0;
+}
+
+.step {
+    vertical-align: top;
+    display: inline-block;
+    max-width: 125px;
+}
+
+.step-number {
+    display: table;
+    text-align: center;
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/step.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 24px;
+    margin-top: -14px;
+}
+
+.step.active .step-number {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/step-active.png');
+}
+
+
+.steps-rede > .step:first-child > .step-number {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/first-step.png');
+    width: 31px;
+}
+
+.step:first-child > .step-number > span {
+    margin-left: -7px;
+    display: inline-block;
+}
+
+.steps-rede > .step:last-child > .step-number {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/last-step.png');
+}
+
+.steps-rede > .step.active:last-child > .step-number {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/last-step-active.png');
+}
+
+.step:last-child > .step-number > span {
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.step-number > span {
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    font-family: 'opensans-bold',sans-serif;
+}
+
+.step-bar {
+    background-color: #B9B8B8;
+    height: 4px;
+    width: 130px;
+    margin: 0px -10px 0 5px;
+}
+
+.step.active .step-bar {
+    background-color: #FF7800;
+}
+
+.steps-rede > .step:last-child > .step-bar {
+    width: 10px;
+}
+
+.step-title {
+    padding-left: 2px;
+    margin-top: 4px;
+    font-size: 12px;
+    font-family: 'opensans-bold',sans-serif;
+    color: transparent;
+}
+
+.step.current .step-title {
+    color: #4f4139;
+}
+
+/* ================= Passo a Passo Jade ============== */
+
+.jade .step.active .step-number {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/step-active-jade.png');
+}
+
+
+.steps-rede.jade > .step:first-child > .step-number {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/first-step-jade.png');
+    width: 31px;
+}
+
+.steps-rede.jade > .step.active:last-child > .step-number {
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/last-step-active-jade.png');
+}
+
+.jade .step.active .step-bar {
+    background-color: #00b9b5;
+}
+
+.jade .step.current .step-title {
+    color: #4f4139;
+}
+
+/*======= Box com valores (valores) ==========*/
+
+.money-values {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 15px;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+    min-height: 141px;
+}
+
+.value-number {
+    font-size: 18px;
+}
+
+.money-values .value {
+    margin-top: 15px;
+}
+
+    .money-values .value:first-child {
+        margin-top: 0;
+    }
+
+.content-title {
+    font-family: 'opensans-bold',sans-serif;
+    font-size: 20px;
+}
+
+/*======= Bandeiras (valores) ==========*/
+.money-values.card-flags {
+    width: 928px;
+    min-height: 141px;
+    padding: 0 20px;
+}
+
+.card-item {
+    padding: 4px 0;
+    float: left;
+    margin-left: 30px;
+    width: 123px;
+    height: 42px;
+    margin-top: 19px;
+}
+
+    .card-item:first-child,
+    .card-item:nth-child(7) {
+        margin-left: 0;
+    }
+
+
+.card-img, .card-info {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.card-info {
+    padding-left: 10px;
+}
+
+    .card-info .commom-text,
+    .card-info .commom-text-bold {
+        font-size: 12px;
+    }
+
+/*======= Box com valores e botão de detalhes ==========*/
+
+.money-values.values-button .value-box {
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 40px;
+    padding-right: 20px;
+}
+
+    .money-values.values-button .value-box:first-child {
+        border-right: 1px solid #988e88;
+        padding-left: 0;
+    }
+
+.values-button .btn-rede {
+    width: 100%;
+}
+
+/* =========== resumo de vendas (valores) ========= */
+
+.sales-summary .value-box {
+    float: left;
+    width: 48%;
+    padding: 0 40px;
+    display: table;
+    border-collapse: separate;
+}
+
+    .sales-summary .value-box .value {
+        display: table-cell;
+        width: 33.3333333333%;
+    }
+
+    .sales-summary .value-box:first-child {
+        border-right: 1px solid #988e88;
+        padding-left: 0;
+        padding-right: 0;
+        width: 52%;
+    }
+
+.summary-row {
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+}
+
+    .summary-row .value-box {
+        padding-top: 20px;
+    }
+
+.sales-summary .summary-row:first-child .value-box {
+    padding-top: 0;
+}
+
+/* ===================== Search ===================== */
+.rede-search {
+    margin-bottom: 20px;
+}
+
+.search-text {
+    font-size: 18px;
+    font-family: 'opensans-bold',sans-serif;
+    margin-right: 5px;
+}
+
+.search-text,
+.search-box {
+    display: inline-block;
+}
+
+.search-input,
+.search-button {
+    height: 50px;
+}
+
+input.search-button {
+    border: 0;
+    background-color: #00b9b8;
+    margin: 0;
+    margin-left: -4px;
+    width: 50px;
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+input.search-input {
+    border: 1px solid #b9b8b8;
+    border-right: 0;
+    padding-left: 15px;
+    width: 482px;
+    font-family: 'opensans-regular';
+}
+
+    input.search-input::-webkit-search-cancel-button,
+    input.search-input::-ms-clear {
+        display: none;
+    }
+
+.search-check {
+    height: 35px;
+}
+
+    .search-check > div {
+        height: 35px;
+    }
+
+.rede-label {
+    font-family: 'opensans-semibold',sans-serif;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.rede-input > label {
+    font-family: 'opensans-semibold',sans-serif;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+
+/* ============== calendário DatePicker =========== */
+
+div#ui-datepicker-div {
+    margin-left: -21px;
+    margin-top: 9px;
+    -webkit-box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 8px 0px rgba(0,0,0,0.2);
+    padding: 0;
+    font-family: 'opensans-regular';
+    font-size: 12px;
+    width: auto;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #4f4139;
+}
+
+.date-box {
+    width: 300px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #fff;
+    border: 0;
+    padding: 4px 3px;
+    text-align: center;
+    color: #4f4139;
+}
+
+.ui-datepicker table {
+    margin: 2px 15px 10px;
+    width: 202px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    padding: 6px 0;
+    height: 40px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'opensans-bold';
+    color: #fff;
+    border: 0;
+    background-color: #00b9b8;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background-color: #f1efee;
+    font-family: 'opensans-bold',sans-serif;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: #ff7800;
+    color: #fff;
+    font-family: 'opensans-bold',sans-serif;
+}
+
+.ui-widget-header .ui-datepicker-prev .ui-icon {
+    background-image: url("/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/calendar-left.png");
+    background-position: center;
+}
+
+.ui-widget-header .ui-datepicker-next .ui-icon {
+    background-image: url("/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/calendar-right.png");
+    background-position: center;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    margin-top: -9px;
+}
+
+.ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: 0;
+    background: #00B9B8;
+    color: #fff;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    top: 0;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/* ============== Popover/Tooltip =========== */
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    max-width: 490px;
+    padding: 15px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    -ms-line-break: auto;
+    -webkit-line-break: auto;
+    line-break: auto;
+    line-height: 1.42857143;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    white-space: normal;
+    -ms-word-break: normal;
+    word-break: normal;
+    word-spacing: normal;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+    font-size: 12px !important;
+    background-color: #ffffff;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+    .popover.top {
+        margin-top: -10px;
+    }
+
+    .popover.right {
+        margin-left: 10px;
+    }
+
+    .popover.bottom {
+        margin-top: 10px;
+    }
+
+    .popover.left {
+        margin-left: -10px;
+    }
+
+.popover-title {
+    color: #00b9b8;
+    font-family: 'opensans-bold',sans-serif;
+    font-size: 12px !important;
+    margin-bottom: 6px;
+}
+
+.popover-content {
+    padding: 0;
+    color: #4f4139;
+    font-family: 'opensans-regular', Sans-serif;
+}
+
+    .popover-content b {
+        font-weight: bold;
+    }
+
+    .popover-content td {
+        font-size: 12px !important;
+    }
+
+.popover > .arrow,
+.popover > .arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.popover > .arrow {
+    border-width: 11px;
+}
+
+    .popover > .arrow:after {
+        border-width: 10px;
+        content: "";
+    }
+
+.popover.top > .arrow {
+    left: 50%;
+    margin-left: -11px;
+    border-bottom-width: 0;
+    border-top-color: #999999;
+    border-top-color: rgba(0, 0, 0, 0.25);
+    bottom: -11px;
+}
+
+    .popover.top > .arrow:after {
+        content: " ";
+        bottom: 1px;
+        margin-left: -10px;
+        border-bottom-width: 0;
+        border-top-color: #ffffff;
+    }
+
+.popover.right > .arrow {
+    top: 50%;
+    left: -11px;
+    margin-top: -11px;
+    border-left-width: 0;
+    border-right-color: #999999;
+    border-right-color: rgba(0, 0, 0, 0);
+}
+
+    .popover.right > .arrow:after {
+        content: " ";
+        left: 1px;
+        bottom: -10px;
+        border-left-width: 0;
+        border-right-color: #ffffff;
+    }
+
+.popover.bottom > .arrow {
+    left: 50%;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #999999;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    top: -11px;
+}
+
+    .popover.bottom > .arrow:after {
+        content: " ";
+        top: 1px;
+        margin-left: -10px;
+        border-top-width: 0;
+        border-bottom-color: #ffffff;
+    }
+
+.popover.left > .arrow {
+    top: 50%;
+    right: -11px;
+    margin-top: -11px;
+    border-right-width: 0;
+    border-left-color: #999999;
+    border-left-color: rgba(0, 0, 0, 0.25);
+}
+
+    .popover.left > .arrow:after {
+        content: " ";
+        right: 1px;
+        border-right-width: 0;
+        border-left-color: #ffffff;
+        bottom: -10px;
+    }
+
+.pnl-tipo-assossiacao {
+    position: relative;
+}
+
+    .pnl-tipo-assossiacao > span {
+        position: absolute;
+        right: 0px;
+        color: #00b9b8;
+        font-family: 'opensans-regular',sans-serif;
+        text-decoration: underline !important;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+.filters-box .pnl-tipo-assossiacao > span {
+    color: #fff;
+}
+
+.listaPV {
+    clear: both !important;
+    overflow-y: auto !important;
+    height: 270px !important;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+    .listaPV > table.rede-table {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        font-family: 'opensans-regular';
+    }
+
+        .listaPV > table.rede-table td {
+            border: unset !important;
+            font-family: 'opensans-regular';
+        }
+
+    .listaPV .rede-table span label {
+        font-family: 'opensans-regular';
+    }
+
+/* ============== alert ====================== */
+.alert-rede {
+    display: table;
+    border-collapse: separate;
+    background-color: #fff;
+    margin: 25px 0;
+    min-height: 80px;
+    border: 1px solid #b9b8b8;
+    width: 100%;
+}
+
+    .alert-rede > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 20px;
+    }
+
+.alert-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+}
+
+.warning .alert-icon {
+    background-color: #ffe400;
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/warning.png');
+}
+
+.smiley .alert-icon {
+    background-color: #00B9B8;
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/smiley.png');
+}
+
+.error .alert-icon {
+    background-color: #f34235;
+    background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/error-icon.png');
+}
+
+.alert-rede .alert-content {
+    padding: 10px 20px;
+    padding-right: 60px;
+}
+
+.alert-button {
+    float: none;
+}
+
+.site-map-item .btn-rede.btn-apple-store {
+    margin-left: 10px;
+}
+
+/* ====== Controle de visualização ==== */
+
+.view-control {
+    margin-top: 2px;
+    margin-bottom: 11px;
+}
+
+    .view-control > span {
+        margin: 6px 0;
+        display: inline-block;
+    }
+
+    .view-control span.selectboxit-container {
+        width: 65px;
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .view-control .selectboxit-container span,
+    .view-control .selectboxit-container .selectboxit-options a {
+        line-height: 31px;
+    }
+
+    .view-control .selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+        top: 37%;
+    }
+
+    .view-control .view-control-select {
+        vertical-align: middle;
+    }
+
+/* Correões no Pop-up */
+div.modal {
+    z-index: 99999;
+    width: 470px;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 35%;
+    right: 0;
+    margin: auto !important;
+    padding: 0 !important;
+}
+
+    div.modal fieldset {
+        border: 0 !important;
+    }
+
+    div.modal .titModal {
+        padding: 18px 22px 40px;
+        background: #fff;
+    }
+
+    div.modal a.closeModal {
+        position: absolute;
+        right: -30px;
+        top: -14px;
+        height: 20px;
+        width: 20px;
+        border: none;
+        background-color: transparent;
+        background-image: url('/sites/fechado/Style%20Library/pt-br/Redecard/Img/redeareafechada-facelift/close-modal.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    div.modal .titModal span {
+        background: #fff;
+        color: #00b9b8;
+        font-size: 24px;
+        font-family: 'opensans-bold',sans-serif;
+        line-height: 1;
+    }
+
+    div.modal .formIndique * {
+        text-align: left;
+    }
+
+    div.modal .boxDados {
+        background-color: #fff;
+        width: auto;
+        padding: 22px;
+        padding-top: 0;
+        display: table;
+        border-collapse: separate;
+    }
+
+    div.modal .closeModal {
+        padding: 5px;
+        vertical-align: middle;
+        text-align: right;
+        width: 5%;
+        height: 15px;
+        top: 4px;
+        right: 4px;
+        cursor: pointer;
+        background: url("/_layouts/Redecard.Comum/IMAGES/btn_fechar.gif") no-repeat;
+        position: absolute;
+        margin-top: 14px !important;
+        outline: 0;
+    }
+
+#bgProtecao {
+    opacity: 0.5;
+    background: #333;
+    filter: Alpha(Opacity=50);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+/*
+Projeto: BBF - Facelift
+Descrição: Classes CSS genéricas para definição de layout a elementos específicos na tela, evitando uso de atributo "styles"
+Autor/Empresa: Iteris Consultoria e Software
+©Copyright: 2016 Rede
+Notas:
+*/
+
+.w865 {
+    width: 865px !important;
+}
+.w600 {
+    width: 600px;
+}
+.w561 {
+    width: 561px;
+}
+
+.w550 {
+    width: 550px;
+}
+
+.w430 {
+    width: 430px !important;
+}
+
+.w400 {
+    width: 400px !important;
+}
+
+.w360 {
+    width: 360px !important;
+}
+
+.w355 {
+    width: 355px !important;
+}
+
+.w340 {
+    width: 340px !important;
+}
+
+.w335 {
+    width: 335px !important;
+}
+
+.w320 {
+    width: 320px !important;
+}
+
+.w315 {
+    width: 315px !important;
+}
+
+.w310 {
+    width: 310px !important;
+}
+
+.W307{
+    width: 307px !important;
+}
+
+.W306{
+    width: 306px !important;
+}
+
+.W300{
+    width: 300px !important;
+}
+
+.w290 {
+    width: 290px !important;
+}
+
+.W250 {
+    width: 250px;
+}
+
+.w230 {
+    width: 230px !important;
+}
+
+.W220 {
+    width: 220px;
+}
+
+.w200 {
+    width: 200px !important;
+}
+
+.W190 {
+        width: 190px;
+}
+
+.w172 {
+    width: 172px;
+}
+
+.w168 {
+    width: 168px;
+}
+
+.W165 {
+    width: 165px;
+}
+
+.W150 {
+    width: 150px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.w145 {
+    width: 145px;
+}
+
+.W141 {
+    width: 141px;
+}
+
+.W140 {
+    width: 140px;
+}
+
+.W135 {
+    width: 135px;
+}
+
+.w135 {
+    width: 135px;
+}
+
+.w132 {
+    width: 132px;
+}
+
+.W130 {
+    width: 130px;
+}
+
+.w130 {
+    width: 130px;
+}
+
+.W126 {
+    width: 126px;
+}
+
+.W125 {
+    width: 125px;
+}
+
+.w125 {
+    width: 125px;
+}
+
+.W120 {
+    width: 120px;
+}
+
+.w120 {
+    width: 120px;
+}
+
+.w116 {
+    width: 116px;
+}
+
+.w115 {
+    width: 115px;
+}
+
+.W115 {
+    width: 115px;
+}
+
+.W110 {
+    width: 110px;
+}
+
+.W105 {
+    width: 105px;
+}
+
+.w100 {
+    width: 100px;
+}
+
+.W100 {
+    width: 100px;
+}
+
+.w98 {
+    width: 98px;
+}
+
+.w90 {
+    width: 90px;
+}
+
+.W80 {
+    width: 80px !important;
+}
+
+.w75px {
+    width: 75px;
+}
+
+.W70 {
+    width: 70px !important;
+}
+
+.w70 {
+    width: 70px;
+}
+
+.w65 {
+    width: 65px;
+}
+
+.W65 {
+    width: 65px !important;
+}
+
+.w40 {
+    width: 40px;
+}
+
+.W35 {
+    width: 35px;
+}
+
+.min-W0 {
+    min-width: 0 !important;
+}
+
+.h22 {
+    height: 22px;
+}
+
+
+.width40perc {
+    width: 40%;
+}
+
+.width70perc {
+    width: 70%;
+}
+
+.width80perc {
+    width: 80%;
+}
+
+.width90perc {
+    width: 90%;
+}
+
+.width100perc {
+    width: 100% !important;
+}
+
+.lineHeight25 {
+    line-height: 25px;
+}
+
+.display-none{
+    display: none;
+}
+
+.margin-bottom15{
+    margin-bottom: 15px !important;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+.margin-bottom0{
+    margin-bottom: 0px !important;
+}
+
+.margin-top22{
+    margin-top: 22px !important;
+}
+
+.margin-top35{
+    margin-top: 35px !important;
+}
+.margin-top20{
+    margin-top: 20px !important;
+}
+.margin-top12{
+    margin-top: 12px !important;
+}
+.margin-left-115 {
+    margin-left: 115px;
+}
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+.validacoes {
+    color: Red;
+}
+
+.clear-both{
+    clear: both;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolut {
+    position: absolute;
+}
+
+.portal-lightbox-overflow-hidden{
+    overflow-y: hidden !important;
+}
