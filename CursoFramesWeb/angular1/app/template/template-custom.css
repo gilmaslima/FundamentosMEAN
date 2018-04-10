@@ -1,0 +1,19 @@
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.icon-fa {
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 0;
+  font-size: 80px;
+  color: rgba(0,0,0,0.15);
+}
+.icon-fa:hover{
+  font-size: 90;
+}
